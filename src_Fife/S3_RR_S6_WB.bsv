@@ -25,14 +25,15 @@ import Semi_FIFOF :: *;
 // ----------------
 // Local imports
 
-import Utils       :: *;
-import Arch        :: *;
-import Instr_Bits  :: *;
-import Mem_Req_Rsp :: *;
-import Inter_Stage :: *;
-import GPRs        :: *;
+import Utils             :: *;
+import Arch              :: *;
+import Instr_Bits        :: *;
+import Mem_Req_Rsp       :: *;
+import Inter_Stage       :: *;
+import GPRs              :: *;
 
-import Fn_Dispatch :: *;
+import Fn_Dispatch       :: *;
+import Posit_Instr_Bits  :: *;
 
 // ****************************************************************
 
@@ -46,6 +47,7 @@ interface RR_WB_IFC;
    interface FIFOF_O #(RR_to_Retire)      fo_RR_to_Retire;
    interface FIFOF_O #(RR_to_EX_Control)  fo_RR_to_EX_Control;
    interface FIFOF_O #(RR_to_EX)          fo_RR_to_EX_Int;
+   interface FIFOF_O #(RR_to_EX)          fo_RR_to_EX_Posit;   // NEW: posit unit
    interface FIFOF_O #(Mem_Req)           fo_DMem_S_req;
 
    // Backward in
@@ -71,6 +73,7 @@ module mkRR_WB (RR_WB_IFC);
    FIFOF #(RR_to_Retire)     f_RR_to_Retire     <- mkBypassFIFOF;  // Direct
    FIFOF #(RR_to_EX_Control) f_RR_to_EX_Control <- mkBypassFIFOF;
    FIFOF #(RR_to_EX)         f_RR_to_EX_Int     <- mkBypassFIFOF;
+   FIFOF #(RR_to_EX)         f_RR_to_EX_Posit   <- mkBypassFIFOF;  // NEW: posit unit
    FIFOF #(Mem_Req)          f_DMem_S_req       <- mkBypassFIFOF;
 
    // Backward in
@@ -152,6 +155,7 @@ module mkRR_WB (RR_WB_IFC);
 	    EXEC_TAG_DIRECT:  noAction;
 	    EXEC_TAG_CONTROL: f_RR_to_EX_Control.enq (y.to_EX_Control);
 	    EXEC_TAG_INT:     f_RR_to_EX_Int.enq (y.to_EX);
+	    EXEC_TAG_POSIT:   f_RR_to_EX_Posit.enq (y.to_EX);   // NEW: dispatch to posit unit
 	    EXEC_TAG_DMEM:    f_DMem_S_req.enq (y.to_EX_DMem);
 	 endcase
 
@@ -160,6 +164,7 @@ module mkRR_WB (RR_WB_IFC);
 	    EXEC_TAG_DIRECT:  log_Dispatch_Direct (rg_flog, y.to_Retire);
 	    EXEC_TAG_CONTROL: log_Dispatch_Control (rg_flog, y.to_Retire, y.to_EX_Control);
 	    EXEC_TAG_INT:     log_Dispatch_Int (rg_flog, y.to_Retire, y.to_EX);
+	    EXEC_TAG_POSIT:   log_Dispatch_Int (rg_flog, y.to_Retire, y.to_EX);  // reuse Int log for posit
 	    EXEC_TAG_DMEM:    log_Dispatch_DMem (rg_flog, y.to_Retire, y.to_EX, y.to_EX_DMem);
 	    default: begin
 			wr_log (rg_flog, $format ("CPU.Dispatch:"));
@@ -222,6 +227,7 @@ module mkRR_WB (RR_WB_IFC);
    interface fo_RR_to_Retire     = to_FIFOF_O (f_RR_to_Retire);
    interface fo_RR_to_EX_Control = to_FIFOF_O (f_RR_to_EX_Control);
    interface fo_RR_to_EX_Int     = to_FIFOF_O (f_RR_to_EX_Int);
+   interface fo_RR_to_EX_Posit   = to_FIFOF_O (f_RR_to_EX_Posit);   // NEW
    interface fo_DMem_S_req       = to_FIFOF_O (f_DMem_S_req);
 
    // Backward in

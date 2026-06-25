@@ -27,6 +27,8 @@ import Mem_Req_Rsp :: *;
 import CSRs         :: *;
 import Retire_Utils :: *;
 
+import Posit_Instr_Bits :: *;    // For posit instr classification
+
 import RVFI_DII_Types :: *;    // For 'RVFI_DII_Execution' struct
 import RVFI_Report    :: *;
 
@@ -39,6 +41,7 @@ interface Retire_IFC;
    interface FIFOF_I #(RR_to_Retire)          fi_RR_to_Retire;
    interface FIFOF_I #(EX_Control_to_Retire)  fi_EX_Control_to_Retire;
    interface FIFOF_I #(EX_to_Retire)          fi_EX_Int_to_Retire;
+   interface FIFOF_I #(EX_to_Retire)          fi_EX_Posit_to_Retire;   // NEW: posit unit
 
    // DMem, speculative
    interface FIFOF_I #(Mem_Rsp)               fi_DMem_S_rsp;
@@ -115,6 +118,7 @@ module mkRetire (Retire_IFC);
    FIFOF #(RR_to_Retire)          f_RR_to_Retire         <- mkSizedFIFOF (8);
    FIFOF #(EX_Control_to_Retire)  f_EX_Control_to_Retire <- mkPipelineFIFOF;
    FIFOF #(EX_to_Retire)          f_EX_Int_to_Retire     <- mkPipelineFIFOF;
+   FIFOF #(EX_to_Retire)          f_EX_Posit_to_Retire   <- mkPipelineFIFOF;  // NEW: posit unit
    FIFOF #(Mem_Rsp)               f_DMem_S_rsp           <- mkPipelineFIFOF;
 
    // Forward out
@@ -250,6 +254,7 @@ module mkRetire (Retire_IFC);
    Bool is_Direct  = (x_rr_to_retire.exec_tag == EXEC_TAG_DIRECT);
    Bool is_Control = (x_rr_to_retire.exec_tag == EXEC_TAG_CONTROL);
    Bool is_Int     = (x_rr_to_retire.exec_tag == EXEC_TAG_INT);
+   Bool is_Posit   = (x_rr_to_retire.exec_tag == EXEC_TAG_POSIT);   // NEW
    Bool is_DMem    = (x_rr_to_retire.exec_tag == EXEC_TAG_DMEM);
 
    // Interrupt
@@ -263,6 +268,7 @@ module mkRetire (Retire_IFC);
    Bool retire_Direct_Exception = (retire_PIPE && is_Direct && x_rr_to_retire.exception);
    Bool retire_Control          = (retire_PIPE && is_Control);
    Bool retire_Int              = (retire_PIPE && is_Int);
+   Bool retire_Posit            = (retire_PIPE && is_Posit);   // NEW
    Bool retire_DMem             = (retire_PIPE && is_DMem);
 
    // ================================================================
@@ -297,6 +303,7 @@ module mkRetire (Retire_IFC);
       // Discard related pipe
       if (is_Control) f_EX_Control_to_Retire.deq;
       if (is_Int)     f_EX_Int_to_Retire.deq;
+      if (is_Posit)   f_EX_Posit_to_Retire.deq;   // NEW: discard posit result
       if (is_DMem) begin
 	 let mem_rsp <- pop_o (to_FIFOF_O (f_DMem_S_rsp));
 	 // Send 'discard' (False) to store-buf, if needed
@@ -517,6 +524,46 @@ module mkRetire (Retire_IFC);
    endrule
 
    // ================================================================
+   // Retire EX Posit pipe (NEW)
+   //
+   // Posit instructions that write rd: prdq, pcvtp, pcvtf
+   // Posit instructions that do NOT write rd: pfma, pfms, prstq
+   // The has_rd field set in Decode controls whether rd gets written.
+
+   rule rl_Retire_EX_Posit (retire_Posit);
+      EX_to_Retire x2 <- pop_o (to_FIFOF_O (f_EX_Posit_to_Retire));
+
+      // Unreserve/commit rd if needed
+      // Note: for pfma/pfms/prstq, has_rd=False so fa_update_rd is a no-op
+      fa_update_rd (x_rr_to_retire, (! x2.exception), x2.data);
+
+      if (! x2.exception) begin
+	 f_RR_to_Retire.deq;
+
+	 // Posit instructions are always fall-through (no branches)
+	 Bool mispredicted = (x_rr_to_retire.predicted_pc
+			      != x_rr_to_retire.fallthru_pc);
+	 fa_redirect_Fetch (mispredicted,
+			    (rg_runstate == S5_HALTREQ),
+			    x_rr_to_retire,
+			    x_rr_to_retire.fallthru_pc);
+	 csrs.ma_incr_instret;
+	 let epoch = (mispredicted ? rg_epoch + 1 : rg_epoch);
+	 // Reuse rvfi_Int for posit reporting (same EX_to_Retire format)
+	 rvfi_report.rvfi_Int (x_rr_to_retire, x2, csrs.mv_instret, epoch);
+      end
+      else begin
+	 rg_epc   <= x_rr_to_retire.pc;
+	 rg_cause <= x2.cause;
+	 rg_tval  <= x2.tval;
+	 rg_mode  <= MODE_EXCEPTION;
+      end
+
+      wr_log (rg_flog, $format ("CPU.S5.rl_Retire_EX_Posit: instr %08h rd=%08h exc=%0d",
+				 x_rr_to_retire.instr, x2.data, pack (x2.exception)));
+   endrule
+
+   // ================================================================
    // Retire EX DMem pipe, not deferred (speculative)
 
    rule rl_Retire_EX_DMem (retire_DMem
@@ -725,6 +772,7 @@ module mkRetire (Retire_IFC);
    interface fi_RR_to_Retire         = to_FIFOF_I (f_RR_to_Retire);
    interface fi_EX_Control_to_Retire = to_FIFOF_I (f_EX_Control_to_Retire);
    interface fi_EX_Int_to_Retire     = to_FIFOF_I (f_EX_Int_to_Retire);
+   interface fi_EX_Posit_to_Retire   = to_FIFOF_I (f_EX_Posit_to_Retire);   // NEW
 
    // DMem, speculative
    interface fi_DMem_S_rsp    = to_FIFOF_I (f_DMem_S_rsp);

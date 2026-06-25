@@ -41,6 +41,7 @@ import S3_RR_S6_WB   :: *;    // Without bypassing
 
 import S4_EX_Control :: *;
 import S4_EX_Int     :: *;
+import S4_EX_Posit   :: *;    // NEW: Posit arithmetic unit
 import S5_Retire     :: *;
 
 // ****************************************************************
@@ -61,6 +62,7 @@ module mkCPU (CPU_IFC);
    RR_WB_IFC       stage_RR_WB      <- mkRR_WB;
    EX_Control_IFC  stage_EX_Control <- mkEX_Control;  // Branch, JAL, JALR
    EX_Int_IFC      stage_EX_Int     <- mkEX_Int;      // Integer ops
+   EX_Posit_IFC    stage_EX_Posit   <- mkEX_Posit;    // NEW: Posit arithmetic ops
    Retire_IFC      stage_Retire     <- mkRetire;
 
    // ----------------
@@ -76,12 +78,16 @@ module mkCPU (CPU_IFC);
 		 stage_EX_Control.fi_RR_to_EX_Control);
    mkConnection (stage_RR_WB.fo_RR_to_EX_Int,
 		 stage_EX_Int.fi_RR_to_EX_Int);
+   mkConnection (stage_RR_WB.fo_RR_to_EX_Posit,
+		 stage_EX_Posit.fi_RR_to_EX_Posit);    // NEW: posit unit
 
    // Various EX->Retire
    mkConnection (stage_EX_Control.fo_EX_Control_to_Retire,
 		 stage_Retire.fi_EX_Control_to_Retire);
    mkConnection (stage_EX_Int.fo_EX_Int_to_Retire,
 		 stage_Retire.fi_EX_Int_to_Retire);
+   mkConnection (stage_EX_Posit.fo_EX_Posit_to_Retire,
+		 stage_Retire.fi_EX_Posit_to_Retire);  // NEW: posit unit
 
    // ----------------
    // Backward flow connections
@@ -110,6 +116,7 @@ module mkCPU (CPU_IFC);
       stage_RR_WB.init (initial_params);
       stage_EX_Control.init (initial_params);
       stage_EX_Int.init (initial_params);
+      stage_EX_Posit.init (initial_params);    // NEW: posit unit init
       stage_Retire.init (initial_params);
 
       $display ("================================================================");
