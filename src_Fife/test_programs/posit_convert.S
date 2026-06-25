@@ -73,7 +73,7 @@ _start:
     # Bit 11:7  = 00010
     # Bit 6:0   = 0001011
     # = 0x0800_080B
-    .word 0x0800080B              # pcvtp x2, x1
+    .word 0x0800810B              # pcvtp x2, x1
     # x2 should be 0x40000000 (posit32(1.0))
 
     # pcvtf x3, x2 : x3 = posit_to_float(x2)
@@ -81,8 +81,8 @@ _start:
     # = 0000101 00000 00010 000 00011 0001011
     # = 0x0A00_118B  (rs1=x2=00010 at bits 19:15)
     # Bit pattern: 0000101_00000_00010_000_00011_0001011
-    # = 0x0A00118B
-    .word 0x0A00118B              # pcvtf x3, x2
+    # = 0x0A01018B
+    .word 0x0A01018B              # pcvtf x3, x2
     # x3 should be 0x3F800000 (float 1.0, roundtrip)
 
     sw      x2, 0(x20)            # store posit result
@@ -103,17 +103,17 @@ _start:
     lui     x1, 0x40000           # x1 = 0x40000000 = float 2.0
 
     # pcvtp x2, x1  (same encoding structure, rs1=x1=00001, rd=x2=00010)
-    .word 0x0800080B              # pcvtp x2, x1
+    .word 0x0800810B              # pcvtp x2, x1
     # x2 should be 0x44000000 (posit32(2.0))
 
     # pcvtf x3, x2
-    .word 0x0A00118B              # pcvtf x3, x2
+    .word 0x0A01018B              # pcvtf x3, x2
     # x3 should be 0x40000000 (float 2.0)
 
     sw      x2, 8(x20)
     sw      x3, 12(x20)
 
-    lui     x10, 0x44000          # expected posit32(2.0) = 0x44000000
+    lui     x10, 0x48000          # expected posit32(2.0) = 0x48000000
     bne     x2, x10, test_fail
 
     lui     x11, 0x40000          # expected float32(2.0) = 0x40000000
@@ -126,7 +126,7 @@ _start:
     li      x1, 0                 # x1 = 0x00000000 = float 0.0
 
     # pcvtp x2, x1
-    .word 0x0800080B              # pcvtp x2, x1
+    .word 0x0800810B              # pcvtp x2, x1
     # x2 should be 0x00000000 (posit32(0))
 
     sw      x2, 16(x20)
@@ -141,12 +141,12 @@ _start:
     lui     x1, 0x3F000           # x1 = 0x3F000000
 
     # pcvtp x2, x1
-    .word 0x0800080B              # pcvtp x2, x1
-    # x2 should be 0x3C000000 (posit32(0.5))
+    .word 0x0800810B              # pcvtp x2, x1
+    # x2 should be 0x38000000 (posit32(0.5))
 
     sw      x2, 20(x20)
 
-    lui     x10, 0x3C000          # expected posit32(0.5) = 0x3C000000
+    lui     x10, 0x38000          # expected posit32(0.5) = 0x38000000
     bne     x2, x10, test_fail
 
     # All tests passed
@@ -154,11 +154,11 @@ _start:
     j       test_done
 
 test_fail:
-    li      x28, 0x0
+    li      x28, 0x3              # test FAIL code
 
 test_done:
-    lui     x30, 0x80001
-    sw      x28, 0(x30)           # signal test result
+    lui     x30, 0x6FFF0
+    sw      x28, 0x010(x30)       # signal result tohost result
 
 loop:
     j       loop

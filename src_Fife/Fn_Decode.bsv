@@ -1,18 +1,12 @@
 // Copyright (c) 2023-2025 Rishiyur S. Nikhil.  All Rights Reserved.
-// Posit extension: Copyright (c) 2025. All Rights Reserved.
-//
-// Fn_Decode.bsv -- Decode function extended with Posit instruction support.
-//
-// This is a local override of the upstream Fn_Decode.bsv from Code/src_Common/.
-// Place this file in src_Fife/ so BSC finds it before the library version.
-//
-// Changes from upstream:
-//   - Added recognition of OPCLASS_POSIT instructions (custom-0 opcode)
-//   - OPCLASS_POSIT must also be added to the OpClass enum in Inter_Stage.bsv
 
 package Fn_Decode;
 
-// ================================================================
+// ****************************************************************
+// Decode function
+// * Check that instruction is legal, and note if it uses rs1/rs2/rd
+
+// ****************************************************************
 // Imports from libraries
 
 // None
@@ -25,9 +19,9 @@ import Instr_Bits      :: *;
 import CSR_Bits        :: *;
 import Mem_Req_Rsp     :: *;
 import Inter_Stage     :: *;
-import Posit_Instr_Bits :: *;    // NEW: posit instruction predicates
+import Posit_Instr_Bits :: *;
 
-// ================================================================
+// ****************************************************************
 // Decode: Functionality
 
 // This is actually a pure function; is ActionValue only to allow $display insertion
@@ -132,40 +126,51 @@ function ActionValue #(Decode_to_RR)
 	 y.has_rs2 = True;
 	 y.has_rd  = non_zero_rd;
       end
-      else if (is_legal_MISC_MEM (instr)) begin
-	 // FENCE, FENCE.I
+      else if (is_legal_ECALL (instr)
+	       || is_legal_EBREAK (instr)
+	       || is_legal_MRET (instr)) begin
+         y.opclass = OPCLASS_SYSTEM;
+      end
+      else if (is_legal_CSRRxx (instr)) begin
+	 y.opclass = OPCLASS_SYSTEM;
+	 y.has_rs1 = (instr_funct3 (instr) [2] == 0);
+	 y.has_rd  = non_zero_rd;
+      end
+      else if (is_legal_FENCE (instr)) begin
 	 y.opclass = OPCLASS_FENCE;
       end
-      else if (is_legal_SYSTEM (instr)) begin
-	 // ECALL, EBREAK, CSRRxx, MRET
-	 y.opclass = OPCLASS_SYSTEM;
-	 y.has_rs1 = (is_legal_CSRRxx (instr)
-		      && (instr [14] == 0));    // CSRRW/CSRRS/CSRRC use rs1
-	 y.has_rd  = (is_legal_CSRRxx (instr) && non_zero_rd);
+      else if (is_legal_FENCE_I (instr)) begin
+	 y.opclass = OPCLASS_FENCE;
+	 y.imm     = 0;
       end
-      // ======================================================================
-      // NEW: Posit custom instructions (custom-0 opcode = 0x0B)
-      // ======================================================================
       else if (is_legal_POSIT (instr)) begin
 	 y.opclass = OPCLASS_POSIT;
 	 y.has_rs1 = posit_has_rs1 (instr);
 	 y.has_rs2 = posit_has_rs2 (instr);
-	 // posit_has_rd returns true for prdq, pcvtp, pcvtf
-	 // For pfma/pfms/prstq, has_rd is False (no rd writeback)
 	 y.has_rd  = (posit_has_rd (instr) && non_zero_rd);
       end
-      // ======================================================================
       else begin
-	 // Illegal instruction
 	 y.exception = True;
 	 y.cause     = cause_ILLEGAL_INSTRUCTION;
-	 y.tval      = zeroExtend (instr);
+	 y.tval      = truncate (instr);
       end
 
       return y;
    endactionvalue
 endfunction
 
-// ================================================================
+// ****************************************************************
+// Logging actions
 
-endpackage : Fn_Decode
+function Action log_Decode (File flog, Decode_to_RR y, Mem_Rsp rsp_IMem);
+   action
+      wr_log (flog, ($format("CPU.Decode:\n    ")
+		     + fshow_Decode_to_RR (y) + $format ("\n    ")
+		     + fshow_Mem_Rsp (rsp_IMem, True)));
+      ftrace (flog, y.xtra.inum, y.pc, y.instr, "D", $format(""));
+   endaction
+endfunction
+
+// ****************************************************************
+
+endpackage

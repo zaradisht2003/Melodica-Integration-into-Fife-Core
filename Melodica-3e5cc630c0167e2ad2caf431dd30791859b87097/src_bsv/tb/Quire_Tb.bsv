@@ -19,6 +19,7 @@
 // THE SOFTWARE.package Extracter_Types;
 //
 package Quire_Tb;
+import Cur_Cycle :: *;
 //
 // -----------------------------------------------------------------
 // This package defines:

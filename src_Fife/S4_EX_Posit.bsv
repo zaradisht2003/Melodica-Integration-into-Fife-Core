@@ -46,6 +46,7 @@ import Semi_FIFOF :: *;
 import Utils       :: *;
 import Arch        :: *;
 import Instr_Bits  :: *;
+import CSR_Bits    :: *;
 import Inter_Stage :: *;
 
 import Posit_Instr_Bits :: *;
@@ -96,7 +97,7 @@ module mkEX_Posit (EX_Posit_IFC);
    // Request  type: Tuple4 #(FloatU, FloatU, RoundMode, PositCmds)
    // Response type: Tuple2 #(FloatU, FloatingPoint::Exception)  (Fpu_Rsp)
 
-   PositCore_IFC posit_core <- mkPositCore (fromInteger (verbosity));
+   PositCore_IFC posit_core <- mkPositCore;
 
    // ----------------------------------------------------------------
    // FIFO to carry the instruction forward from request to response

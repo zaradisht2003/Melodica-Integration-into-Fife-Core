@@ -19,6 +19,7 @@
 // THE SOFTWARE.
 
 package Multiplier_fma;
+import Cur_Cycle :: *;
 
 // --------------------------------------------------------------
 // This package defines:

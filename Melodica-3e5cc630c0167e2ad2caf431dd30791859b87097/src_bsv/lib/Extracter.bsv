@@ -36,6 +36,7 @@ import FShow               :: *;
 import Posit_Numeric_Types :: *;
 import Posit_User_Types    :: *;
 import Utils               :: *;
+import Cur_Cycle           :: *;
 
 // --------
 // Local type definitions

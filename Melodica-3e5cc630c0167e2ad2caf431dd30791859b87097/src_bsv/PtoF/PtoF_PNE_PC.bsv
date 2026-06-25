@@ -19,6 +19,7 @@
 // THE SOFTWARE.
 
 package PtoF_PNE_PC;
+import Cur_Cycle :: *;
 
 // -----------------------------------------------------------------
 // This package defines:

@@ -87,8 +87,8 @@ _start:
     # pfma x0, x1, x2 : quire += posit(x1) * posit(x2) = 1.0 * 2.0 = 2.0
     # Encoding: funct7=0b0000000, rs2=x2(00010), rs1=x1(00001), funct3=000, rd=x0(00000), opcode=0001011
     # = 0000000 00010 00001 000 00000 0001011
-    # = 0x0020080B
-    .word 0x0020080B              # pfma x0, x1, x2
+    # = 0x0020800B
+    .word 0x0020800B              # pfma x0, x1, x2
 
     # prdq x5: rd = posit_from_quire
     # Encoding: funct7=0b0000010, rs2=x0, rs1=x0, funct3=000, rd=x5(00101), opcode=0001011
@@ -111,13 +111,13 @@ _start:
     .word 0x0600000B              # prstq
 
     # pfma x0, x1, x2 : quire += 1.0 * 2.0 = 2.0
-    .word 0x0020080B              # pfma x0, x1, x2
+    .word 0x0020800B              # pfma x0, x1, x2
 
     # pfma x0, x1, x3 : quire += 1.0 * 4.0 = 4.0; total = 6.0
     # Encoding: funct7=0b0000000, rs2=x3(00011), rs1=x1(00001), funct3=000, rd=x0, opcode=0001011
     # = 0000000 00011 00001 000 00000 0001011
-    # = 0x0030080B
-    .word 0x0030080B              # pfma x0, x1, x3
+    # = 0x0030800B
+    .word 0x0030800B              # pfma x0, x1, x3
 
     # prdq x6: read quire result
     # Encoding: funct7=0b0000010, rd=x6(00110), others zero, opcode=0001011
@@ -138,13 +138,13 @@ _start:
     .word 0x0600000B              # prstq
 
     # pfma x0, x1, x2 : quire += 1.0 * 2.0 = 2.0
-    .word 0x0020080B              # pfma x0, x1, x2
+    .word 0x0020800B              # pfma x0, x1, x2
 
     # pfms x0, x1, x2 : quire -= 1.0 * 2.0; total = 0.0
     # pfms: funct7=0b0000001, rs2=x2(00010), rs1=x1(00001), funct3=000, rd=x0, opcode=0001011
     # = 0000001 00010 00001 000 00000 0001011
-    # = 0x0220080B
-    .word 0x0220080B              # pfms x0, x1, x2
+    # = 0x0220800B
+    .word 0x0220800B              # pfms x0, x1, x2
 
     # prdq x7: read quire result
     # Encoding: funct7=0b0000010, rd=x7(00111), others zero, opcode=0001011
@@ -175,12 +175,11 @@ test3_ok:
     j       test_done
 
 test_fail:
-    li      x28, 0x0              # FAIL code
+    li      x28, 0x3              # FAIL code
 
 test_done:
-    # Write pass/fail to magic HTIF address to signal test completion
-    lui     x30, 0x80001
-    sw      x28, 0(x30)
+    lui     x30, 0x6FFF0
+    sw      x28, 0x010(x30)       # write tohost
 
     # Loop forever
 loop:

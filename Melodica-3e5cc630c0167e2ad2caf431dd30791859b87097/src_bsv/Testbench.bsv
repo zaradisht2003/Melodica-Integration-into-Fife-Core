@@ -1,4 +1,5 @@
 package Testbench;
+import Cur_Cycle :: *;
 
 import GetPut       :: *;
 import ClientServer :: *;

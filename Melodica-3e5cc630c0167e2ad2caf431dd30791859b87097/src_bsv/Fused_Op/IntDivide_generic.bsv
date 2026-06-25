@@ -1,4 +1,5 @@
 package IntDivide_generic;
+import Cur_Cycle :: *;
 
 import FIFO                :: *;
 import GetPut              :: *;

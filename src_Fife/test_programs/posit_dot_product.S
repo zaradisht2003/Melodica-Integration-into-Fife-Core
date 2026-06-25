@@ -48,27 +48,27 @@
 #  [28] = B[3] = 0x48000000 (4.0)
 # =============================================================================
 
-.section .data
-.align 4
+.section .text
+.global _start
+_start:
+    j real_start
 
+.align 4
 # Vector A: posit32 values [1.0, 2.0, 3.0, 4.0]
 vec_A:
     .word 0x40000000    # posit32(1.0)
-    .word 0x44000000    # posit32(2.0)
-    .word 0x46000000    # posit32(3.0)
-    .word 0x48000000    # posit32(4.0)
+    .word 0x48000000    # posit32(2.0)
+    .word 0x4C000000    # posit32(3.0)
+    .word 0x50000000    # posit32(4.0)
 
 # Vector B: posit32 values [1.0, 2.0, 3.0, 4.0]
 vec_B:
     .word 0x40000000    # posit32(1.0)
-    .word 0x44000000    # posit32(2.0)
-    .word 0x46000000    # posit32(3.0)
-    .word 0x48000000    # posit32(4.0)
+    .word 0x48000000    # posit32(2.0)
+    .word 0x4C000000    # posit32(3.0)
+    .word 0x50000000    # posit32(4.0)
 
-# =============================================================================
-.section .text
-.global _start
-_start:
+real_start:
 
     # =========================================================================
     # Reset the quire before starting accumulation
@@ -92,51 +92,43 @@ dot_loop:
     lw      x14, 0(x11)           # x14 = B[i]
 
     # pfma x0, x13, x14 : quire += x13 * x14
-    # x13 = r13 = 01101 = 13
-    # x14 = r14 = 01110 = 14
-    # Encoding: funct7=0000000, rs2=x14(01110), rs1=x13(01101), funct3=000, rd=x0, opcode=0001011
-    # = 0000000_01110_01101_000_00000_0001011
-    # Bit decomposition:
-    #   [31:25] funct7  = 0000000
-    #   [24:20] rs2=14  = 01110
-    #   [19:15] rs1=13  = 01101
-    #   [14:12] funct3  = 000
-    #   [11:7]  rd=0    = 00000
-    #   [6:0]   opcode  = 0001011
-    # = 0000000 01110 01101 000 00000 0001011
-    # = 0x00E6_800B
     .word 0x00E6800B              # pfma x0, x13, x14
 
-    addi    x10, x10, 4           # advance A pointer
-    addi    x11, x11, 4           # advance B pointer
-    addi    x12, x12, -1          # decrement counter
+    addi    x10, x10, 4           # A++
+    addi    x11, x11, 4           # B++
+    addi    x12, x12, -1          # count--
     j       dot_loop
 
 dot_done:
-    # =========================================================================
-    # Read quire to get dot product result
     # prdq x15 : x15 = posit_from_quire
-    # Encoding: funct7=0b0000010, rs2=x0, rs1=x0, funct3=000, rd=x15(01111), opcode=0001011
-    # = 0000010 00000 00000 000 01111 0001011
-    # = 0x0400078B
-    # =========================================================================
     .word 0x0400078B              # prdq x15
-    # x15 should contain posit32(30.0)
+    # x15 should be approx 30.0 = 0x63800000
+
+    lui     s4, 0x80000
+    sw      x15, 0(s4)            # store dot_product result
+
+    # Check if dot product > 0
+    beqz    x15, test_fail
+    bltz    x15, test_fail
+
+    # Check if dot product ≈ 30.0
+    lui     a0, 0x60000           # lower bound: 16.0
+    lui     a1, 0x68000           # upper bound: 64.0
+    blt     x15, a0, test_fail
+    bge     x15, a1, test_fail
 
     # =========================================================================
     # Store and validate result
     # =========================================================================
     lui     x20, 0x80000          # results base address
-    sw      x15, 0(x20)           # store dot product result
 
     # Validate: dot product should be positive (bit 31 = 0) and nonzero
     beqz    x15, test_fail        # fail if zero
     bltz    x15, test_fail        # fail if negative (NaR)
 
     # Optional: check approximate value
-    # posit32(30.0) should be between posit32(16.0)=0x4C000000 and posit32(64.0)=0x54000000
-    lui     x10, 0x4C000          # lower bound: posit32(16.0) = 0x4C000000
-    lui     x11, 0x54000          # upper bound: posit32(64.0) = 0x54000000
+    lui     x10, 0x60000          # lower bound: posit32(16.0) = 0x60000000
+    lui     x11, 0x68000          # upper bound: posit32(64.0) = 0x68000000
     blt     x15, x10, test_fail   # fail if result < 16.0
     bge     x15, x11, test_fail   # fail if result >= 64.0
 
@@ -148,13 +140,13 @@ dot_done:
 
     lui     x1, 0x40000           # x1 = posit32(1.0)  = 0x40000000
     lui     x2, 0xC0000           # x2 = posit32(-1.0) = 0xC0000000
-    lui     x3, 0x44000           # x3 = posit32(2.0)  = 0x44000000
+    lui     x3, 0x48000           # x3 = posit32(2.0)  = 0x48000000
 
     # pfma x0, x1, x3 : quire += 1.0 * 2.0 = 2.0
     # rs1=x1(00001), rs2=x3(00011), rd=x0(00000)
     # = 0000000 00011 00001 000 00000 0001011
     # = 0x0030_080B
-    .word 0x0030080B              # pfma x0, x1, x3
+    .word 0x0030800B              # pfma x0, x1, x3
 
     # pfma x0, x2, x3 : quire += -1.0 * 2.0 = -2.0; total = 0.0
     # rs1=x2(00010), rs2=x3(00011), rd=x0(00000)
@@ -179,11 +171,11 @@ dot_done:
     j       test_done
 
 test_fail:
-    li      x28, 0x0
+    li      x28, 0x3              # test FAIL code
 
 test_done:
-    lui     x30, 0x80001
-    sw      x28, 0(x30)           # signal result
+    lui     x30, 0x6FFF0
+    sw      x28, 0x010(x30)       # signal result tohost
 
 loop:
     j       loop

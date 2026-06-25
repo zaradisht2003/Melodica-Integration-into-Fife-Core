@@ -1,4 +1,5 @@
 package Utils;
+import Cur_Cycle :: *;
 
 // ================================================================
 // Copyright (c) 2013-2016 Bluespec, Inc. All Rights Reserved.

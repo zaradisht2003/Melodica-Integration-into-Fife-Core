@@ -19,6 +19,7 @@
 // THE SOFTWARE.
 
 package Quire;
+import Cur_Cycle :: *;
 
 // --------------------------------------------------------------
 // This package defines:

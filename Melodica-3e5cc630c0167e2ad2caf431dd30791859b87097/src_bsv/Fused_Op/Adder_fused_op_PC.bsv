@@ -19,6 +19,7 @@
 // THE SOFTWARE.
 
 package Adder_fused_op_PC;
+import Cur_Cycle :: *;
 
 // --------------------------------------------------------------
 // This package defines:

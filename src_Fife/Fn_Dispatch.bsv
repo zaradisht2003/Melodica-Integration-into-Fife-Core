@@ -1,18 +1,11 @@
 // Copyright (c) 2023-2025 Rishiyur S. Nikhil.  All Rights Reserved.
-// Posit extension: Copyright (c) 2025. All Rights Reserved.
-//
-// Fn_Dispatch.bsv -- Register-read-and-dispatch extended with Posit support.
-//
-// This is a local override of the upstream Fn_Dispatch.bsv from Code/src_Common/.
-// Place this file in src_Fife/ so BSC finds it before the library version.
-//
-// Changes from upstream:
-//   - Added EXEC_TAG_POSIT case in exec_tag computation
-//   - OPCLASS_POSIT -> EXEC_TAG_POSIT mapping
 
 package Fn_Dispatch;
 
-// ================================================================
+// ****************************************************************
+// Register-Read and Dispatch step
+
+// ****************************************************************
 // Imports from libraries
 
 import Cur_Cycle :: *;
@@ -26,11 +19,11 @@ import Instr_Bits  :: *;
 import Mem_Req_Rsp :: *;
 import Inter_Stage :: *;
 
-// ================================================================
+// ****************************************************************
 
 Integer verbosity = 0;
 
-// ================================================================
+// ****************************************************************
 // Register-read dispatch to execute steps
 
 typedef struct {
@@ -57,7 +50,6 @@ function ActionValue #(Result_Dispatch)
 	 else if (x.opclass == OPCLASS_INT)     exec_tag = EXEC_TAG_INT;
 	 else if (x.opclass == OPCLASS_MEM)     exec_tag = EXEC_TAG_DMEM;
 	 else if (x.opclass == OPCLASS_FENCE)   exec_tag = EXEC_TAG_DMEM;
-	 // NEW: posit instructions dispatch to posit execution unit
 	 else if (x.opclass == OPCLASS_POSIT)   exec_tag = EXEC_TAG_POSIT;
       end
 
@@ -96,7 +88,7 @@ function ActionValue #(Result_Dispatch)
 					       inum: x.xtra.inum}
 					    };
       // ----------------
-      // Info for Execute Int pipe (also reused for posit pipe -- same RR_to_EX type)
+      // Info for Execute Int pipe
       let to_EX  = RR_to_EX {instr:   x.instr,
 			     rs1_val: rs1_val,
 			     rs2_val: rs2_val,
@@ -123,22 +115,60 @@ function ActionValue #(Result_Dispatch)
 				epoch:    x.epoch,
 
 				xtra: Mem_Req_Xtra {
-				   inum:  x.xtra.inum,
-				   pc:    x.pc,
-				   instr: x.instr}
+				   inum:     x.xtra.inum,
+				   pc:       x.pc,
+				   instr:    x.instr}
 				};
-
-      if (verbosity > 0)
-	 $display ("%0d: Fn_Dispatch: ", cur_cycle, fshow (exec_tag),
-		   " pc %0h instr %08h", x.pc, x.instr);
-
-      return (Result_Dispatch {to_Retire:    to_Retire,
-			       to_EX_Control: to_EX_Control,
-			       to_EX:         to_EX,
-			       to_EX_DMem:    to_EX_DMem});
+      // ----------------
+      // Construct and return final result
+      let result = Result_Dispatch {to_Retire:     to_Retire,
+				    to_EX_Control: to_EX_Control,
+				    to_EX:         to_EX,
+				    to_EX_DMem:    to_EX_DMem};
+      return result;
    endactionvalue
 endfunction
 
-// ================================================================
+// ****************************************************************
+// Logging actions
 
-endpackage : Fn_Dispatch
+function Action log_Dispatch_Direct (File flog, RR_to_Retire x);
+   action
+      wr_log (flog, $format ("CPU.Dispatch_Direct:"));
+      wr_log_cont (flog, $format ("    ", fshow_RR_to_Retire (x)));
+      ftrace (flog, x.xtra.inum, x.pc, x.instr, "RR.dir", $format (""));
+   endaction
+endfunction
+
+function Action log_Dispatch_Control (File flog, RR_to_Retire x, RR_to_EX_Control y);
+   action
+      wr_log (flog, $format ("CPU.Dispatch_Control:"));
+      wr_log_cont (flog, $format ("    ", fshow_RR_to_Retire (x)));
+      wr_log_cont (flog, $format ("    ", fshow_RR_to_EX_Control (y)));
+      ftrace (flog, x.xtra.inum, x.pc, x.instr, "RR.C", $format (""));
+   endaction
+endfunction
+
+function Action log_Dispatch_Int (File flog, RR_to_Retire x, RR_to_EX y);
+   action
+      wr_log (flog, $format ("CPU.Dispatch_Int:"));
+      wr_log_cont (flog, $format ("    ", fshow_RR_to_Retire (x)));
+      wr_log_cont (flog, $format ("    ", fshow_RR_to_EX (y)));
+      ftrace (flog, x.xtra.inum, x.pc, x.instr, "RR.I", $format (""));
+   endaction
+endfunction
+
+function Action log_Dispatch_DMem (File flog, RR_to_Retire x, RR_to_EX y, Mem_Req mem_req);
+   action
+      wr_log (flog, $format ("CPU.Dispatch_DMem:"));
+      wr_log_cont (flog, $format ("    ", fshow_RR_to_Retire (x)));
+      wr_log_cont (flog, $format ("        rs1_val:%08h  rs2_val:%08h  imm:%08h",
+				  y.rs1_val, y.rs2_val, y.imm));
+      wr_log_cont (flog, $format ("    ", fshow_Mem_Req (mem_req)));
+      ftrace (flog, x.xtra.inum, x.pc, x.instr, "RR.D", $format (""));
+   endaction
+endfunction
+
+// ****************************************************************
+
+endpackage

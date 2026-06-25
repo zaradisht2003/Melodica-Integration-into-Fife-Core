@@ -1,5 +1,6 @@
 //FMA FDA PtoQ QtoP FtoP PtoF
 package PositCore_Coproc;
+import Cur_Cycle :: *;
 
 // Library imports
 import FIFOF        :: *;

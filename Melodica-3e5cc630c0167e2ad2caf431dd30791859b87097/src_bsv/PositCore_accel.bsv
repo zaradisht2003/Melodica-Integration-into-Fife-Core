@@ -1,4 +1,5 @@
 package PositCore_accel;
+import Cur_Cycle :: *;
 
 // --------------------------------------------------------------
 // This package implements the top-level of the Posit Arithmetic Unit that

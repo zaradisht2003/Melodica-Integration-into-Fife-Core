@@ -19,6 +19,7 @@
 // THE SOFTWARE.
 
 package Divider_fda;
+import Cur_Cycle :: *;
 
 // --------------------------------------------------------------
 // This package defines:
