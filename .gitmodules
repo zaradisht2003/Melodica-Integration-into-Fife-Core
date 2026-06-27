@@ -1,0 +1,6 @@
+[submodule "Learn_Bluespec_and_RISCV_Design"]
+	path = Learn_Bluespec_and_RISCV_Design
+	url = https://github.com/zaradisht2003/Learn_Bluespec_and_RISCV_Design
+[submodule "Melodica"]
+	path = Melodica
+	url = https://github.com/zaradisht2003/Melodica
