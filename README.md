@@ -10,16 +10,59 @@ The core objective of this project is to port the custom posit arithmetic operat
 - **Melodica**: Provided the Bluespec implementation of the Posit Arithmetic core, specifically `PositCore.bsv` and its associated components for posit formats (posit addition, fused multiply-accumulate, conversion, etc.).
 - **Learn Bluespec and RISCV Design (Fife Core)**: Provided the baseline 5-stage RISC-V processor pipeline (`src_Fife`), memory interfaces, and the Verilator/Bluespec simulation environment.
 
-## Integration Structure
+## 1. Architectural Integration (Bluespec Codebase)
 
-The integration involved several key components in `src_Fife`:
+The first phase of the port involved integrating the standalone `PositCore` unit into the Fife pipeline, creating a custom execution path in `src_Fife`.
 
-1. **`S4_EX_Posit.bsv`**: A wrapper module bridging the Fife execution stage (`EX_to_Retire`) and the Melodica `PositCore`. It handles dispatching custom posit instructions to the posit arithmetic unit, waiting for completion, and propagating the result or exception to the Retire stage.
-2. **`Inter_Stage.bsv`**: Expanded to include the new execution pipeline interfaces (`f_RR_to_EX_Posit`, `f_EX_Posit_to_Retire`).
-3. **`Fn_Decode.bsv` & `Posit_Instr_Bits.bsv`**: The instruction decoder was modified to identify RISC-V custom-0 instructions (opcode `0x0B`) and correctly extract operand dependencies (`has_rd`, `has_rs1`, `has_rs2`) for the Scoreboard to handle data hazards.
-4. **`Fn_Dispatch.bsv`**: Added logic to route the decoded custom-0 instructions to the newly instantiated `S4_EX_Posit` pipeline instead of the standard ALU.
+### Execution Stage Wrappers
+We created **`S4_EX_Posit.bsv`**, which serves as a wrapper module that bridges the standard Fife execution stages (`EX_to_Retire`) with the Melodica `PositCore`. 
+- **Dispatch:** It accepts custom posit instructions containing specific operands and forwards them into `PositCore`.
+- **Synchronization:** It waits for the multi-cycle operations to complete within the arithmetic unit.
+- **Propagation:** It routes the results (or exceptions) to the standard Fife Retire stage.
 
-## Building the Project
+### Inter-Stage Pipeline Interfaces
+The **`Inter_Stage.bsv`** definitions were expanded to establish the newly required FIFO connections for the Posit pipeline.
+- We added `f_RR_to_EX_Posit` to carry operands from the Register-Read (RR) stage.
+- We added `f_EX_Posit_to_Retire` to carry the write-back results to the retirement queue.
+
+### Instruction Decoding & Dispatch
+To allow the CPU to recognize posit instructions, we updated **`Fn_Decode.bsv`** and created **`Posit_Instr_Bits.bsv`**.
+- **Custom-0 Opcode:** The decoder was programmed to identify the standard RISC-V `custom-0` opcode (`0x0B`).
+- **Hazard Detection:** We configured the decoder to accurately extract the read and write dependencies (`has_rd`, `has_rs1`, `has_rs2`) from these custom instructions, allowing the core's Scoreboard to properly manage data hazards.
+- **Dispatching:** **`Fn_Dispatch.bsv`** was modified to route these decoded custom-0 instructions directly to `S4_EX_Posit` instead of the standard ALU.
+
+---
+
+## 2. Source Code Migration & Version Control
+
+To cleanly maintain the two repositories, we established integration branches:
+- **`fife-integration` (Melodica):** We migrated the modified Melodica sources from our temporary workspace into the forked Melodica repository.
+- **`fife-melodica-integration` (Fife):** We placed the wrapper modules and modified Fife files into `Code/src_Fife/`.
+
+By keeping the repositories distinct but linked within the same workspace, we ensured that both could be managed and updated independently in the future.
+
+---
+
+## 3. Build System and Compiler Configuration
+
+Integrating two independent Bluespec codebases required synchronizing the Fife compilation environment to resolve Melodica dependencies.
+
+### Dynamic Path Linking
+We updated the Fife Makefile at **`Code/Build/Include.mk`**:
+- Defined `MELODICA_SRC` to point dynamically to the sibling `Melodica/src_bsv/` repository.
+- Expanded the `BSCPATH` array to include all essential PositCore subdirectories:
+  - `$(MELODICA_SRC)`
+  - `$(MELODICA_SRC)/Fused_Op`
+  - `$(MELODICA_SRC)/lib`
+  - `$(MELODICA_SRC)/Multiplier`
+  - `$(MELODICA_SRC)/Posit_Divider`
+
+### Standalone Macro
+The original `PositCore.bsv` contained dependencies on floating-point libraries (`FPU_Types`) that do not exist within the Fife core. To safely bypass this missing dependency, we injected the `-D STANDALONE` flag into `BSCFLAGS` during compilation. This preprocessor macro commands the compiler to omit the problematic `import` statement inside `PositCore`, successfully bridging the environments.
+
+---
+
+## 4. Building the Project
 
 Ensure you have the **Bluespec Compiler (bsc)**, **Verilator**, and the **RISC-V GNU Toolchain** (`riscv64-unknown-elf-gcc`) installed on your system.
 
@@ -36,7 +79,7 @@ make v_link
 ```
 This produces the executable simulator binary `exe_Fife_RV32_verilator`.
 
-## Running Test Programs
+## 5. Running Test Programs
 
 We have written assembly test programs specifically to test posit arithmetic. They are located in `src_Fife/test_programs/`:
 
@@ -77,7 +120,7 @@ If a test fails or you want to inspect pipeline states:
 ```
 This will generate a `log.txt` file containing instruction retirement traces, pipeline movements, and Posit unit intermediate calculations.
 
-## Synthesizing Hardware and Extracting Critical Path
+## 6. Synthesizing Hardware and Extracting Critical Path
 
 Once the Bluespec compiler (`bsc`) has generated the verilog outputs during the build step, you can synthesize the hardware netlist and extract the critical path length using **Yosys**.
 
