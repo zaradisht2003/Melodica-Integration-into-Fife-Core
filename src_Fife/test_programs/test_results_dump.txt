@@ -1,3 +1,0 @@
-posit_basic.o: Instr: 28, Cycles: 95, IPC: 0.29, Result: PASS
-posit_convert.o: Instr: 33, Cycles: 51, IPC: 0.65, Result: PASS
-posit_dot_product.o: Instr: 61, Cycles: 143, IPC: 0.43, Result: PASS
