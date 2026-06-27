@@ -12,8 +12,7 @@ fixes = {
     "0x0020080B": encode_posit(0, 2, 1, 0, 0),
     # prdq x5
     "0x0400028B": encode_posit(2, 0, 0, 0, 5),
-    # pfma x0, x1, x3
-    "0x0030080B": encode_posit(0, 3, 1, 0, 0),
+
     # prdq x6
     "0x0400030B": encode_posit(2, 0, 0, 0, 6),
     # pfms x0, x1, x2
