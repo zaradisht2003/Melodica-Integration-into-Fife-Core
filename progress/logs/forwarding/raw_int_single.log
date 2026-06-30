@@ -1,0 +1,954 @@
+================================================================
+Fife v0.90 2025-07-12: starting execution at PC 80000000
+3: CPU.Fetch:
+        Fetch_to_Decode{I_0 pc:80000000 pred:80000004 epoch:0 halt_sentinel:0}
+        Mem_Req {I_0 pc:80000000 instr:xxxxxxxx FETCH 4B addr:80000000 epoch:0}
+Trace 3 0 80000000 00000000 F
+4: CPU.Fetch:
+        Fetch_to_Decode{I_1 pc:80000004 pred:80000008 epoch:0 halt_sentinel:0}
+        Mem_Req {I_1 pc:80000004 instr:xxxxxxxx FETCH 4B addr:80000004 epoch:0}
+Trace 4 1 80000004 00000000 F
+4: CPU.Decode:
+        Decode_to_RR{I_0 pc:80000000 instr:000000b3 pred:80000004 epoch:0
+            fallthru:80000004 OPCLASS_INT has_{rs1,rs2,rd}:{1,1,1} writes_mem:0, imm:0 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000000 rdata:000000b3 I_0 pc:80000000 instr:00000000 FETCH 4B}
+Trace 4 0 80000000 000000b3 D
+5: CPU.Fetch:
+        Fetch_to_Decode{I_2 pc:80000008 pred:8000000c epoch:0 halt_sentinel:0}
+        Mem_Req {I_2 pc:80000008 instr:xxxxxxxx FETCH 4B addr:80000008 epoch:0}
+Trace 5 2 80000008 00000000 F
+5: CPU.Decode:
+        Decode_to_RR{I_1 pc:80000004 instr:00508113 pred:80000008 epoch:0
+            fallthru:80000008 OPCLASS_INT has_{rs1,rs2,rd}:{1,0,1} writes_mem:0, imm:5 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000004 rdata:00508113 I_1 pc:80000004 instr:00000000 FETCH 4B}
+Trace 5 1 80000004 00508113 D
+6: CPU.Fetch:
+        Fetch_to_Decode{I_3 pc:8000000c pred:80000010 epoch:0 halt_sentinel:0}
+        Mem_Req {I_3 pc:8000000c instr:xxxxxxxx FETCH 4B addr:8000000c epoch:0}
+Trace 6 3 8000000c 00000000 F
+33: CPU.Dispatch_Int:
+        RR_to_Retire{I_0 pc:80000000 instr:000000b3 EXEC_TAG_INT
+                 pred:80000004 epoch:0 has_rd:1 writes_mem:0
+                 fallthru:80000004 halt_sentinel:0}
+        RR_to_EX{I_0 pc:80000000 instr:000000b3
+             rs1_val:00000000  rs2_val:00000000  imm:00000000 }
+Trace 33 0 80000000 000000b3 RR.I
+fn_EX_IALU: IALU x1 <= 0
+34: CPU.EX_Int
+        RR_to_EX{I_0 pc:80000000 instr:000000b3
+             rs1_val:00000000  rs2_val:00000000  imm:00000000 }
+        EX_to_Retire{I_0 pc:80000000 instr:000000b3
+                  data:00000000}
+Trace 34 0 80000000 000000b3 EX.I
+34: CPU.Decode:
+        Decode_to_RR{I_2 pc:80000008 instr:00310193 pred:8000000c epoch:0
+            fallthru:8000000c OPCLASS_INT has_{rs1,rs2,rd}:{1,0,1} writes_mem:0, imm:3 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000008 rdata:00310193 I_2 pc:80000008 instr:00000000 FETCH 4B}
+Trace 34 2 80000008 00310193 D
+34: CPU.rl_RR.stall: busy rd:0 rs1:1 rs2:0
+        Decode_to_RR{I_1 pc:80000004 instr:00508113 pred:80000008 epoch:0
+            fallthru:80000008 OPCLASS_INT has_{rs1,rs2,rd}:{1,0,1} writes_mem:0, imm:5 halt_sentinel:0}
+Trace 34 1 80000004 00508113 RR.S
+35: CPU.Fetch:
+        Fetch_to_Decode{I_4 pc:80000010 pred:80000014 epoch:0 halt_sentinel:0}
+        Mem_Req {I_4 pc:80000010 instr:xxxxxxxx FETCH 4B addr:80000010 epoch:0}
+Trace 35 4 80000010 00000000 F
+35:     CPU.S5.fa_update_rd:
+          RW_from_Retire{I_0 pc:80000000 instr:000000b3 rd:1 commit:1 data:00000000}
+Trace 35 0 80000000 000000b3 RET.I
+35: CPU.Retire_EX_Int: Normal
+        EX_to_Retire{I_0 pc:80000000 instr:000000b3
+                  data:00000000}
+35: CPU.rl_RR.stall: busy rd:0 rs1:1 rs2:0
+        Decode_to_RR{I_1 pc:80000004 instr:00508113 pred:80000008 epoch:0
+            fallthru:80000008 OPCLASS_INT has_{rs1,rs2,rd}:{1,0,1} writes_mem:0, imm:5 halt_sentinel:0}
+Trace 35 1 80000004 00508113 RR.S
+36: CPU.RW:
+36:     RW_from_Retire{I_0 pc:80000000 instr:000000b3 rd:1 commit:1 data:00000000}
+Trace 36 0 80000000 000000b3 RW
+37: CPU.Dispatch_Int:
+        RR_to_Retire{I_1 pc:80000004 instr:00508113 EXEC_TAG_INT
+                 pred:80000008 epoch:0 has_rd:1 writes_mem:0
+                 fallthru:80000008 halt_sentinel:0}
+        RR_to_EX{I_1 pc:80000004 instr:00508113
+             rs1_val:00000000  rs2_val:00000000  imm:00000005 }
+Trace 37 1 80000004 00508113 RR.I
+fn_EX_IALU: IALU x2 <= 5
+38: CPU.EX_Int
+        RR_to_EX{I_1 pc:80000004 instr:00508113
+             rs1_val:00000000  rs2_val:00000000  imm:00000005 }
+        EX_to_Retire{I_1 pc:80000004 instr:00508113
+                  data:00000005}
+Trace 38 1 80000004 00508113 EX.I
+38: CPU.Decode:
+        Decode_to_RR{I_3 pc:8000000c instr:00500513 pred:80000010 epoch:0
+            fallthru:80000010 OPCLASS_INT has_{rs1,rs2,rd}:{1,0,1} writes_mem:0, imm:5 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:8000000c rdata:00500513 I_3 pc:8000000c instr:00000000 FETCH 4B}
+Trace 38 3 8000000c 00500513 D
+38: CPU.rl_RR.stall: busy rd:0 rs1:1 rs2:0
+        Decode_to_RR{I_2 pc:80000008 instr:00310193 pred:8000000c epoch:0
+            fallthru:8000000c OPCLASS_INT has_{rs1,rs2,rd}:{1,0,1} writes_mem:0, imm:3 halt_sentinel:0}
+Trace 38 2 80000008 00310193 RR.S
+39: CPU.Fetch:
+        Fetch_to_Decode{I_5 pc:80000014 pred:80000018 epoch:0 halt_sentinel:0}
+        Mem_Req {I_5 pc:80000014 instr:xxxxxxxx FETCH 4B addr:80000014 epoch:0}
+Trace 39 5 80000014 00000000 F
+39:     CPU.S5.fa_update_rd:
+          RW_from_Retire{I_1 pc:80000004 instr:00508113 rd:2 commit:1 data:00000005}
+Trace 39 1 80000004 00508113 RET.I
+39: CPU.Retire_EX_Int: Normal
+        EX_to_Retire{I_1 pc:80000004 instr:00508113
+                  data:00000005}
+39: CPU.rl_RR.stall: busy rd:0 rs1:1 rs2:0
+        Decode_to_RR{I_2 pc:80000008 instr:00310193 pred:8000000c epoch:0
+            fallthru:8000000c OPCLASS_INT has_{rs1,rs2,rd}:{1,0,1} writes_mem:0, imm:3 halt_sentinel:0}
+Trace 39 2 80000008 00310193 RR.S
+40: CPU.RW:
+40:     RW_from_Retire{I_1 pc:80000004 instr:00508113 rd:2 commit:1 data:00000005}
+Trace 40 1 80000004 00508113 RW
+41: CPU.Dispatch_Int:
+        RR_to_Retire{I_2 pc:80000008 instr:00310193 EXEC_TAG_INT
+                 pred:8000000c epoch:0 has_rd:1 writes_mem:0
+                 fallthru:8000000c halt_sentinel:0}
+        RR_to_EX{I_2 pc:80000008 instr:00310193
+             rs1_val:00000005  rs2_val:00000000  imm:00000003 }
+Trace 41 2 80000008 00310193 RR.I
+fn_EX_IALU: IALU x3 <= 8
+42: CPU.EX_Int
+        RR_to_EX{I_2 pc:80000008 instr:00310193
+             rs1_val:00000005  rs2_val:00000000  imm:00000003 }
+        EX_to_Retire{I_2 pc:80000008 instr:00310193
+                  data:00000008}
+Trace 42 2 80000008 00310193 EX.I
+42: CPU.Decode:
+        Decode_to_RR{I_4 pc:80000010 instr:02a11e63 pred:80000014 epoch:0
+            fallthru:80000014 OPCLASS_CONTROL has_{rs1,rs2,rd}:{1,1,0} writes_mem:0, imm:3c halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000010 rdata:02a11e63 I_4 pc:80000010 instr:00000000 FETCH 4B}
+Trace 42 4 80000010 02a11e63 D
+42: CPU.Dispatch_Int:
+        RR_to_Retire{I_3 pc:8000000c instr:00500513 EXEC_TAG_INT
+                 pred:80000010 epoch:0 has_rd:1 writes_mem:0
+                 fallthru:80000010 halt_sentinel:0}
+        RR_to_EX{I_3 pc:8000000c instr:00500513
+             rs1_val:00000000  rs2_val:00000000  imm:00000005 }
+Trace 42 3 8000000c 00500513 RR.I
+fn_EX_IALU: IALU x10 <= 5
+43: CPU.EX_Int
+        RR_to_EX{I_3 pc:8000000c instr:00500513
+             rs1_val:00000000  rs2_val:00000000  imm:00000005 }
+        EX_to_Retire{I_3 pc:8000000c instr:00500513
+                  data:00000005}
+Trace 43 3 8000000c 00500513 EX.I
+43: CPU.Fetch:
+        Fetch_to_Decode{I_6 pc:80000018 pred:8000001c epoch:0 halt_sentinel:0}
+        Mem_Req {I_6 pc:80000018 instr:xxxxxxxx FETCH 4B addr:80000018 epoch:0}
+Trace 43 6 80000018 00000000 F
+43: CPU.Decode:
+        Decode_to_RR{I_5 pc:80000014 instr:00800593 pred:80000018 epoch:0
+            fallthru:80000018 OPCLASS_INT has_{rs1,rs2,rd}:{1,0,1} writes_mem:0, imm:8 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000014 rdata:00800593 I_5 pc:80000014 instr:00000000 FETCH 4B}
+Trace 43 5 80000014 00800593 D
+43:     CPU.S5.fa_update_rd:
+          RW_from_Retire{I_2 pc:80000008 instr:00310193 rd:3 commit:1 data:00000008}
+Trace 43 2 80000008 00310193 RET.I
+43: CPU.Retire_EX_Int: Normal
+        EX_to_Retire{I_2 pc:80000008 instr:00310193
+                  data:00000008}
+43: CPU.rl_RR.stall: busy rd:0 rs1:0 rs2:1
+        Decode_to_RR{I_4 pc:80000010 instr:02a11e63 pred:80000014 epoch:0
+            fallthru:80000014 OPCLASS_CONTROL has_{rs1,rs2,rd}:{1,1,0} writes_mem:0, imm:3c halt_sentinel:0}
+Trace 43 4 80000010 02a11e63 RR.S
+44: CPU.Fetch:
+        Fetch_to_Decode{I_7 pc:8000001c pred:80000020 epoch:0 halt_sentinel:0}
+        Mem_Req {I_7 pc:8000001c instr:xxxxxxxx FETCH 4B addr:8000001c epoch:0}
+Trace 44 7 8000001c 00000000 F
+44:     CPU.S5.fa_update_rd:
+          RW_from_Retire{I_3 pc:8000000c instr:00500513 rd:10 commit:1 data:00000005}
+Trace 44 3 8000000c 00500513 RET.I
+44: CPU.Retire_EX_Int: Normal
+        EX_to_Retire{I_3 pc:8000000c instr:00500513
+                  data:00000005}
+44: CPU.RW:
+44:     RW_from_Retire{I_2 pc:80000008 instr:00310193 rd:3 commit:1 data:00000008}
+Trace 44 2 80000008 00310193 RW
+45: CPU.RW:
+45:     RW_from_Retire{I_3 pc:8000000c instr:00500513 rd:10 commit:1 data:00000005}
+Trace 45 3 8000000c 00500513 RW
+46: CPU.Dispatch_Control:
+        RR_to_Retire{I_4 pc:80000010 instr:02a11e63 EXEC_TAG_CONTROL
+                 pred:80000014 epoch:0 has_rd:0 writes_mem:0
+                 fallthru:80000014 halt_sentinel:0}
+        RR_to_EX_Control{I_4 pc:80000010 instr:02a11e63 fallthru:80000014
+                  rs1_val:00000005  rs2_val:00000005  imm:0000003c }
+Trace 46 4 80000010 02a11e63 RR.C
+47: CPU.EX_Control
+        RR_to_EX_Control{I_4 pc:80000010 instr:02a11e63 fallthru:80000014
+                  rs1_val:00000005  rs2_val:00000005  imm:0000003c }
+        EX_Control_to_Retire{I_4 pc:80000010 instr:02a11e63
+                       next_pc:80000014  data:80000014}
+Trace 47 4 80000010 02a11e63 EX.C
+47: CPU.Decode:
+        Decode_to_RR{I_6 pc:80000018 instr:02b19a63 pred:8000001c epoch:0
+            fallthru:8000001c OPCLASS_CONTROL has_{rs1,rs2,rd}:{1,1,0} writes_mem:0, imm:34 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000018 rdata:02b19a63 I_6 pc:80000018 instr:00000000 FETCH 4B}
+Trace 47 6 80000018 02b19a63 D
+47: CPU.Dispatch_Int:
+        RR_to_Retire{I_5 pc:80000014 instr:00800593 EXEC_TAG_INT
+                 pred:80000018 epoch:0 has_rd:1 writes_mem:0
+                 fallthru:80000018 halt_sentinel:0}
+        RR_to_EX{I_5 pc:80000014 instr:00800593
+             rs1_val:00000000  rs2_val:00000000  imm:00000008 }
+Trace 47 5 80000014 00800593 RR.I
+fn_EX_IALU: IALU x11 <= 8
+48: CPU.EX_Int
+        RR_to_EX{I_5 pc:80000014 instr:00800593
+             rs1_val:00000000  rs2_val:00000000  imm:00000008 }
+        EX_to_Retire{I_5 pc:80000014 instr:00800593
+                  data:00000008}
+Trace 48 5 80000014 00800593 EX.I
+48: CPU.Fetch:
+        Fetch_to_Decode{I_8 pc:80000020 pred:80000024 epoch:0 halt_sentinel:0}
+        Mem_Req {I_8 pc:80000020 instr:xxxxxxxx FETCH 4B addr:80000020 epoch:0}
+Trace 48 8 80000020 00000000 F
+48: CPU.Decode:
+        Decode_to_RR{I_7 pc:8000001c instr:00318233 pred:80000020 epoch:0
+            fallthru:80000020 OPCLASS_INT has_{rs1,rs2,rd}:{1,1,1} writes_mem:0, imm:0 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:8000001c rdata:00318233 I_7 pc:8000001c instr:00000000 FETCH 4B}
+Trace 48 7 8000001c 00318233 D
+Trace 48 4 80000010 02a11e63 RET.C
+48: CPU.Retire_EX_Control: Normal
+        EX_Control_to_Retire{I_4 pc:80000010 instr:02a11e63
+                       next_pc:80000014  data:80000014}
+48: CPU.rl_RR.stall: busy rd:0 rs1:0 rs2:1
+        Decode_to_RR{I_6 pc:80000018 instr:02b19a63 pred:8000001c epoch:0
+            fallthru:8000001c OPCLASS_CONTROL has_{rs1,rs2,rd}:{1,1,0} writes_mem:0, imm:34 halt_sentinel:0}
+Trace 48 6 80000018 02b19a63 RR.S
+49: CPU.Fetch:
+        Fetch_to_Decode{I_9 pc:80000024 pred:80000028 epoch:0 halt_sentinel:0}
+        Mem_Req {I_9 pc:80000024 instr:xxxxxxxx FETCH 4B addr:80000024 epoch:0}
+Trace 49 9 80000024 00000000 F
+49:     CPU.S5.fa_update_rd:
+          RW_from_Retire{I_5 pc:80000014 instr:00800593 rd:11 commit:1 data:00000008}
+Trace 49 5 80000014 00800593 RET.I
+49: CPU.Retire_EX_Int: Normal
+        EX_to_Retire{I_5 pc:80000014 instr:00800593
+                  data:00000008}
+49: CPU.rl_RR.stall: busy rd:0 rs1:0 rs2:1
+        Decode_to_RR{I_6 pc:80000018 instr:02b19a63 pred:8000001c epoch:0
+            fallthru:8000001c OPCLASS_CONTROL has_{rs1,rs2,rd}:{1,1,0} writes_mem:0, imm:34 halt_sentinel:0}
+Trace 49 6 80000018 02b19a63 RR.S
+50: CPU.RW:
+50:     RW_from_Retire{I_5 pc:80000014 instr:00800593 rd:11 commit:1 data:00000008}
+Trace 50 5 80000014 00800593 RW
+51: CPU.Dispatch_Control:
+        RR_to_Retire{I_6 pc:80000018 instr:02b19a63 EXEC_TAG_CONTROL
+                 pred:8000001c epoch:0 has_rd:0 writes_mem:0
+                 fallthru:8000001c halt_sentinel:0}
+        RR_to_EX_Control{I_6 pc:80000018 instr:02b19a63 fallthru:8000001c
+                  rs1_val:00000008  rs2_val:00000008  imm:00000034 }
+Trace 51 6 80000018 02b19a63 RR.C
+52: CPU.EX_Control
+        RR_to_EX_Control{I_6 pc:80000018 instr:02b19a63 fallthru:8000001c
+                  rs1_val:00000008  rs2_val:00000008  imm:00000034 }
+        EX_Control_to_Retire{I_6 pc:80000018 instr:02b19a63
+                       next_pc:8000001c  data:8000001c}
+Trace 52 6 80000018 02b19a63 EX.C
+52: CPU.Decode:
+        Decode_to_RR{I_8 pc:80000020 instr:01000613 pred:80000024 epoch:0
+            fallthru:80000024 OPCLASS_INT has_{rs1,rs2,rd}:{1,0,1} writes_mem:0, imm:10 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000020 rdata:01000613 I_8 pc:80000020 instr:00000000 FETCH 4B}
+Trace 52 8 80000020 01000613 D
+52: CPU.Dispatch_Int:
+        RR_to_Retire{I_7 pc:8000001c instr:00318233 EXEC_TAG_INT
+                 pred:80000020 epoch:0 has_rd:1 writes_mem:0
+                 fallthru:80000020 halt_sentinel:0}
+        RR_to_EX{I_7 pc:8000001c instr:00318233
+             rs1_val:00000008  rs2_val:00000008  imm:00000000 }
+Trace 52 7 8000001c 00318233 RR.I
+fn_EX_IALU: IALU x4 <= 10
+53: CPU.EX_Int
+        RR_to_EX{I_7 pc:8000001c instr:00318233
+             rs1_val:00000008  rs2_val:00000008  imm:00000000 }
+        EX_to_Retire{I_7 pc:8000001c instr:00318233
+                  data:00000010}
+Trace 53 7 8000001c 00318233 EX.I
+53: CPU.Fetch:
+        Fetch_to_Decode{I_10 pc:80000028 pred:8000002c epoch:0 halt_sentinel:0}
+        Mem_Req {I_10 pc:80000028 instr:xxxxxxxx FETCH 4B addr:80000028 epoch:0}
+Trace 53 10 80000028 00000000 F
+53: CPU.Decode:
+        Decode_to_RR{I_9 pc:80000024 instr:02c21463 pred:80000028 epoch:0
+            fallthru:80000028 OPCLASS_CONTROL has_{rs1,rs2,rd}:{1,1,0} writes_mem:0, imm:28 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000024 rdata:02c21463 I_9 pc:80000024 instr:00000000 FETCH 4B}
+Trace 53 9 80000024 02c21463 D
+Trace 53 6 80000018 02b19a63 RET.C
+53: CPU.Retire_EX_Control: Normal
+        EX_Control_to_Retire{I_6 pc:80000018 instr:02b19a63
+                       next_pc:8000001c  data:8000001c}
+53: CPU.Dispatch_Int:
+        RR_to_Retire{I_8 pc:80000020 instr:01000613 EXEC_TAG_INT
+                 pred:80000024 epoch:0 has_rd:1 writes_mem:0
+                 fallthru:80000024 halt_sentinel:0}
+        RR_to_EX{I_8 pc:80000020 instr:01000613
+             rs1_val:00000000  rs2_val:00000000  imm:00000010 }
+Trace 53 8 80000020 01000613 RR.I
+fn_EX_IALU: IALU x12 <= 10
+54: CPU.EX_Int
+        RR_to_EX{I_8 pc:80000020 instr:01000613
+             rs1_val:00000000  rs2_val:00000000  imm:00000010 }
+        EX_to_Retire{I_8 pc:80000020 instr:01000613
+                  data:00000010}
+Trace 54 8 80000020 01000613 EX.I
+54: CPU.Fetch:
+        Fetch_to_Decode{I_11 pc:8000002c pred:80000030 epoch:0 halt_sentinel:0}
+        Mem_Req {I_11 pc:8000002c instr:xxxxxxxx FETCH 4B addr:8000002c epoch:0}
+Trace 54 11 8000002c 00000000 F
+54: CPU.Decode:
+        Decode_to_RR{I_10 pc:80000028 instr:01422293 pred:8000002c epoch:0
+            fallthru:8000002c OPCLASS_INT has_{rs1,rs2,rd}:{1,0,1} writes_mem:0, imm:14 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000028 rdata:01422293 I_10 pc:80000028 instr:00000000 FETCH 4B}
+Trace 54 10 80000028 01422293 D
+54:     CPU.S5.fa_update_rd:
+          RW_from_Retire{I_7 pc:8000001c instr:00318233 rd:4 commit:1 data:00000010}
+Trace 54 7 8000001c 00318233 RET.I
+54: CPU.Retire_EX_Int: Normal
+        EX_to_Retire{I_7 pc:8000001c instr:00318233
+                  data:00000010}
+54: CPU.rl_RR.stall: busy rd:0 rs1:1 rs2:1
+        Decode_to_RR{I_9 pc:80000024 instr:02c21463 pred:80000028 epoch:0
+            fallthru:80000028 OPCLASS_CONTROL has_{rs1,rs2,rd}:{1,1,0} writes_mem:0, imm:28 halt_sentinel:0}
+Trace 54 9 80000024 02c21463 RR.S
+55: CPU.Fetch:
+        Fetch_to_Decode{I_12 pc:80000030 pred:80000034 epoch:0 halt_sentinel:0}
+        Mem_Req {I_12 pc:80000030 instr:xxxxxxxx FETCH 4B addr:80000030 epoch:0}
+Trace 55 12 80000030 00000000 F
+55:     CPU.S5.fa_update_rd:
+          RW_from_Retire{I_8 pc:80000020 instr:01000613 rd:12 commit:1 data:00000010}
+Trace 55 8 80000020 01000613 RET.I
+55: CPU.Retire_EX_Int: Normal
+        EX_to_Retire{I_8 pc:80000020 instr:01000613
+                  data:00000010}
+55: CPU.RW:
+55:     RW_from_Retire{I_7 pc:8000001c instr:00318233 rd:4 commit:1 data:00000010}
+Trace 55 7 8000001c 00318233 RW
+56: CPU.RW:
+56:     RW_from_Retire{I_8 pc:80000020 instr:01000613 rd:12 commit:1 data:00000010}
+Trace 56 8 80000020 01000613 RW
+57: CPU.Dispatch_Control:
+        RR_to_Retire{I_9 pc:80000024 instr:02c21463 EXEC_TAG_CONTROL
+                 pred:80000028 epoch:0 has_rd:0 writes_mem:0
+                 fallthru:80000028 halt_sentinel:0}
+        RR_to_EX_Control{I_9 pc:80000024 instr:02c21463 fallthru:80000028
+                  rs1_val:00000010  rs2_val:00000010  imm:00000028 }
+Trace 57 9 80000024 02c21463 RR.C
+58: CPU.EX_Control
+        RR_to_EX_Control{I_9 pc:80000024 instr:02c21463 fallthru:80000028
+                  rs1_val:00000010  rs2_val:00000010  imm:00000028 }
+        EX_Control_to_Retire{I_9 pc:80000024 instr:02c21463
+                       next_pc:80000028  data:80000028}
+Trace 58 9 80000024 02c21463 EX.C
+58: CPU.Decode:
+        Decode_to_RR{I_11 pc:8000002c instr:00100693 pred:80000030 epoch:0
+            fallthru:80000030 OPCLASS_INT has_{rs1,rs2,rd}:{1,0,1} writes_mem:0, imm:1 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:8000002c rdata:00100693 I_11 pc:8000002c instr:00000000 FETCH 4B}
+Trace 58 11 8000002c 00100693 D
+58: CPU.Dispatch_Int:
+        RR_to_Retire{I_10 pc:80000028 instr:01422293 EXEC_TAG_INT
+                 pred:8000002c epoch:0 has_rd:1 writes_mem:0
+                 fallthru:8000002c halt_sentinel:0}
+        RR_to_EX{I_10 pc:80000028 instr:01422293
+             rs1_val:00000010  rs2_val:00000000  imm:00000014 }
+Trace 58 10 80000028 01422293 RR.I
+fn_EX_IALU: IALU x5 <= 1
+59: CPU.EX_Int
+        RR_to_EX{I_10 pc:80000028 instr:01422293
+             rs1_val:00000010  rs2_val:00000000  imm:00000014 }
+        EX_to_Retire{I_10 pc:80000028 instr:01422293
+                  data:00000001}
+Trace 59 10 80000028 01422293 EX.I
+59: CPU.Fetch:
+        Fetch_to_Decode{I_13 pc:80000034 pred:80000038 epoch:0 halt_sentinel:0}
+        Mem_Req {I_13 pc:80000034 instr:xxxxxxxx FETCH 4B addr:80000034 epoch:0}
+Trace 59 13 80000034 00000000 F
+59: CPU.Decode:
+        Decode_to_RR{I_12 pc:80000030 instr:00d29e63 pred:80000034 epoch:0
+            fallthru:80000034 OPCLASS_CONTROL has_{rs1,rs2,rd}:{1,1,0} writes_mem:0, imm:1c halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000030 rdata:00d29e63 I_12 pc:80000030 instr:00000000 FETCH 4B}
+Trace 59 12 80000030 00d29e63 D
+Trace 59 9 80000024 02c21463 RET.C
+59: CPU.Retire_EX_Control: Normal
+        EX_Control_to_Retire{I_9 pc:80000024 instr:02c21463
+                       next_pc:80000028  data:80000028}
+59: CPU.Dispatch_Int:
+        RR_to_Retire{I_11 pc:8000002c instr:00100693 EXEC_TAG_INT
+                 pred:80000030 epoch:0 has_rd:1 writes_mem:0
+                 fallthru:80000030 halt_sentinel:0}
+        RR_to_EX{I_11 pc:8000002c instr:00100693
+             rs1_val:00000000  rs2_val:00000000  imm:00000001 }
+Trace 59 11 8000002c 00100693 RR.I
+fn_EX_IALU: IALU x13 <= 1
+60: CPU.EX_Int
+        RR_to_EX{I_11 pc:8000002c instr:00100693
+             rs1_val:00000000  rs2_val:00000000  imm:00000001 }
+        EX_to_Retire{I_11 pc:8000002c instr:00100693
+                  data:00000001}
+Trace 60 11 8000002c 00100693 EX.I
+60: CPU.Fetch:
+        Fetch_to_Decode{I_14 pc:80000038 pred:8000003c epoch:0 halt_sentinel:0}
+        Mem_Req {I_14 pc:80000038 instr:xxxxxxxx FETCH 4B addr:80000038 epoch:0}
+Trace 60 14 80000038 00000000 F
+60: CPU.Decode:
+        Decode_to_RR{I_13 pc:80000034 instr:0ff00313 pred:80000038 epoch:0
+            fallthru:80000038 OPCLASS_INT has_{rs1,rs2,rd}:{1,0,1} writes_mem:0, imm:ff halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000034 rdata:0ff00313 I_13 pc:80000034 instr:00000000 FETCH 4B}
+Trace 60 13 80000034 0ff00313 D
+60:     CPU.S5.fa_update_rd:
+          RW_from_Retire{I_10 pc:80000028 instr:01422293 rd:5 commit:1 data:00000001}
+Trace 60 10 80000028 01422293 RET.I
+60: CPU.Retire_EX_Int: Normal
+        EX_to_Retire{I_10 pc:80000028 instr:01422293
+                  data:00000001}
+60: CPU.rl_RR.stall: busy rd:0 rs1:1 rs2:1
+        Decode_to_RR{I_12 pc:80000030 instr:00d29e63 pred:80000034 epoch:0
+            fallthru:80000034 OPCLASS_CONTROL has_{rs1,rs2,rd}:{1,1,0} writes_mem:0, imm:1c halt_sentinel:0}
+Trace 60 12 80000030 00d29e63 RR.S
+61: CPU.Fetch:
+        Fetch_to_Decode{I_15 pc:8000003c pred:80000040 epoch:0 halt_sentinel:0}
+        Mem_Req {I_15 pc:8000003c instr:xxxxxxxx FETCH 4B addr:8000003c epoch:0}
+Trace 61 15 8000003c 00000000 F
+61:     CPU.S5.fa_update_rd:
+          RW_from_Retire{I_11 pc:8000002c instr:00100693 rd:13 commit:1 data:00000001}
+Trace 61 11 8000002c 00100693 RET.I
+61: CPU.Retire_EX_Int: Normal
+        EX_to_Retire{I_11 pc:8000002c instr:00100693
+                  data:00000001}
+61: CPU.RW:
+61:     RW_from_Retire{I_10 pc:80000028 instr:01422293 rd:5 commit:1 data:00000001}
+Trace 61 10 80000028 01422293 RW
+62: CPU.RW:
+62:     RW_from_Retire{I_11 pc:8000002c instr:00100693 rd:13 commit:1 data:00000001}
+Trace 62 11 8000002c 00100693 RW
+63: CPU.Dispatch_Control:
+        RR_to_Retire{I_12 pc:80000030 instr:00d29e63 EXEC_TAG_CONTROL
+                 pred:80000034 epoch:0 has_rd:0 writes_mem:0
+                 fallthru:80000034 halt_sentinel:0}
+        RR_to_EX_Control{I_12 pc:80000030 instr:00d29e63 fallthru:80000034
+                  rs1_val:00000001  rs2_val:00000001  imm:0000001c }
+Trace 63 12 80000030 00d29e63 RR.C
+64: CPU.EX_Control
+        RR_to_EX_Control{I_12 pc:80000030 instr:00d29e63 fallthru:80000034
+                  rs1_val:00000001  rs2_val:00000001  imm:0000001c }
+        EX_Control_to_Retire{I_12 pc:80000030 instr:00d29e63
+                       next_pc:80000034  data:80000034}
+Trace 64 12 80000030 00d29e63 EX.C
+64: CPU.Decode:
+        Decode_to_RR{I_14 pc:80000038 instr:006273b3 pred:8000003c epoch:0
+            fallthru:8000003c OPCLASS_INT has_{rs1,rs2,rd}:{1,1,1} writes_mem:0, imm:0 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000038 rdata:006273b3 I_14 pc:80000038 instr:00000000 FETCH 4B}
+Trace 64 14 80000038 006273b3 D
+64: CPU.Dispatch_Int:
+        RR_to_Retire{I_13 pc:80000034 instr:0ff00313 EXEC_TAG_INT
+                 pred:80000038 epoch:0 has_rd:1 writes_mem:0
+                 fallthru:80000038 halt_sentinel:0}
+        RR_to_EX{I_13 pc:80000034 instr:0ff00313
+             rs1_val:00000000  rs2_val:00000000  imm:000000ff }
+Trace 64 13 80000034 0ff00313 RR.I
+fn_EX_IALU: IALU x6 <= ff
+65: CPU.EX_Int
+        RR_to_EX{I_13 pc:80000034 instr:0ff00313
+             rs1_val:00000000  rs2_val:00000000  imm:000000ff }
+        EX_to_Retire{I_13 pc:80000034 instr:0ff00313
+                  data:000000ff}
+Trace 65 13 80000034 0ff00313 EX.I
+65: CPU.Fetch:
+        Fetch_to_Decode{I_16 pc:80000040 pred:80000044 epoch:0 halt_sentinel:0}
+        Mem_Req {I_16 pc:80000040 instr:xxxxxxxx FETCH 4B addr:80000040 epoch:0}
+Trace 65 16 80000040 00000000 F
+65: CPU.Decode:
+        Decode_to_RR{I_15 pc:8000003c instr:01000713 pred:80000040 epoch:0
+            fallthru:80000040 OPCLASS_INT has_{rs1,rs2,rd}:{1,0,1} writes_mem:0, imm:10 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:8000003c rdata:01000713 I_15 pc:8000003c instr:00000000 FETCH 4B}
+Trace 65 15 8000003c 01000713 D
+Trace 65 12 80000030 00d29e63 RET.C
+65: CPU.Retire_EX_Control: Normal
+        EX_Control_to_Retire{I_12 pc:80000030 instr:00d29e63
+                       next_pc:80000034  data:80000034}
+65: CPU.rl_RR.stall: busy rd:0 rs1:0 rs2:1
+        Decode_to_RR{I_14 pc:80000038 instr:006273b3 pred:8000003c epoch:0
+            fallthru:8000003c OPCLASS_INT has_{rs1,rs2,rd}:{1,1,1} writes_mem:0, imm:0 halt_sentinel:0}
+Trace 65 14 80000038 006273b3 RR.S
+66: CPU.Fetch:
+        Fetch_to_Decode{I_17 pc:80000044 pred:80000048 epoch:0 halt_sentinel:0}
+        Mem_Req {I_17 pc:80000044 instr:xxxxxxxx FETCH 4B addr:80000044 epoch:0}
+Trace 66 17 80000044 00000000 F
+66:     CPU.S5.fa_update_rd:
+          RW_from_Retire{I_13 pc:80000034 instr:0ff00313 rd:6 commit:1 data:000000ff}
+Trace 66 13 80000034 0ff00313 RET.I
+66: CPU.Retire_EX_Int: Normal
+        EX_to_Retire{I_13 pc:80000034 instr:0ff00313
+                  data:000000ff}
+66: CPU.rl_RR.stall: busy rd:0 rs1:0 rs2:1
+        Decode_to_RR{I_14 pc:80000038 instr:006273b3 pred:8000003c epoch:0
+            fallthru:8000003c OPCLASS_INT has_{rs1,rs2,rd}:{1,1,1} writes_mem:0, imm:0 halt_sentinel:0}
+Trace 66 14 80000038 006273b3 RR.S
+67: CPU.RW:
+67:     RW_from_Retire{I_13 pc:80000034 instr:0ff00313 rd:6 commit:1 data:000000ff}
+Trace 67 13 80000034 0ff00313 RW
+68: CPU.Dispatch_Int:
+        RR_to_Retire{I_14 pc:80000038 instr:006273b3 EXEC_TAG_INT
+                 pred:8000003c epoch:0 has_rd:1 writes_mem:0
+                 fallthru:8000003c halt_sentinel:0}
+        RR_to_EX{I_14 pc:80000038 instr:006273b3
+             rs1_val:00000010  rs2_val:000000ff  imm:00000000 }
+Trace 68 14 80000038 006273b3 RR.I
+fn_EX_IALU: IALU x7 <= 10
+69: CPU.EX_Int
+        RR_to_EX{I_14 pc:80000038 instr:006273b3
+             rs1_val:00000010  rs2_val:000000ff  imm:00000000 }
+        EX_to_Retire{I_14 pc:80000038 instr:006273b3
+                  data:00000010}
+Trace 69 14 80000038 006273b3 EX.I
+69: CPU.Decode:
+        Decode_to_RR{I_16 pc:80000040 instr:00e39663 pred:80000044 epoch:0
+            fallthru:80000044 OPCLASS_CONTROL has_{rs1,rs2,rd}:{1,1,0} writes_mem:0, imm:c halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000040 rdata:00e39663 I_16 pc:80000040 instr:00000000 FETCH 4B}
+Trace 69 16 80000040 00e39663 D
+69: CPU.Dispatch_Int:
+        RR_to_Retire{I_15 pc:8000003c instr:01000713 EXEC_TAG_INT
+                 pred:80000040 epoch:0 has_rd:1 writes_mem:0
+                 fallthru:80000040 halt_sentinel:0}
+        RR_to_EX{I_15 pc:8000003c instr:01000713
+             rs1_val:00000000  rs2_val:00000000  imm:00000010 }
+Trace 69 15 8000003c 01000713 RR.I
+fn_EX_IALU: IALU x14 <= 10
+70: CPU.EX_Int
+        RR_to_EX{I_15 pc:8000003c instr:01000713
+             rs1_val:00000000  rs2_val:00000000  imm:00000010 }
+        EX_to_Retire{I_15 pc:8000003c instr:01000713
+                  data:00000010}
+Trace 70 15 8000003c 01000713 EX.I
+70: CPU.Fetch:
+        Fetch_to_Decode{I_18 pc:80000048 pred:8000004c epoch:0 halt_sentinel:0}
+        Mem_Req {I_18 pc:80000048 instr:xxxxxxxx FETCH 4B addr:80000048 epoch:0}
+Trace 70 18 80000048 00000000 F
+70: CPU.Decode:
+        Decode_to_RR{I_17 pc:80000044 instr:00100e13 pred:80000048 epoch:0
+            fallthru:80000048 OPCLASS_INT has_{rs1,rs2,rd}:{1,0,1} writes_mem:0, imm:1 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000044 rdata:00100e13 I_17 pc:80000044 instr:00000000 FETCH 4B}
+Trace 70 17 80000044 00100e13 D
+70:     CPU.S5.fa_update_rd:
+          RW_from_Retire{I_14 pc:80000038 instr:006273b3 rd:7 commit:1 data:00000010}
+Trace 70 14 80000038 006273b3 RET.I
+70: CPU.Retire_EX_Int: Normal
+        EX_to_Retire{I_14 pc:80000038 instr:006273b3
+                  data:00000010}
+70: CPU.rl_RR.stall: busy rd:0 rs1:1 rs2:1
+        Decode_to_RR{I_16 pc:80000040 instr:00e39663 pred:80000044 epoch:0
+            fallthru:80000044 OPCLASS_CONTROL has_{rs1,rs2,rd}:{1,1,0} writes_mem:0, imm:c halt_sentinel:0}
+Trace 70 16 80000040 00e39663 RR.S
+71: CPU.Fetch:
+        Fetch_to_Decode{I_19 pc:8000004c pred:80000050 epoch:0 halt_sentinel:0}
+        Mem_Req {I_19 pc:8000004c instr:xxxxxxxx FETCH 4B addr:8000004c epoch:0}
+Trace 71 19 8000004c 00000000 F
+71:     CPU.S5.fa_update_rd:
+          RW_from_Retire{I_15 pc:8000003c instr:01000713 rd:14 commit:1 data:00000010}
+Trace 71 15 8000003c 01000713 RET.I
+71: CPU.Retire_EX_Int: Normal
+        EX_to_Retire{I_15 pc:8000003c instr:01000713
+                  data:00000010}
+71: CPU.RW:
+71:     RW_from_Retire{I_14 pc:80000038 instr:006273b3 rd:7 commit:1 data:00000010}
+Trace 71 14 80000038 006273b3 RW
+72: CPU.RW:
+72:     RW_from_Retire{I_15 pc:8000003c instr:01000713 rd:14 commit:1 data:00000010}
+Trace 72 15 8000003c 01000713 RW
+73: CPU.Dispatch_Control:
+        RR_to_Retire{I_16 pc:80000040 instr:00e39663 EXEC_TAG_CONTROL
+                 pred:80000044 epoch:0 has_rd:0 writes_mem:0
+                 fallthru:80000044 halt_sentinel:0}
+        RR_to_EX_Control{I_16 pc:80000040 instr:00e39663 fallthru:80000044
+                  rs1_val:00000010  rs2_val:00000010  imm:0000000c }
+Trace 73 16 80000040 00e39663 RR.C
+74: CPU.EX_Control
+        RR_to_EX_Control{I_16 pc:80000040 instr:00e39663 fallthru:80000044
+                  rs1_val:00000010  rs2_val:00000010  imm:0000000c }
+        EX_Control_to_Retire{I_16 pc:80000040 instr:00e39663
+                       next_pc:80000044  data:80000044}
+Trace 74 16 80000040 00e39663 EX.C
+74: CPU.Decode:
+        Decode_to_RR{I_18 pc:80000048 instr:0080006f pred:8000004c epoch:0
+            fallthru:8000004c OPCLASS_CONTROL has_{rs1,rs2,rd}:{0,0,0} writes_mem:0, imm:8 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000048 rdata:0080006f I_18 pc:80000048 instr:00000000 FETCH 4B}
+Trace 74 18 80000048 0080006f D
+74: CPU.Dispatch_Int:
+        RR_to_Retire{I_17 pc:80000044 instr:00100e13 EXEC_TAG_INT
+                 pred:80000048 epoch:0 has_rd:1 writes_mem:0
+                 fallthru:80000048 halt_sentinel:0}
+        RR_to_EX{I_17 pc:80000044 instr:00100e13
+             rs1_val:00000000  rs2_val:00000000  imm:00000001 }
+Trace 74 17 80000044 00100e13 RR.I
+fn_EX_IALU: IALU x28 <= 1
+75: CPU.EX_Int
+        RR_to_EX{I_17 pc:80000044 instr:00100e13
+             rs1_val:00000000  rs2_val:00000000  imm:00000001 }
+        EX_to_Retire{I_17 pc:80000044 instr:00100e13
+                  data:00000001}
+Trace 75 17 80000044 00100e13 EX.I
+75: CPU.Fetch:
+        Fetch_to_Decode{I_20 pc:80000050 pred:80000054 epoch:0 halt_sentinel:0}
+        Mem_Req {I_20 pc:80000050 instr:xxxxxxxx FETCH 4B addr:80000050 epoch:0}
+Trace 75 20 80000050 00000000 F
+75: CPU.Decode:
+        Decode_to_RR{I_19 pc:8000004c instr:00300e13 pred:80000050 epoch:0
+            fallthru:80000050 OPCLASS_INT has_{rs1,rs2,rd}:{1,0,1} writes_mem:0, imm:3 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:8000004c rdata:00300e13 I_19 pc:8000004c instr:00000000 FETCH 4B}
+Trace 75 19 8000004c 00300e13 D
+Trace 75 16 80000040 00e39663 RET.C
+75: CPU.Retire_EX_Control: Normal
+        EX_Control_to_Retire{I_16 pc:80000040 instr:00e39663
+                       next_pc:80000044  data:80000044}
+75: CPU.Dispatch_Control:
+        RR_to_Retire{I_18 pc:80000048 instr:0080006f EXEC_TAG_CONTROL
+                 pred:8000004c epoch:0 has_rd:0 writes_mem:0
+                 fallthru:8000004c halt_sentinel:0}
+        RR_to_EX_Control{I_18 pc:80000048 instr:0080006f fallthru:8000004c
+                  rs1_val:00000000  rs2_val:00000000  imm:00000008 }
+Trace 75 18 80000048 0080006f RR.C
+76: CPU.EX_Control
+        RR_to_EX_Control{I_18 pc:80000048 instr:0080006f fallthru:8000004c
+                  rs1_val:00000000  rs2_val:00000000  imm:00000008 }
+        EX_Control_to_Retire{I_18 pc:80000048 instr:0080006f
+                       next_pc:80000050  data:8000004c}
+Trace 76 18 80000048 0080006f EX.C
+76: CPU.Fetch:
+        Fetch_to_Decode{I_21 pc:80000054 pred:80000058 epoch:0 halt_sentinel:0}
+        Mem_Req {I_21 pc:80000054 instr:xxxxxxxx FETCH 4B addr:80000054 epoch:0}
+Trace 76 21 80000054 00000000 F
+76: CPU.Decode:
+        Decode_to_RR{I_20 pc:80000050 instr:6fff0f37 pred:80000054 epoch:0
+            fallthru:80000054 OPCLASS_INT has_{rs1,rs2,rd}:{0,0,1} writes_mem:0, imm:6fff0000 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000050 rdata:6fff0f37 I_20 pc:80000050 instr:00000000 FETCH 4B}
+Trace 76 20 80000050 6fff0f37 D
+76:     CPU.S5.fa_update_rd:
+          RW_from_Retire{I_17 pc:80000044 instr:00100e13 rd:28 commit:1 data:00000001}
+Trace 76 17 80000044 00100e13 RET.I
+76: CPU.Retire_EX_Int: Normal
+        EX_to_Retire{I_17 pc:80000044 instr:00100e13
+                  data:00000001}
+76: CPU.rl_RR.stall: busy rd:1 rs1:0 rs2:0
+        Decode_to_RR{I_19 pc:8000004c instr:00300e13 pred:80000050 epoch:0
+            fallthru:80000050 OPCLASS_INT has_{rs1,rs2,rd}:{1,0,1} writes_mem:0, imm:3 halt_sentinel:0}
+Trace 76 19 8000004c 00300e13 RR.S
+77: CPU.Fetch:
+        Fetch_to_Decode{I_22 pc:80000058 pred:8000005c epoch:0 halt_sentinel:0}
+        Mem_Req {I_22 pc:80000058 instr:xxxxxxxx FETCH 4B addr:80000058 epoch:0}
+Trace 77 22 80000058 00000000 F
+77:     CPU.S5.fa_redirect_Fetch:
+        Fetch_from_Retire{I_18 pc:80000048 instr:0080006f next_pc:80000050 next_epoch 1 haltreq 0}
+Trace 77 18 80000048 0080006f RET.C
+77: CPU.Retire_EX_Control: Normal
+        EX_Control_to_Retire{I_18 pc:80000048 instr:0080006f
+                       next_pc:80000050  data:8000004c}
+77: CPU.RW:
+77:     RW_from_Retire{I_17 pc:80000044 instr:00100e13 rd:28 commit:1 data:00000001}
+Trace 77 17 80000044 00100e13 RW
+78: CPU.Redirect:
+        Fetch_from_Retire{I_18 pc:80000048 instr:0080006f next_pc:80000050 next_epoch 1 haltreq 0}
+Trace 78 18 80000048 0080006f Redir
+78: CPU.Dispatch_Int:
+        RR_to_Retire{I_19 pc:8000004c instr:00300e13 EXEC_TAG_INT
+                 pred:80000050 epoch:0 has_rd:1 writes_mem:0
+                 fallthru:80000050 halt_sentinel:0}
+        RR_to_EX{I_19 pc:8000004c instr:00300e13
+             rs1_val:00000000  rs2_val:00000008  imm:00000003 }
+Trace 78 19 8000004c 00300e13 RR.I
+fn_EX_IALU: IALU x28 <= 3
+79: CPU.EX_Int
+        RR_to_EX{I_19 pc:8000004c instr:00300e13
+             rs1_val:00000000  rs2_val:00000008  imm:00000003 }
+        EX_to_Retire{I_19 pc:8000004c instr:00300e13
+                  data:00000003}
+Trace 79 19 8000004c 00300e13 EX.I
+79: CPU.Decode:
+        Decode_to_RR{I_21 pc:80000054 instr:01cf2823 pred:80000058 epoch:0
+            fallthru:80000058 OPCLASS_MEM has_{rs1,rs2,rd}:{1,1,0} writes_mem:1, imm:10 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000054 rdata:01cf2823 I_21 pc:80000054 instr:00000000 FETCH 4B}
+Trace 79 21 80000054 01cf2823 D
+79: CPU.Dispatch_Int:
+        RR_to_Retire{I_20 pc:80000050 instr:6fff0f37 EXEC_TAG_INT
+                 pred:80000054 epoch:0 has_rd:1 writes_mem:0
+                 fallthru:80000054 halt_sentinel:0}
+        RR_to_EX{I_20 pc:80000050 instr:6fff0f37
+             rs1_val:00000000  rs2_val:00000000  imm:6fff0000 }
+Trace 79 20 80000050 6fff0f37 RR.I
+fn_EX_IALU: LUI x30 <= 6fff0000
+80: CPU.EX_Int
+        RR_to_EX{I_20 pc:80000050 instr:6fff0f37
+             rs1_val:00000000  rs2_val:00000000  imm:6fff0000 }
+        EX_to_Retire{I_20 pc:80000050 instr:6fff0f37
+                  data:6fff0000}
+Trace 80 20 80000050 6fff0f37 EX.I
+80: CPU.Fetch:
+        Fetch_to_Decode{I_23 pc:80000050 pred:80000054 epoch:1 halt_sentinel:0}
+        Mem_Req {I_23 pc:80000050 instr:xxxxxxxx FETCH 4B addr:80000050 epoch:1}
+Trace 80 23 80000050 00000000 F
+80: CPU.Decode:
+        Decode_to_RR{I_22 pc:80000058 instr:0000006f pred:8000005c epoch:0
+            fallthru:8000005c OPCLASS_CONTROL has_{rs1,rs2,rd}:{0,0,0} writes_mem:0, imm:0 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000058 rdata:0000006f I_22 pc:80000058 instr:00000000 FETCH 4B}
+Trace 80 22 80000058 0000006f D
+80:     CPU.S5.fa_update_rd:(unreserve scoreboard)
+          RW_from_Retire{I_19 pc:8000004c instr:00300e13 rd:28 commit:0 data:xxxxxxxx}
+Trace 80 19 8000004c 00300e13 RET.discard
+80: CPU.S5.rl_Retire_wrong_path:
+        RR_to_Retire{I_19 pc:8000004c instr:00300e13 EXEC_TAG_INT
+                 pred:80000050 epoch:0 has_rd:1 writes_mem:0
+                 fallthru:80000050 halt_sentinel:0}
+80: CPU.rl_RR.stall: busy rd:0 rs1:1 rs2:1
+        Decode_to_RR{I_21 pc:80000054 instr:01cf2823 pred:80000058 epoch:0
+            fallthru:80000058 OPCLASS_MEM has_{rs1,rs2,rd}:{1,1,0} writes_mem:1, imm:10 halt_sentinel:0}
+Trace 80 21 80000054 01cf2823 RR.S
+81: CPU.Fetch:
+        Fetch_to_Decode{I_24 pc:80000054 pred:80000058 epoch:1 halt_sentinel:0}
+        Mem_Req {I_24 pc:80000054 instr:xxxxxxxx FETCH 4B addr:80000054 epoch:1}
+Trace 81 24 80000054 00000000 F
+81:     CPU.S5.fa_update_rd:(unreserve scoreboard)
+          RW_from_Retire{I_20 pc:80000050 instr:6fff0f37 rd:30 commit:0 data:xxxxxxxx}
+Trace 81 20 80000050 6fff0f37 RET.discard
+81: CPU.S5.rl_Retire_wrong_path:
+        RR_to_Retire{I_20 pc:80000050 instr:6fff0f37 EXEC_TAG_INT
+                 pred:80000054 epoch:0 has_rd:1 writes_mem:0
+                 fallthru:80000054 halt_sentinel:0}
+81: CPU.RW:
+81:     RW_from_Retire{I_19 pc:8000004c instr:00300e13 rd:28 commit:0 data:00000000}
+Trace 81 19 8000004c 00300e13 RW
+82: CPU.RW:
+82:     RW_from_Retire{I_20 pc:80000050 instr:6fff0f37 rd:30 commit:0 data:00000000}
+Trace 82 20 80000050 6fff0f37 RW
+83: CPU.Dispatch_DMem:
+        RR_to_Retire{I_21 pc:80000054 instr:01cf2823 EXEC_TAG_DMEM
+                 pred:80000058 epoch:0 has_rd:0 writes_mem:1
+                 fallthru:80000058 halt_sentinel:0}
+        rs1_val:00000000  rs2_val:00000001  imm:00000010
+        Mem_Req {I_21 pc:80000054 instr:01cf2823 STORE 4B addr:00000010 wdata:00000001 epoch:0}
+Trace 83 21 80000054 01cf2823 RR.D
+84: CPU.Decode:
+        Decode_to_RR{I_23 pc:80000050 instr:6fff0f37 pred:80000054 epoch:1
+            fallthru:80000054 OPCLASS_INT has_{rs1,rs2,rd}:{0,0,1} writes_mem:0, imm:6fff0000 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000050 rdata:6fff0f37 I_23 pc:80000050 instr:00000000 FETCH 4B}
+Trace 84 23 80000050 6fff0f37 D
+Trace 84 21 80000054 01cf2823 RET.discard
+84: CPU.S5.rl_Retire_wrong_path:
+        RR_to_Retire{I_21 pc:80000054 instr:01cf2823 EXEC_TAG_DMEM
+                 pred:80000058 epoch:0 has_rd:0 writes_mem:1
+                 fallthru:80000058 halt_sentinel:0}
+84: CPU.Dispatch_Control:
+        RR_to_Retire{I_22 pc:80000058 instr:0000006f EXEC_TAG_CONTROL
+                 pred:8000005c epoch:0 has_rd:0 writes_mem:0
+                 fallthru:8000005c halt_sentinel:0}
+        RR_to_EX_Control{I_22 pc:80000058 instr:0000006f fallthru:8000005c
+                  rs1_val:00000000  rs2_val:00000000  imm:00000000 }
+Trace 84 22 80000058 0000006f RR.C
+85: CPU.EX_Control
+        RR_to_EX_Control{I_22 pc:80000058 instr:0000006f fallthru:8000005c
+                  rs1_val:00000000  rs2_val:00000000  imm:00000000 }
+        EX_Control_to_Retire{I_22 pc:80000058 instr:0000006f
+                       next_pc:80000058  data:8000005c}
+Trace 85 22 80000058 0000006f EX.C
+85: CPU.Fetch:
+        Fetch_to_Decode{I_25 pc:80000058 pred:8000005c epoch:1 halt_sentinel:0}
+        Mem_Req {I_25 pc:80000058 instr:xxxxxxxx FETCH 4B addr:80000058 epoch:1}
+Trace 85 25 80000058 00000000 F
+85: CPU.Decode:
+        Decode_to_RR{I_24 pc:80000054 instr:01cf2823 pred:80000058 epoch:1
+            fallthru:80000058 OPCLASS_MEM has_{rs1,rs2,rd}:{1,1,0} writes_mem:1, imm:10 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000054 rdata:01cf2823 I_24 pc:80000054 instr:00000000 FETCH 4B}
+Trace 85 24 80000054 01cf2823 D
+85: CPU.Dispatch_Int:
+        RR_to_Retire{I_23 pc:80000050 instr:6fff0f37 EXEC_TAG_INT
+                 pred:80000054 epoch:1 has_rd:1 writes_mem:0
+                 fallthru:80000054 halt_sentinel:0}
+        RR_to_EX{I_23 pc:80000050 instr:6fff0f37
+             rs1_val:00000000  rs2_val:00000000  imm:6fff0000 }
+Trace 85 23 80000050 6fff0f37 RR.I
+fn_EX_IALU: LUI x30 <= 6fff0000
+86: CPU.EX_Int
+        RR_to_EX{I_23 pc:80000050 instr:6fff0f37
+             rs1_val:00000000  rs2_val:00000000  imm:6fff0000 }
+        EX_to_Retire{I_23 pc:80000050 instr:6fff0f37
+                  data:6fff0000}
+Trace 86 23 80000050 6fff0f37 EX.I
+86: CPU.Fetch:
+        Fetch_to_Decode{I_26 pc:8000005c pred:80000060 epoch:1 halt_sentinel:0}
+        Mem_Req {I_26 pc:8000005c instr:xxxxxxxx FETCH 4B addr:8000005c epoch:1}
+Trace 86 26 8000005c 00000000 F
+86: CPU.Decode:
+        Decode_to_RR{I_25 pc:80000058 instr:0000006f pred:8000005c epoch:1
+            fallthru:8000005c OPCLASS_CONTROL has_{rs1,rs2,rd}:{0,0,0} writes_mem:0, imm:0 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000058 rdata:0000006f I_25 pc:80000058 instr:00000000 FETCH 4B}
+Trace 86 25 80000058 0000006f D
+Trace 86 22 80000058 0000006f RET.discard
+86: CPU.S5.rl_Retire_wrong_path:
+        RR_to_Retire{I_22 pc:80000058 instr:0000006f EXEC_TAG_CONTROL
+                 pred:8000005c epoch:0 has_rd:0 writes_mem:0
+                 fallthru:8000005c halt_sentinel:0}
+86: CPU.rl_RR.stall: busy rd:0 rs1:1 rs2:0
+        Decode_to_RR{I_24 pc:80000054 instr:01cf2823 pred:80000058 epoch:1
+            fallthru:80000058 OPCLASS_MEM has_{rs1,rs2,rd}:{1,1,0} writes_mem:1, imm:10 halt_sentinel:0}
+Trace 86 24 80000054 01cf2823 RR.S
+87: CPU.Fetch:
+        Fetch_to_Decode{I_27 pc:80000060 pred:80000064 epoch:1 halt_sentinel:0}
+        Mem_Req {I_27 pc:80000060 instr:xxxxxxxx FETCH 4B addr:80000060 epoch:1}
+Trace 87 27 80000060 00000000 F
+87:     CPU.S5.fa_update_rd:
+          RW_from_Retire{I_23 pc:80000050 instr:6fff0f37 rd:30 commit:1 data:6fff0000}
+Trace 87 23 80000050 6fff0f37 RET.I
+87: CPU.Retire_EX_Int: Normal
+        EX_to_Retire{I_23 pc:80000050 instr:6fff0f37
+                  data:6fff0000}
+87: CPU.rl_RR.stall: busy rd:0 rs1:1 rs2:0
+        Decode_to_RR{I_24 pc:80000054 instr:01cf2823 pred:80000058 epoch:1
+            fallthru:80000058 OPCLASS_MEM has_{rs1,rs2,rd}:{1,1,0} writes_mem:1, imm:10 halt_sentinel:0}
+Trace 87 24 80000054 01cf2823 RR.S
+88: CPU.RW:
+88:     RW_from_Retire{I_23 pc:80000050 instr:6fff0f37 rd:30 commit:1 data:6fff0000}
+Trace 88 23 80000050 6fff0f37 RW
+89: CPU.Dispatch_DMem:
+        RR_to_Retire{I_24 pc:80000054 instr:01cf2823 EXEC_TAG_DMEM
+                 pred:80000058 epoch:1 has_rd:0 writes_mem:1
+                 fallthru:80000058 halt_sentinel:0}
+        rs1_val:6fff0000  rs2_val:00000001  imm:00000010
+        Mem_Req {I_24 pc:80000054 instr:01cf2823 STORE 4B addr:6fff0010 wdata:00000001 epoch:1}
+Trace 89 24 80000054 01cf2823 RR.D
+90: CPU.Decode:
+        Decode_to_RR{I_26 pc:8000005c instr:00000000 pred:80000060 epoch:1
+            fallthru:80000060 ILLEGAL_INSTR tval:0 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:8000005c rdata:00000000 I_26 pc:8000005c instr:00000000 FETCH 4B}
+Trace 90 26 8000005c 00000000 D
+Trace 90 24 80000054 01cf2823 RET.Dreq
+90: CPU.Retire_DMem_NS_req:
+        Mem_Req {I_24 pc:80000054 instr:01cf2823 STORE 4B addr:6fff0010 wdata:00000001 epoch:x}
+90: CPU.Dispatch_Control:
+        RR_to_Retire{I_25 pc:80000058 instr:0000006f EXEC_TAG_CONTROL
+                 pred:8000005c epoch:1 has_rd:0 writes_mem:0
+                 fallthru:8000005c halt_sentinel:0}
+        RR_to_EX_Control{I_25 pc:80000058 instr:0000006f fallthru:8000005c
+                  rs1_val:00000000  rs2_val:00000000  imm:00000000 }
+Trace 90 25 80000058 0000006f RR.C
+91: CPU.EX_Control
+        RR_to_EX_Control{I_25 pc:80000058 instr:0000006f fallthru:8000005c
+                  rs1_val:00000000  rs2_val:00000000  imm:00000000 }
+        EX_Control_to_Retire{I_25 pc:80000058 instr:0000006f
+                       next_pc:80000058  data:8000005c}
+Trace 91 25 80000058 0000006f EX.C
+91: CPU.Fetch:
+        Fetch_to_Decode{I_28 pc:80000064 pred:80000068 epoch:1 halt_sentinel:0}
+        Mem_Req {I_28 pc:80000064 instr:xxxxxxxx FETCH 4B addr:80000064 epoch:1}
+Trace 91 28 80000064 00000000 F
+91: CPU.Decode:
+        Decode_to_RR{I_27 pc:80000060 instr:00000000 pred:80000064 epoch:1
+            fallthru:80000064 ILLEGAL_INSTR tval:0 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000060 rdata:00000000 I_27 pc:80000060 instr:00000000 FETCH 4B}
+Trace 91 27 80000060 00000000 D
+91: CPU.Dispatch_Direct:
+        RR_to_Retire{I_26 pc:8000005c instr:00000000 EXEC_TAG_DIRECT
+                 pred:80000060 epoch:1 has_rd:0 writes_mem:0
+                 fallthru:80000060 ILLEGAL_INSTR tval:0 halt_sentinel:0}
+Trace 91 26 8000005c 00000000 RR.dir
+92: CPU.Fetch:
+        Fetch_to_Decode{I_29 pc:80000068 pred:8000006c epoch:1 halt_sentinel:0}
+        Mem_Req {I_29 pc:80000068 instr:xxxxxxxx FETCH 4B addr:80000068 epoch:1}
+Trace 92 29 80000068 00000000 F
+92: CPU.Decode:
+        Decode_to_RR{I_28 pc:80000064 instr:00000000 pred:80000068 epoch:1
+            fallthru:80000068 ILLEGAL_INSTR tval:0 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000064 rdata:00000000 I_28 pc:80000064 instr:00000000 FETCH 4B}
+Trace 92 28 80000064 00000000 D
+92: CPU.Dispatch_Direct:
+        RR_to_Retire{I_27 pc:80000060 instr:00000000 EXEC_TAG_DIRECT
+                 pred:80000064 epoch:1 has_rd:0 writes_mem:0
+                 fallthru:80000064 ILLEGAL_INSTR tval:0 halt_sentinel:0}
+Trace 92 27 80000060 00000000 RR.dir
+93: CPU.Fetch:
+        Fetch_to_Decode{I_30 pc:8000006c pred:80000070 epoch:1 halt_sentinel:0}
+        Mem_Req {I_30 pc:8000006c instr:xxxxxxxx FETCH 4B addr:8000006c epoch:1}
+Trace 93 30 8000006c 00000000 F
+93: CPU.Decode:
+        Decode_to_RR{I_29 pc:80000068 instr:00000000 pred:8000006c epoch:1
+            fallthru:8000006c ILLEGAL_INSTR tval:0 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000068 rdata:00000000 I_29 pc:80000068 instr:00000000 FETCH 4B}
+Trace 93 29 80000068 00000000 D
+93: CPU.Dispatch_Direct:
+        RR_to_Retire{I_28 pc:80000064 instr:00000000 EXEC_TAG_DIRECT
+                 pred:80000068 epoch:1 has_rd:0 writes_mem:0
+                 fallthru:80000068 ILLEGAL_INSTR tval:0 halt_sentinel:0}
+Trace 93 28 80000064 00000000 RR.dir
+94: CPU.Fetch:
+        Fetch_to_Decode{I_31 pc:80000070 pred:80000074 epoch:1 halt_sentinel:0}
+        Mem_Req {I_31 pc:80000070 instr:xxxxxxxx FETCH 4B addr:80000070 epoch:1}
+Trace 94 31 80000070 00000000 F
+94: CPU.Decode:
+        Decode_to_RR{I_30 pc:8000006c instr:00000000 pred:80000070 epoch:1
+            fallthru:80000070 ILLEGAL_INSTR tval:0 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:8000006c rdata:00000000 I_30 pc:8000006c instr:00000000 FETCH 4B}
+Trace 94 30 8000006c 00000000 D
+94: CPU.Dispatch_Direct:
+        RR_to_Retire{I_29 pc:80000068 instr:00000000 EXEC_TAG_DIRECT
+                 pred:8000006c epoch:1 has_rd:0 writes_mem:0
+                 fallthru:8000006c ILLEGAL_INSTR tval:0 halt_sentinel:0}
+Trace 94 29 80000068 00000000 RR.dir
+95: CPU.Fetch:
+        Fetch_to_Decode{I_32 pc:80000074 pred:80000078 epoch:1 halt_sentinel:0}
+        Mem_Req {I_32 pc:80000074 instr:xxxxxxxx FETCH 4B addr:80000074 epoch:1}
+Trace 95 32 80000074 00000000 F
+95: CPU.Decode:
+        Decode_to_RR{I_31 pc:80000070 instr:00000000 pred:80000074 epoch:1
+            fallthru:80000074 ILLEGAL_INSTR tval:0 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000070 rdata:00000000 I_31 pc:80000070 instr:00000000 FETCH 4B}
+Trace 95 31 80000070 00000000 D
+95: CPU.Dispatch_Direct:
+        RR_to_Retire{I_30 pc:8000006c instr:00000000 EXEC_TAG_DIRECT
+                 pred:80000070 epoch:1 has_rd:0 writes_mem:0
+                 fallthru:80000070 ILLEGAL_INSTR tval:0 halt_sentinel:0}
+Trace 95 30 8000006c 00000000 RR.dir
+96: CPU.Fetch:
+        Fetch_to_Decode{I_33 pc:80000078 pred:8000007c epoch:1 halt_sentinel:0}
+        Mem_Req {I_33 pc:80000078 instr:xxxxxxxx FETCH 4B addr:80000078 epoch:1}
+Trace 96 33 80000078 00000000 F
+96: CPU.Decode:
+        Decode_to_RR{I_32 pc:80000074 instr:00000000 pred:80000078 epoch:1
+            fallthru:80000078 ILLEGAL_INSTR tval:0 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000074 rdata:00000000 I_32 pc:80000074 instr:00000000 FETCH 4B}
+Trace 96 32 80000074 00000000 D
+96: CPU.Dispatch_Direct:
+        RR_to_Retire{I_31 pc:80000070 instr:00000000 EXEC_TAG_DIRECT
+                 pred:80000074 epoch:1 has_rd:0 writes_mem:0
+                 fallthru:80000074 ILLEGAL_INSTR tval:0 halt_sentinel:0}
+Trace 96 31 80000070 00000000 RR.dir
+97: CPU.Fetch:
+        Fetch_to_Decode{I_34 pc:8000007c pred:80000080 epoch:1 halt_sentinel:0}
+        Mem_Req {I_34 pc:8000007c instr:xxxxxxxx FETCH 4B addr:8000007c epoch:1}
+Trace 97 34 8000007c 00000000 F
+97: CPU.Decode:
+        Decode_to_RR{I_33 pc:80000078 instr:00000000 pred:8000007c epoch:1
+            fallthru:8000007c ILLEGAL_INSTR tval:0 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:80000078 rdata:00000000 I_33 pc:80000078 instr:00000000 FETCH 4B}
+Trace 97 33 80000078 00000000 D
+97: CPU.Dispatch_Direct:
+        RR_to_Retire{I_32 pc:80000074 instr:00000000 EXEC_TAG_DIRECT
+                 pred:80000078 epoch:1 has_rd:0 writes_mem:0
+                 fallthru:80000078 ILLEGAL_INSTR tval:0 halt_sentinel:0}
+Trace 97 32 80000074 00000000 RR.dir
+98: CPU.Fetch:
+        Fetch_to_Decode{I_35 pc:80000080 pred:80000084 epoch:1 halt_sentinel:0}
+        Mem_Req {I_35 pc:80000080 instr:xxxxxxxx FETCH 4B addr:80000080 epoch:1}
+Trace 98 35 80000080 00000000 F
+98: CPU.Decode:
+        Decode_to_RR{I_34 pc:8000007c instr:00000000 pred:80000080 epoch:1
+            fallthru:80000080 ILLEGAL_INSTR tval:0 halt_sentinel:0}
+        Mem_Rsp {MEM_RSP_OK addr:8000007c rdata:00000000 I_34 pc:8000007c instr:00000000 FETCH 4B}
+Trace 98 34 8000007c 00000000 D
+99: CPU.Fetch:
+        Fetch_to_Decode{I_36 pc:80000084 pred:80000088 epoch:1 halt_sentinel:0}
+        Mem_Req {I_36 pc:80000084 instr:xxxxxxxx FETCH 4B addr:80000084 epoch:1}
+Trace 99 36 80000084 00000000 F
