@@ -1,0 +1,5 @@
+read_verilog ../Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/*.v
+hierarchy -check -top mkCPU
+synth -top mkCPU
+ltp
+stat

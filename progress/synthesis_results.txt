@@ -1,0 +1,10 @@
+Synthesis Results
+=================
+--------------------------------
+Branch: feature/forwarding
+  
+  Number of cells (approx): 
+--------------------------------
+Branch: master (baseline)
+  
+  Number of cells (approx): 

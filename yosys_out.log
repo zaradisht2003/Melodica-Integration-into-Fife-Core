@@ -1,0 +1,410 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.33 (git sha1 2584903a060)
+
+
+-- Executing script file `yosys_script.ys' --
+
+1. Executing Verilog-2005 frontend: Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCPU.v
+Parsing Verilog input from `Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCPU.v' to AST representation.
+Warning: Encountered `parallel_case' comment! Such legacy hot comments are supported by Yosys, but are not part of any formal language specification. Using the Verilog `parallel_case' attribute or the SystemVerilog `unique' or `priority' keywords is recommended!
+Warning: Encountered `translate_off' comment! Such legacy hot comments are supported by Yosys, but are not part of any formal language specification. Using a portable and standards-compliant construct such as `ifdef is recommended!
+Generating RTLIL representation for module `\mkCPU'.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCPU.v:1657.3-1664.10 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCPU.v:1670.3-1683.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCPU.v:1693.3-1708.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCPU.v:1735.3-1778.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCPU.v:1801.3-1829.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCSRs.v
+Parsing Verilog input from `Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCSRs.v' to AST representation.
+Generating RTLIL representation for module `\mkCSRs'.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCSRs.v:724.3-737.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCSRs.v:819.3-830.10 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCSRs.v:842.3-853.10 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCSRs.v:865.3-877.10 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCSRs.v:893.3-904.10 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCSRs.v:930.3-944.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCSRs.v:971.3-987.10 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCSRs.v:1000.3-1012.10 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCSRs.v:1358.3-1390.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCSRs.v:1391.3-1423.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkDecode.v
+Parsing Verilog input from `Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkDecode.v' to AST representation.
+Generating RTLIL representation for module `\mkDecode'.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkDecode.v:920.3-927.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkDecode.v:928.3-934.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkDecode.v:935.3-962.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkDecode.v:963.3-973.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkDecode.v:974.3-983.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkDecode.v:984.3-1000.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkEX_Control.v
+Parsing Verilog input from `Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkEX_Control.v' to AST representation.
+Generating RTLIL representation for module `\mkEX_Control'.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkEX_Control.v:283.3-307.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkEX_Control.v:308.3-316.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkEX_Control.v:317.3-341.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkEX_Control.v:342.3-359.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkEX_Control.v:360.3-377.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkEX_Int.v
+Parsing Verilog input from `Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkEX_Int.v' to AST representation.
+Generating RTLIL representation for module `\mkEX_Int'.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkEX_Int.v:401.3-419.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkEX_Int.v:420.3-438.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkEX_Int.v:439.3-446.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkEX_Posit.v
+Parsing Verilog input from `Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkEX_Posit.v' to AST representation.
+Generating RTLIL representation for module `\mkEX_Posit'.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkEX_Posit.v:380.3-387.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkExtracter.v
+Parsing Verilog input from `Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkExtracter.v' to AST representation.
+Generating RTLIL representation for module `\mkExtracter'.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkExtracter.v:441.3-477.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Successfully finished Verilog frontend.
+
+8. Executing Verilog-2005 frontend: Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkFetch.v
+Parsing Verilog input from `Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkFetch.v' to AST representation.
+Generating RTLIL representation for module `\mkFetch'.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkFetch.v:429.3-442.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Successfully finished Verilog frontend.
+
+9. Executing Verilog-2005 frontend: Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkFtoP_PNE.v
+Parsing Verilog input from `Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkFtoP_PNE.v' to AST representation.
+Generating RTLIL representation for module `\mkFtoP_PNE'.
+Successfully finished Verilog frontend.
+
+10. Executing Verilog-2005 frontend: Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkGPR_Logging_synth.v
+Parsing Verilog input from `Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkGPR_Logging_synth.v' to AST representation.
+Generating RTLIL representation for module `\mkGPR_Logging_synth'.
+Successfully finished Verilog frontend.
+
+11. Executing Verilog-2005 frontend: Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkGPRs_synth.v
+Parsing Verilog input from `Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkGPRs_synth.v' to AST representation.
+Generating RTLIL representation for module `\mkGPRs_synth'.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkGPRs_synth.v:186.3-197.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkGPRs_synth.v:198.3-209.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Successfully finished Verilog frontend.
+
+12. Executing Verilog-2005 frontend: Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkMultiplier.v
+Parsing Verilog input from `Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkMultiplier.v' to AST representation.
+Generating RTLIL representation for module `\mkMultiplier'.
+Successfully finished Verilog frontend.
+
+13. Executing Verilog-2005 frontend: Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkNormalizer.v
+Parsing Verilog input from `Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkNormalizer.v' to AST representation.
+Generating RTLIL representation for module `\mkNormalizer'.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkNormalizer.v:394.3-408.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkNormalizer.v:409.3-419.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Successfully finished Verilog frontend.
+
+14. Executing Verilog-2005 frontend: Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkPositCore.v
+Parsing Verilog input from `Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkPositCore.v' to AST representation.
+Generating RTLIL representation for module `\mkPositCore'.
+Successfully finished Verilog frontend.
+
+15. Executing Verilog-2005 frontend: Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkPtoF_PNE.v
+Parsing Verilog input from `Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkPtoF_PNE.v' to AST representation.
+Generating RTLIL representation for module `\mkPtoF_PNE'.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkPtoF_PNE.v:220.3-227.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkPtoF_PNE.v:228.3-235.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Successfully finished Verilog frontend.
+
+16. Executing Verilog-2005 frontend: Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v
+Parsing Verilog input from `Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v' to AST representation.
+Generating RTLIL representation for module `\mkQuire'.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:1606.3-1620.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:1629.3-1644.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:1653.3-1669.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:1678.3-1694.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:1703.3-1719.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:1728.3-1744.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:1753.3-1769.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:1778.3-1794.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:1803.3-1819.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:1828.3-1844.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:1853.3-1869.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:1878.3-1894.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:1903.3-1919.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:1928.3-1944.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:1953.3-1969.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:1978.3-1994.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:2003.3-2019.10 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:2029.3-2045.10 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:2055.3-2071.10 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:2081.3-2097.10 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:2107.3-2123.10 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:2133.3-2149.10 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:2159.3-2175.10 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:2185.3-2198.10 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:2208.3-2224.10 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:2234.3-2250.10 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:2260.3-2276.10 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:2286.3-2302.10 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:2312.3-2328.10 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:2338.3-2354.10 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:2364.3-2380.10 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v:2390.3-2406.10 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Successfully finished Verilog frontend.
+
+17. Executing Verilog-2005 frontend: Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRR_WB.v
+Parsing Verilog input from `Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRR_WB.v' to AST representation.
+Generating RTLIL representation for module `\mkRR_WB'.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRR_WB.v:2106.3-2120.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRR_WB.v:2121.3-2221.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRR_WB.v:2222.3-2322.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRR_WB.v:2323.3-2423.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRR_WB.v:2424.3-2524.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRR_WB.v:2525.3-2545.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRR_WB.v:2546.3-2557.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Successfully finished Verilog frontend.
+
+18. Executing Verilog-2005 frontend: Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRVFI_Report.v
+Parsing Verilog input from `Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRVFI_Report.v' to AST representation.
+Generating RTLIL representation for module `\mkRVFI_Report'.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRVFI_Report.v:383.3-405.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRVFI_Report.v:471.3-477.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRVFI_Report.v:478.3-485.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRVFI_Report.v:486.3-492.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRVFI_Report.v:493.3-500.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRVFI_Report.v:501.3-509.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Successfully finished Verilog frontend.
+
+19. Executing Verilog-2005 frontend: Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRetire.v
+Parsing Verilog input from `Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRetire.v' to AST representation.
+Generating RTLIL representation for module `\mkRetire'.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRetire.v:1851.3-1857.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRetire.v:1975.3-2031.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRetire.v:2051.3-2091.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRetire.v:2164.3-2197.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRetire.v:2248.3-2275.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRetire.v:2317.3-2348.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRetire.v:2367.3-2389.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRetire.v:2407.3-2437.10 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRetire.v:2466.3-2498.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRetire.v:2817.3-2838.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRetire.v:2839.3-2856.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRetire.v:2857.3-2878.6 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Successfully finished Verilog frontend.
+
+20. Executing Verilog-2005 frontend: Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkTop.v
+Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkTop.v:29: ERROR: syntax error, unexpected '[', expecting ',' or ')'
