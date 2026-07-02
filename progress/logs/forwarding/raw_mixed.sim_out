@@ -1,0 +1,90 @@
+================================================================
+Simulation top-level.  Command-line options:
+  +debug    Start under control of remote debugger (EDB/GDB/... over TCP)
+  +log      Generate log (trace) file (can become large!)
+INFO: Logfile is: log.txt
+================================================================
+Fife v0.90 2025-07-12: starting execution at PC 80000000
+INFO: c_mems_devices_init
+  Mem system model
+   addr_base_mem:  0x80000000 size_B_mem:  0x10000000 (268435456) bytes
+   ADDR_BASE_UART: 0x60100000 SIZE_B_UART: 0x00001000 (4096) bytes
+Loading memhex file test.memhex32
+    (default file---no env variable MEMHEX32)
+GPRs: forwarding (EX_Int->RR, RWire + reg bypass)
+================================================================
+GPRs: initialized to 0
+40: main.top.cpu.stage_EX_Posit.posit_core.extracter2.request: 0x00000000
+40: main.top.cpu.stage_EX_Posit.posit_core.extracter1.request: 0x00000000
+40: main.top.cpu.stage_EX_Posit.posit_core: rl_extract_stg1: FCVT_R_P
+41: main.top.cpu.stage_EX_Posit.posit_core.extracter2.request: 0x44000000
+41: main.top.cpu.stage_EX_Posit.posit_core.extracter1.request: 0x40000000
+41: main.top.cpu.stage_EX_Posit.posit_core: rl_extract_stg1: FMA_P
+42: main.top.cpu.stage_EX_Posit.posit_core.quire: init: 
+42: main.top.cpu.stage_EX_Posit.posit_core.rl_init_quire_stg2: initialize 
+43: main.top.cpu.stage_EX_Posit.posit_core.multiplier.request: 
+43: main.top.cpu.stage_EX_Posit.posit_core.rl_fma_stg2: multiply 
+44: main.top.cpu.stage_EX_Posit.posit_core.multiplier.stage_1: 
+45: main.top.cpu.stage_EX_Posit.posit_core.rl_fma_stg3: accumulate 
+49: main.top.cpu.stage_EX_Posit.posit_core.quire: read_req: 
+49: main.top.cpu.stage_EX_Posit.posit_core.rl_read_quire_stg1: read 
+51: main.top.cpu.stage_EX_Posit.posit_core.quire.rl_read_response
+shift_exp 11011 shift_frac 000 expo_new 00 p.frac 100000000000000000000000000 n_2_k 11101 expo 00 truncated_frac_msb 0 truncated_frac_zero 1 
+k 1000000000000000000000000000000
+no_of_bit_k 00001
+52: main.top.cpu.stage_EX_Posit.posit_core.rl_read_quire_stg2: normalize 
+dIn.sign 0
+dIn.k_expo 1000000000000000000000000000000 dIn.frac 100000000000000000000000000 uint_k_expo_frac 1000100000000000000000000000000 dIn.flag_endcase 0
+ dIn.shift_exp 11011 shift_frac 00000 flag_prev_truncate 0 flag_equidistant 0
+ dIn.zero_infinity_flag 00
+54: main.top.cpu.stage_EX_Posit.posit_core.rl_read_quire_stg3: out 
+69: main.top.cpu.stage_EX_Posit.posit_core.extracter2.request: 0x00000000
+69: main.top.cpu.stage_EX_Posit.posit_core.extracter1.request: 0x00000000
+69: main.top.cpu.stage_EX_Posit.posit_core: rl_extract_stg1: FCVT_R_P
+70: main.top.cpu.stage_EX_Posit.posit_core.quire: init: 
+70: main.top.cpu.stage_EX_Posit.posit_core.rl_init_quire_stg2: initialize 
+92: main.top.cpu.stage_EX_Posit.posit_core.extracter2.request: 0x44000000
+92: main.top.cpu.stage_EX_Posit.posit_core.extracter1.request: 0x40000000
+92: main.top.cpu.stage_EX_Posit.posit_core: rl_extract_stg1: FMA_P
+93: main.top.cpu.stage_EX_Posit.posit_core.multiplier.request: 
+93: main.top.cpu.stage_EX_Posit.posit_core.rl_fma_stg2: multiply 
+94: main.top.cpu.stage_EX_Posit.posit_core.multiplier.stage_1: 
+95: main.top.cpu.stage_EX_Posit.posit_core.rl_fma_stg3: accumulate 
+100: main.top.cpu.stage_EX_Posit.posit_core.quire: read_req: 
+100: main.top.cpu.stage_EX_Posit.posit_core.rl_read_quire_stg1: read 
+102: main.top.cpu.stage_EX_Posit.posit_core.quire.rl_read_response
+shift_exp 11011 shift_frac 000 expo_new 00 p.frac 100000000000000000000000000 n_2_k 11101 expo 00 truncated_frac_msb 0 truncated_frac_zero 1 
+k 1000000000000000000000000000000
+no_of_bit_k 00001
+103: main.top.cpu.stage_EX_Posit.posit_core.rl_read_quire_stg2: normalize 
+dIn.sign 0
+dIn.k_expo 1000000000000000000000000000000 dIn.frac 100000000000000000000000000 uint_k_expo_frac 1000100000000000000000000000000 dIn.flag_endcase 0
+ dIn.shift_exp 11011 shift_frac 00000 flag_prev_truncate 0 flag_equidistant 0
+ dIn.zero_infinity_flag 00
+105: main.top.cpu.stage_EX_Posit.posit_core.rl_read_quire_stg3: out 
+120: main.top.cpu.stage_EX_Posit.posit_core.extracter2.request: 0x00000000
+120: main.top.cpu.stage_EX_Posit.posit_core.extracter1.request: 0x00000000
+120: main.top.cpu.stage_EX_Posit.posit_core: rl_extract_stg1: FCVT_R_P
+121: main.top.cpu.stage_EX_Posit.posit_core.extracter2.request: 0x40000000
+121: main.top.cpu.stage_EX_Posit.posit_core.extracter1.request: 0x40000000
+121: main.top.cpu.stage_EX_Posit.posit_core: rl_extract_stg1: FMA_P
+122: main.top.cpu.stage_EX_Posit.posit_core.quire: init: 
+122: main.top.cpu.stage_EX_Posit.posit_core.rl_init_quire_stg2: initialize 
+123: main.top.cpu.stage_EX_Posit.posit_core.multiplier.request: 
+123: main.top.cpu.stage_EX_Posit.posit_core.rl_fma_stg2: multiply 
+124: main.top.cpu.stage_EX_Posit.posit_core.multiplier.stage_1: 
+125: main.top.cpu.stage_EX_Posit.posit_core.rl_fma_stg3: accumulate 
+126: main.top.cpu.stage_EX_Posit.posit_core.quire: read_req: 
+126: main.top.cpu.stage_EX_Posit.posit_core.rl_read_quire_stg1: read 
+128: main.top.cpu.stage_EX_Posit.posit_core.quire.rl_read_response
+shift_exp 11011 shift_frac 000 expo_new 00 p.frac 000000000000000000000000000 n_2_k 11101 expo 00 truncated_frac_msb 0 truncated_frac_zero 1 
+k 1000000000000000000000000000000
+no_of_bit_k 00001
+129: main.top.cpu.stage_EX_Posit.posit_core.rl_read_quire_stg2: normalize 
+dIn.sign 0
+dIn.k_expo 1000000000000000000000000000000 dIn.frac 000000000000000000000000000 uint_k_expo_frac 1000000000000000000000000000000 dIn.flag_endcase 0
+ dIn.shift_exp 11011 shift_frac 00000 flag_prev_truncate 0 flag_equidistant 0
+ dIn.zero_infinity_flag 00
+131: main.top.cpu.stage_EX_Posit.posit_core.rl_read_quire_stg3: out 
+
+GPIO tohost PASS

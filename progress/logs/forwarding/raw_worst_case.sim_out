@@ -1,0 +1,18 @@
+================================================================
+Simulation top-level.  Command-line options:
+  +debug    Start under control of remote debugger (EDB/GDB/... over TCP)
+  +log      Generate log (trace) file (can become large!)
+INFO: Logfile is: log.txt
+================================================================
+Fife v0.90 2025-07-12: starting execution at PC 80000000
+INFO: c_mems_devices_init
+  Mem system model
+   addr_base_mem:  0x80000000 size_B_mem:  0x10000000 (268435456) bytes
+   ADDR_BASE_UART: 0x60100000 SIZE_B_UART: 0x00001000 (4096) bytes
+Loading memhex file test.memhex32
+    (default file---no env variable MEMHEX32)
+GPRs: forwarding (EX_Int->RR, RWire + reg bypass)
+================================================================
+GPRs: initialized to 0
+
+GPIO tohost PASS
