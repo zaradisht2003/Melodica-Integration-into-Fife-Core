@@ -1,0 +1,27 @@
+# ============================================================
+# Variant 6: Fife Core WITHOUT Melodica (Base CPU)
+# Top module: mkCPU
+# ============================================================
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/bsc/lib/Verilog/FIFO1.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/bsc/lib/Verilog/FIFO2.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/bsc/lib/Verilog/SizedFIFO.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/bsc/lib/Verilog/RegFile.v
+
+# Use the e9f3e17 verilog
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Fife-e9f3e17/Code/Build/Fife/verilog/mkGPRs_synth.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Fife-e9f3e17/Code/Build/Fife/verilog/mkGPR_Logging_synth.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Fife-e9f3e17/Code/Build/Fife/verilog/mkRR_WB.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Fife-e9f3e17/Code/Build/Fife/verilog/mkDecode.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Fife-e9f3e17/Code/Build/Fife/verilog/mkFetch.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Fife-e9f3e17/Code/Build/Fife/verilog/mkCSRs.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Fife-e9f3e17/Code/Build/Fife/verilog/mkRetire.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Fife-e9f3e17/Code/Build/Fife/verilog/mkEX_Control.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Fife-e9f3e17/Code/Build/Fife/verilog/mkEX_Int.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Fife-e9f3e17/Code/Build/Fife/verilog/mkRVFI_Report.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Fife-e9f3e17/Code/Build/Fife/verilog/mkCPU.v
+
+hierarchy -check -top mkCPU
+synth -top mkCPU -flatten
+abc -script "+read_library,/teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/generic45nm.genlib;strash;map;print_stats -t;write_blif,%/output.blif"
+stat
+ltp

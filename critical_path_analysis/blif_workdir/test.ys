@@ -1,0 +1,8 @@
+
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/bsc/lib/Verilog/FIFO1.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/bsc/lib/Verilog/FIFO2.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkEX_Control.v
+hierarchy -check -top mkEX_Control
+synth -top mkEX_Control -flatten
+write_blif /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/critical_path_analysis/blif_workdir/test_mkEX_Control.blif
+stat

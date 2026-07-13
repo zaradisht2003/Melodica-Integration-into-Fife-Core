@@ -1,0 +1,12 @@
+echo + read_blif "/teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/abc_tmp/yosys-abc-rhmItM/input.blif";
+read_blif "/teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/abc_tmp/yosys-abc-rhmItM/input.blif";
+echo + read_lib -w "/teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/generic45nm.lib";
+read_lib -w "/teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/generic45nm.lib";
+echo + strash;
+strash;
+echo + if;
+if;
+echo + write_blif;
+write_blif;
+echo + write_blif /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/abc_tmp/yosys-abc-rhmItM/output.blif;
+write_blif /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/abc_tmp/yosys-abc-rhmItM/output.blif

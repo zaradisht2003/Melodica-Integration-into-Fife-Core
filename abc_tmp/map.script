@@ -1,0 +1,3 @@
+strash
+if
+write_blif output.blif

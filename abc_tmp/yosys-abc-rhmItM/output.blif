@@ -1,0 +1,3158 @@
+# Benchmark "netlist" written by ABC on Sun Jul 12 18:18:50 2026
+.model netlist
+.inputs ys__n9 ys__n12 ys__n71 ys__n74 ys__n76 ys__n77 ys__n89 ys__n92 \
+ ys__n94 ys__n96 ys__n98 ys__n100 ys__n102 ys__n104 ys__n106 ys__n108 \
+ ys__n110 ys__n112 ys__n114 ys__n116 ys__n118 ys__n120 ys__n122 ys__n124 \
+ ys__n126 ys__n128 ys__n130 ys__n132 ys__n134 ys__n136 ys__n138 ys__n140 \
+ ys__n142 ys__n144 ys__n146 ys__n148 ys__n150 ys__n152 ys__n154 ys__n156 \
+ ys__n158 ys__n160 ys__n162 ys__n164 ys__n166 ys__n167 ys__n169 ys__n170 \
+ ys__n172 ys__n177 ys__n179 ys__n181 ys__n183 ys__n185 ys__n187 ys__n189 \
+ ys__n191 ys__n193 ys__n195 ys__n197 ys__n199 ys__n201 ys__n203 ys__n205 \
+ ys__n207 ys__n209 ys__n211 ys__n213 ys__n215 ys__n217 ys__n219 ys__n221 \
+ ys__n223 ys__n225 ys__n227 ys__n229 ys__n231 ys__n233 ys__n235 ys__n237 \
+ ys__n239 ys__n241 ys__n243 ys__n245 ys__n247 ys__n249 ys__n251 ys__n253 \
+ ys__n255 ys__n257 ys__n259 ys__n261 ys__n263 ys__n265 ys__n267 ys__n269 \
+ ys__n271 ys__n273 ys__n275 ys__n277 ys__n279 ys__n281 ys__n283 ys__n285 \
+ ys__n287 ys__n289 ys__n291 ys__n293 ys__n295 ys__n297 ys__n299 ys__n301 \
+ ys__n303 ys__n305 ys__n307 ys__n309 ys__n311 ys__n313 ys__n315 ys__n317 \
+ ys__n319 ys__n321 ys__n323 ys__n325 ys__n327 ys__n329 ys__n331 ys__n333 \
+ ys__n335 ys__n337 ys__n339 ys__n341 ys__n343 ys__n345 ys__n347 ys__n349 \
+ ys__n351 ys__n353 ys__n355 ys__n357 ys__n359 ys__n361 ys__n363 ys__n365 \
+ ys__n367 ys__n369 ys__n371 ys__n373 ys__n375 ys__n377 ys__n379 ys__n381 \
+ ys__n383 ys__n385 ys__n387 ys__n389 ys__n391 ys__n393 ys__n395 ys__n397 \
+ ys__n399 ys__n401 ys__n403 ys__n405 ys__n407 ys__n409 ys__n411 ys__n413 \
+ ys__n415 ys__n417 ys__n419 ys__n421 ys__n423 ys__n425 ys__n427 ys__n429 \
+ ys__n431 ys__n433 ys__n435 ys__n437 ys__n439 ys__n441 ys__n443 ys__n445 \
+ ys__n447 ys__n449 ys__n451 ys__n453 ys__n455 ys__n457 ys__n459 ys__n461 \
+ ys__n463 ys__n465 ys__n467 ys__n469 ys__n471 ys__n473 ys__n475 ys__n477 \
+ ys__n479 ys__n481 ys__n483 ys__n485 ys__n487 ys__n489 ys__n491 ys__n493 \
+ ys__n495 ys__n497 ys__n499 ys__n501 ys__n503 ys__n505 ys__n507 ys__n509 \
+ ys__n511 ys__n513 ys__n515 ys__n517 ys__n519 ys__n521 ys__n523 ys__n525 \
+ ys__n527 ys__n529 ys__n531 ys__n533 ys__n535 ys__n537 ys__n539 ys__n541 \
+ ys__n543 ys__n545 ys__n547 ys__n549 ys__n551 ys__n553 ys__n555 ys__n557 \
+ ys__n559 ys__n561 ys__n563 ys__n565 ys__n567 ys__n569 ys__n571 ys__n573 \
+ ys__n575 ys__n577 ys__n579 ys__n581 ys__n583 ys__n585 ys__n587 ys__n589 \
+ ys__n591 ys__n593 ys__n595 ys__n597 ys__n599 ys__n601 ys__n603 ys__n605 \
+ ys__n607 ys__n609 ys__n611 ys__n613 ys__n615 ys__n617 ys__n619 ys__n621 \
+ ys__n623 ys__n626 ys__n627 ys__n629 ys__n630 ys__n632 ys__n633 ys__n635 \
+ ys__n636 ys__n638 ys__n639 ys__n641 ys__n642 ys__n644 ys__n645 ys__n647 \
+ ys__n648 ys__n650 ys__n651 ys__n653 ys__n654 ys__n656 ys__n657 ys__n659 \
+ ys__n660 ys__n662 ys__n663 ys__n665 ys__n666 ys__n668 ys__n669 ys__n671 \
+ ys__n672 ys__n674 ys__n675 ys__n677 ys__n678 ys__n680 ys__n681 ys__n683 \
+ ys__n684 ys__n686 ys__n687 ys__n689 ys__n690 ys__n692 ys__n693 ys__n695 \
+ ys__n696 ys__n698 ys__n699 ys__n701 ys__n702 ys__n704 ys__n705 ys__n707 \
+ ys__n708 ys__n710 ys__n711 ys__n713 ys__n714 ys__n716 ys__n718 ys__n719 \
+ ys__n721 ys__n722 ys__n724 ys__n725 ys__n727 ys__n728 ys__n730 ys__n731 \
+ ys__n733 ys__n734 ys__n736 ys__n737 ys__n739 ys__n740 ys__n742 ys__n743 \
+ ys__n745 ys__n746 ys__n748 ys__n749 ys__n751 ys__n752 ys__n754 ys__n755 \
+ ys__n757 ys__n758 ys__n760 ys__n761 ys__n763 ys__n764 ys__n766 ys__n767 \
+ ys__n769 ys__n770 ys__n772 ys__n773 ys__n775 ys__n776 ys__n778 ys__n779 \
+ ys__n781 ys__n782 ys__n784 ys__n785 ys__n787 ys__n788 ys__n790 ys__n791 \
+ ys__n793 ys__n794 ys__n796 ys__n797 ys__n799 ys__n800 ys__n802 ys__n803 \
+ ys__n805 ys__n806 ys__n808 ys__n809 ys__n811 ys__n813 ys__n815 ys__n816 \
+ ys__n818 ys__n819 ys__n821 ys__n822 ys__n824 ys__n825 ys__n827 ys__n828 \
+ ys__n830 ys__n831 ys__n833 ys__n834 ys__n836 ys__n837 ys__n839 ys__n840 \
+ ys__n842 ys__n843 ys__n845 ys__n846 ys__n848 ys__n849 ys__n851 ys__n852 \
+ ys__n854 ys__n855 ys__n857 ys__n858 ys__n860 ys__n861 ys__n863 ys__n864 \
+ ys__n866 ys__n867 ys__n869 ys__n870 ys__n872 ys__n873 ys__n875 ys__n876 \
+ ys__n878 ys__n879 ys__n881 ys__n882 ys__n884 ys__n885 ys__n887 ys__n888 \
+ ys__n890 ys__n891 ys__n893 ys__n894 ys__n896 ys__n897 ys__n899 ys__n900 \
+ ys__n902 ys__n903 ys__n905 ys__n906 ys__n908 ys__n909 ys__n911 ys__n912 \
+ ys__n914 ys__n915 ys__n917 ys__n918 ys__n920 ys__n921 ys__n923 ys__n924 \
+ ys__n926 ys__n927 ys__n929 ys__n930 ys__n932 ys__n933 ys__n935 ys__n936 \
+ ys__n938 ys__n939 ys__n941 ys__n942 ys__n944 ys__n945 ys__n947 ys__n948 \
+ ys__n950 ys__n951 ys__n953 ys__n954 ys__n956 ys__n957 ys__n959 ys__n960 \
+ ys__n962 ys__n963 ys__n965 ys__n966 ys__n968 ys__n969 ys__n971 ys__n972 \
+ ys__n974 ys__n975 ys__n977 ys__n978 ys__n980 ys__n981 ys__n983 ys__n984 \
+ ys__n986 ys__n987 ys__n989 ys__n990 ys__n992 ys__n993 ys__n995 ys__n996 \
+ ys__n998 ys__n999 ys__n1001 ys__n1002 ys__n1004 ys__n1005 ys__n1013 \
+ ys__n1014 ys__n1031 ys__n1034 ys__n1046 ys__n1048 ys__n1051 ys__n1053 \
+ ys__n1057 ys__n1059 ys__n1062 ys__n1064 ys__n1067 ys__n1069 ys__n1074 \
+ ys__n1076 ys__n1079 ys__n1081 ys__n1084 ys__n1086 ys__n1090 ys__n1092 \
+ ys__n1095 ys__n1097 ys__n1103 ys__n1105 ys__n1108 ys__n1110 ys__n1113 \
+ ys__n1115 ys__n1119 ys__n1121 ys__n1124 ys__n1126 ys__n1131 ys__n1133 \
+ ys__n1136 ys__n1138 ys__n1142 ys__n1144 ys__n1147 ys__n1160 ys__n1164 \
+ ys__n1172 ys__n1177 ys__n1188 ys__n1193 ys__n1201 ys__n1206 ys__n1220 \
+ ys__n1225 ys__n1233 ys__n1238 ys__n1249 ys__n1254 ys__n1262 ys__n1267 \
+ ys__n1284 ys__n1289 ys__n1297 ys__n1302 ys__n1313 ys__n1318 ys__n1326 \
+ ys__n1331 ys__n1345 ys__n1350 ys__n1358 ys__n1444 ys__n1449 ys__n1460 \
+ ys__n1465 ys__n1473 ys__n1478 ys__n1492 ys__n1497 ys__n1505 ys__n1510 \
+ ys__n1521 ys__n1526 ys__n1534 ys__n1539 ys__n1556 ys__n1561 ys__n1569 \
+ ys__n1574 ys__n1585 ys__n1590 ys__n1598 ys__n1603 ys__n1617 ys__n1622 \
+ ys__n1630 ys__n1698 ys__n1788 ys__n1862 ys__n1935 ys__n2010 ys__n2075 \
+ ys__n2152 ys__n2216 ys__n2296 ys__n2355 ys__n2427 ys__n2486 ys__n2568 \
+ ys__n2627 ys__n2699 ys__n2755 ys__n2843 ys__n2899 ys__n2968 ys__n3024 \
+ ys__n3104 ys__n3160 ys__n3229 ys__n3284 ys__n3374 ys__n3430 ys__n3499 \
+ ys__n3554 ys__n3634 ys__n3689 ys__n3752
+.outputs ys__n91 ys__n93 ys__n95 ys__n97 ys__n99 ys__n101 ys__n103 ys__n105 \
+ ys__n107 ys__n109 ys__n111 ys__n113 ys__n115 ys__n117 ys__n119 ys__n121 \
+ ys__n123 ys__n125 ys__n127 ys__n129 ys__n131 ys__n133 ys__n135 ys__n137 \
+ ys__n139 ys__n141 ys__n143 ys__n145 ys__n147 ys__n149 ys__n151 ys__n153 \
+ ys__n155 ys__n157 ys__n159 ys__n161 ys__n163 ys__n165 ys__n168 ys__n171 \
+ ys__n174 ys__n176 ys__n178 ys__n180 ys__n182 ys__n184 ys__n186 ys__n188 \
+ ys__n190 ys__n192 ys__n194 ys__n196 ys__n198 ys__n200 ys__n202 ys__n204 \
+ ys__n206 ys__n208 ys__n210 ys__n212 ys__n214 ys__n216 ys__n218 ys__n220 \
+ ys__n222 ys__n224 ys__n226 ys__n228 ys__n230 ys__n232 ys__n234 ys__n236 \
+ ys__n238 ys__n240 ys__n242 ys__n244 ys__n246 ys__n248 ys__n250 ys__n252 \
+ ys__n254 ys__n256 ys__n258 ys__n260 ys__n262 ys__n264 ys__n266 ys__n268 \
+ ys__n270 ys__n272 ys__n274 ys__n276 ys__n278 ys__n280 ys__n282 ys__n284 \
+ ys__n286 ys__n288 ys__n290 ys__n292 ys__n294 ys__n296 ys__n298 ys__n300 \
+ ys__n302 ys__n304 ys__n306 ys__n308 ys__n310 ys__n312 ys__n314 ys__n316 \
+ ys__n318 ys__n320 ys__n322 ys__n324 ys__n326 ys__n328 ys__n330 ys__n332 \
+ ys__n334 ys__n336 ys__n338 ys__n340 ys__n342 ys__n344 ys__n346 ys__n348 \
+ ys__n350 ys__n352 ys__n354 ys__n356 ys__n358 ys__n360 ys__n362 ys__n364 \
+ ys__n366 ys__n368 ys__n370 ys__n372 ys__n374 ys__n376 ys__n378 ys__n380 \
+ ys__n382 ys__n384 ys__n386 ys__n388 ys__n390 ys__n392 ys__n394 ys__n396 \
+ ys__n398 ys__n400 ys__n402 ys__n404 ys__n406 ys__n408 ys__n410 ys__n412 \
+ ys__n414 ys__n416 ys__n418 ys__n420 ys__n422 ys__n424 ys__n426 ys__n428 \
+ ys__n430 ys__n432 ys__n434 ys__n436 ys__n438 ys__n440 ys__n442 ys__n444 \
+ ys__n446 ys__n448 ys__n450 ys__n452 ys__n454 ys__n456 ys__n458 ys__n460 \
+ ys__n462 ys__n464 ys__n466 ys__n468 ys__n470 ys__n472 ys__n474 ys__n476 \
+ ys__n478 ys__n480 ys__n482 ys__n484 ys__n486 ys__n488 ys__n490 ys__n492 \
+ ys__n494 ys__n496 ys__n498 ys__n500 ys__n502 ys__n504 ys__n506 ys__n508 \
+ ys__n510 ys__n512 ys__n514 ys__n516 ys__n518 ys__n520 ys__n522 ys__n524 \
+ ys__n526 ys__n528 ys__n530 ys__n532 ys__n534 ys__n536 ys__n538 ys__n540 \
+ ys__n542 ys__n544 ys__n546 ys__n548 ys__n550 ys__n552 ys__n554 ys__n556 \
+ ys__n558 ys__n560 ys__n562 ys__n564 ys__n566 ys__n568 ys__n570 ys__n572 \
+ ys__n574 ys__n576 ys__n578 ys__n580 ys__n582 ys__n584 ys__n586 ys__n588 \
+ ys__n590 ys__n592 ys__n594 ys__n596 ys__n598 ys__n600 ys__n602 ys__n604 \
+ ys__n606 ys__n608 ys__n610 ys__n612 ys__n614 ys__n616 ys__n618 ys__n620 \
+ ys__n622 ys__n624 ys__n625 ys__n628 ys__n631 ys__n634 ys__n637 ys__n640 \
+ ys__n643 ys__n646 ys__n649 ys__n652 ys__n655 ys__n658 ys__n661 ys__n664 \
+ ys__n667 ys__n670 ys__n673 ys__n676 ys__n679 ys__n682 ys__n685 ys__n688 \
+ ys__n691 ys__n694 ys__n697 ys__n700 ys__n703 ys__n706 ys__n709 ys__n712 \
+ ys__n715 ys__n717 ys__n720 ys__n723 ys__n726 ys__n729 ys__n732 ys__n735 \
+ ys__n738 ys__n741 ys__n744 ys__n747 ys__n750 ys__n753 ys__n756 ys__n759 \
+ ys__n762 ys__n765 ys__n768 ys__n771 ys__n774 ys__n777 ys__n780 ys__n783 \
+ ys__n786 ys__n789 ys__n792 ys__n795 ys__n798 ys__n801 ys__n804 ys__n807 \
+ ys__n810 ys__n812 ys__n814 ys__n817 ys__n820 ys__n823 ys__n826 ys__n829 \
+ ys__n832 ys__n835 ys__n838 ys__n841 ys__n844 ys__n847 ys__n850 ys__n853 \
+ ys__n856 ys__n859 ys__n862 ys__n865 ys__n868 ys__n871 ys__n874 ys__n877 \
+ ys__n880 ys__n883 ys__n886 ys__n889 ys__n892 ys__n895 ys__n898 ys__n901 \
+ ys__n904 ys__n907 ys__n910 ys__n913 ys__n916 ys__n919 ys__n922 ys__n925 \
+ ys__n928 ys__n931 ys__n934 ys__n937 ys__n940 ys__n943 ys__n946 ys__n949 \
+ ys__n952 ys__n955 ys__n958 ys__n961 ys__n964 ys__n967 ys__n970 ys__n973 \
+ ys__n976 ys__n979 ys__n982 ys__n985 ys__n988 ys__n991 ys__n994 ys__n997 \
+ ys__n1000 ys__n1003 ys__n1006 ys__n1699 ys__n1789 ys__n1863 ys__n1936 \
+ ys__n2011 ys__n2076 ys__n2153 ys__n2217 ys__n2297 ys__n2356 ys__n2428 \
+ ys__n2487 ys__n2569 ys__n2628 ys__n2700 ys__n2756 ys__n2844 ys__n2900 \
+ ys__n2969 ys__n3025 ys__n3105 ys__n3161 ys__n3230 ys__n3285 ys__n3375 \
+ ys__n3431 ys__n3500 ys__n3555 ys__n3635 ys__n3690 ys__n3753
+.gate $_ANDNOT_ A=ys__n166 B=ys__n167 Y=new_n1077_
+.gate $_NOT_    A=new_n1077_ Y=new_n1078_
+.gate $_NOT_    A=ys__n645 Y=new_n1079_
+.gate $_ANDNOT_ A=ys__n639 B=ys__n642 Y=new_n1080_
+.gate $_ANDNOT_ A=ys__n633 B=ys__n636 Y=new_n1081_
+.gate $_NAND_   A=new_n1081_ B=new_n1080_ Y=new_n1082_
+.gate $_ANDNOT_ A=new_n1079_ B=new_n1082_ Y=new_n1083_
+.gate $_NAND_   A=ys__n77 B=ys__n76 Y=new_n1084_
+.gate $_XOR_    A=ys__n77 B=ys__n76 Y=new_n1085_
+.gate $_NAND_   A=ys__n1444 B=ys__n809 Y=new_n1086_
+.gate $_AND_    A=ys__n1449 B=ys__n806 Y=new_n1087_
+.gate $_NOT_    A=new_n1087_ Y=new_n1088_
+.gate $_XOR_    A=ys__n1444 B=ys__n809 Y=new_n1089_
+.gate $_ANDNOT_ A=new_n1089_ B=new_n1088_ Y=new_n1090_
+.gate $_ANDNOT_ A=new_n1086_ B=new_n1090_ Y=new_n1091_
+.gate $_XOR_    A=ys__n1449 B=ys__n806 Y=new_n1092_
+.gate $_AND_    A=new_n1092_ B=new_n1089_ Y=new_n1093_
+.gate $_NAND_   A=ys__n1460 B=ys__n803 Y=new_n1094_
+.gate $_AND_    A=ys__n1465 B=ys__n800 Y=new_n1095_
+.gate $_XOR_    A=ys__n1460 B=ys__n803 Y=new_n1096_
+.gate $_NAND_   A=new_n1096_ B=new_n1095_ Y=new_n1097_
+.gate $_NAND_   A=new_n1097_ B=new_n1094_ Y=new_n1098_
+.gate $_XOR_    A=ys__n1465 B=ys__n800 Y=new_n1099_
+.gate $_NAND_   A=new_n1099_ B=new_n1096_ Y=new_n1100_
+.gate $_NAND_   A=ys__n1473 B=ys__n797 Y=new_n1101_
+.gate $_AND_    A=ys__n1478 B=ys__n794 Y=new_n1102_
+.gate $_NOT_    A=new_n1102_ Y=new_n1103_
+.gate $_XOR_    A=ys__n1473 B=ys__n797 Y=new_n1104_
+.gate $_ANDNOT_ A=new_n1104_ B=new_n1103_ Y=new_n1105_
+.gate $_ANDNOT_ A=new_n1101_ B=new_n1105_ Y=new_n1106_
+.gate $_NOR_    A=new_n1106_ B=new_n1100_ Y=new_n1107_
+.gate $_NOR_    A=new_n1107_ B=new_n1098_ Y=new_n1108_
+.gate $_XOR_    A=ys__n1478 B=ys__n794 Y=new_n1109_
+.gate $_AND_    A=new_n1109_ B=new_n1104_ Y=new_n1110_
+.gate $_ANDNOT_ A=new_n1110_ B=new_n1100_ Y=new_n1111_
+.gate $_NAND_   A=ys__n1492 B=ys__n791 Y=new_n1112_
+.gate $_AND_    A=ys__n1497 B=ys__n788 Y=new_n1113_
+.gate $_XOR_    A=ys__n1492 B=ys__n791 Y=new_n1114_
+.gate $_NAND_   A=new_n1114_ B=new_n1113_ Y=new_n1115_
+.gate $_NAND_   A=new_n1115_ B=new_n1112_ Y=new_n1116_
+.gate $_XOR_    A=ys__n1497 B=ys__n788 Y=new_n1117_
+.gate $_NAND_   A=new_n1117_ B=new_n1114_ Y=new_n1118_
+.gate $_NAND_   A=ys__n1505 B=ys__n785 Y=new_n1119_
+.gate $_AND_    A=ys__n1510 B=ys__n782 Y=new_n1120_
+.gate $_NOT_    A=new_n1120_ Y=new_n1121_
+.gate $_XOR_    A=ys__n1505 B=ys__n785 Y=new_n1122_
+.gate $_ANDNOT_ A=new_n1122_ B=new_n1121_ Y=new_n1123_
+.gate $_ANDNOT_ A=new_n1119_ B=new_n1123_ Y=new_n1124_
+.gate $_NOR_    A=new_n1124_ B=new_n1118_ Y=new_n1125_
+.gate $_NOR_    A=new_n1125_ B=new_n1116_ Y=new_n1126_
+.gate $_XOR_    A=ys__n1521 B=ys__n779 Y=new_n1127_
+.gate $_XOR_    A=ys__n1526 B=ys__n776 Y=new_n1128_
+.gate $_AND_    A=new_n1128_ B=new_n1127_ Y=new_n1129_
+.gate $_NAND_   A=ys__n1534 B=ys__n773 Y=new_n1130_
+.gate $_AND_    A=ys__n1539 B=ys__n770 Y=new_n1131_
+.gate $_NOT_    A=new_n1131_ Y=new_n1132_
+.gate $_XOR_    A=ys__n1534 B=ys__n773 Y=new_n1133_
+.gate $_ANDNOT_ A=new_n1133_ B=new_n1132_ Y=new_n1134_
+.gate $_ANDNOT_ A=new_n1130_ B=new_n1134_ Y=new_n1135_
+.gate $_ANDNOT_ A=new_n1129_ B=new_n1135_ Y=new_n1136_
+.gate $_NAND_   A=ys__n1521 B=ys__n779 Y=new_n1137_
+.gate $_AND_    A=ys__n1526 B=ys__n776 Y=new_n1138_
+.gate $_NOT_    A=new_n1138_ Y=new_n1139_
+.gate $_ANDNOT_ A=new_n1127_ B=new_n1139_ Y=new_n1140_
+.gate $_ANDNOT_ A=new_n1137_ B=new_n1140_ Y=new_n1141_
+.gate $_ANDNOT_ A=new_n1141_ B=new_n1136_ Y=new_n1142_
+.gate $_XOR_    A=ys__n1510 B=ys__n782 Y=new_n1143_
+.gate $_AND_    A=new_n1143_ B=new_n1122_ Y=new_n1144_
+.gate $_ANDNOT_ A=new_n1144_ B=new_n1118_ Y=new_n1145_
+.gate $_ANDNOT_ A=new_n1145_ B=new_n1142_ Y=new_n1146_
+.gate $_ANDNOT_ A=new_n1126_ B=new_n1146_ Y=new_n1147_
+.gate $_XOR_    A=ys__n1617 B=ys__n743 Y=new_n1148_
+.gate $_XOR_    A=ys__n1622 B=ys__n740 Y=new_n1149_
+.gate $_AND_    A=new_n1149_ B=new_n1148_ Y=new_n1150_
+.gate $_XOR_    A=ys__n1630 B=ys__n737 Y=new_n1151_
+.gate $_XOR_    A=ys__n1105 B=ys__n734 Y=new_n1152_
+.gate $_AND_    A=new_n1152_ B=new_n1151_ Y=new_n1153_
+.gate $_AND_    A=new_n1153_ B=new_n1150_ Y=new_n1154_
+.gate $_NAND_   A=ys__n1076 B=ys__n731 Y=new_n1155_
+.gate $_AND_    A=ys__n1059 B=ys__n728 Y=new_n1156_
+.gate $_NOT_    A=new_n1156_ Y=new_n1157_
+.gate $_XOR_    A=ys__n1076 B=ys__n731 Y=new_n1158_
+.gate $_ANDNOT_ A=new_n1158_ B=new_n1157_ Y=new_n1159_
+.gate $_ANDNOT_ A=new_n1155_ B=new_n1159_ Y=new_n1160_
+.gate $_XOR_    A=ys__n1059 B=ys__n728 Y=new_n1161_
+.gate $_AND_    A=new_n1161_ B=new_n1158_ Y=new_n1162_
+.gate $_NAND_   A=ys__n1048 B=ys__n725 Y=new_n1163_
+.gate $_AND_    A=ys__n1034 B=ys__n722 Y=new_n1164_
+.gate $_XOR_    A=ys__n1048 B=ys__n725 Y=new_n1165_
+.gate $_NAND_   A=new_n1165_ B=new_n1164_ Y=new_n1166_
+.gate $_NAND_   A=new_n1166_ B=new_n1163_ Y=new_n1167_
+.gate $_NAND_   A=new_n1167_ B=new_n1162_ Y=new_n1168_
+.gate $_NAND_   A=new_n1168_ B=new_n1160_ Y=new_n1169_
+.gate $_NAND_   A=new_n1169_ B=new_n1154_ Y=new_n1170_
+.gate $_NAND_   A=ys__n1630 B=ys__n737 Y=new_n1171_
+.gate $_AND_    A=ys__n1105 B=ys__n734 Y=new_n1172_
+.gate $_NOT_    A=new_n1172_ Y=new_n1173_
+.gate $_ANDNOT_ A=new_n1151_ B=new_n1173_ Y=new_n1174_
+.gate $_ANDNOT_ A=new_n1171_ B=new_n1174_ Y=new_n1175_
+.gate $_ANDNOT_ A=new_n1150_ B=new_n1175_ Y=new_n1176_
+.gate $_NAND_   A=ys__n1617 B=ys__n743 Y=new_n1177_
+.gate $_AND_    A=ys__n1622 B=ys__n740 Y=new_n1178_
+.gate $_NAND_   A=new_n1178_ B=new_n1148_ Y=new_n1179_
+.gate $_AND_    A=new_n1179_ B=new_n1177_ Y=new_n1180_
+.gate $_ANDNOT_ A=new_n1180_ B=new_n1176_ Y=new_n1181_
+.gate $_NAND_   A=new_n1181_ B=new_n1170_ Y=new_n1182_
+.gate $_XOR_    A=ys__n1556 B=ys__n767 Y=new_n1183_
+.gate $_XOR_    A=ys__n1561 B=ys__n764 Y=new_n1184_
+.gate $_AND_    A=new_n1184_ B=new_n1183_ Y=new_n1185_
+.gate $_XOR_    A=ys__n1569 B=ys__n761 Y=new_n1186_
+.gate $_XOR_    A=ys__n1574 B=ys__n758 Y=new_n1187_
+.gate $_AND_    A=new_n1187_ B=new_n1186_ Y=new_n1188_
+.gate $_AND_    A=new_n1188_ B=new_n1185_ Y=new_n1189_
+.gate $_XOR_    A=ys__n1585 B=ys__n755 Y=new_n1190_
+.gate $_XOR_    A=ys__n1590 B=ys__n752 Y=new_n1191_
+.gate $_AND_    A=new_n1191_ B=new_n1190_ Y=new_n1192_
+.gate $_XOR_    A=ys__n1598 B=ys__n749 Y=new_n1193_
+.gate $_XOR_    A=ys__n1603 B=ys__n746 Y=new_n1194_
+.gate $_NAND_   A=new_n1194_ B=new_n1193_ Y=new_n1195_
+.gate $_ANDNOT_ A=new_n1192_ B=new_n1195_ Y=new_n1196_
+.gate $_AND_    A=new_n1196_ B=new_n1189_ Y=new_n1197_
+.gate $_NAND_   A=new_n1197_ B=new_n1182_ Y=new_n1198_
+.gate $_NAND_   A=ys__n1598 B=ys__n749 Y=new_n1199_
+.gate $_AND_    A=ys__n1603 B=ys__n746 Y=new_n1200_
+.gate $_NOT_    A=new_n1200_ Y=new_n1201_
+.gate $_ANDNOT_ A=new_n1193_ B=new_n1201_ Y=new_n1202_
+.gate $_ANDNOT_ A=new_n1199_ B=new_n1202_ Y=new_n1203_
+.gate $_ANDNOT_ A=new_n1192_ B=new_n1203_ Y=new_n1204_
+.gate $_NAND_   A=ys__n1585 B=ys__n755 Y=new_n1205_
+.gate $_AND_    A=ys__n1590 B=ys__n752 Y=new_n1206_
+.gate $_NOT_    A=new_n1206_ Y=new_n1207_
+.gate $_ANDNOT_ A=new_n1190_ B=new_n1207_ Y=new_n1208_
+.gate $_ANDNOT_ A=new_n1205_ B=new_n1208_ Y=new_n1209_
+.gate $_ANDNOT_ A=new_n1209_ B=new_n1204_ Y=new_n1210_
+.gate $_ANDNOT_ A=new_n1189_ B=new_n1210_ Y=new_n1211_
+.gate $_NAND_   A=ys__n1569 B=ys__n761 Y=new_n1212_
+.gate $_AND_    A=ys__n1574 B=ys__n758 Y=new_n1213_
+.gate $_NOT_    A=new_n1213_ Y=new_n1214_
+.gate $_ANDNOT_ A=new_n1186_ B=new_n1214_ Y=new_n1215_
+.gate $_ANDNOT_ A=new_n1212_ B=new_n1215_ Y=new_n1216_
+.gate $_ANDNOT_ A=new_n1185_ B=new_n1216_ Y=new_n1217_
+.gate $_NAND_   A=ys__n1556 B=ys__n767 Y=new_n1218_
+.gate $_NAND_   A=ys__n1561 B=ys__n764 Y=new_n1219_
+.gate $_ANDNOT_ A=new_n1183_ B=new_n1219_ Y=new_n1220_
+.gate $_ANDNOT_ A=new_n1218_ B=new_n1220_ Y=new_n1221_
+.gate $_ANDNOT_ A=new_n1221_ B=new_n1217_ Y=new_n1222_
+.gate $_ANDNOT_ A=new_n1222_ B=new_n1211_ Y=new_n1223_
+.gate $_NAND_   A=new_n1223_ B=new_n1198_ Y=new_n1224_
+.gate $_XOR_    A=ys__n1539 B=ys__n770 Y=new_n1225_
+.gate $_AND_    A=new_n1225_ B=new_n1133_ Y=new_n1226_
+.gate $_AND_    A=new_n1226_ B=new_n1129_ Y=new_n1227_
+.gate $_AND_    A=new_n1227_ B=new_n1145_ Y=new_n1228_
+.gate $_NAND_   A=new_n1228_ B=new_n1224_ Y=new_n1229_
+.gate $_NAND_   A=new_n1229_ B=new_n1147_ Y=new_n1230_
+.gate $_NAND_   A=new_n1230_ B=new_n1111_ Y=new_n1231_
+.gate $_NAND_   A=new_n1231_ B=new_n1108_ Y=new_n1232_
+.gate $_NAND_   A=new_n1232_ B=new_n1093_ Y=new_n1233_
+.gate $_NAND_   A=new_n1233_ B=new_n1091_ Y=new_n1234_
+.gate $_NAND_   A=new_n1234_ B=new_n1085_ Y=new_n1235_
+.gate $_NAND_   A=new_n1235_ B=new_n1084_ Y=new_n1236_
+.gate $_XOR_    A=ys__n74 B=ys__n71 Y=new_n1237_
+.gate $_XOR_    A=new_n1237_ B=new_n1236_ Y=new_n1238_
+.gate $_NAND_   A=new_n1238_ B=new_n1083_ Y=new_n1239_
+.gate $_AND_    A=ys__n642 B=ys__n639 Y=new_n1240_
+.gate $_NAND_   A=new_n1240_ B=new_n1081_ Y=new_n1241_
+.gate $_OR_     A=new_n1241_ B=ys__n645 Y=new_n1242_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n71 Y=new_n1243_
+.gate $_NAND_   A=new_n1243_ B=new_n1239_ Y=new_n1244_
+.gate $_ORNOT_  A=new_n1083_ B=new_n1242_ Y=new_n1245_
+.gate $_NAND_   A=ys__n630 B=ys__n627 Y=new_n1246_
+.gate $_OR_     A=ys__n636 B=ys__n633 Y=new_n1247_
+.gate $_NOR_    A=new_n1247_ B=new_n1246_ Y=new_n1248_
+.gate $_NAND_   A=new_n1080_ B=new_n1079_ Y=new_n1249_
+.gate $_ANDNOT_ A=new_n1248_ B=new_n1249_ Y=new_n1250_
+.gate $_NOR_    A=ys__n666 B=ys__n663 Y=new_n1251_
+.gate $_NAND_   A=new_n1251_ B=ys__n669 Y=new_n1252_
+.gate $_XNOR_   A=ys__n71 B=ys__n9 Y=new_n1253_
+.gate $_NOR_    A=new_n1253_ B=new_n1252_ Y=new_n1254_
+.gate $_NOT_    A=ys__n669 Y=new_n1255_
+.gate $_ANDNOT_ A=ys__n663 B=ys__n666 Y=new_n1256_
+.gate $_ANDNOT_ A=new_n1256_ B=new_n1255_ Y=new_n1257_
+.gate $_NOT_    A=new_n1257_ Y=new_n1258_
+.gate $_NOT_    A=ys__n12 Y=new_n1259_
+.gate $_NAND_   A=new_n1240_ B=new_n1079_ Y=new_n1260_
+.gate $_ANDNOT_ A=new_n1248_ B=new_n1260_ Y=new_n1261_
+.gate $_OR_     A=new_n1083_ B=new_n1078_ Y=new_n1262_
+.gate $_NAND_   A=new_n1257_ B=new_n1242_ Y=new_n1263_
+.gate $_NOR_    A=new_n1263_ B=new_n1262_ Y=new_n1264_
+.gate $_AND_    A=new_n1264_ B=new_n1261_ Y=new_n1265_
+.gate $_MUX_    A=ys__n1034 B=ys__n1014 S=new_n1265_ Y=new_n1266_
+.gate $_ANDNOT_ A=ys__n9 B=new_n1266_ Y=new_n1267_
+.gate $_MUX_    A=ys__n1048 B=ys__n1046 S=new_n1265_ Y=new_n1268_
+.gate $_ANDNOT_ A=new_n1267_ B=new_n1268_ Y=new_n1269_
+.gate $_MUX_    A=ys__n1059 B=ys__n1057 S=new_n1265_ Y=new_n1270_
+.gate $_ANDNOT_ A=new_n1269_ B=new_n1270_ Y=new_n1271_
+.gate $_MUX_    A=ys__n1076 B=ys__n1074 S=new_n1265_ Y=new_n1272_
+.gate $_ANDNOT_ A=new_n1271_ B=new_n1272_ Y=new_n1273_
+.gate $_MUX_    A=ys__n1105 B=ys__n1103 S=new_n1265_ Y=new_n1274_
+.gate $_ANDNOT_ A=new_n1273_ B=new_n1274_ Y=new_n1275_
+.gate $_NOT_    A=ys__n9 Y=new_n1276_
+.gate $_NOR_    A=new_n1083_ B=new_n1259_ Y=new_n1277_
+.gate $_ORNOT_  A=new_n1263_ B=new_n1277_ Y=new_n1278_
+.gate $_NAND_   A=new_n1261_ B=new_n1077_ Y=new_n1279_
+.gate $_NOR_    A=new_n1279_ B=new_n1278_ Y=new_n1280_
+.gate $_MUX_    A=ys__n1034 B=ys__n1014 S=new_n1280_ Y=new_n1281_
+.gate $_MUX_    A=ys__n1048 B=ys__n1046 S=new_n1280_ Y=new_n1282_
+.gate $_OR_     A=new_n1282_ B=new_n1281_ Y=new_n1283_
+.gate $_MUX_    A=ys__n1059 B=ys__n1057 S=new_n1280_ Y=new_n1284_
+.gate $_NOT_    A=new_n1284_ Y=new_n1285_
+.gate $_ANDNOT_ A=new_n1285_ B=new_n1283_ Y=new_n1286_
+.gate $_MUX_    A=ys__n1076 B=ys__n1074 S=new_n1280_ Y=new_n1287_
+.gate $_ANDNOT_ A=new_n1286_ B=new_n1287_ Y=new_n1288_
+.gate $_MUX_    A=ys__n1105 B=ys__n1103 S=new_n1280_ Y=new_n1289_
+.gate $_ANDNOT_ A=new_n1288_ B=new_n1289_ Y=new_n1290_
+.gate $_NOR_    A=new_n1290_ B=new_n1276_ Y=new_n1291_
+.gate $_OR_     A=new_n1291_ B=new_n1275_ Y=new_n1292_
+.gate $_MUX_    A=new_n1292_ B=new_n1275_ S=new_n1259_ Y=new_n1293_
+.gate $_ANDNOT_ A=new_n1293_ B=new_n1258_ Y=new_n1294_
+.gate $_NOR_    A=new_n1294_ B=new_n1254_ Y=new_n1295_
+.gate $_ANDNOT_ A=ys__n666 B=ys__n663 Y=new_n1296_
+.gate $_NAND_   A=new_n1296_ B=ys__n669 Y=new_n1297_
+.gate $_NOR_    A=ys__n71 B=ys__n9 Y=new_n1298_
+.gate $_NOR_    A=new_n1298_ B=new_n1297_ Y=new_n1299_
+.gate $_NAND_   A=ys__n666 B=ys__n663 Y=new_n1300_
+.gate $_OR_     A=new_n1300_ B=new_n1255_ Y=new_n1301_
+.gate $_NAND_   A=ys__n71 B=ys__n9 Y=new_n1302_
+.gate $_NOR_    A=new_n1302_ B=new_n1301_ Y=new_n1303_
+.gate $_NOR_    A=new_n1303_ B=new_n1299_ Y=new_n1304_
+.gate $_NAND_   A=new_n1304_ B=new_n1295_ Y=new_n1305_
+.gate $_ANDNOT_ A=new_n1256_ B=ys__n669 Y=new_n1306_
+.gate $_NOT_    A=new_n1306_ Y=new_n1307_
+.gate $_NOT_    A=ys__n1147 Y=new_n1308_
+.gate $_NAND_   A=new_n1306_ B=new_n1242_ Y=new_n1309_
+.gate $_NOR_    A=new_n1309_ B=new_n1262_ Y=new_n1310_
+.gate $_AND_    A=new_n1310_ B=new_n1261_ Y=new_n1311_
+.gate $_MUX_    A=ys__n1034 B=ys__n1014 S=new_n1311_ Y=new_n1312_
+.gate $_MUX_    A=new_n1276_ B=new_n1308_ S=new_n1312_ Y=new_n1313_
+.gate $_NOT_    A=ys__n1046 Y=new_n1314_
+.gate $_NOT_    A=ys__n1048 Y=new_n1315_
+.gate $_MUX_    A=new_n1315_ B=new_n1314_ S=new_n1311_ Y=new_n1316_
+.gate $_NOT_    A=ys__n1142 Y=new_n1317_
+.gate $_NOT_    A=ys__n1144 Y=new_n1318_
+.gate $_MUX_    A=new_n1318_ B=new_n1317_ S=new_n1312_ Y=new_n1319_
+.gate $_MUX_    A=new_n1319_ B=new_n1313_ S=new_n1316_ Y=new_n1320_
+.gate $_NOT_    A=ys__n1057 Y=new_n1321_
+.gate $_NOT_    A=ys__n1059 Y=new_n1322_
+.gate $_MUX_    A=new_n1322_ B=new_n1321_ S=new_n1311_ Y=new_n1323_
+.gate $_NOT_    A=ys__n1136 Y=new_n1324_
+.gate $_NOT_    A=ys__n1138 Y=new_n1325_
+.gate $_MUX_    A=new_n1325_ B=new_n1324_ S=new_n1312_ Y=new_n1326_
+.gate $_NOT_    A=ys__n1131 Y=new_n1327_
+.gate $_NOT_    A=ys__n1133 Y=new_n1328_
+.gate $_MUX_    A=new_n1328_ B=new_n1327_ S=new_n1312_ Y=new_n1329_
+.gate $_MUX_    A=new_n1329_ B=new_n1326_ S=new_n1316_ Y=new_n1330_
+.gate $_MUX_    A=new_n1330_ B=new_n1320_ S=new_n1323_ Y=new_n1331_
+.gate $_NOT_    A=ys__n1074 Y=new_n1332_
+.gate $_NOT_    A=ys__n1076 Y=new_n1333_
+.gate $_MUX_    A=new_n1333_ B=new_n1332_ S=new_n1311_ Y=new_n1334_
+.gate $_MUX_    A=ys__n1126 B=ys__n1124 S=new_n1312_ Y=new_n1335_
+.gate $_MUX_    A=ys__n1121 B=ys__n1119 S=new_n1312_ Y=new_n1336_
+.gate $_MUX_    A=new_n1336_ B=new_n1335_ S=new_n1316_ Y=new_n1337_
+.gate $_MUX_    A=ys__n1115 B=ys__n1113 S=new_n1312_ Y=new_n1338_
+.gate $_MUX_    A=ys__n1110 B=ys__n1108 S=new_n1312_ Y=new_n1339_
+.gate $_MUX_    A=new_n1339_ B=new_n1338_ S=new_n1316_ Y=new_n1340_
+.gate $_MUX_    A=new_n1340_ B=new_n1337_ S=new_n1323_ Y=new_n1341_
+.gate $_NOT_    A=new_n1341_ Y=new_n1342_
+.gate $_MUX_    A=new_n1342_ B=new_n1331_ S=new_n1334_ Y=new_n1343_
+.gate $_NOT_    A=ys__n1103 Y=new_n1344_
+.gate $_NOT_    A=ys__n1105 Y=new_n1345_
+.gate $_MUX_    A=new_n1345_ B=new_n1344_ S=new_n1311_ Y=new_n1346_
+.gate $_MUX_    A=ys__n1097 B=ys__n1095 S=new_n1312_ Y=new_n1347_
+.gate $_MUX_    A=ys__n1092 B=ys__n1090 S=new_n1312_ Y=new_n1348_
+.gate $_MUX_    A=new_n1348_ B=new_n1347_ S=new_n1316_ Y=new_n1349_
+.gate $_MUX_    A=ys__n1086 B=ys__n1084 S=new_n1312_ Y=new_n1350_
+.gate $_MUX_    A=ys__n1081 B=ys__n1079 S=new_n1312_ Y=new_n1351_
+.gate $_MUX_    A=new_n1351_ B=new_n1350_ S=new_n1316_ Y=new_n1352_
+.gate $_MUX_    A=new_n1352_ B=new_n1349_ S=new_n1323_ Y=new_n1353_
+.gate $_MUX_    A=ys__n1069 B=ys__n1067 S=new_n1312_ Y=new_n1354_
+.gate $_MUX_    A=ys__n1064 B=ys__n1062 S=new_n1312_ Y=new_n1355_
+.gate $_MUX_    A=new_n1355_ B=new_n1354_ S=new_n1316_ Y=new_n1356_
+.gate $_MUX_    A=ys__n1053 B=ys__n1051 S=new_n1312_ Y=new_n1357_
+.gate $_MUX_    A=ys__n1031 B=ys__n1013 S=new_n1312_ Y=new_n1358_
+.gate $_MUX_    A=new_n1358_ B=new_n1357_ S=new_n1316_ Y=new_n1359_
+.gate $_MUX_    A=new_n1359_ B=new_n1356_ S=new_n1323_ Y=new_n1360_
+.gate $_MUX_    A=new_n1360_ B=new_n1353_ S=new_n1334_ Y=new_n1361_
+.gate $_NOT_    A=new_n1361_ Y=new_n1362_
+.gate $_MUX_    A=new_n1362_ B=new_n1343_ S=new_n1346_ Y=new_n1363_
+.gate $_NOR_    A=new_n1363_ B=new_n1307_ Y=new_n1364_
+.gate $_NOR_    A=new_n1364_ B=new_n1305_ Y=new_n1365_
+.gate $_AND_    A=ys__n669 B=ys__n666 Y=new_n1366_
+.gate $_ANDNOT_ A=ys__n669 B=ys__n666 Y=new_n1367_
+.gate $_NOR_    A=new_n1367_ B=new_n1366_ Y=new_n1368_
+.gate $_ANDNOT_ A=ys__n666 B=ys__n669 Y=new_n1369_
+.gate $_NOR_    A=new_n1369_ B=new_n1306_ Y=new_n1370_
+.gate $_NAND_   A=new_n1370_ B=new_n1368_ Y=new_n1371_
+.gate $_NAND_   A=ys__n1147 B=ys__n76 Y=new_n1372_
+.gate $_XOR_    A=ys__n1147 B=ys__n76 Y=new_n1373_
+.gate $_NAND_   A=ys__n1444 B=ys__n1144 Y=new_n1374_
+.gate $_AND_    A=ys__n1449 B=ys__n1142 Y=new_n1375_
+.gate $_NOT_    A=new_n1375_ Y=new_n1376_
+.gate $_XOR_    A=ys__n1444 B=ys__n1144 Y=new_n1377_
+.gate $_ANDNOT_ A=new_n1377_ B=new_n1376_ Y=new_n1378_
+.gate $_ANDNOT_ A=new_n1374_ B=new_n1378_ Y=new_n1379_
+.gate $_XOR_    A=ys__n1449 B=ys__n1142 Y=new_n1380_
+.gate $_AND_    A=new_n1380_ B=new_n1377_ Y=new_n1381_
+.gate $_NAND_   A=ys__n1460 B=ys__n1138 Y=new_n1382_
+.gate $_AND_    A=ys__n1465 B=ys__n1136 Y=new_n1383_
+.gate $_XOR_    A=ys__n1460 B=ys__n1138 Y=new_n1384_
+.gate $_NAND_   A=new_n1384_ B=new_n1383_ Y=new_n1385_
+.gate $_NAND_   A=new_n1385_ B=new_n1382_ Y=new_n1386_
+.gate $_XOR_    A=ys__n1465 B=ys__n1136 Y=new_n1387_
+.gate $_NAND_   A=new_n1387_ B=new_n1384_ Y=new_n1388_
+.gate $_NAND_   A=ys__n1473 B=ys__n1133 Y=new_n1389_
+.gate $_AND_    A=ys__n1478 B=ys__n1131 Y=new_n1390_
+.gate $_NOT_    A=new_n1390_ Y=new_n1391_
+.gate $_XOR_    A=ys__n1473 B=ys__n1133 Y=new_n1392_
+.gate $_ANDNOT_ A=new_n1392_ B=new_n1391_ Y=new_n1393_
+.gate $_ANDNOT_ A=new_n1389_ B=new_n1393_ Y=new_n1394_
+.gate $_NOR_    A=new_n1394_ B=new_n1388_ Y=new_n1395_
+.gate $_NOR_    A=new_n1395_ B=new_n1386_ Y=new_n1396_
+.gate $_XOR_    A=ys__n1478 B=ys__n1131 Y=new_n1397_
+.gate $_AND_    A=new_n1397_ B=new_n1392_ Y=new_n1398_
+.gate $_ANDNOT_ A=new_n1398_ B=new_n1388_ Y=new_n1399_
+.gate $_NAND_   A=ys__n1492 B=ys__n1126 Y=new_n1400_
+.gate $_AND_    A=ys__n1497 B=ys__n1124 Y=new_n1401_
+.gate $_XOR_    A=ys__n1492 B=ys__n1126 Y=new_n1402_
+.gate $_NAND_   A=new_n1402_ B=new_n1401_ Y=new_n1403_
+.gate $_NAND_   A=new_n1403_ B=new_n1400_ Y=new_n1404_
+.gate $_XOR_    A=ys__n1497 B=ys__n1124 Y=new_n1405_
+.gate $_NAND_   A=new_n1405_ B=new_n1402_ Y=new_n1406_
+.gate $_NAND_   A=ys__n1505 B=ys__n1121 Y=new_n1407_
+.gate $_AND_    A=ys__n1510 B=ys__n1119 Y=new_n1408_
+.gate $_NOT_    A=new_n1408_ Y=new_n1409_
+.gate $_XOR_    A=ys__n1505 B=ys__n1121 Y=new_n1410_
+.gate $_ANDNOT_ A=new_n1410_ B=new_n1409_ Y=new_n1411_
+.gate $_ANDNOT_ A=new_n1407_ B=new_n1411_ Y=new_n1412_
+.gate $_NOR_    A=new_n1412_ B=new_n1406_ Y=new_n1413_
+.gate $_NOR_    A=new_n1413_ B=new_n1404_ Y=new_n1414_
+.gate $_XOR_    A=ys__n1521 B=ys__n1115 Y=new_n1415_
+.gate $_XOR_    A=ys__n1526 B=ys__n1113 Y=new_n1416_
+.gate $_AND_    A=new_n1416_ B=new_n1415_ Y=new_n1417_
+.gate $_NAND_   A=ys__n1534 B=ys__n1110 Y=new_n1418_
+.gate $_AND_    A=ys__n1539 B=ys__n1108 Y=new_n1419_
+.gate $_NOT_    A=new_n1419_ Y=new_n1420_
+.gate $_XOR_    A=ys__n1534 B=ys__n1110 Y=new_n1421_
+.gate $_ANDNOT_ A=new_n1421_ B=new_n1420_ Y=new_n1422_
+.gate $_ANDNOT_ A=new_n1418_ B=new_n1422_ Y=new_n1423_
+.gate $_ANDNOT_ A=new_n1417_ B=new_n1423_ Y=new_n1424_
+.gate $_NAND_   A=ys__n1521 B=ys__n1115 Y=new_n1425_
+.gate $_AND_    A=ys__n1526 B=ys__n1113 Y=new_n1426_
+.gate $_NOT_    A=new_n1426_ Y=new_n1427_
+.gate $_ANDNOT_ A=new_n1415_ B=new_n1427_ Y=new_n1428_
+.gate $_ANDNOT_ A=new_n1425_ B=new_n1428_ Y=new_n1429_
+.gate $_ANDNOT_ A=new_n1429_ B=new_n1424_ Y=new_n1430_
+.gate $_XOR_    A=ys__n1510 B=ys__n1119 Y=new_n1431_
+.gate $_AND_    A=new_n1431_ B=new_n1410_ Y=new_n1432_
+.gate $_ANDNOT_ A=new_n1432_ B=new_n1406_ Y=new_n1433_
+.gate $_ANDNOT_ A=new_n1433_ B=new_n1430_ Y=new_n1434_
+.gate $_ANDNOT_ A=new_n1414_ B=new_n1434_ Y=new_n1435_
+.gate $_XOR_    A=ys__n1617 B=ys__n1069 Y=new_n1436_
+.gate $_XOR_    A=ys__n1622 B=ys__n1067 Y=new_n1437_
+.gate $_AND_    A=new_n1437_ B=new_n1436_ Y=new_n1438_
+.gate $_XOR_    A=ys__n1630 B=ys__n1064 Y=new_n1439_
+.gate $_XOR_    A=ys__n1105 B=ys__n1062 Y=new_n1440_
+.gate $_AND_    A=new_n1440_ B=new_n1439_ Y=new_n1441_
+.gate $_AND_    A=new_n1441_ B=new_n1438_ Y=new_n1442_
+.gate $_NAND_   A=ys__n1076 B=ys__n1053 Y=new_n1443_
+.gate $_AND_    A=ys__n1059 B=ys__n1051 Y=new_n1444_
+.gate $_NOT_    A=new_n1444_ Y=new_n1445_
+.gate $_XOR_    A=ys__n1076 B=ys__n1053 Y=new_n1446_
+.gate $_ANDNOT_ A=new_n1446_ B=new_n1445_ Y=new_n1447_
+.gate $_ANDNOT_ A=new_n1443_ B=new_n1447_ Y=new_n1448_
+.gate $_XOR_    A=ys__n1059 B=ys__n1051 Y=new_n1449_
+.gate $_AND_    A=new_n1449_ B=new_n1446_ Y=new_n1450_
+.gate $_NAND_   A=ys__n1048 B=ys__n1031 Y=new_n1451_
+.gate $_AND_    A=ys__n1034 B=ys__n1013 Y=new_n1452_
+.gate $_XOR_    A=ys__n1048 B=ys__n1031 Y=new_n1453_
+.gate $_NAND_   A=new_n1453_ B=new_n1452_ Y=new_n1454_
+.gate $_NAND_   A=new_n1454_ B=new_n1451_ Y=new_n1455_
+.gate $_NAND_   A=new_n1455_ B=new_n1450_ Y=new_n1456_
+.gate $_NAND_   A=new_n1456_ B=new_n1448_ Y=new_n1457_
+.gate $_NAND_   A=new_n1457_ B=new_n1442_ Y=new_n1458_
+.gate $_NAND_   A=ys__n1630 B=ys__n1064 Y=new_n1459_
+.gate $_AND_    A=ys__n1105 B=ys__n1062 Y=new_n1460_
+.gate $_NOT_    A=new_n1460_ Y=new_n1461_
+.gate $_ANDNOT_ A=new_n1439_ B=new_n1461_ Y=new_n1462_
+.gate $_ANDNOT_ A=new_n1459_ B=new_n1462_ Y=new_n1463_
+.gate $_ANDNOT_ A=new_n1438_ B=new_n1463_ Y=new_n1464_
+.gate $_NAND_   A=ys__n1617 B=ys__n1069 Y=new_n1465_
+.gate $_AND_    A=ys__n1622 B=ys__n1067 Y=new_n1466_
+.gate $_NAND_   A=new_n1466_ B=new_n1436_ Y=new_n1467_
+.gate $_AND_    A=new_n1467_ B=new_n1465_ Y=new_n1468_
+.gate $_ANDNOT_ A=new_n1468_ B=new_n1464_ Y=new_n1469_
+.gate $_NAND_   A=new_n1469_ B=new_n1458_ Y=new_n1470_
+.gate $_XOR_    A=ys__n1556 B=ys__n1097 Y=new_n1471_
+.gate $_XOR_    A=ys__n1561 B=ys__n1095 Y=new_n1472_
+.gate $_AND_    A=new_n1472_ B=new_n1471_ Y=new_n1473_
+.gate $_XOR_    A=ys__n1569 B=ys__n1092 Y=new_n1474_
+.gate $_XOR_    A=ys__n1574 B=ys__n1090 Y=new_n1475_
+.gate $_AND_    A=new_n1475_ B=new_n1474_ Y=new_n1476_
+.gate $_AND_    A=new_n1476_ B=new_n1473_ Y=new_n1477_
+.gate $_XOR_    A=ys__n1585 B=ys__n1086 Y=new_n1478_
+.gate $_XOR_    A=ys__n1590 B=ys__n1084 Y=new_n1479_
+.gate $_AND_    A=new_n1479_ B=new_n1478_ Y=new_n1480_
+.gate $_XOR_    A=ys__n1598 B=ys__n1081 Y=new_n1481_
+.gate $_XOR_    A=ys__n1603 B=ys__n1079 Y=new_n1482_
+.gate $_AND_    A=new_n1482_ B=new_n1481_ Y=new_n1483_
+.gate $_AND_    A=new_n1483_ B=new_n1480_ Y=new_n1484_
+.gate $_AND_    A=new_n1484_ B=new_n1477_ Y=new_n1485_
+.gate $_NAND_   A=new_n1485_ B=new_n1470_ Y=new_n1486_
+.gate $_NAND_   A=ys__n1598 B=ys__n1081 Y=new_n1487_
+.gate $_AND_    A=ys__n1603 B=ys__n1079 Y=new_n1488_
+.gate $_NOT_    A=new_n1488_ Y=new_n1489_
+.gate $_ANDNOT_ A=new_n1481_ B=new_n1489_ Y=new_n1490_
+.gate $_ANDNOT_ A=new_n1487_ B=new_n1490_ Y=new_n1491_
+.gate $_ANDNOT_ A=new_n1480_ B=new_n1491_ Y=new_n1492_
+.gate $_NAND_   A=ys__n1585 B=ys__n1086 Y=new_n1493_
+.gate $_AND_    A=ys__n1590 B=ys__n1084 Y=new_n1494_
+.gate $_NOT_    A=new_n1494_ Y=new_n1495_
+.gate $_ANDNOT_ A=new_n1478_ B=new_n1495_ Y=new_n1496_
+.gate $_ANDNOT_ A=new_n1493_ B=new_n1496_ Y=new_n1497_
+.gate $_ANDNOT_ A=new_n1497_ B=new_n1492_ Y=new_n1498_
+.gate $_ANDNOT_ A=new_n1477_ B=new_n1498_ Y=new_n1499_
+.gate $_NAND_   A=ys__n1569 B=ys__n1092 Y=new_n1500_
+.gate $_AND_    A=ys__n1574 B=ys__n1090 Y=new_n1501_
+.gate $_NOT_    A=new_n1501_ Y=new_n1502_
+.gate $_ANDNOT_ A=new_n1474_ B=new_n1502_ Y=new_n1503_
+.gate $_ANDNOT_ A=new_n1500_ B=new_n1503_ Y=new_n1504_
+.gate $_ANDNOT_ A=new_n1473_ B=new_n1504_ Y=new_n1505_
+.gate $_NAND_   A=ys__n1556 B=ys__n1097 Y=new_n1506_
+.gate $_NAND_   A=ys__n1561 B=ys__n1095 Y=new_n1507_
+.gate $_ANDNOT_ A=new_n1471_ B=new_n1507_ Y=new_n1508_
+.gate $_ANDNOT_ A=new_n1506_ B=new_n1508_ Y=new_n1509_
+.gate $_ANDNOT_ A=new_n1509_ B=new_n1505_ Y=new_n1510_
+.gate $_ANDNOT_ A=new_n1510_ B=new_n1499_ Y=new_n1511_
+.gate $_NAND_   A=new_n1511_ B=new_n1486_ Y=new_n1512_
+.gate $_XOR_    A=ys__n1539 B=ys__n1108 Y=new_n1513_
+.gate $_AND_    A=new_n1513_ B=new_n1421_ Y=new_n1514_
+.gate $_AND_    A=new_n1514_ B=new_n1417_ Y=new_n1515_
+.gate $_AND_    A=new_n1515_ B=new_n1433_ Y=new_n1516_
+.gate $_NAND_   A=new_n1516_ B=new_n1512_ Y=new_n1517_
+.gate $_NAND_   A=new_n1517_ B=new_n1435_ Y=new_n1518_
+.gate $_NAND_   A=new_n1518_ B=new_n1399_ Y=new_n1519_
+.gate $_NAND_   A=new_n1519_ B=new_n1396_ Y=new_n1520_
+.gate $_NAND_   A=new_n1520_ B=new_n1381_ Y=new_n1521_
+.gate $_NAND_   A=new_n1521_ B=new_n1379_ Y=new_n1522_
+.gate $_NAND_   A=new_n1522_ B=new_n1373_ Y=new_n1523_
+.gate $_NAND_   A=new_n1523_ B=new_n1372_ Y=new_n1524_
+.gate $_XOR_    A=new_n1524_ B=new_n1253_ Y=new_n1525_
+.gate $_MUX_    A=new_n1525_ B=new_n1365_ S=new_n1371_ Y=new_n1526_
+.gate $_ORNOT_  A=new_n1526_ B=new_n1250_ Y=new_n1527_
+.gate $_NAND_   A=ys__n1160 B=ys__n9 Y=new_n1528_
+.gate $_NOR_    A=new_n1528_ B=new_n1301_ Y=new_n1529_
+.gate $_NOR_    A=ys__n1160 B=ys__n9 Y=new_n1530_
+.gate $_NOR_    A=new_n1530_ B=new_n1297_ Y=new_n1531_
+.gate $_NOR_    A=new_n1531_ B=new_n1529_ Y=new_n1532_
+.gate $_XNOR_   A=ys__n1160 B=ys__n9 Y=new_n1533_
+.gate $_NOR_    A=new_n1533_ B=new_n1252_ Y=new_n1534_
+.gate $_NOR_    A=new_n1534_ B=new_n1294_ Y=new_n1535_
+.gate $_NAND_   A=new_n1535_ B=new_n1532_ Y=new_n1536_
+.gate $_OR_     A=new_n1536_ B=new_n1364_ Y=new_n1537_
+.gate $_NOT_    A=ys__n1164 Y=new_n1538_
+.gate $_NOR_    A=ys__n1046 B=ys__n1014 Y=new_n1539_
+.gate $_NOR_    A=ys__n1074 B=ys__n1057 Y=new_n1540_
+.gate $_NAND_   A=new_n1540_ B=new_n1539_ Y=new_n1541_
+.gate $_NOR_    A=ys__n1350 B=ys__n1345 Y=new_n1542_
+.gate $_NOR_    A=ys__n1358 B=ys__n1103 Y=new_n1543_
+.gate $_NAND_   A=new_n1543_ B=new_n1542_ Y=new_n1544_
+.gate $_NOR_    A=new_n1544_ B=new_n1541_ Y=new_n1545_
+.gate $_NOR_    A=ys__n1289 B=ys__n1284 Y=new_n1546_
+.gate $_NOR_    A=ys__n1302 B=ys__n1297 Y=new_n1547_
+.gate $_NAND_   A=new_n1547_ B=new_n1546_ Y=new_n1548_
+.gate $_OR_     A=ys__n1318 B=ys__n1313 Y=new_n1549_
+.gate $_OR_     A=ys__n1331 B=ys__n1326 Y=new_n1550_
+.gate $_OR_     A=new_n1550_ B=new_n1549_ Y=new_n1551_
+.gate $_NOR_    A=new_n1551_ B=new_n1548_ Y=new_n1552_
+.gate $_NAND_   A=new_n1552_ B=new_n1545_ Y=new_n1553_
+.gate $_NOR_    A=ys__n1225 B=ys__n1220 Y=new_n1554_
+.gate $_NOR_    A=ys__n1238 B=ys__n1233 Y=new_n1555_
+.gate $_NAND_   A=new_n1555_ B=new_n1554_ Y=new_n1556_
+.gate $_NOR_    A=ys__n1254 B=ys__n1249 Y=new_n1557_
+.gate $_NOR_    A=ys__n1267 B=ys__n1262 Y=new_n1558_
+.gate $_NAND_   A=new_n1558_ B=new_n1557_ Y=new_n1559_
+.gate $_OR_     A=new_n1559_ B=new_n1556_ Y=new_n1560_
+.gate $_NOR_    A=new_n1560_ B=new_n1553_ Y=new_n1561_
+.gate $_NOR_    A=ys__n1193 B=ys__n1188 Y=new_n1562_
+.gate $_OR_     A=ys__n1206 B=ys__n1201 Y=new_n1563_
+.gate $_ANDNOT_ A=new_n1562_ B=new_n1563_ Y=new_n1564_
+.gate $_NAND_   A=new_n1564_ B=new_n1561_ Y=new_n1565_
+.gate $_OR_     A=ys__n1177 B=ys__n1172 Y=new_n1566_
+.gate $_NOR_    A=new_n1566_ B=new_n1565_ Y=new_n1567_
+.gate $_XOR_    A=new_n1567_ B=new_n1538_ Y=new_n1568_
+.gate $_MUX_    A=new_n1568_ B=ys__n1164 S=ys__n12 Y=new_n1569_
+.gate $_OR_     A=new_n1569_ B=new_n1308_ Y=new_n1570_
+.gate $_XOR_    A=new_n1569_ B=new_n1308_ Y=new_n1571_
+.gate $_OR_     A=new_n1565_ B=ys__n1177 Y=new_n1572_
+.gate $_XOR_    A=new_n1572_ B=ys__n1172 Y=new_n1573_
+.gate $_MUX_    A=new_n1573_ B=ys__n1172 S=ys__n12 Y=new_n1574_
+.gate $_OR_     A=new_n1574_ B=new_n1318_ Y=new_n1575_
+.gate $_XOR_    A=new_n1565_ B=ys__n1177 Y=new_n1576_
+.gate $_MUX_    A=new_n1576_ B=ys__n1177 S=ys__n12 Y=new_n1577_
+.gate $_ANDNOT_ A=ys__n1142 B=new_n1577_ Y=new_n1578_
+.gate $_NOT_    A=new_n1578_ Y=new_n1579_
+.gate $_XOR_    A=new_n1574_ B=new_n1318_ Y=new_n1580_
+.gate $_ANDNOT_ A=new_n1580_ B=new_n1579_ Y=new_n1581_
+.gate $_ANDNOT_ A=new_n1575_ B=new_n1581_ Y=new_n1582_
+.gate $_XOR_    A=new_n1577_ B=new_n1317_ Y=new_n1583_
+.gate $_AND_    A=new_n1583_ B=new_n1580_ Y=new_n1584_
+.gate $_ANDNOT_ A=new_n1561_ B=new_n1563_ Y=new_n1585_
+.gate $_ORNOT_  A=ys__n1193 B=new_n1585_ Y=new_n1586_
+.gate $_XOR_    A=new_n1586_ B=ys__n1188 Y=new_n1587_
+.gate $_MUX_    A=new_n1587_ B=ys__n1188 S=ys__n12 Y=new_n1588_
+.gate $_OR_     A=new_n1588_ B=new_n1325_ Y=new_n1589_
+.gate $_XOR_    A=new_n1588_ B=new_n1325_ Y=new_n1590_
+.gate $_XNOR_   A=new_n1585_ B=ys__n1193 Y=new_n1591_
+.gate $_MUX_    A=new_n1591_ B=ys__n1193 S=ys__n12 Y=new_n1592_
+.gate $_ANDNOT_ A=ys__n1136 B=new_n1592_ Y=new_n1593_
+.gate $_NAND_   A=new_n1593_ B=new_n1590_ Y=new_n1594_
+.gate $_NAND_   A=new_n1594_ B=new_n1589_ Y=new_n1595_
+.gate $_ORNOT_  A=ys__n1206 B=new_n1561_ Y=new_n1596_
+.gate $_XOR_    A=new_n1596_ B=ys__n1201 Y=new_n1597_
+.gate $_MUX_    A=new_n1597_ B=ys__n1201 S=ys__n12 Y=new_n1598_
+.gate $_XOR_    A=new_n1598_ B=new_n1328_ Y=new_n1599_
+.gate $_XNOR_   A=new_n1561_ B=ys__n1206 Y=new_n1600_
+.gate $_MUX_    A=new_n1600_ B=ys__n1206 S=ys__n12 Y=new_n1601_
+.gate $_ANDNOT_ A=ys__n1131 B=new_n1601_ Y=new_n1602_
+.gate $_NAND_   A=new_n1602_ B=new_n1599_ Y=new_n1603_
+.gate $_ANDNOT_ A=ys__n1133 B=new_n1598_ Y=new_n1604_
+.gate $_ANDNOT_ A=new_n1603_ B=new_n1604_ Y=new_n1605_
+.gate $_XOR_    A=new_n1592_ B=new_n1324_ Y=new_n1606_
+.gate $_NAND_   A=new_n1606_ B=new_n1590_ Y=new_n1607_
+.gate $_NOR_    A=new_n1607_ B=new_n1605_ Y=new_n1608_
+.gate $_NOR_    A=new_n1608_ B=new_n1595_ Y=new_n1609_
+.gate $_XOR_    A=new_n1601_ B=ys__n1131 Y=new_n1610_
+.gate $_ANDNOT_ A=new_n1599_ B=new_n1610_ Y=new_n1611_
+.gate $_ANDNOT_ A=new_n1611_ B=new_n1607_ Y=new_n1612_
+.gate $_NOT_    A=ys__n1031 Y=new_n1613_
+.gate $_XNOR_   A=ys__n1046 B=ys__n1014 Y=new_n1614_
+.gate $_MUX_    A=new_n1614_ B=new_n1314_ S=ys__n12 Y=new_n1615_
+.gate $_XOR_    A=new_n1615_ B=new_n1613_ Y=new_n1616_
+.gate $_ANDNOT_ A=ys__n1014 B=ys__n1013 Y=new_n1617_
+.gate $_OR_     A=new_n1617_ B=new_n1616_ Y=new_n1618_
+.gate $_NAND_   A=new_n1615_ B=ys__n1031 Y=new_n1619_
+.gate $_NAND_   A=new_n1619_ B=new_n1618_ Y=new_n1620_
+.gate $_XOR_    A=new_n1539_ B=new_n1321_ Y=new_n1621_
+.gate $_MUX_    A=new_n1621_ B=ys__n1057 S=ys__n12 Y=new_n1622_
+.gate $_XNOR_   A=new_n1622_ B=ys__n1051 Y=new_n1623_
+.gate $_ANDNOT_ A=new_n1539_ B=ys__n1057 Y=new_n1624_
+.gate $_XOR_    A=new_n1624_ B=new_n1332_ Y=new_n1625_
+.gate $_MUX_    A=new_n1625_ B=ys__n1074 S=ys__n12 Y=new_n1626_
+.gate $_XNOR_   A=new_n1626_ B=ys__n1053 Y=new_n1627_
+.gate $_NAND_   A=new_n1627_ B=new_n1623_ Y=new_n1628_
+.gate $_ORNOT_  A=new_n1628_ B=new_n1620_ Y=new_n1629_
+.gate $_ANDNOT_ A=ys__n1051 B=new_n1622_ Y=new_n1630_
+.gate $_NAND_   A=new_n1627_ B=new_n1630_ Y=new_n1631_
+.gate $_ANDNOT_ A=ys__n1053 B=new_n1626_ Y=new_n1632_
+.gate $_ANDNOT_ A=new_n1631_ B=new_n1632_ Y=new_n1633_
+.gate $_NAND_   A=new_n1633_ B=new_n1629_ Y=new_n1634_
+.gate $_NOT_    A=ys__n1069 Y=new_n1635_
+.gate $_ANDNOT_ A=new_n1543_ B=new_n1541_ Y=new_n1636_
+.gate $_ORNOT_  A=ys__n1350 B=new_n1636_ Y=new_n1637_
+.gate $_XOR_    A=new_n1637_ B=ys__n1345 Y=new_n1638_
+.gate $_MUX_    A=new_n1638_ B=ys__n1345 S=ys__n12 Y=new_n1639_
+.gate $_XOR_    A=new_n1639_ B=new_n1635_ Y=new_n1640_
+.gate $_XNOR_   A=new_n1636_ B=ys__n1350 Y=new_n1641_
+.gate $_MUX_    A=new_n1641_ B=ys__n1350 S=ys__n12 Y=new_n1642_
+.gate $_XNOR_   A=new_n1642_ B=ys__n1067 Y=new_n1643_
+.gate $_NAND_   A=new_n1643_ B=new_n1640_ Y=new_n1644_
+.gate $_XOR_    A=new_n1541_ B=ys__n1103 Y=new_n1645_
+.gate $_MUX_    A=new_n1645_ B=ys__n1103 S=ys__n12 Y=new_n1646_
+.gate $_XNOR_   A=new_n1646_ B=ys__n1062 Y=new_n1647_
+.gate $_OR_     A=new_n1541_ B=ys__n1103 Y=new_n1648_
+.gate $_XOR_    A=new_n1648_ B=ys__n1358 Y=new_n1649_
+.gate $_MUX_    A=new_n1649_ B=ys__n1358 S=ys__n12 Y=new_n1650_
+.gate $_XNOR_   A=new_n1650_ B=ys__n1064 Y=new_n1651_
+.gate $_NAND_   A=new_n1651_ B=new_n1647_ Y=new_n1652_
+.gate $_OR_     A=new_n1652_ B=new_n1644_ Y=new_n1653_
+.gate $_ORNOT_  A=new_n1653_ B=new_n1634_ Y=new_n1654_
+.gate $_ANDNOT_ A=ys__n1062 B=new_n1646_ Y=new_n1655_
+.gate $_NAND_   A=new_n1651_ B=new_n1655_ Y=new_n1656_
+.gate $_ANDNOT_ A=ys__n1064 B=new_n1650_ Y=new_n1657_
+.gate $_ANDNOT_ A=new_n1656_ B=new_n1657_ Y=new_n1658_
+.gate $_NOR_    A=new_n1658_ B=new_n1644_ Y=new_n1659_
+.gate $_ANDNOT_ A=ys__n1067 B=new_n1642_ Y=new_n1660_
+.gate $_NAND_   A=new_n1660_ B=new_n1640_ Y=new_n1661_
+.gate $_OR_     A=new_n1639_ B=new_n1635_ Y=new_n1662_
+.gate $_NAND_   A=new_n1662_ B=new_n1661_ Y=new_n1663_
+.gate $_NOR_    A=new_n1663_ B=new_n1659_ Y=new_n1664_
+.gate $_NAND_   A=new_n1664_ B=new_n1654_ Y=new_n1665_
+.gate $_NOT_    A=ys__n1097 Y=new_n1666_
+.gate $_NOT_    A=new_n1547_ Y=new_n1667_
+.gate $_OR_     A=new_n1544_ B=new_n1541_ Y=new_n1668_
+.gate $_OR_     A=new_n1551_ B=new_n1668_ Y=new_n1669_
+.gate $_OR_     A=new_n1669_ B=new_n1667_ Y=new_n1670_
+.gate $_NOR_    A=new_n1670_ B=ys__n1289 Y=new_n1671_
+.gate $_XNOR_   A=new_n1671_ B=ys__n1284 Y=new_n1672_
+.gate $_MUX_    A=new_n1672_ B=ys__n1284 S=ys__n12 Y=new_n1673_
+.gate $_XOR_    A=new_n1673_ B=new_n1666_ Y=new_n1674_
+.gate $_XOR_    A=new_n1670_ B=ys__n1289 Y=new_n1675_
+.gate $_MUX_    A=new_n1675_ B=ys__n1289 S=ys__n12 Y=new_n1676_
+.gate $_XNOR_   A=new_n1676_ B=ys__n1095 Y=new_n1677_
+.gate $_NAND_   A=new_n1677_ B=new_n1674_ Y=new_n1678_
+.gate $_OR_     A=new_n1669_ B=ys__n1302 Y=new_n1679_
+.gate $_XOR_    A=new_n1679_ B=ys__n1297 Y=new_n1680_
+.gate $_MUX_    A=new_n1680_ B=ys__n1297 S=ys__n12 Y=new_n1681_
+.gate $_XNOR_   A=new_n1681_ B=ys__n1092 Y=new_n1682_
+.gate $_XOR_    A=new_n1669_ B=ys__n1302 Y=new_n1683_
+.gate $_MUX_    A=new_n1683_ B=ys__n1302 S=ys__n12 Y=new_n1684_
+.gate $_XNOR_   A=new_n1684_ B=ys__n1090 Y=new_n1685_
+.gate $_NAND_   A=new_n1685_ B=new_n1682_ Y=new_n1686_
+.gate $_NOR_    A=new_n1686_ B=new_n1678_ Y=new_n1687_
+.gate $_NOT_    A=ys__n1313 Y=new_n1688_
+.gate $_ORNOT_  A=new_n1550_ B=new_n1545_ Y=new_n1689_
+.gate $_NOR_    A=new_n1689_ B=ys__n1318 Y=new_n1690_
+.gate $_XOR_    A=new_n1690_ B=ys__n1313 Y=new_n1691_
+.gate $_MUX_    A=new_n1691_ B=new_n1688_ S=ys__n12 Y=new_n1692_
+.gate $_XOR_    A=new_n1692_ B=ys__n1086 Y=new_n1693_
+.gate $_XOR_    A=new_n1689_ B=ys__n1318 Y=new_n1694_
+.gate $_MUX_    A=new_n1694_ B=ys__n1318 S=ys__n12 Y=new_n1695_
+.gate $_XNOR_   A=new_n1695_ B=ys__n1084 Y=new_n1696_
+.gate $_NAND_   A=new_n1696_ B=new_n1693_ Y=new_n1697_
+.gate $_XOR_    A=new_n1668_ B=ys__n1331 Y=new_n1698_
+.gate $_MUX_    A=new_n1698_ B=ys__n1331 S=ys__n12 Y=new_n1699_
+.gate $_XNOR_   A=new_n1699_ B=ys__n1079 Y=new_n1700_
+.gate $_NOT_    A=ys__n1326 Y=new_n1701_
+.gate $_ANDNOT_ A=new_n1545_ B=ys__n1331 Y=new_n1702_
+.gate $_XOR_    A=new_n1702_ B=ys__n1326 Y=new_n1703_
+.gate $_MUX_    A=new_n1703_ B=new_n1701_ S=ys__n12 Y=new_n1704_
+.gate $_XOR_    A=new_n1704_ B=ys__n1081 Y=new_n1705_
+.gate $_AND_    A=new_n1705_ B=new_n1700_ Y=new_n1706_
+.gate $_ORNOT_  A=new_n1697_ B=new_n1706_ Y=new_n1707_
+.gate $_ANDNOT_ A=new_n1687_ B=new_n1707_ Y=new_n1708_
+.gate $_NAND_   A=new_n1708_ B=new_n1665_ Y=new_n1709_
+.gate $_ANDNOT_ A=ys__n1079 B=new_n1699_ Y=new_n1710_
+.gate $_NAND_   A=new_n1705_ B=new_n1710_ Y=new_n1711_
+.gate $_NAND_   A=new_n1704_ B=ys__n1081 Y=new_n1712_
+.gate $_NAND_   A=new_n1712_ B=new_n1711_ Y=new_n1713_
+.gate $_ANDNOT_ A=new_n1713_ B=new_n1697_ Y=new_n1714_
+.gate $_ANDNOT_ A=ys__n1084 B=new_n1695_ Y=new_n1715_
+.gate $_NAND_   A=new_n1715_ B=new_n1693_ Y=new_n1716_
+.gate $_NAND_   A=new_n1692_ B=ys__n1086 Y=new_n1717_
+.gate $_NAND_   A=new_n1717_ B=new_n1716_ Y=new_n1718_
+.gate $_NOR_    A=new_n1718_ B=new_n1714_ Y=new_n1719_
+.gate $_ANDNOT_ A=new_n1687_ B=new_n1719_ Y=new_n1720_
+.gate $_ANDNOT_ A=ys__n1090 B=new_n1684_ Y=new_n1721_
+.gate $_NAND_   A=new_n1721_ B=new_n1682_ Y=new_n1722_
+.gate $_ANDNOT_ A=ys__n1092 B=new_n1681_ Y=new_n1723_
+.gate $_ANDNOT_ A=new_n1722_ B=new_n1723_ Y=new_n1724_
+.gate $_NOR_    A=new_n1724_ B=new_n1678_ Y=new_n1725_
+.gate $_ANDNOT_ A=ys__n1095 B=new_n1676_ Y=new_n1726_
+.gate $_NAND_   A=new_n1726_ B=new_n1674_ Y=new_n1727_
+.gate $_OR_     A=new_n1673_ B=new_n1666_ Y=new_n1728_
+.gate $_NAND_   A=new_n1728_ B=new_n1727_ Y=new_n1729_
+.gate $_NOR_    A=new_n1729_ B=new_n1725_ Y=new_n1730_
+.gate $_ANDNOT_ A=new_n1730_ B=new_n1720_ Y=new_n1731_
+.gate $_NAND_   A=new_n1731_ B=new_n1709_ Y=new_n1732_
+.gate $_NOT_    A=ys__n1126 Y=new_n1733_
+.gate $_NOR_    A=new_n1559_ B=new_n1553_ Y=new_n1734_
+.gate $_AND_    A=new_n1734_ B=new_n1555_ Y=new_n1735_
+.gate $_ORNOT_  A=ys__n1225 B=new_n1735_ Y=new_n1736_
+.gate $_XOR_    A=new_n1736_ B=ys__n1220 Y=new_n1737_
+.gate $_MUX_    A=new_n1737_ B=ys__n1220 S=ys__n12 Y=new_n1738_
+.gate $_XOR_    A=new_n1738_ B=new_n1733_ Y=new_n1739_
+.gate $_XNOR_   A=new_n1735_ B=ys__n1225 Y=new_n1740_
+.gate $_MUX_    A=new_n1740_ B=ys__n1225 S=ys__n12 Y=new_n1741_
+.gate $_XNOR_   A=new_n1741_ B=ys__n1124 Y=new_n1742_
+.gate $_NAND_   A=new_n1742_ B=new_n1739_ Y=new_n1743_
+.gate $_ORNOT_  A=ys__n1238 B=new_n1734_ Y=new_n1744_
+.gate $_XOR_    A=new_n1744_ B=ys__n1233 Y=new_n1745_
+.gate $_MUX_    A=new_n1745_ B=ys__n1233 S=ys__n12 Y=new_n1746_
+.gate $_XNOR_   A=new_n1746_ B=ys__n1121 Y=new_n1747_
+.gate $_XNOR_   A=new_n1734_ B=ys__n1238 Y=new_n1748_
+.gate $_MUX_    A=new_n1748_ B=ys__n1238 S=ys__n12 Y=new_n1749_
+.gate $_XNOR_   A=new_n1749_ B=ys__n1119 Y=new_n1750_
+.gate $_NAND_   A=new_n1750_ B=new_n1747_ Y=new_n1751_
+.gate $_OR_     A=new_n1751_ B=new_n1743_ Y=new_n1752_
+.gate $_NOT_    A=ys__n1115 Y=new_n1753_
+.gate $_ANDNOT_ A=new_n1558_ B=new_n1553_ Y=new_n1754_
+.gate $_ORNOT_  A=ys__n1254 B=new_n1754_ Y=new_n1755_
+.gate $_XOR_    A=new_n1755_ B=ys__n1249 Y=new_n1756_
+.gate $_MUX_    A=new_n1756_ B=ys__n1249 S=ys__n12 Y=new_n1757_
+.gate $_XOR_    A=new_n1757_ B=new_n1753_ Y=new_n1758_
+.gate $_XNOR_   A=new_n1754_ B=ys__n1254 Y=new_n1759_
+.gate $_MUX_    A=new_n1759_ B=ys__n1254 S=ys__n12 Y=new_n1760_
+.gate $_XNOR_   A=new_n1760_ B=ys__n1113 Y=new_n1761_
+.gate $_NAND_   A=new_n1761_ B=new_n1758_ Y=new_n1762_
+.gate $_OR_     A=new_n1553_ B=ys__n1267 Y=new_n1763_
+.gate $_XOR_    A=new_n1763_ B=ys__n1262 Y=new_n1764_
+.gate $_MUX_    A=new_n1764_ B=ys__n1262 S=ys__n12 Y=new_n1765_
+.gate $_XNOR_   A=new_n1765_ B=ys__n1110 Y=new_n1766_
+.gate $_XOR_    A=new_n1553_ B=ys__n1267 Y=new_n1767_
+.gate $_MUX_    A=new_n1767_ B=ys__n1267 S=ys__n12 Y=new_n1768_
+.gate $_XNOR_   A=new_n1768_ B=ys__n1108 Y=new_n1769_
+.gate $_NAND_   A=new_n1769_ B=new_n1766_ Y=new_n1770_
+.gate $_OR_     A=new_n1770_ B=new_n1762_ Y=new_n1771_
+.gate $_NOR_    A=new_n1771_ B=new_n1752_ Y=new_n1772_
+.gate $_NAND_   A=new_n1772_ B=new_n1732_ Y=new_n1773_
+.gate $_ANDNOT_ A=ys__n1108 B=new_n1768_ Y=new_n1774_
+.gate $_NAND_   A=new_n1774_ B=new_n1766_ Y=new_n1775_
+.gate $_ANDNOT_ A=ys__n1110 B=new_n1765_ Y=new_n1776_
+.gate $_ANDNOT_ A=new_n1775_ B=new_n1776_ Y=new_n1777_
+.gate $_NOR_    A=new_n1777_ B=new_n1762_ Y=new_n1778_
+.gate $_ANDNOT_ A=ys__n1113 B=new_n1760_ Y=new_n1779_
+.gate $_NAND_   A=new_n1779_ B=new_n1758_ Y=new_n1780_
+.gate $_OR_     A=new_n1757_ B=new_n1753_ Y=new_n1781_
+.gate $_NAND_   A=new_n1781_ B=new_n1780_ Y=new_n1782_
+.gate $_NOR_    A=new_n1782_ B=new_n1778_ Y=new_n1783_
+.gate $_NOR_    A=new_n1783_ B=new_n1752_ Y=new_n1784_
+.gate $_ANDNOT_ A=ys__n1119 B=new_n1749_ Y=new_n1785_
+.gate $_NAND_   A=new_n1785_ B=new_n1747_ Y=new_n1786_
+.gate $_ANDNOT_ A=ys__n1121 B=new_n1746_ Y=new_n1787_
+.gate $_ORNOT_  A=new_n1787_ B=new_n1786_ Y=new_n1788_
+.gate $_ANDNOT_ A=new_n1788_ B=new_n1743_ Y=new_n1789_
+.gate $_ANDNOT_ A=ys__n1124 B=new_n1741_ Y=new_n1790_
+.gate $_NAND_   A=new_n1790_ B=new_n1739_ Y=new_n1791_
+.gate $_OR_     A=new_n1738_ B=new_n1733_ Y=new_n1792_
+.gate $_NAND_   A=new_n1792_ B=new_n1791_ Y=new_n1793_
+.gate $_NOR_    A=new_n1793_ B=new_n1789_ Y=new_n1794_
+.gate $_ANDNOT_ A=new_n1794_ B=new_n1784_ Y=new_n1795_
+.gate $_NAND_   A=new_n1795_ B=new_n1773_ Y=new_n1796_
+.gate $_NAND_   A=new_n1796_ B=new_n1612_ Y=new_n1797_
+.gate $_NAND_   A=new_n1797_ B=new_n1609_ Y=new_n1798_
+.gate $_NAND_   A=new_n1798_ B=new_n1584_ Y=new_n1799_
+.gate $_NAND_   A=new_n1799_ B=new_n1582_ Y=new_n1800_
+.gate $_NAND_   A=new_n1800_ B=new_n1571_ Y=new_n1801_
+.gate $_NAND_   A=new_n1801_ B=new_n1570_ Y=new_n1802_
+.gate $_NAND_   A=new_n1567_ B=new_n1538_ Y=new_n1803_
+.gate $_XOR_    A=new_n1803_ B=ys__n1160 Y=new_n1804_
+.gate $_MUX_    A=new_n1804_ B=ys__n1160 S=ys__n12 Y=new_n1805_
+.gate $_XOR_    A=new_n1805_ B=new_n1276_ Y=new_n1806_
+.gate $_XOR_    A=new_n1806_ B=new_n1802_ Y=new_n1807_
+.gate $_MUX_    A=new_n1807_ B=new_n1537_ S=new_n1371_ Y=new_n1808_
+.gate $_NAND_   A=new_n1808_ B=new_n1261_ Y=new_n1809_
+.gate $_NAND_   A=new_n1809_ B=new_n1527_ Y=new_n1810_
+.gate $_MUX_    A=new_n1810_ B=new_n1244_ S=new_n1245_ Y=new_n1811_
+.gate $_MUX_    A=new_n1811_ B=ys__n89 S=new_n1078_ Y=ys__n91
+.gate $_ANDNOT_ A=ys__n92 B=new_n1077_ Y=ys__n93
+.gate $_ANDNOT_ A=ys__n94 B=new_n1077_ Y=ys__n95
+.gate $_ANDNOT_ A=ys__n96 B=new_n1077_ Y=ys__n97
+.gate $_ANDNOT_ A=ys__n98 B=new_n1077_ Y=ys__n99
+.gate $_ANDNOT_ A=ys__n100 B=new_n1077_ Y=ys__n101
+.gate $_ANDNOT_ A=ys__n102 B=new_n1077_ Y=ys__n103
+.gate $_ANDNOT_ A=ys__n104 B=new_n1077_ Y=ys__n105
+.gate $_ANDNOT_ A=ys__n106 B=new_n1077_ Y=ys__n107
+.gate $_ANDNOT_ A=ys__n108 B=new_n1077_ Y=ys__n109
+.gate $_ANDNOT_ A=ys__n110 B=new_n1077_ Y=ys__n111
+.gate $_ANDNOT_ A=ys__n112 B=new_n1077_ Y=ys__n113
+.gate $_ANDNOT_ A=ys__n114 B=new_n1077_ Y=ys__n115
+.gate $_ANDNOT_ A=ys__n116 B=new_n1077_ Y=ys__n117
+.gate $_ANDNOT_ A=ys__n118 B=new_n1077_ Y=ys__n119
+.gate $_ANDNOT_ A=ys__n120 B=new_n1077_ Y=ys__n121
+.gate $_ANDNOT_ A=ys__n122 B=new_n1077_ Y=ys__n123
+.gate $_ANDNOT_ A=ys__n124 B=new_n1077_ Y=ys__n125
+.gate $_ANDNOT_ A=ys__n126 B=new_n1077_ Y=ys__n127
+.gate $_ANDNOT_ A=ys__n128 B=new_n1077_ Y=ys__n129
+.gate $_ANDNOT_ A=ys__n130 B=new_n1077_ Y=ys__n131
+.gate $_ANDNOT_ A=ys__n132 B=new_n1077_ Y=ys__n133
+.gate $_ANDNOT_ A=ys__n134 B=new_n1077_ Y=ys__n135
+.gate $_ANDNOT_ A=ys__n136 B=new_n1077_ Y=ys__n137
+.gate $_ANDNOT_ A=ys__n138 B=new_n1077_ Y=ys__n139
+.gate $_ANDNOT_ A=ys__n140 B=new_n1077_ Y=ys__n141
+.gate $_ANDNOT_ A=ys__n142 B=new_n1077_ Y=ys__n143
+.gate $_ANDNOT_ A=ys__n144 B=new_n1077_ Y=ys__n145
+.gate $_ANDNOT_ A=ys__n146 B=new_n1077_ Y=ys__n147
+.gate $_ANDNOT_ A=ys__n148 B=new_n1077_ Y=ys__n149
+.gate $_ANDNOT_ A=ys__n150 B=new_n1077_ Y=ys__n151
+.gate $_ANDNOT_ A=ys__n152 B=new_n1077_ Y=ys__n153
+.gate $_ANDNOT_ A=ys__n154 B=new_n1077_ Y=ys__n155
+.gate $_ANDNOT_ A=ys__n156 B=new_n1077_ Y=ys__n157
+.gate $_ANDNOT_ A=ys__n158 B=new_n1077_ Y=ys__n159
+.gate $_ANDNOT_ A=ys__n160 B=new_n1077_ Y=ys__n161
+.gate $_ANDNOT_ A=ys__n162 B=new_n1077_ Y=ys__n163
+.gate $_ANDNOT_ A=ys__n164 B=new_n1077_ Y=ys__n165
+.gate $_OR_     A=ys__n167 B=ys__n166 Y=ys__n168
+.gate $_ORNOT_  A=ys__n169 B=ys__n170 Y=ys__n171
+.gate $_ORNOT_  A=ys__n172 B=ys__n170 Y=new_n1852_
+.gate $_OR_     A=new_n1852_ B=new_n1077_ Y=ys__n174
+.gate $_NAND_   A=ys__n167 B=ys__n166 Y=ys__n176
+.gate $_AND_    A=ys__n177 B=ys__n172 Y=ys__n178
+.gate $_AND_    A=ys__n179 B=ys__n172 Y=ys__n180
+.gate $_AND_    A=ys__n181 B=ys__n172 Y=ys__n182
+.gate $_AND_    A=ys__n183 B=ys__n172 Y=ys__n184
+.gate $_AND_    A=ys__n185 B=ys__n172 Y=ys__n186
+.gate $_AND_    A=ys__n187 B=ys__n172 Y=ys__n188
+.gate $_AND_    A=ys__n189 B=ys__n172 Y=ys__n190
+.gate $_AND_    A=ys__n191 B=ys__n172 Y=ys__n192
+.gate $_AND_    A=ys__n193 B=ys__n172 Y=ys__n194
+.gate $_AND_    A=ys__n195 B=ys__n172 Y=ys__n196
+.gate $_AND_    A=ys__n197 B=ys__n172 Y=ys__n198
+.gate $_AND_    A=ys__n199 B=ys__n172 Y=ys__n200
+.gate $_AND_    A=ys__n201 B=ys__n172 Y=ys__n202
+.gate $_AND_    A=ys__n203 B=ys__n172 Y=ys__n204
+.gate $_AND_    A=ys__n205 B=ys__n172 Y=ys__n206
+.gate $_AND_    A=ys__n207 B=ys__n172 Y=ys__n208
+.gate $_AND_    A=ys__n209 B=ys__n172 Y=ys__n210
+.gate $_AND_    A=ys__n211 B=ys__n172 Y=ys__n212
+.gate $_AND_    A=ys__n213 B=ys__n172 Y=ys__n214
+.gate $_AND_    A=ys__n215 B=ys__n172 Y=ys__n216
+.gate $_AND_    A=ys__n217 B=ys__n172 Y=ys__n218
+.gate $_AND_    A=ys__n219 B=ys__n172 Y=ys__n220
+.gate $_AND_    A=ys__n221 B=ys__n172 Y=ys__n222
+.gate $_AND_    A=ys__n223 B=ys__n172 Y=ys__n224
+.gate $_AND_    A=ys__n225 B=ys__n172 Y=ys__n226
+.gate $_AND_    A=ys__n227 B=ys__n172 Y=ys__n228
+.gate $_AND_    A=ys__n229 B=ys__n172 Y=ys__n230
+.gate $_AND_    A=ys__n231 B=ys__n172 Y=ys__n232
+.gate $_AND_    A=ys__n233 B=ys__n172 Y=ys__n234
+.gate $_AND_    A=ys__n235 B=ys__n172 Y=ys__n236
+.gate $_AND_    A=ys__n237 B=ys__n172 Y=ys__n238
+.gate $_AND_    A=ys__n239 B=ys__n172 Y=ys__n240
+.gate $_AND_    A=ys__n241 B=ys__n172 Y=ys__n242
+.gate $_AND_    A=ys__n243 B=ys__n172 Y=ys__n244
+.gate $_AND_    A=ys__n245 B=ys__n172 Y=ys__n246
+.gate $_AND_    A=ys__n247 B=ys__n172 Y=ys__n248
+.gate $_AND_    A=ys__n249 B=ys__n172 Y=ys__n250
+.gate $_AND_    A=ys__n251 B=ys__n172 Y=ys__n252
+.gate $_AND_    A=ys__n253 B=ys__n172 Y=ys__n254
+.gate $_AND_    A=ys__n255 B=ys__n172 Y=ys__n256
+.gate $_AND_    A=ys__n257 B=ys__n172 Y=ys__n258
+.gate $_AND_    A=ys__n259 B=ys__n172 Y=ys__n260
+.gate $_AND_    A=ys__n261 B=ys__n172 Y=ys__n262
+.gate $_AND_    A=ys__n263 B=ys__n172 Y=ys__n264
+.gate $_AND_    A=ys__n265 B=ys__n172 Y=ys__n266
+.gate $_AND_    A=ys__n267 B=ys__n172 Y=ys__n268
+.gate $_AND_    A=ys__n269 B=ys__n172 Y=ys__n270
+.gate $_AND_    A=ys__n271 B=ys__n172 Y=ys__n272
+.gate $_AND_    A=ys__n273 B=ys__n172 Y=ys__n274
+.gate $_AND_    A=ys__n275 B=ys__n172 Y=ys__n276
+.gate $_AND_    A=ys__n277 B=ys__n172 Y=ys__n278
+.gate $_AND_    A=ys__n279 B=ys__n172 Y=ys__n280
+.gate $_AND_    A=ys__n281 B=ys__n172 Y=ys__n282
+.gate $_AND_    A=ys__n283 B=ys__n172 Y=ys__n284
+.gate $_AND_    A=ys__n285 B=ys__n172 Y=ys__n286
+.gate $_AND_    A=ys__n287 B=ys__n172 Y=ys__n288
+.gate $_AND_    A=ys__n289 B=ys__n172 Y=ys__n290
+.gate $_AND_    A=ys__n291 B=ys__n172 Y=ys__n292
+.gate $_AND_    A=ys__n293 B=ys__n172 Y=ys__n294
+.gate $_AND_    A=ys__n295 B=ys__n172 Y=ys__n296
+.gate $_AND_    A=ys__n297 B=ys__n172 Y=ys__n298
+.gate $_AND_    A=ys__n299 B=ys__n172 Y=ys__n300
+.gate $_AND_    A=ys__n301 B=ys__n172 Y=ys__n302
+.gate $_AND_    A=ys__n303 B=ys__n172 Y=ys__n304
+.gate $_AND_    A=ys__n305 B=ys__n172 Y=ys__n306
+.gate $_AND_    A=ys__n307 B=ys__n172 Y=ys__n308
+.gate $_AND_    A=ys__n309 B=ys__n172 Y=ys__n310
+.gate $_AND_    A=ys__n311 B=ys__n172 Y=ys__n312
+.gate $_AND_    A=ys__n313 B=ys__n172 Y=ys__n314
+.gate $_AND_    A=ys__n315 B=ys__n172 Y=ys__n316
+.gate $_AND_    A=ys__n317 B=ys__n172 Y=ys__n318
+.gate $_AND_    A=ys__n319 B=ys__n172 Y=ys__n320
+.gate $_AND_    A=ys__n321 B=ys__n172 Y=ys__n322
+.gate $_AND_    A=ys__n323 B=ys__n172 Y=ys__n324
+.gate $_AND_    A=ys__n325 B=ys__n172 Y=ys__n326
+.gate $_AND_    A=ys__n327 B=ys__n172 Y=ys__n328
+.gate $_AND_    A=ys__n329 B=ys__n172 Y=ys__n330
+.gate $_AND_    A=ys__n331 B=ys__n172 Y=ys__n332
+.gate $_AND_    A=ys__n333 B=ys__n172 Y=ys__n334
+.gate $_AND_    A=ys__n335 B=ys__n172 Y=ys__n336
+.gate $_AND_    A=ys__n337 B=ys__n172 Y=ys__n338
+.gate $_AND_    A=ys__n339 B=ys__n172 Y=ys__n340
+.gate $_AND_    A=ys__n341 B=ys__n172 Y=ys__n342
+.gate $_AND_    A=ys__n343 B=ys__n172 Y=ys__n344
+.gate $_AND_    A=ys__n345 B=ys__n172 Y=ys__n346
+.gate $_AND_    A=ys__n347 B=ys__n172 Y=ys__n348
+.gate $_AND_    A=ys__n349 B=ys__n172 Y=ys__n350
+.gate $_AND_    A=ys__n351 B=ys__n172 Y=ys__n352
+.gate $_AND_    A=ys__n353 B=ys__n172 Y=ys__n354
+.gate $_AND_    A=ys__n355 B=ys__n172 Y=ys__n356
+.gate $_AND_    A=ys__n357 B=ys__n172 Y=ys__n358
+.gate $_AND_    A=ys__n359 B=ys__n172 Y=ys__n360
+.gate $_AND_    A=ys__n361 B=ys__n172 Y=ys__n362
+.gate $_AND_    A=ys__n363 B=ys__n172 Y=ys__n364
+.gate $_AND_    A=ys__n365 B=ys__n172 Y=ys__n366
+.gate $_AND_    A=ys__n367 B=ys__n172 Y=ys__n368
+.gate $_AND_    A=ys__n369 B=ys__n172 Y=ys__n370
+.gate $_AND_    A=ys__n371 B=ys__n172 Y=ys__n372
+.gate $_AND_    A=ys__n373 B=ys__n172 Y=ys__n374
+.gate $_AND_    A=ys__n375 B=ys__n172 Y=ys__n376
+.gate $_AND_    A=ys__n377 B=ys__n172 Y=ys__n378
+.gate $_AND_    A=ys__n379 B=ys__n172 Y=ys__n380
+.gate $_AND_    A=ys__n381 B=ys__n172 Y=ys__n382
+.gate $_AND_    A=ys__n383 B=ys__n172 Y=ys__n384
+.gate $_AND_    A=ys__n385 B=ys__n172 Y=ys__n386
+.gate $_AND_    A=ys__n387 B=ys__n172 Y=ys__n388
+.gate $_AND_    A=ys__n389 B=ys__n172 Y=ys__n390
+.gate $_AND_    A=ys__n391 B=ys__n172 Y=ys__n392
+.gate $_AND_    A=ys__n393 B=ys__n172 Y=ys__n394
+.gate $_AND_    A=ys__n395 B=ys__n172 Y=ys__n396
+.gate $_AND_    A=ys__n397 B=ys__n172 Y=ys__n398
+.gate $_AND_    A=ys__n399 B=ys__n172 Y=ys__n400
+.gate $_AND_    A=ys__n401 B=ys__n172 Y=ys__n402
+.gate $_AND_    A=ys__n403 B=ys__n172 Y=ys__n404
+.gate $_AND_    A=ys__n405 B=ys__n172 Y=ys__n406
+.gate $_AND_    A=ys__n407 B=ys__n172 Y=ys__n408
+.gate $_AND_    A=ys__n409 B=ys__n172 Y=ys__n410
+.gate $_AND_    A=ys__n411 B=ys__n172 Y=ys__n412
+.gate $_AND_    A=ys__n413 B=ys__n172 Y=ys__n414
+.gate $_AND_    A=ys__n415 B=ys__n172 Y=ys__n416
+.gate $_AND_    A=ys__n417 B=ys__n172 Y=ys__n418
+.gate $_AND_    A=ys__n419 B=ys__n172 Y=ys__n420
+.gate $_AND_    A=ys__n421 B=ys__n172 Y=ys__n422
+.gate $_AND_    A=ys__n423 B=ys__n172 Y=ys__n424
+.gate $_AND_    A=ys__n425 B=ys__n172 Y=ys__n426
+.gate $_AND_    A=ys__n427 B=ys__n172 Y=ys__n428
+.gate $_AND_    A=ys__n429 B=ys__n172 Y=ys__n430
+.gate $_AND_    A=ys__n431 B=ys__n172 Y=ys__n432
+.gate $_AND_    A=ys__n433 B=ys__n172 Y=ys__n434
+.gate $_AND_    A=ys__n435 B=ys__n172 Y=ys__n436
+.gate $_AND_    A=ys__n437 B=ys__n172 Y=ys__n438
+.gate $_AND_    A=ys__n439 B=ys__n172 Y=ys__n440
+.gate $_AND_    A=ys__n441 B=ys__n172 Y=ys__n442
+.gate $_AND_    A=ys__n443 B=ys__n172 Y=ys__n444
+.gate $_AND_    A=ys__n445 B=ys__n172 Y=ys__n446
+.gate $_AND_    A=ys__n447 B=ys__n172 Y=ys__n448
+.gate $_AND_    A=ys__n449 B=ys__n172 Y=ys__n450
+.gate $_AND_    A=ys__n451 B=ys__n172 Y=ys__n452
+.gate $_AND_    A=ys__n453 B=ys__n172 Y=ys__n454
+.gate $_AND_    A=ys__n455 B=ys__n172 Y=ys__n456
+.gate $_AND_    A=ys__n457 B=ys__n172 Y=ys__n458
+.gate $_AND_    A=ys__n459 B=ys__n172 Y=ys__n460
+.gate $_AND_    A=ys__n461 B=ys__n172 Y=ys__n462
+.gate $_AND_    A=ys__n463 B=ys__n172 Y=ys__n464
+.gate $_AND_    A=ys__n465 B=ys__n172 Y=ys__n466
+.gate $_AND_    A=ys__n467 B=ys__n172 Y=ys__n468
+.gate $_AND_    A=ys__n469 B=ys__n172 Y=ys__n470
+.gate $_AND_    A=ys__n471 B=ys__n172 Y=ys__n472
+.gate $_AND_    A=ys__n473 B=ys__n172 Y=ys__n474
+.gate $_AND_    A=ys__n475 B=ys__n172 Y=ys__n476
+.gate $_AND_    A=ys__n477 B=ys__n172 Y=ys__n478
+.gate $_AND_    A=ys__n479 B=ys__n172 Y=ys__n480
+.gate $_AND_    A=ys__n481 B=ys__n172 Y=ys__n482
+.gate $_AND_    A=ys__n483 B=ys__n172 Y=ys__n484
+.gate $_AND_    A=ys__n485 B=ys__n172 Y=ys__n486
+.gate $_AND_    A=ys__n487 B=ys__n172 Y=ys__n488
+.gate $_AND_    A=ys__n489 B=ys__n172 Y=ys__n490
+.gate $_AND_    A=ys__n491 B=ys__n172 Y=ys__n492
+.gate $_AND_    A=ys__n493 B=ys__n172 Y=ys__n494
+.gate $_AND_    A=ys__n495 B=ys__n172 Y=ys__n496
+.gate $_AND_    A=ys__n497 B=ys__n172 Y=ys__n498
+.gate $_AND_    A=ys__n499 B=ys__n172 Y=ys__n500
+.gate $_AND_    A=ys__n501 B=ys__n172 Y=ys__n502
+.gate $_AND_    A=ys__n503 B=ys__n172 Y=ys__n504
+.gate $_AND_    A=ys__n505 B=ys__n172 Y=ys__n506
+.gate $_AND_    A=ys__n507 B=ys__n172 Y=ys__n508
+.gate $_AND_    A=ys__n509 B=ys__n172 Y=ys__n510
+.gate $_AND_    A=ys__n511 B=ys__n172 Y=ys__n512
+.gate $_AND_    A=ys__n513 B=ys__n172 Y=ys__n514
+.gate $_AND_    A=ys__n515 B=ys__n172 Y=ys__n516
+.gate $_AND_    A=ys__n517 B=ys__n172 Y=ys__n518
+.gate $_AND_    A=ys__n519 B=ys__n172 Y=ys__n520
+.gate $_AND_    A=ys__n521 B=ys__n172 Y=ys__n522
+.gate $_AND_    A=ys__n523 B=ys__n172 Y=ys__n524
+.gate $_AND_    A=ys__n525 B=ys__n172 Y=ys__n526
+.gate $_AND_    A=ys__n527 B=ys__n172 Y=ys__n528
+.gate $_AND_    A=ys__n529 B=ys__n172 Y=ys__n530
+.gate $_AND_    A=ys__n531 B=ys__n172 Y=ys__n532
+.gate $_AND_    A=ys__n533 B=ys__n172 Y=ys__n534
+.gate $_AND_    A=ys__n535 B=ys__n172 Y=ys__n536
+.gate $_AND_    A=ys__n537 B=ys__n172 Y=ys__n538
+.gate $_AND_    A=ys__n539 B=ys__n172 Y=ys__n540
+.gate $_AND_    A=ys__n541 B=ys__n172 Y=ys__n542
+.gate $_AND_    A=ys__n543 B=ys__n172 Y=ys__n544
+.gate $_AND_    A=ys__n545 B=ys__n172 Y=ys__n546
+.gate $_AND_    A=ys__n547 B=ys__n172 Y=ys__n548
+.gate $_AND_    A=ys__n549 B=ys__n172 Y=ys__n550
+.gate $_AND_    A=ys__n551 B=ys__n172 Y=ys__n552
+.gate $_AND_    A=ys__n553 B=ys__n172 Y=ys__n554
+.gate $_AND_    A=ys__n555 B=ys__n172 Y=ys__n556
+.gate $_AND_    A=ys__n557 B=ys__n172 Y=ys__n558
+.gate $_AND_    A=ys__n559 B=ys__n172 Y=ys__n560
+.gate $_AND_    A=ys__n561 B=ys__n172 Y=ys__n562
+.gate $_AND_    A=ys__n563 B=ys__n172 Y=ys__n564
+.gate $_AND_    A=ys__n565 B=ys__n172 Y=ys__n566
+.gate $_AND_    A=ys__n567 B=ys__n172 Y=ys__n568
+.gate $_AND_    A=ys__n569 B=ys__n172 Y=ys__n570
+.gate $_AND_    A=ys__n571 B=ys__n172 Y=ys__n572
+.gate $_AND_    A=ys__n573 B=ys__n172 Y=ys__n574
+.gate $_AND_    A=ys__n575 B=ys__n172 Y=ys__n576
+.gate $_AND_    A=ys__n577 B=ys__n172 Y=ys__n578
+.gate $_AND_    A=ys__n579 B=ys__n172 Y=ys__n580
+.gate $_AND_    A=ys__n581 B=ys__n172 Y=ys__n582
+.gate $_AND_    A=ys__n583 B=ys__n172 Y=ys__n584
+.gate $_AND_    A=ys__n585 B=ys__n172 Y=ys__n586
+.gate $_AND_    A=ys__n587 B=ys__n172 Y=ys__n588
+.gate $_AND_    A=ys__n589 B=ys__n172 Y=ys__n590
+.gate $_AND_    A=ys__n591 B=ys__n172 Y=ys__n592
+.gate $_AND_    A=ys__n593 B=ys__n172 Y=ys__n594
+.gate $_AND_    A=ys__n595 B=ys__n172 Y=ys__n596
+.gate $_AND_    A=ys__n597 B=ys__n172 Y=ys__n598
+.gate $_AND_    A=ys__n599 B=ys__n172 Y=ys__n600
+.gate $_AND_    A=ys__n601 B=ys__n172 Y=ys__n602
+.gate $_AND_    A=ys__n603 B=ys__n172 Y=ys__n604
+.gate $_AND_    A=ys__n605 B=ys__n172 Y=ys__n606
+.gate $_AND_    A=ys__n607 B=ys__n172 Y=ys__n608
+.gate $_AND_    A=ys__n609 B=ys__n172 Y=ys__n610
+.gate $_AND_    A=ys__n611 B=ys__n172 Y=ys__n612
+.gate $_AND_    A=ys__n613 B=ys__n172 Y=ys__n614
+.gate $_AND_    A=ys__n615 B=ys__n172 Y=ys__n616
+.gate $_AND_    A=ys__n617 B=ys__n172 Y=ys__n618
+.gate $_AND_    A=ys__n619 B=ys__n172 Y=ys__n620
+.gate $_AND_    A=ys__n621 B=ys__n172 Y=ys__n622
+.gate $_AND_    A=ys__n623 B=ys__n172 Y=ys__n624
+.gate $_ORNOT_  A=ys__n172 B=ys__n176 Y=ys__n625
+.gate $_MUX_    A=ys__n626 B=ys__n627 S=new_n1077_ Y=ys__n628
+.gate $_MUX_    A=ys__n629 B=ys__n630 S=new_n1077_ Y=ys__n631
+.gate $_MUX_    A=ys__n632 B=ys__n633 S=new_n1077_ Y=ys__n634
+.gate $_MUX_    A=ys__n635 B=ys__n636 S=new_n1077_ Y=ys__n637
+.gate $_MUX_    A=ys__n638 B=ys__n639 S=new_n1077_ Y=ys__n640
+.gate $_MUX_    A=ys__n641 B=ys__n642 S=new_n1077_ Y=ys__n643
+.gate $_MUX_    A=ys__n644 B=ys__n645 S=new_n1077_ Y=ys__n646
+.gate $_MUX_    A=ys__n647 B=ys__n648 S=new_n1077_ Y=ys__n649
+.gate $_MUX_    A=ys__n650 B=ys__n651 S=new_n1077_ Y=ys__n652
+.gate $_MUX_    A=ys__n653 B=ys__n654 S=new_n1077_ Y=ys__n655
+.gate $_MUX_    A=ys__n656 B=ys__n657 S=new_n1077_ Y=ys__n658
+.gate $_MUX_    A=ys__n659 B=ys__n660 S=new_n1077_ Y=ys__n661
+.gate $_MUX_    A=ys__n662 B=ys__n663 S=new_n1077_ Y=ys__n664
+.gate $_MUX_    A=ys__n665 B=ys__n666 S=new_n1077_ Y=ys__n667
+.gate $_MUX_    A=ys__n668 B=ys__n669 S=new_n1077_ Y=ys__n670
+.gate $_MUX_    A=ys__n671 B=ys__n672 S=new_n1077_ Y=ys__n673
+.gate $_MUX_    A=ys__n674 B=ys__n675 S=new_n1077_ Y=ys__n676
+.gate $_MUX_    A=ys__n677 B=ys__n678 S=new_n1077_ Y=ys__n679
+.gate $_MUX_    A=ys__n680 B=ys__n681 S=new_n1077_ Y=ys__n682
+.gate $_MUX_    A=ys__n683 B=ys__n684 S=new_n1077_ Y=ys__n685
+.gate $_MUX_    A=ys__n686 B=ys__n687 S=new_n1077_ Y=ys__n688
+.gate $_MUX_    A=ys__n689 B=ys__n690 S=new_n1077_ Y=ys__n691
+.gate $_MUX_    A=ys__n692 B=ys__n693 S=new_n1077_ Y=ys__n694
+.gate $_MUX_    A=ys__n695 B=ys__n696 S=new_n1077_ Y=ys__n697
+.gate $_MUX_    A=ys__n698 B=ys__n699 S=new_n1077_ Y=ys__n700
+.gate $_MUX_    A=ys__n701 B=ys__n702 S=new_n1077_ Y=ys__n703
+.gate $_MUX_    A=ys__n704 B=ys__n705 S=new_n1077_ Y=ys__n706
+.gate $_MUX_    A=ys__n707 B=ys__n708 S=new_n1077_ Y=ys__n709
+.gate $_MUX_    A=ys__n710 B=ys__n711 S=new_n1077_ Y=ys__n712
+.gate $_MUX_    A=ys__n713 B=ys__n714 S=new_n1077_ Y=ys__n715
+.gate $_MUX_    A=ys__n716 B=ys__n12 S=new_n1077_ Y=ys__n717
+.gate $_MUX_    A=ys__n718 B=ys__n719 S=new_n1077_ Y=ys__n720
+.gate $_MUX_    A=ys__n721 B=ys__n722 S=new_n1077_ Y=ys__n723
+.gate $_MUX_    A=ys__n724 B=ys__n725 S=new_n1077_ Y=ys__n726
+.gate $_MUX_    A=ys__n727 B=ys__n728 S=new_n1077_ Y=ys__n729
+.gate $_MUX_    A=ys__n730 B=ys__n731 S=new_n1077_ Y=ys__n732
+.gate $_MUX_    A=ys__n733 B=ys__n734 S=new_n1077_ Y=ys__n735
+.gate $_MUX_    A=ys__n736 B=ys__n737 S=new_n1077_ Y=ys__n738
+.gate $_MUX_    A=ys__n739 B=ys__n740 S=new_n1077_ Y=ys__n741
+.gate $_MUX_    A=ys__n742 B=ys__n743 S=new_n1077_ Y=ys__n744
+.gate $_MUX_    A=ys__n745 B=ys__n746 S=new_n1077_ Y=ys__n747
+.gate $_MUX_    A=ys__n748 B=ys__n749 S=new_n1077_ Y=ys__n750
+.gate $_MUX_    A=ys__n751 B=ys__n752 S=new_n1077_ Y=ys__n753
+.gate $_MUX_    A=ys__n754 B=ys__n755 S=new_n1077_ Y=ys__n756
+.gate $_MUX_    A=ys__n757 B=ys__n758 S=new_n1077_ Y=ys__n759
+.gate $_MUX_    A=ys__n760 B=ys__n761 S=new_n1077_ Y=ys__n762
+.gate $_MUX_    A=ys__n763 B=ys__n764 S=new_n1077_ Y=ys__n765
+.gate $_MUX_    A=ys__n766 B=ys__n767 S=new_n1077_ Y=ys__n768
+.gate $_MUX_    A=ys__n769 B=ys__n770 S=new_n1077_ Y=ys__n771
+.gate $_MUX_    A=ys__n772 B=ys__n773 S=new_n1077_ Y=ys__n774
+.gate $_MUX_    A=ys__n775 B=ys__n776 S=new_n1077_ Y=ys__n777
+.gate $_MUX_    A=ys__n778 B=ys__n779 S=new_n1077_ Y=ys__n780
+.gate $_MUX_    A=ys__n781 B=ys__n782 S=new_n1077_ Y=ys__n783
+.gate $_MUX_    A=ys__n784 B=ys__n785 S=new_n1077_ Y=ys__n786
+.gate $_MUX_    A=ys__n787 B=ys__n788 S=new_n1077_ Y=ys__n789
+.gate $_MUX_    A=ys__n790 B=ys__n791 S=new_n1077_ Y=ys__n792
+.gate $_MUX_    A=ys__n793 B=ys__n794 S=new_n1077_ Y=ys__n795
+.gate $_MUX_    A=ys__n796 B=ys__n797 S=new_n1077_ Y=ys__n798
+.gate $_MUX_    A=ys__n799 B=ys__n800 S=new_n1077_ Y=ys__n801
+.gate $_MUX_    A=ys__n802 B=ys__n803 S=new_n1077_ Y=ys__n804
+.gate $_MUX_    A=ys__n805 B=ys__n806 S=new_n1077_ Y=ys__n807
+.gate $_MUX_    A=ys__n808 B=ys__n809 S=new_n1077_ Y=ys__n810
+.gate $_MUX_    A=ys__n811 B=ys__n77 S=new_n1077_ Y=ys__n812
+.gate $_MUX_    A=ys__n813 B=ys__n74 S=new_n1077_ Y=ys__n814
+.gate $_MUX_    A=ys__n815 B=ys__n816 S=new_n1077_ Y=ys__n817
+.gate $_MUX_    A=ys__n818 B=ys__n819 S=new_n1077_ Y=ys__n820
+.gate $_MUX_    A=ys__n821 B=ys__n822 S=new_n1077_ Y=ys__n823
+.gate $_MUX_    A=ys__n824 B=ys__n825 S=new_n1077_ Y=ys__n826
+.gate $_MUX_    A=ys__n827 B=ys__n828 S=new_n1077_ Y=ys__n829
+.gate $_MUX_    A=ys__n830 B=ys__n831 S=new_n1077_ Y=ys__n832
+.gate $_MUX_    A=ys__n833 B=ys__n834 S=new_n1077_ Y=ys__n835
+.gate $_MUX_    A=ys__n836 B=ys__n837 S=new_n1077_ Y=ys__n838
+.gate $_MUX_    A=ys__n839 B=ys__n840 S=new_n1077_ Y=ys__n841
+.gate $_MUX_    A=ys__n842 B=ys__n843 S=new_n1077_ Y=ys__n844
+.gate $_MUX_    A=ys__n845 B=ys__n846 S=new_n1077_ Y=ys__n847
+.gate $_MUX_    A=ys__n848 B=ys__n849 S=new_n1077_ Y=ys__n850
+.gate $_MUX_    A=ys__n851 B=ys__n852 S=new_n1077_ Y=ys__n853
+.gate $_MUX_    A=ys__n854 B=ys__n855 S=new_n1077_ Y=ys__n856
+.gate $_MUX_    A=ys__n857 B=ys__n858 S=new_n1077_ Y=ys__n859
+.gate $_MUX_    A=ys__n860 B=ys__n861 S=new_n1077_ Y=ys__n862
+.gate $_MUX_    A=ys__n863 B=ys__n864 S=new_n1077_ Y=ys__n865
+.gate $_MUX_    A=ys__n866 B=ys__n867 S=new_n1077_ Y=ys__n868
+.gate $_MUX_    A=ys__n869 B=ys__n870 S=new_n1077_ Y=ys__n871
+.gate $_MUX_    A=ys__n872 B=ys__n873 S=new_n1077_ Y=ys__n874
+.gate $_MUX_    A=ys__n875 B=ys__n876 S=new_n1077_ Y=ys__n877
+.gate $_MUX_    A=ys__n878 B=ys__n879 S=new_n1077_ Y=ys__n880
+.gate $_MUX_    A=ys__n881 B=ys__n882 S=new_n1077_ Y=ys__n883
+.gate $_MUX_    A=ys__n884 B=ys__n885 S=new_n1077_ Y=ys__n886
+.gate $_MUX_    A=ys__n887 B=ys__n888 S=new_n1077_ Y=ys__n889
+.gate $_MUX_    A=ys__n890 B=ys__n891 S=new_n1077_ Y=ys__n892
+.gate $_MUX_    A=ys__n893 B=ys__n894 S=new_n1077_ Y=ys__n895
+.gate $_MUX_    A=ys__n896 B=ys__n897 S=new_n1077_ Y=ys__n898
+.gate $_MUX_    A=ys__n899 B=ys__n900 S=new_n1077_ Y=ys__n901
+.gate $_MUX_    A=ys__n902 B=ys__n903 S=new_n1077_ Y=ys__n904
+.gate $_MUX_    A=ys__n905 B=ys__n906 S=new_n1077_ Y=ys__n907
+.gate $_MUX_    A=ys__n908 B=ys__n909 S=new_n1077_ Y=ys__n910
+.gate $_MUX_    A=ys__n911 B=ys__n912 S=new_n1077_ Y=ys__n913
+.gate $_MUX_    A=ys__n914 B=ys__n915 S=new_n1077_ Y=ys__n916
+.gate $_MUX_    A=ys__n917 B=ys__n918 S=new_n1077_ Y=ys__n919
+.gate $_MUX_    A=ys__n920 B=ys__n921 S=new_n1077_ Y=ys__n922
+.gate $_MUX_    A=ys__n923 B=ys__n924 S=new_n1077_ Y=ys__n925
+.gate $_MUX_    A=ys__n926 B=ys__n927 S=new_n1077_ Y=ys__n928
+.gate $_MUX_    A=ys__n929 B=ys__n930 S=new_n1077_ Y=ys__n931
+.gate $_MUX_    A=ys__n932 B=ys__n933 S=new_n1077_ Y=ys__n934
+.gate $_MUX_    A=ys__n935 B=ys__n936 S=new_n1077_ Y=ys__n937
+.gate $_MUX_    A=ys__n938 B=ys__n939 S=new_n1077_ Y=ys__n940
+.gate $_MUX_    A=ys__n941 B=ys__n942 S=new_n1077_ Y=ys__n943
+.gate $_MUX_    A=ys__n944 B=ys__n945 S=new_n1077_ Y=ys__n946
+.gate $_MUX_    A=ys__n947 B=ys__n948 S=new_n1077_ Y=ys__n949
+.gate $_MUX_    A=ys__n950 B=ys__n951 S=new_n1077_ Y=ys__n952
+.gate $_MUX_    A=ys__n953 B=ys__n954 S=new_n1077_ Y=ys__n955
+.gate $_MUX_    A=ys__n956 B=ys__n957 S=new_n1077_ Y=ys__n958
+.gate $_MUX_    A=ys__n959 B=ys__n960 S=new_n1077_ Y=ys__n961
+.gate $_MUX_    A=ys__n962 B=ys__n963 S=new_n1077_ Y=ys__n964
+.gate $_MUX_    A=ys__n965 B=ys__n966 S=new_n1077_ Y=ys__n967
+.gate $_MUX_    A=ys__n968 B=ys__n969 S=new_n1077_ Y=ys__n970
+.gate $_MUX_    A=ys__n971 B=ys__n972 S=new_n1077_ Y=ys__n973
+.gate $_MUX_    A=ys__n974 B=ys__n975 S=new_n1077_ Y=ys__n976
+.gate $_MUX_    A=ys__n977 B=ys__n978 S=new_n1077_ Y=ys__n979
+.gate $_MUX_    A=ys__n980 B=ys__n981 S=new_n1077_ Y=ys__n982
+.gate $_MUX_    A=ys__n983 B=ys__n984 S=new_n1077_ Y=ys__n985
+.gate $_MUX_    A=ys__n986 B=ys__n987 S=new_n1077_ Y=ys__n988
+.gate $_MUX_    A=ys__n989 B=ys__n990 S=new_n1077_ Y=ys__n991
+.gate $_MUX_    A=ys__n992 B=ys__n993 S=new_n1077_ Y=ys__n994
+.gate $_MUX_    A=ys__n995 B=ys__n996 S=new_n1077_ Y=ys__n997
+.gate $_MUX_    A=ys__n998 B=ys__n999 S=new_n1077_ Y=ys__n1000
+.gate $_MUX_    A=ys__n1001 B=ys__n1002 S=new_n1077_ Y=ys__n1003
+.gate $_MUX_    A=ys__n1004 B=ys__n1005 S=new_n1077_ Y=ys__n1006
+.gate $_XNOR_   A=ys__n1034 B=ys__n722 Y=new_n2208_
+.gate $_ORNOT_  A=new_n2208_ B=new_n1083_ Y=new_n2209_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1034 Y=new_n2210_
+.gate $_NAND_   A=new_n2210_ B=new_n2209_ Y=new_n2211_
+.gate $_XNOR_   A=ys__n1034 B=ys__n1013 Y=new_n2212_
+.gate $_ANDNOT_ A=new_n1296_ B=ys__n669 Y=new_n2213_
+.gate $_ORNOT_  A=ys__n71 B=ys__n9 Y=new_n2214_
+.gate $_XNOR_   A=ys__n71 B=ys__n9 Y=new_n2215_
+.gate $_ANDNOT_ A=ys__n76 B=ys__n1147 Y=new_n2216_
+.gate $_AND_    A=new_n2216_ B=new_n2215_ Y=new_n2217_
+.gate $_ANDNOT_ A=new_n2214_ B=new_n2217_ Y=new_n2218_
+.gate $_ORNOT_  A=new_n1373_ B=new_n2215_ Y=new_n2219_
+.gate $_ORNOT_  A=ys__n1144 B=ys__n1444 Y=new_n2220_
+.gate $_ORNOT_  A=ys__n1142 B=ys__n1449 Y=new_n2221_
+.gate $_OR_     A=new_n2221_ B=new_n1377_ Y=new_n2222_
+.gate $_NAND_   A=new_n2222_ B=new_n2220_ Y=new_n2223_
+.gate $_ANDNOT_ A=new_n2223_ B=new_n2219_ Y=new_n2224_
+.gate $_ANDNOT_ A=new_n2218_ B=new_n2224_ Y=new_n2225_
+.gate $_OR_     A=new_n1380_ B=new_n1377_ Y=new_n2226_
+.gate $_NOR_    A=new_n2226_ B=new_n2219_ Y=new_n2227_
+.gate $_ORNOT_  A=ys__n1138 B=ys__n1460 Y=new_n2228_
+.gate $_ANDNOT_ A=ys__n1465 B=ys__n1136 Y=new_n2229_
+.gate $_ANDNOT_ A=new_n2229_ B=new_n1384_ Y=new_n2230_
+.gate $_ANDNOT_ A=new_n2228_ B=new_n2230_ Y=new_n2231_
+.gate $_NOR_    A=new_n1387_ B=new_n1384_ Y=new_n2232_
+.gate $_ORNOT_  A=ys__n1133 B=ys__n1473 Y=new_n2233_
+.gate $_ORNOT_  A=ys__n1131 B=ys__n1478 Y=new_n2234_
+.gate $_OR_     A=new_n2234_ B=new_n1392_ Y=new_n2235_
+.gate $_NAND_   A=new_n2235_ B=new_n2233_ Y=new_n2236_
+.gate $_NAND_   A=new_n2236_ B=new_n2232_ Y=new_n2237_
+.gate $_AND_    A=new_n2237_ B=new_n2231_ Y=new_n2238_
+.gate $_ANDNOT_ A=new_n2227_ B=new_n2238_ Y=new_n2239_
+.gate $_ANDNOT_ A=new_n2225_ B=new_n2239_ Y=new_n2240_
+.gate $_NOR_    A=new_n1397_ B=new_n1392_ Y=new_n2241_
+.gate $_NAND_   A=new_n2241_ B=new_n2232_ Y=new_n2242_
+.gate $_ANDNOT_ A=new_n2227_ B=new_n2242_ Y=new_n2243_
+.gate $_ORNOT_  A=ys__n1126 B=ys__n1492 Y=new_n2244_
+.gate $_ANDNOT_ A=ys__n1497 B=ys__n1124 Y=new_n2245_
+.gate $_ANDNOT_ A=new_n2245_ B=new_n1402_ Y=new_n2246_
+.gate $_ANDNOT_ A=new_n2244_ B=new_n2246_ Y=new_n2247_
+.gate $_OR_     A=new_n1405_ B=new_n1402_ Y=new_n2248_
+.gate $_ORNOT_  A=ys__n1121 B=ys__n1505 Y=new_n2249_
+.gate $_ORNOT_  A=ys__n1119 B=ys__n1510 Y=new_n2250_
+.gate $_OR_     A=new_n2250_ B=new_n1410_ Y=new_n2251_
+.gate $_NAND_   A=new_n2251_ B=new_n2249_ Y=new_n2252_
+.gate $_ANDNOT_ A=new_n2252_ B=new_n2248_ Y=new_n2253_
+.gate $_ANDNOT_ A=new_n2247_ B=new_n2253_ Y=new_n2254_
+.gate $_OR_     A=new_n1431_ B=new_n1410_ Y=new_n2255_
+.gate $_NOR_    A=new_n2255_ B=new_n2248_ Y=new_n2256_
+.gate $_ORNOT_  A=ys__n1115 B=ys__n1521 Y=new_n2257_
+.gate $_ANDNOT_ A=ys__n1526 B=ys__n1113 Y=new_n2258_
+.gate $_ANDNOT_ A=new_n2258_ B=new_n1415_ Y=new_n2259_
+.gate $_ANDNOT_ A=new_n2257_ B=new_n2259_ Y=new_n2260_
+.gate $_NOR_    A=new_n1416_ B=new_n1415_ Y=new_n2261_
+.gate $_ORNOT_  A=ys__n1110 B=ys__n1534 Y=new_n2262_
+.gate $_ORNOT_  A=ys__n1108 B=ys__n1539 Y=new_n2263_
+.gate $_OR_     A=new_n2263_ B=new_n1421_ Y=new_n2264_
+.gate $_NAND_   A=new_n2264_ B=new_n2262_ Y=new_n2265_
+.gate $_NAND_   A=new_n2265_ B=new_n2261_ Y=new_n2266_
+.gate $_NAND_   A=new_n2266_ B=new_n2260_ Y=new_n2267_
+.gate $_NAND_   A=new_n2267_ B=new_n2256_ Y=new_n2268_
+.gate $_AND_    A=new_n2268_ B=new_n2254_ Y=new_n2269_
+.gate $_ANDNOT_ A=new_n2243_ B=new_n2269_ Y=new_n2270_
+.gate $_ANDNOT_ A=new_n2240_ B=new_n2270_ Y=new_n2271_
+.gate $_NOR_    A=new_n1513_ B=new_n1421_ Y=new_n2272_
+.gate $_NAND_   A=new_n2272_ B=new_n2261_ Y=new_n2273_
+.gate $_ANDNOT_ A=new_n2256_ B=new_n2273_ Y=new_n2274_
+.gate $_AND_    A=new_n2274_ B=new_n2243_ Y=new_n2275_
+.gate $_ORNOT_  A=ys__n1097 B=ys__n1556 Y=new_n2276_
+.gate $_ANDNOT_ A=ys__n1561 B=ys__n1095 Y=new_n2277_
+.gate $_ANDNOT_ A=new_n2277_ B=new_n1471_ Y=new_n2278_
+.gate $_ANDNOT_ A=new_n2276_ B=new_n2278_ Y=new_n2279_
+.gate $_OR_     A=new_n1472_ B=new_n1471_ Y=new_n2280_
+.gate $_ORNOT_  A=ys__n1092 B=ys__n1569 Y=new_n2281_
+.gate $_ORNOT_  A=ys__n1090 B=ys__n1574 Y=new_n2282_
+.gate $_OR_     A=new_n2282_ B=new_n1474_ Y=new_n2283_
+.gate $_NAND_   A=new_n2283_ B=new_n2281_ Y=new_n2284_
+.gate $_ANDNOT_ A=new_n2284_ B=new_n2280_ Y=new_n2285_
+.gate $_ORNOT_  A=new_n2285_ B=new_n2279_ Y=new_n2286_
+.gate $_OR_     A=new_n1475_ B=new_n1474_ Y=new_n2287_
+.gate $_NOR_    A=new_n2287_ B=new_n2280_ Y=new_n2288_
+.gate $_ORNOT_  A=ys__n1086 B=ys__n1585 Y=new_n2289_
+.gate $_ANDNOT_ A=ys__n1590 B=ys__n1084 Y=new_n2290_
+.gate $_ANDNOT_ A=new_n2290_ B=new_n1478_ Y=new_n2291_
+.gate $_ANDNOT_ A=new_n2289_ B=new_n2291_ Y=new_n2292_
+.gate $_NOR_    A=new_n1479_ B=new_n1478_ Y=new_n2293_
+.gate $_ORNOT_  A=ys__n1081 B=ys__n1598 Y=new_n2294_
+.gate $_ORNOT_  A=ys__n1079 B=ys__n1603 Y=new_n2295_
+.gate $_OR_     A=new_n2295_ B=new_n1481_ Y=new_n2296_
+.gate $_NAND_   A=new_n2296_ B=new_n2294_ Y=new_n2297_
+.gate $_NAND_   A=new_n2297_ B=new_n2293_ Y=new_n2298_
+.gate $_NAND_   A=new_n2298_ B=new_n2292_ Y=new_n2299_
+.gate $_NAND_   A=new_n2299_ B=new_n2288_ Y=new_n2300_
+.gate $_ANDNOT_ A=new_n2300_ B=new_n2286_ Y=new_n2301_
+.gate $_NOR_    A=new_n1482_ B=new_n1481_ Y=new_n2302_
+.gate $_NAND_   A=new_n2302_ B=new_n2293_ Y=new_n2303_
+.gate $_ANDNOT_ A=new_n2288_ B=new_n2303_ Y=new_n2304_
+.gate $_ORNOT_  A=ys__n1069 B=ys__n1617 Y=new_n2305_
+.gate $_ANDNOT_ A=ys__n1622 B=ys__n1067 Y=new_n2306_
+.gate $_ANDNOT_ A=new_n2306_ B=new_n1436_ Y=new_n2307_
+.gate $_ANDNOT_ A=new_n2305_ B=new_n2307_ Y=new_n2308_
+.gate $_OR_     A=new_n1437_ B=new_n1436_ Y=new_n2309_
+.gate $_ORNOT_  A=ys__n1064 B=ys__n1630 Y=new_n2310_
+.gate $_ORNOT_  A=ys__n1062 B=ys__n1105 Y=new_n2311_
+.gate $_OR_     A=new_n2311_ B=new_n1439_ Y=new_n2312_
+.gate $_NAND_   A=new_n2312_ B=new_n2310_ Y=new_n2313_
+.gate $_ANDNOT_ A=new_n2313_ B=new_n2309_ Y=new_n2314_
+.gate $_ANDNOT_ A=new_n2308_ B=new_n2314_ Y=new_n2315_
+.gate $_OR_     A=new_n1440_ B=new_n1439_ Y=new_n2316_
+.gate $_NOR_    A=new_n2316_ B=new_n2309_ Y=new_n2317_
+.gate $_ORNOT_  A=ys__n1053 B=ys__n1076 Y=new_n2318_
+.gate $_ANDNOT_ A=ys__n1059 B=ys__n1051 Y=new_n2319_
+.gate $_ANDNOT_ A=new_n2319_ B=new_n1446_ Y=new_n2320_
+.gate $_ANDNOT_ A=new_n2318_ B=new_n2320_ Y=new_n2321_
+.gate $_NOR_    A=new_n1449_ B=new_n1446_ Y=new_n2322_
+.gate $_ORNOT_  A=ys__n1031 B=ys__n1048 Y=new_n2323_
+.gate $_ANDNOT_ A=ys__n1013 B=ys__n1034 Y=new_n2324_
+.gate $_OR_     A=new_n2324_ B=new_n1453_ Y=new_n2325_
+.gate $_NAND_   A=new_n2325_ B=new_n2323_ Y=new_n2326_
+.gate $_NAND_   A=new_n2326_ B=new_n2322_ Y=new_n2327_
+.gate $_NAND_   A=new_n2327_ B=new_n2321_ Y=new_n2328_
+.gate $_NAND_   A=new_n2328_ B=new_n2317_ Y=new_n2329_
+.gate $_NAND_   A=new_n2329_ B=new_n2315_ Y=new_n2330_
+.gate $_NAND_   A=new_n2330_ B=new_n2304_ Y=new_n2331_
+.gate $_NAND_   A=new_n2331_ B=new_n2301_ Y=new_n2332_
+.gate $_NAND_   A=new_n2332_ B=new_n2275_ Y=new_n2333_
+.gate $_NAND_   A=new_n2333_ B=new_n2271_ Y=new_n2334_
+.gate $_ANDNOT_ A=new_n2212_ B=new_n1453_ Y=new_n2335_
+.gate $_NAND_   A=new_n2335_ B=new_n2322_ Y=new_n2336_
+.gate $_ANDNOT_ A=new_n2317_ B=new_n2336_ Y=new_n2337_
+.gate $_AND_    A=new_n2337_ B=new_n2304_ Y=new_n2338_
+.gate $_NAND_   A=new_n2338_ B=new_n2275_ Y=new_n2339_
+.gate $_NAND_   A=new_n2339_ B=new_n2334_ Y=new_n2340_
+.gate $_ANDNOT_ A=new_n2213_ B=new_n2340_ Y=new_n2341_
+.gate $_ANDNOT_ A=new_n1255_ B=new_n1300_ Y=new_n2342_
+.gate $_ANDNOT_ A=ys__n71 B=ys__n9 Y=new_n2343_
+.gate $_OR_     A=new_n2217_ B=new_n2343_ Y=new_n2344_
+.gate $_OR_     A=new_n2344_ B=new_n2224_ Y=new_n2345_
+.gate $_NOR_    A=new_n2345_ B=new_n2239_ Y=new_n2346_
+.gate $_ANDNOT_ A=new_n2346_ B=new_n2270_ Y=new_n2347_
+.gate $_NAND_   A=new_n2347_ B=new_n2333_ Y=new_n2348_
+.gate $_NAND_   A=new_n2348_ B=new_n2339_ Y=new_n2349_
+.gate $_ANDNOT_ A=new_n2342_ B=new_n2349_ Y=new_n2350_
+.gate $_NOR_    A=new_n2350_ B=new_n2341_ Y=new_n2351_
+.gate $_NOT_    A=new_n1334_ Y=new_n2352_
+.gate $_NOT_    A=new_n1323_ Y=new_n2353_
+.gate $_NOT_    A=new_n1316_ Y=new_n2354_
+.gate $_ANDNOT_ A=ys__n1013 B=new_n1312_ Y=new_n2355_
+.gate $_ANDNOT_ A=new_n2355_ B=new_n2354_ Y=new_n2356_
+.gate $_ANDNOT_ A=new_n2356_ B=new_n2353_ Y=new_n2357_
+.gate $_ANDNOT_ A=new_n2357_ B=new_n2352_ Y=new_n2358_
+.gate $_NAND_   A=new_n2358_ B=new_n1346_ Y=new_n2359_
+.gate $_OR_     A=new_n2359_ B=new_n1307_ Y=new_n2360_
+.gate $_NAND_   A=new_n2360_ B=new_n2351_ Y=new_n2361_
+.gate $_NOR_    A=new_n2212_ B=new_n1252_ Y=new_n2362_
+.gate $_MUX_    A=ys__n1147 B=ys__n9 S=new_n1266_ Y=new_n2363_
+.gate $_MUX_    A=ys__n1142 B=ys__n1144 S=new_n1266_ Y=new_n2364_
+.gate $_MUX_    A=new_n2364_ B=new_n2363_ S=new_n1268_ Y=new_n2365_
+.gate $_MUX_    A=ys__n1136 B=ys__n1138 S=new_n1266_ Y=new_n2366_
+.gate $_MUX_    A=ys__n1131 B=ys__n1133 S=new_n1266_ Y=new_n2367_
+.gate $_MUX_    A=new_n2367_ B=new_n2366_ S=new_n1268_ Y=new_n2368_
+.gate $_MUX_    A=new_n2368_ B=new_n2365_ S=new_n1270_ Y=new_n2369_
+.gate $_MUX_    A=ys__n1124 B=ys__n1126 S=new_n1266_ Y=new_n2370_
+.gate $_MUX_    A=ys__n1119 B=ys__n1121 S=new_n1266_ Y=new_n2371_
+.gate $_MUX_    A=new_n2371_ B=new_n2370_ S=new_n1268_ Y=new_n2372_
+.gate $_MUX_    A=ys__n1113 B=ys__n1115 S=new_n1266_ Y=new_n2373_
+.gate $_MUX_    A=ys__n1108 B=ys__n1110 S=new_n1266_ Y=new_n2374_
+.gate $_MUX_    A=new_n2374_ B=new_n2373_ S=new_n1268_ Y=new_n2375_
+.gate $_MUX_    A=new_n2375_ B=new_n2372_ S=new_n1270_ Y=new_n2376_
+.gate $_MUX_    A=new_n2376_ B=new_n2369_ S=new_n1272_ Y=new_n2377_
+.gate $_NOT_    A=new_n2377_ Y=new_n2378_
+.gate $_MUX_    A=ys__n1095 B=ys__n1097 S=new_n1266_ Y=new_n2379_
+.gate $_MUX_    A=ys__n1090 B=ys__n1092 S=new_n1266_ Y=new_n2380_
+.gate $_MUX_    A=new_n2380_ B=new_n2379_ S=new_n1268_ Y=new_n2381_
+.gate $_MUX_    A=ys__n1084 B=ys__n1086 S=new_n1266_ Y=new_n2382_
+.gate $_MUX_    A=ys__n1079 B=ys__n1081 S=new_n1266_ Y=new_n2383_
+.gate $_MUX_    A=new_n2383_ B=new_n2382_ S=new_n1268_ Y=new_n2384_
+.gate $_MUX_    A=new_n2384_ B=new_n2381_ S=new_n1270_ Y=new_n2385_
+.gate $_NOT_    A=new_n2385_ Y=new_n2386_
+.gate $_MUX_    A=ys__n1067 B=ys__n1069 S=new_n1266_ Y=new_n2387_
+.gate $_MUX_    A=ys__n1062 B=ys__n1064 S=new_n1266_ Y=new_n2388_
+.gate $_MUX_    A=new_n2388_ B=new_n2387_ S=new_n1268_ Y=new_n2389_
+.gate $_NOT_    A=new_n2389_ Y=new_n2390_
+.gate $_MUX_    A=ys__n1051 B=ys__n1053 S=new_n1266_ Y=new_n2391_
+.gate $_NOT_    A=new_n2391_ Y=new_n2392_
+.gate $_NOT_    A=ys__n1013 Y=new_n2393_
+.gate $_MUX_    A=new_n2393_ B=new_n1613_ S=new_n1266_ Y=new_n2394_
+.gate $_MUX_    A=new_n2394_ B=new_n2392_ S=new_n1268_ Y=new_n2395_
+.gate $_MUX_    A=new_n2395_ B=new_n2390_ S=new_n1270_ Y=new_n2396_
+.gate $_MUX_    A=new_n2396_ B=new_n2386_ S=new_n1272_ Y=new_n2397_
+.gate $_MUX_    A=new_n2397_ B=new_n2378_ S=new_n1274_ Y=new_n2398_
+.gate $_NOR_    A=new_n2398_ B=new_n1258_ Y=new_n2399_
+.gate $_NOR_    A=new_n2399_ B=new_n2362_ Y=new_n2400_
+.gate $_NOR_    A=ys__n1034 B=ys__n1013 Y=new_n2401_
+.gate $_NOR_    A=new_n2401_ B=new_n1297_ Y=new_n2402_
+.gate $_ANDNOT_ A=new_n1452_ B=new_n1301_ Y=new_n2403_
+.gate $_NOR_    A=new_n2403_ B=new_n2402_ Y=new_n2404_
+.gate $_NAND_   A=new_n2404_ B=new_n2400_ Y=new_n2405_
+.gate $_NOR_    A=new_n2405_ B=new_n2361_ Y=new_n2406_
+.gate $_MUX_    A=new_n2212_ B=new_n2406_ S=new_n1371_ Y=new_n2407_
+.gate $_ANDNOT_ A=new_n1250_ B=new_n2407_ Y=new_n2408_
+.gate $_XNOR_   A=ys__n1014 B=ys__n1013 Y=new_n2409_
+.gate $_ORNOT_  A=ys__n1160 B=ys__n9 Y=new_n2410_
+.gate $_XNOR_   A=ys__n1160 B=ys__n9 Y=new_n2411_
+.gate $_ANDNOT_ A=ys__n1164 B=ys__n1147 Y=new_n2412_
+.gate $_AND_    A=new_n2412_ B=new_n2411_ Y=new_n2413_
+.gate $_ANDNOT_ A=new_n2410_ B=new_n2413_ Y=new_n2414_
+.gate $_XNOR_   A=ys__n1164 B=ys__n1147 Y=new_n2415_
+.gate $_NAND_   A=new_n2415_ B=new_n2411_ Y=new_n2416_
+.gate $_ORNOT_  A=ys__n1144 B=ys__n1172 Y=new_n2417_
+.gate $_ANDNOT_ A=ys__n1177 B=ys__n1142 Y=new_n2418_
+.gate $_XNOR_   A=ys__n1172 B=ys__n1144 Y=new_n2419_
+.gate $_NAND_   A=new_n2419_ B=new_n2418_ Y=new_n2420_
+.gate $_NAND_   A=new_n2420_ B=new_n2417_ Y=new_n2421_
+.gate $_ANDNOT_ A=new_n2421_ B=new_n2416_ Y=new_n2422_
+.gate $_ANDNOT_ A=new_n2414_ B=new_n2422_ Y=new_n2423_
+.gate $_XNOR_   A=ys__n1177 B=ys__n1142 Y=new_n2424_
+.gate $_NAND_   A=new_n2424_ B=new_n2419_ Y=new_n2425_
+.gate $_NOR_    A=new_n2425_ B=new_n2416_ Y=new_n2426_
+.gate $_ORNOT_  A=ys__n1138 B=ys__n1188 Y=new_n2427_
+.gate $_XNOR_   A=ys__n1188 B=ys__n1138 Y=new_n2428_
+.gate $_ORNOT_  A=ys__n1136 B=ys__n1193 Y=new_n2429_
+.gate $_ANDNOT_ A=new_n2428_ B=new_n2429_ Y=new_n2430_
+.gate $_ANDNOT_ A=new_n2427_ B=new_n2430_ Y=new_n2431_
+.gate $_XNOR_   A=ys__n1193 B=ys__n1136 Y=new_n2432_
+.gate $_AND_    A=new_n2432_ B=new_n2428_ Y=new_n2433_
+.gate $_ORNOT_  A=ys__n1133 B=ys__n1201 Y=new_n2434_
+.gate $_ANDNOT_ A=ys__n1206 B=ys__n1131 Y=new_n2435_
+.gate $_XNOR_   A=ys__n1201 B=ys__n1133 Y=new_n2436_
+.gate $_NAND_   A=new_n2436_ B=new_n2435_ Y=new_n2437_
+.gate $_NAND_   A=new_n2437_ B=new_n2434_ Y=new_n2438_
+.gate $_NAND_   A=new_n2438_ B=new_n2433_ Y=new_n2439_
+.gate $_NAND_   A=new_n2439_ B=new_n2431_ Y=new_n2440_
+.gate $_AND_    A=new_n2440_ B=new_n2426_ Y=new_n2441_
+.gate $_ANDNOT_ A=new_n2423_ B=new_n2441_ Y=new_n2442_
+.gate $_XNOR_   A=ys__n1206 B=ys__n1131 Y=new_n2443_
+.gate $_AND_    A=new_n2443_ B=new_n2436_ Y=new_n2444_
+.gate $_NAND_   A=new_n2444_ B=new_n2433_ Y=new_n2445_
+.gate $_ANDNOT_ A=new_n2426_ B=new_n2445_ Y=new_n2446_
+.gate $_ORNOT_  A=ys__n1126 B=ys__n1220 Y=new_n2447_
+.gate $_XNOR_   A=ys__n1220 B=ys__n1126 Y=new_n2448_
+.gate $_ORNOT_  A=ys__n1124 B=ys__n1225 Y=new_n2449_
+.gate $_ANDNOT_ A=new_n2448_ B=new_n2449_ Y=new_n2450_
+.gate $_ANDNOT_ A=new_n2447_ B=new_n2450_ Y=new_n2451_
+.gate $_XNOR_   A=ys__n1225 B=ys__n1124 Y=new_n2452_
+.gate $_NAND_   A=new_n2452_ B=new_n2448_ Y=new_n2453_
+.gate $_ORNOT_  A=ys__n1121 B=ys__n1233 Y=new_n2454_
+.gate $_ANDNOT_ A=ys__n1238 B=ys__n1119 Y=new_n2455_
+.gate $_XNOR_   A=ys__n1233 B=ys__n1121 Y=new_n2456_
+.gate $_NAND_   A=new_n2456_ B=new_n2455_ Y=new_n2457_
+.gate $_NAND_   A=new_n2457_ B=new_n2454_ Y=new_n2458_
+.gate $_ANDNOT_ A=new_n2458_ B=new_n2453_ Y=new_n2459_
+.gate $_ANDNOT_ A=new_n2451_ B=new_n2459_ Y=new_n2460_
+.gate $_XNOR_   A=ys__n1238 B=ys__n1119 Y=new_n2461_
+.gate $_NAND_   A=new_n2461_ B=new_n2456_ Y=new_n2462_
+.gate $_NOR_    A=new_n2462_ B=new_n2453_ Y=new_n2463_
+.gate $_ORNOT_  A=ys__n1115 B=ys__n1249 Y=new_n2464_
+.gate $_XNOR_   A=ys__n1249 B=ys__n1115 Y=new_n2465_
+.gate $_ORNOT_  A=ys__n1113 B=ys__n1254 Y=new_n2466_
+.gate $_ANDNOT_ A=new_n2465_ B=new_n2466_ Y=new_n2467_
+.gate $_ANDNOT_ A=new_n2464_ B=new_n2467_ Y=new_n2468_
+.gate $_XNOR_   A=ys__n1254 B=ys__n1113 Y=new_n2469_
+.gate $_AND_    A=new_n2469_ B=new_n2465_ Y=new_n2470_
+.gate $_ORNOT_  A=ys__n1110 B=ys__n1262 Y=new_n2471_
+.gate $_ANDNOT_ A=ys__n1267 B=ys__n1108 Y=new_n2472_
+.gate $_XNOR_   A=ys__n1262 B=ys__n1110 Y=new_n2473_
+.gate $_NAND_   A=new_n2473_ B=new_n2472_ Y=new_n2474_
+.gate $_NAND_   A=new_n2474_ B=new_n2471_ Y=new_n2475_
+.gate $_NAND_   A=new_n2475_ B=new_n2470_ Y=new_n2476_
+.gate $_NAND_   A=new_n2476_ B=new_n2468_ Y=new_n2477_
+.gate $_NAND_   A=new_n2477_ B=new_n2463_ Y=new_n2478_
+.gate $_NAND_   A=new_n2478_ B=new_n2460_ Y=new_n2479_
+.gate $_AND_    A=new_n2479_ B=new_n2446_ Y=new_n2480_
+.gate $_ANDNOT_ A=new_n2442_ B=new_n2480_ Y=new_n2481_
+.gate $_XNOR_   A=ys__n1267 B=ys__n1108 Y=new_n2482_
+.gate $_AND_    A=new_n2482_ B=new_n2473_ Y=new_n2483_
+.gate $_NAND_   A=new_n2483_ B=new_n2470_ Y=new_n2484_
+.gate $_ANDNOT_ A=new_n2463_ B=new_n2484_ Y=new_n2485_
+.gate $_AND_    A=new_n2485_ B=new_n2446_ Y=new_n2486_
+.gate $_ORNOT_  A=ys__n1097 B=ys__n1284 Y=new_n2487_
+.gate $_XNOR_   A=ys__n1284 B=ys__n1097 Y=new_n2488_
+.gate $_ORNOT_  A=ys__n1095 B=ys__n1289 Y=new_n2489_
+.gate $_ANDNOT_ A=new_n2488_ B=new_n2489_ Y=new_n2490_
+.gate $_ANDNOT_ A=new_n2487_ B=new_n2490_ Y=new_n2491_
+.gate $_XNOR_   A=ys__n1289 B=ys__n1095 Y=new_n2492_
+.gate $_NAND_   A=new_n2492_ B=new_n2488_ Y=new_n2493_
+.gate $_ORNOT_  A=ys__n1092 B=ys__n1297 Y=new_n2494_
+.gate $_ANDNOT_ A=ys__n1302 B=ys__n1090 Y=new_n2495_
+.gate $_XNOR_   A=ys__n1297 B=ys__n1092 Y=new_n2496_
+.gate $_NAND_   A=new_n2496_ B=new_n2495_ Y=new_n2497_
+.gate $_NAND_   A=new_n2497_ B=new_n2494_ Y=new_n2498_
+.gate $_ANDNOT_ A=new_n2498_ B=new_n2493_ Y=new_n2499_
+.gate $_ANDNOT_ A=new_n2491_ B=new_n2499_ Y=new_n2500_
+.gate $_XNOR_   A=ys__n1302 B=ys__n1090 Y=new_n2501_
+.gate $_NAND_   A=new_n2501_ B=new_n2496_ Y=new_n2502_
+.gate $_NOR_    A=new_n2502_ B=new_n2493_ Y=new_n2503_
+.gate $_ORNOT_  A=ys__n1086 B=ys__n1313 Y=new_n2504_
+.gate $_XNOR_   A=ys__n1313 B=ys__n1086 Y=new_n2505_
+.gate $_ORNOT_  A=ys__n1084 B=ys__n1318 Y=new_n2506_
+.gate $_ANDNOT_ A=new_n2505_ B=new_n2506_ Y=new_n2507_
+.gate $_ANDNOT_ A=new_n2504_ B=new_n2507_ Y=new_n2508_
+.gate $_XNOR_   A=ys__n1318 B=ys__n1084 Y=new_n2509_
+.gate $_AND_    A=new_n2509_ B=new_n2505_ Y=new_n2510_
+.gate $_ORNOT_  A=ys__n1081 B=ys__n1326 Y=new_n2511_
+.gate $_ANDNOT_ A=ys__n1331 B=ys__n1079 Y=new_n2512_
+.gate $_XNOR_   A=ys__n1326 B=ys__n1081 Y=new_n2513_
+.gate $_NAND_   A=new_n2513_ B=new_n2512_ Y=new_n2514_
+.gate $_NAND_   A=new_n2514_ B=new_n2511_ Y=new_n2515_
+.gate $_NAND_   A=new_n2515_ B=new_n2510_ Y=new_n2516_
+.gate $_NAND_   A=new_n2516_ B=new_n2508_ Y=new_n2517_
+.gate $_AND_    A=new_n2517_ B=new_n2503_ Y=new_n2518_
+.gate $_ANDNOT_ A=new_n2500_ B=new_n2518_ Y=new_n2519_
+.gate $_XNOR_   A=ys__n1331 B=ys__n1079 Y=new_n2520_
+.gate $_AND_    A=new_n2520_ B=new_n2513_ Y=new_n2521_
+.gate $_NAND_   A=new_n2521_ B=new_n2510_ Y=new_n2522_
+.gate $_ANDNOT_ A=new_n2503_ B=new_n2522_ Y=new_n2523_
+.gate $_ORNOT_  A=ys__n1069 B=ys__n1345 Y=new_n2524_
+.gate $_XNOR_   A=ys__n1345 B=ys__n1069 Y=new_n2525_
+.gate $_ORNOT_  A=ys__n1067 B=ys__n1350 Y=new_n2526_
+.gate $_ANDNOT_ A=new_n2525_ B=new_n2526_ Y=new_n2527_
+.gate $_ANDNOT_ A=new_n2524_ B=new_n2527_ Y=new_n2528_
+.gate $_XNOR_   A=ys__n1350 B=ys__n1067 Y=new_n2529_
+.gate $_NAND_   A=new_n2529_ B=new_n2525_ Y=new_n2530_
+.gate $_ORNOT_  A=ys__n1064 B=ys__n1358 Y=new_n2531_
+.gate $_ANDNOT_ A=ys__n1103 B=ys__n1062 Y=new_n2532_
+.gate $_XNOR_   A=ys__n1358 B=ys__n1064 Y=new_n2533_
+.gate $_NAND_   A=new_n2533_ B=new_n2532_ Y=new_n2534_
+.gate $_NAND_   A=new_n2534_ B=new_n2531_ Y=new_n2535_
+.gate $_ANDNOT_ A=new_n2535_ B=new_n2530_ Y=new_n2536_
+.gate $_ANDNOT_ A=new_n2528_ B=new_n2536_ Y=new_n2537_
+.gate $_XNOR_   A=ys__n1103 B=ys__n1062 Y=new_n2538_
+.gate $_NAND_   A=new_n2538_ B=new_n2533_ Y=new_n2539_
+.gate $_NOR_    A=new_n2539_ B=new_n2530_ Y=new_n2540_
+.gate $_ORNOT_  A=ys__n1053 B=ys__n1074 Y=new_n2541_
+.gate $_XNOR_   A=ys__n1074 B=ys__n1053 Y=new_n2542_
+.gate $_ORNOT_  A=ys__n1051 B=ys__n1057 Y=new_n2543_
+.gate $_ANDNOT_ A=new_n2542_ B=new_n2543_ Y=new_n2544_
+.gate $_ANDNOT_ A=new_n2541_ B=new_n2544_ Y=new_n2545_
+.gate $_XNOR_   A=ys__n1057 B=ys__n1051 Y=new_n2546_
+.gate $_AND_    A=new_n2546_ B=new_n2542_ Y=new_n2547_
+.gate $_ORNOT_  A=ys__n1031 B=ys__n1046 Y=new_n2548_
+.gate $_ORNOT_  A=ys__n1014 B=ys__n1013 Y=new_n2549_
+.gate $_XNOR_   A=ys__n1046 B=ys__n1031 Y=new_n2550_
+.gate $_NAND_   A=new_n2550_ B=new_n2549_ Y=new_n2551_
+.gate $_NAND_   A=new_n2551_ B=new_n2548_ Y=new_n2552_
+.gate $_NAND_   A=new_n2552_ B=new_n2547_ Y=new_n2553_
+.gate $_NAND_   A=new_n2553_ B=new_n2545_ Y=new_n2554_
+.gate $_NAND_   A=new_n2554_ B=new_n2540_ Y=new_n2555_
+.gate $_NAND_   A=new_n2555_ B=new_n2537_ Y=new_n2556_
+.gate $_NAND_   A=new_n2556_ B=new_n2523_ Y=new_n2557_
+.gate $_NAND_   A=new_n2557_ B=new_n2519_ Y=new_n2558_
+.gate $_NAND_   A=new_n2558_ B=new_n2486_ Y=new_n2559_
+.gate $_NAND_   A=new_n2559_ B=new_n2481_ Y=new_n2560_
+.gate $_AND_    A=new_n2409_ B=new_n2550_ Y=new_n2561_
+.gate $_NAND_   A=new_n2561_ B=new_n2547_ Y=new_n2562_
+.gate $_ANDNOT_ A=new_n2540_ B=new_n2562_ Y=new_n2563_
+.gate $_AND_    A=new_n2563_ B=new_n2523_ Y=new_n2564_
+.gate $_NAND_   A=new_n2564_ B=new_n2486_ Y=new_n2565_
+.gate $_NAND_   A=new_n2565_ B=new_n2560_ Y=new_n2566_
+.gate $_ANDNOT_ A=new_n2213_ B=new_n2566_ Y=new_n2567_
+.gate $_ANDNOT_ A=ys__n1160 B=ys__n9 Y=new_n2568_
+.gate $_OR_     A=new_n2413_ B=new_n2568_ Y=new_n2569_
+.gate $_OR_     A=new_n2569_ B=new_n2422_ Y=new_n2570_
+.gate $_NOR_    A=new_n2570_ B=new_n2441_ Y=new_n2571_
+.gate $_ANDNOT_ A=new_n2571_ B=new_n2480_ Y=new_n2572_
+.gate $_NAND_   A=new_n2572_ B=new_n2559_ Y=new_n2573_
+.gate $_NAND_   A=new_n2573_ B=new_n2565_ Y=new_n2574_
+.gate $_ANDNOT_ A=new_n2342_ B=new_n2574_ Y=new_n2575_
+.gate $_NOR_    A=new_n2575_ B=new_n2567_ Y=new_n2576_
+.gate $_NAND_   A=new_n2576_ B=new_n2360_ Y=new_n2577_
+.gate $_NAND_   A=ys__n1014 B=ys__n1013 Y=new_n2578_
+.gate $_NOR_    A=new_n2578_ B=new_n1301_ Y=new_n2579_
+.gate $_NOR_    A=ys__n1014 B=ys__n1013 Y=new_n2580_
+.gate $_NOR_    A=new_n2580_ B=new_n1297_ Y=new_n2581_
+.gate $_NOR_    A=new_n2581_ B=new_n2579_ Y=new_n2582_
+.gate $_NOR_    A=new_n2409_ B=new_n1252_ Y=new_n2583_
+.gate $_NOR_    A=new_n2583_ B=new_n2399_ Y=new_n2584_
+.gate $_NAND_   A=new_n2584_ B=new_n2582_ Y=new_n2585_
+.gate $_NOR_    A=new_n2585_ B=new_n2577_ Y=new_n2586_
+.gate $_MUX_    A=new_n2409_ B=new_n2586_ S=new_n1371_ Y=new_n2587_
+.gate $_ANDNOT_ A=new_n1261_ B=new_n2587_ Y=new_n2588_
+.gate $_OR_     A=new_n2588_ B=new_n2408_ Y=new_n2589_
+.gate $_MUX_    A=new_n2589_ B=new_n2211_ S=new_n1245_ Y=new_n2590_
+.gate $_MUX_    A=new_n2590_ B=ys__n1698 S=new_n1078_ Y=ys__n1699
+.gate $_XOR_    A=new_n1165_ B=new_n1164_ Y=new_n2592_
+.gate $_NAND_   A=new_n2592_ B=new_n1083_ Y=new_n2593_
+.gate $_OR_     A=new_n1242_ B=new_n1315_ Y=new_n2594_
+.gate $_NAND_   A=new_n2594_ B=new_n2593_ Y=new_n2595_
+.gate $_ORNOT_  A=new_n1252_ B=new_n1453_ Y=new_n2596_
+.gate $_MUX_    A=ys__n1144 B=ys__n1147 S=new_n1266_ Y=new_n2597_
+.gate $_MUX_    A=new_n2597_ B=new_n1267_ S=new_n1268_ Y=new_n2598_
+.gate $_MUX_    A=ys__n1138 B=ys__n1142 S=new_n1266_ Y=new_n2599_
+.gate $_MUX_    A=ys__n1133 B=ys__n1136 S=new_n1266_ Y=new_n2600_
+.gate $_MUX_    A=new_n2600_ B=new_n2599_ S=new_n1268_ Y=new_n2601_
+.gate $_MUX_    A=new_n2601_ B=new_n2598_ S=new_n1270_ Y=new_n2602_
+.gate $_MUX_    A=ys__n1126 B=ys__n1131 S=new_n1266_ Y=new_n2603_
+.gate $_MUX_    A=ys__n1121 B=ys__n1124 S=new_n1266_ Y=new_n2604_
+.gate $_MUX_    A=new_n2604_ B=new_n2603_ S=new_n1268_ Y=new_n2605_
+.gate $_MUX_    A=ys__n1115 B=ys__n1119 S=new_n1266_ Y=new_n2606_
+.gate $_MUX_    A=ys__n1110 B=ys__n1113 S=new_n1266_ Y=new_n2607_
+.gate $_MUX_    A=new_n2607_ B=new_n2606_ S=new_n1268_ Y=new_n2608_
+.gate $_MUX_    A=new_n2608_ B=new_n2605_ S=new_n1270_ Y=new_n2609_
+.gate $_MUX_    A=new_n2609_ B=new_n2602_ S=new_n1272_ Y=new_n2610_
+.gate $_MUX_    A=ys__n1097 B=ys__n1108 S=new_n1266_ Y=new_n2611_
+.gate $_MUX_    A=ys__n1092 B=ys__n1095 S=new_n1266_ Y=new_n2612_
+.gate $_MUX_    A=new_n2612_ B=new_n2611_ S=new_n1268_ Y=new_n2613_
+.gate $_MUX_    A=ys__n1086 B=ys__n1090 S=new_n1266_ Y=new_n2614_
+.gate $_MUX_    A=ys__n1081 B=ys__n1084 S=new_n1266_ Y=new_n2615_
+.gate $_MUX_    A=new_n2615_ B=new_n2614_ S=new_n1268_ Y=new_n2616_
+.gate $_MUX_    A=new_n2616_ B=new_n2613_ S=new_n1270_ Y=new_n2617_
+.gate $_MUX_    A=ys__n1069 B=ys__n1079 S=new_n1266_ Y=new_n2618_
+.gate $_MUX_    A=ys__n1064 B=ys__n1067 S=new_n1266_ Y=new_n2619_
+.gate $_MUX_    A=new_n2619_ B=new_n2618_ S=new_n1268_ Y=new_n2620_
+.gate $_MUX_    A=ys__n1053 B=ys__n1062 S=new_n1266_ Y=new_n2621_
+.gate $_MUX_    A=ys__n1031 B=ys__n1051 S=new_n1266_ Y=new_n2622_
+.gate $_MUX_    A=new_n2622_ B=new_n2621_ S=new_n1268_ Y=new_n2623_
+.gate $_MUX_    A=new_n2623_ B=new_n2620_ S=new_n1270_ Y=new_n2624_
+.gate $_MUX_    A=new_n2624_ B=new_n2617_ S=new_n1272_ Y=new_n2625_
+.gate $_MUX_    A=new_n2625_ B=new_n2610_ S=new_n1274_ Y=new_n2626_
+.gate $_NAND_   A=new_n1282_ B=new_n1281_ Y=new_n2627_
+.gate $_OR_     A=new_n2627_ B=new_n1285_ Y=new_n2628_
+.gate $_ANDNOT_ A=new_n1287_ B=new_n2628_ Y=new_n2629_
+.gate $_NAND_   A=new_n2629_ B=new_n1289_ Y=new_n2630_
+.gate $_ANDNOT_ A=ys__n9 B=new_n2630_ Y=new_n2631_
+.gate $_OR_     A=new_n2631_ B=new_n2626_ Y=new_n2632_
+.gate $_MUX_    A=new_n2632_ B=new_n2626_ S=new_n1259_ Y=new_n2633_
+.gate $_NAND_   A=new_n2633_ B=new_n1257_ Y=new_n2634_
+.gate $_NAND_   A=new_n2634_ B=new_n2596_ Y=new_n2635_
+.gate $_NOR_    A=ys__n1048 B=ys__n1031 Y=new_n2636_
+.gate $_OR_     A=new_n2636_ B=new_n1297_ Y=new_n2637_
+.gate $_OR_     A=new_n1451_ B=new_n1301_ Y=new_n2638_
+.gate $_NAND_   A=new_n2638_ B=new_n2637_ Y=new_n2639_
+.gate $_NOR_    A=new_n2639_ B=new_n2635_ Y=new_n2640_
+.gate $_NOT_    A=new_n1346_ Y=new_n2641_
+.gate $_ANDNOT_ A=new_n1358_ B=new_n2354_ Y=new_n2642_
+.gate $_ANDNOT_ A=new_n2642_ B=new_n2353_ Y=new_n2643_
+.gate $_ANDNOT_ A=new_n2643_ B=new_n2352_ Y=new_n2644_
+.gate $_ORNOT_  A=new_n2641_ B=new_n2644_ Y=new_n2645_
+.gate $_OR_     A=new_n2645_ B=new_n1307_ Y=new_n2646_
+.gate $_NAND_   A=new_n2646_ B=new_n2640_ Y=new_n2647_
+.gate $_XOR_    A=new_n1453_ B=new_n1452_ Y=new_n2648_
+.gate $_MUX_    A=new_n2648_ B=new_n2647_ S=new_n1371_ Y=new_n2649_
+.gate $_NAND_   A=new_n2649_ B=new_n1250_ Y=new_n2650_
+.gate $_NAND_   A=ys__n1046 B=ys__n1031 Y=new_n2651_
+.gate $_OR_     A=new_n2651_ B=new_n1301_ Y=new_n2652_
+.gate $_NOR_    A=ys__n1046 B=ys__n1031 Y=new_n2653_
+.gate $_OR_     A=new_n2653_ B=new_n1297_ Y=new_n2654_
+.gate $_NAND_   A=new_n2654_ B=new_n2652_ Y=new_n2655_
+.gate $_OR_     A=new_n2550_ B=new_n1252_ Y=new_n2656_
+.gate $_NAND_   A=new_n2656_ B=new_n2634_ Y=new_n2657_
+.gate $_NOR_    A=new_n2657_ B=new_n2655_ Y=new_n2658_
+.gate $_NAND_   A=new_n2658_ B=new_n2646_ Y=new_n2659_
+.gate $_XOR_    A=new_n1617_ B=new_n1616_ Y=new_n2660_
+.gate $_MUX_    A=new_n2660_ B=new_n2659_ S=new_n1371_ Y=new_n2661_
+.gate $_NAND_   A=new_n2661_ B=new_n1261_ Y=new_n2662_
+.gate $_NAND_   A=new_n2662_ B=new_n2650_ Y=new_n2663_
+.gate $_MUX_    A=new_n2663_ B=new_n2595_ S=new_n1245_ Y=new_n2664_
+.gate $_MUX_    A=new_n2664_ B=ys__n1788 S=new_n1078_ Y=ys__n1789
+.gate $_XOR_    A=new_n1167_ B=new_n1161_ Y=new_n2666_
+.gate $_NAND_   A=new_n2666_ B=new_n1083_ Y=new_n2667_
+.gate $_OR_     A=new_n1242_ B=new_n1322_ Y=new_n2668_
+.gate $_NAND_   A=new_n2668_ B=new_n2667_ Y=new_n2669_
+.gate $_ORNOT_  A=new_n1252_ B=new_n1449_ Y=new_n2670_
+.gate $_ANDNOT_ A=new_n2363_ B=new_n1268_ Y=new_n2671_
+.gate $_MUX_    A=new_n2366_ B=new_n2364_ S=new_n1268_ Y=new_n2672_
+.gate $_MUX_    A=new_n2672_ B=new_n2671_ S=new_n1270_ Y=new_n2673_
+.gate $_MUX_    A=new_n2370_ B=new_n2367_ S=new_n1268_ Y=new_n2674_
+.gate $_MUX_    A=new_n2373_ B=new_n2371_ S=new_n1268_ Y=new_n2675_
+.gate $_MUX_    A=new_n2675_ B=new_n2674_ S=new_n1270_ Y=new_n2676_
+.gate $_MUX_    A=new_n2676_ B=new_n2673_ S=new_n1272_ Y=new_n2677_
+.gate $_MUX_    A=new_n2379_ B=new_n2374_ S=new_n1268_ Y=new_n2678_
+.gate $_MUX_    A=new_n2382_ B=new_n2380_ S=new_n1268_ Y=new_n2679_
+.gate $_MUX_    A=new_n2679_ B=new_n2678_ S=new_n1270_ Y=new_n2680_
+.gate $_MUX_    A=new_n2387_ B=new_n2383_ S=new_n1268_ Y=new_n2681_
+.gate $_MUX_    A=new_n2391_ B=new_n2388_ S=new_n1268_ Y=new_n2682_
+.gate $_MUX_    A=new_n2682_ B=new_n2681_ S=new_n1270_ Y=new_n2683_
+.gate $_MUX_    A=new_n2683_ B=new_n2680_ S=new_n1272_ Y=new_n2684_
+.gate $_MUX_    A=new_n2684_ B=new_n2677_ S=new_n1274_ Y=new_n2685_
+.gate $_NAND_   A=new_n1284_ B=new_n1282_ Y=new_n2686_
+.gate $_ANDNOT_ A=new_n1287_ B=new_n2686_ Y=new_n2687_
+.gate $_NAND_   A=new_n2687_ B=new_n1289_ Y=new_n2688_
+.gate $_ANDNOT_ A=ys__n9 B=new_n2688_ Y=new_n2689_
+.gate $_OR_     A=new_n2689_ B=new_n2685_ Y=new_n2690_
+.gate $_MUX_    A=new_n2690_ B=new_n2685_ S=new_n1259_ Y=new_n2691_
+.gate $_NAND_   A=new_n2691_ B=new_n1257_ Y=new_n2692_
+.gate $_NAND_   A=new_n2692_ B=new_n2670_ Y=new_n2693_
+.gate $_NOR_    A=ys__n1059 B=ys__n1051 Y=new_n2694_
+.gate $_OR_     A=new_n2694_ B=new_n1297_ Y=new_n2695_
+.gate $_OR_     A=new_n1445_ B=new_n1301_ Y=new_n2696_
+.gate $_NAND_   A=new_n2696_ B=new_n2695_ Y=new_n2697_
+.gate $_NOR_    A=new_n2697_ B=new_n2693_ Y=new_n2698_
+.gate $_MUX_    A=ys__n1051 B=ys__n1031 S=new_n1312_ Y=new_n2699_
+.gate $_MUX_    A=new_n2699_ B=new_n2355_ S=new_n2354_ Y=new_n2700_
+.gate $_ANDNOT_ A=new_n2700_ B=new_n2353_ Y=new_n2701_
+.gate $_ANDNOT_ A=new_n2701_ B=new_n2352_ Y=new_n2702_
+.gate $_ANDNOT_ A=new_n2702_ B=new_n2641_ Y=new_n2703_
+.gate $_NAND_   A=new_n2703_ B=new_n1306_ Y=new_n2704_
+.gate $_NAND_   A=new_n2704_ B=new_n2698_ Y=new_n2705_
+.gate $_XOR_    A=new_n1455_ B=new_n1449_ Y=new_n2706_
+.gate $_MUX_    A=new_n2706_ B=new_n2705_ S=new_n1371_ Y=new_n2707_
+.gate $_NAND_   A=new_n2707_ B=new_n1250_ Y=new_n2708_
+.gate $_NAND_   A=ys__n1057 B=ys__n1051 Y=new_n2709_
+.gate $_OR_     A=new_n2709_ B=new_n1301_ Y=new_n2710_
+.gate $_NOR_    A=ys__n1057 B=ys__n1051 Y=new_n2711_
+.gate $_OR_     A=new_n2711_ B=new_n1297_ Y=new_n2712_
+.gate $_NAND_   A=new_n2712_ B=new_n2710_ Y=new_n2713_
+.gate $_OR_     A=new_n2546_ B=new_n1252_ Y=new_n2714_
+.gate $_NAND_   A=new_n2714_ B=new_n2692_ Y=new_n2715_
+.gate $_NOR_    A=new_n2715_ B=new_n2713_ Y=new_n2716_
+.gate $_NAND_   A=new_n2716_ B=new_n2704_ Y=new_n2717_
+.gate $_XOR_    A=new_n1623_ B=new_n1620_ Y=new_n2718_
+.gate $_MUX_    A=new_n2718_ B=new_n2717_ S=new_n1371_ Y=new_n2719_
+.gate $_NAND_   A=new_n2719_ B=new_n1261_ Y=new_n2720_
+.gate $_NAND_   A=new_n2720_ B=new_n2708_ Y=new_n2721_
+.gate $_MUX_    A=new_n2721_ B=new_n2669_ S=new_n1245_ Y=new_n2722_
+.gate $_MUX_    A=new_n2722_ B=ys__n1862 S=new_n1078_ Y=ys__n1863
+.gate $_NAND_   A=new_n1167_ B=new_n1161_ Y=new_n2724_
+.gate $_NAND_   A=new_n2724_ B=new_n1157_ Y=new_n2725_
+.gate $_XOR_    A=new_n2725_ B=new_n1158_ Y=new_n2726_
+.gate $_NAND_   A=new_n2726_ B=new_n1083_ Y=new_n2727_
+.gate $_OR_     A=new_n1242_ B=new_n1333_ Y=new_n2728_
+.gate $_NAND_   A=new_n2728_ B=new_n2727_ Y=new_n2729_
+.gate $_ORNOT_  A=new_n1252_ B=new_n1446_ Y=new_n2730_
+.gate $_MUX_    A=new_n2599_ B=new_n2597_ S=new_n1268_ Y=new_n2731_
+.gate $_MUX_    A=new_n2731_ B=new_n1269_ S=new_n1270_ Y=new_n2732_
+.gate $_MUX_    A=new_n2603_ B=new_n2600_ S=new_n1268_ Y=new_n2733_
+.gate $_MUX_    A=new_n2606_ B=new_n2604_ S=new_n1268_ Y=new_n2734_
+.gate $_MUX_    A=new_n2734_ B=new_n2733_ S=new_n1270_ Y=new_n2735_
+.gate $_MUX_    A=new_n2735_ B=new_n2732_ S=new_n1272_ Y=new_n2736_
+.gate $_MUX_    A=new_n2611_ B=new_n2607_ S=new_n1268_ Y=new_n2737_
+.gate $_MUX_    A=new_n2614_ B=new_n2612_ S=new_n1268_ Y=new_n2738_
+.gate $_MUX_    A=new_n2738_ B=new_n2737_ S=new_n1270_ Y=new_n2739_
+.gate $_MUX_    A=new_n2618_ B=new_n2615_ S=new_n1268_ Y=new_n2740_
+.gate $_MUX_    A=new_n2621_ B=new_n2619_ S=new_n1268_ Y=new_n2741_
+.gate $_MUX_    A=new_n2741_ B=new_n2740_ S=new_n1270_ Y=new_n2742_
+.gate $_MUX_    A=new_n2742_ B=new_n2739_ S=new_n1272_ Y=new_n2743_
+.gate $_MUX_    A=new_n2743_ B=new_n2736_ S=new_n1274_ Y=new_n2744_
+.gate $_NAND_   A=new_n1284_ B=new_n1283_ Y=new_n2745_
+.gate $_ANDNOT_ A=new_n1287_ B=new_n2745_ Y=new_n2746_
+.gate $_NAND_   A=new_n2746_ B=new_n1289_ Y=new_n2747_
+.gate $_ANDNOT_ A=ys__n9 B=new_n2747_ Y=new_n2748_
+.gate $_OR_     A=new_n2748_ B=new_n2744_ Y=new_n2749_
+.gate $_MUX_    A=new_n2749_ B=new_n2744_ S=new_n1259_ Y=new_n2750_
+.gate $_NAND_   A=new_n2750_ B=new_n1257_ Y=new_n2751_
+.gate $_NAND_   A=new_n2751_ B=new_n2730_ Y=new_n2752_
+.gate $_NOR_    A=ys__n1076 B=ys__n1053 Y=new_n2753_
+.gate $_OR_     A=new_n2753_ B=new_n1297_ Y=new_n2754_
+.gate $_OR_     A=new_n1443_ B=new_n1301_ Y=new_n2755_
+.gate $_NAND_   A=new_n2755_ B=new_n2754_ Y=new_n2756_
+.gate $_NOR_    A=new_n2756_ B=new_n2752_ Y=new_n2757_
+.gate $_ANDNOT_ A=new_n1359_ B=new_n2353_ Y=new_n2758_
+.gate $_ANDNOT_ A=new_n2758_ B=new_n2352_ Y=new_n2759_
+.gate $_ANDNOT_ A=new_n2759_ B=new_n2641_ Y=new_n2760_
+.gate $_NAND_   A=new_n2760_ B=new_n1306_ Y=new_n2761_
+.gate $_NAND_   A=new_n2761_ B=new_n2757_ Y=new_n2762_
+.gate $_NAND_   A=new_n1455_ B=new_n1449_ Y=new_n2763_
+.gate $_NAND_   A=new_n2763_ B=new_n1445_ Y=new_n2764_
+.gate $_XOR_    A=new_n2764_ B=new_n1446_ Y=new_n2765_
+.gate $_MUX_    A=new_n2765_ B=new_n2762_ S=new_n1371_ Y=new_n2766_
+.gate $_NAND_   A=new_n2766_ B=new_n1250_ Y=new_n2767_
+.gate $_NAND_   A=ys__n1074 B=ys__n1053 Y=new_n2768_
+.gate $_OR_     A=new_n2768_ B=new_n1301_ Y=new_n2769_
+.gate $_NOR_    A=ys__n1074 B=ys__n1053 Y=new_n2770_
+.gate $_OR_     A=new_n2770_ B=new_n1297_ Y=new_n2771_
+.gate $_NAND_   A=new_n2771_ B=new_n2769_ Y=new_n2772_
+.gate $_OR_     A=new_n2542_ B=new_n1252_ Y=new_n2773_
+.gate $_NAND_   A=new_n2773_ B=new_n2751_ Y=new_n2774_
+.gate $_NOR_    A=new_n2774_ B=new_n2772_ Y=new_n2775_
+.gate $_NAND_   A=new_n2775_ B=new_n2761_ Y=new_n2776_
+.gate $_NAND_   A=new_n1623_ B=new_n1620_ Y=new_n2777_
+.gate $_ORNOT_  A=new_n1630_ B=new_n2777_ Y=new_n2778_
+.gate $_XOR_    A=new_n2778_ B=new_n1627_ Y=new_n2779_
+.gate $_MUX_    A=new_n2779_ B=new_n2776_ S=new_n1371_ Y=new_n2780_
+.gate $_NAND_   A=new_n2780_ B=new_n1261_ Y=new_n2781_
+.gate $_NAND_   A=new_n2781_ B=new_n2767_ Y=new_n2782_
+.gate $_MUX_    A=new_n2782_ B=new_n2729_ S=new_n1245_ Y=new_n2783_
+.gate $_MUX_    A=new_n2783_ B=ys__n1935 S=new_n1078_ Y=ys__n1936
+.gate $_XOR_    A=new_n1169_ B=new_n1152_ Y=new_n2785_
+.gate $_NAND_   A=new_n2785_ B=new_n1083_ Y=new_n2786_
+.gate $_OR_     A=new_n1242_ B=new_n1345_ Y=new_n2787_
+.gate $_NAND_   A=new_n2787_ B=new_n2786_ Y=new_n2788_
+.gate $_ORNOT_  A=new_n1252_ B=new_n1440_ Y=new_n2789_
+.gate $_ANDNOT_ A=new_n2365_ B=new_n1270_ Y=new_n2790_
+.gate $_MUX_    A=new_n2372_ B=new_n2368_ S=new_n1270_ Y=new_n2791_
+.gate $_MUX_    A=new_n2791_ B=new_n2790_ S=new_n1272_ Y=new_n2792_
+.gate $_MUX_    A=new_n2381_ B=new_n2375_ S=new_n1270_ Y=new_n2793_
+.gate $_MUX_    A=new_n2389_ B=new_n2384_ S=new_n1270_ Y=new_n2794_
+.gate $_MUX_    A=new_n2794_ B=new_n2793_ S=new_n1272_ Y=new_n2795_
+.gate $_MUX_    A=new_n2795_ B=new_n2792_ S=new_n1274_ Y=new_n2796_
+.gate $_NOT_    A=new_n1289_ Y=new_n2797_
+.gate $_NAND_   A=new_n1287_ B=new_n1284_ Y=new_n2798_
+.gate $_OR_     A=new_n2798_ B=new_n2797_ Y=new_n2799_
+.gate $_ANDNOT_ A=ys__n9 B=new_n2799_ Y=new_n2800_
+.gate $_OR_     A=new_n2800_ B=new_n2796_ Y=new_n2801_
+.gate $_MUX_    A=new_n2801_ B=new_n2796_ S=new_n1259_ Y=new_n2802_
+.gate $_NAND_   A=new_n2802_ B=new_n1257_ Y=new_n2803_
+.gate $_NAND_   A=new_n2803_ B=new_n2789_ Y=new_n2804_
+.gate $_NOR_    A=ys__n1105 B=ys__n1062 Y=new_n2805_
+.gate $_OR_     A=new_n2805_ B=new_n1297_ Y=new_n2806_
+.gate $_OR_     A=new_n1461_ B=new_n1301_ Y=new_n2807_
+.gate $_NAND_   A=new_n2807_ B=new_n2806_ Y=new_n2808_
+.gate $_NOR_    A=new_n2808_ B=new_n2804_ Y=new_n2809_
+.gate $_MUX_    A=ys__n1062 B=ys__n1053 S=new_n1312_ Y=new_n2810_
+.gate $_MUX_    A=new_n2810_ B=new_n2699_ S=new_n2354_ Y=new_n2811_
+.gate $_MUX_    A=new_n2811_ B=new_n2356_ S=new_n2353_ Y=new_n2812_
+.gate $_ANDNOT_ A=new_n2812_ B=new_n2352_ Y=new_n2813_
+.gate $_NAND_   A=new_n2813_ B=new_n1346_ Y=new_n2814_
+.gate $_OR_     A=new_n2814_ B=new_n1307_ Y=new_n2815_
+.gate $_NAND_   A=new_n2815_ B=new_n2809_ Y=new_n2816_
+.gate $_XOR_    A=new_n1457_ B=new_n1440_ Y=new_n2817_
+.gate $_MUX_    A=new_n2817_ B=new_n2816_ S=new_n1371_ Y=new_n2818_
+.gate $_NAND_   A=new_n2818_ B=new_n1250_ Y=new_n2819_
+.gate $_NAND_   A=ys__n1103 B=ys__n1062 Y=new_n2820_
+.gate $_OR_     A=new_n2820_ B=new_n1301_ Y=new_n2821_
+.gate $_NOR_    A=ys__n1103 B=ys__n1062 Y=new_n2822_
+.gate $_OR_     A=new_n2822_ B=new_n1297_ Y=new_n2823_
+.gate $_NAND_   A=new_n2823_ B=new_n2821_ Y=new_n2824_
+.gate $_OR_     A=new_n2538_ B=new_n1252_ Y=new_n2825_
+.gate $_NAND_   A=new_n2825_ B=new_n2803_ Y=new_n2826_
+.gate $_NOR_    A=new_n2826_ B=new_n2824_ Y=new_n2827_
+.gate $_NAND_   A=new_n2827_ B=new_n2815_ Y=new_n2828_
+.gate $_XOR_    A=new_n1647_ B=new_n1634_ Y=new_n2829_
+.gate $_MUX_    A=new_n2829_ B=new_n2828_ S=new_n1371_ Y=new_n2830_
+.gate $_NAND_   A=new_n2830_ B=new_n1261_ Y=new_n2831_
+.gate $_NAND_   A=new_n2831_ B=new_n2819_ Y=new_n2832_
+.gate $_MUX_    A=new_n2832_ B=new_n2788_ S=new_n1245_ Y=new_n2833_
+.gate $_MUX_    A=new_n2833_ B=ys__n2010 S=new_n1078_ Y=ys__n2011
+.gate $_NAND_   A=new_n1169_ B=new_n1152_ Y=new_n2835_
+.gate $_NAND_   A=new_n2835_ B=new_n1173_ Y=new_n2836_
+.gate $_XOR_    A=new_n2836_ B=new_n1151_ Y=new_n2837_
+.gate $_NAND_   A=new_n2837_ B=new_n1083_ Y=new_n2838_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1630 Y=new_n2839_
+.gate $_NAND_   A=new_n2839_ B=new_n2838_ Y=new_n2840_
+.gate $_ORNOT_  A=new_n1252_ B=new_n1439_ Y=new_n2841_
+.gate $_ANDNOT_ A=new_n2598_ B=new_n1270_ Y=new_n2842_
+.gate $_MUX_    A=new_n2605_ B=new_n2601_ S=new_n1270_ Y=new_n2843_
+.gate $_MUX_    A=new_n2843_ B=new_n2842_ S=new_n1272_ Y=new_n2844_
+.gate $_MUX_    A=new_n2613_ B=new_n2608_ S=new_n1270_ Y=new_n2845_
+.gate $_MUX_    A=new_n2620_ B=new_n2616_ S=new_n1270_ Y=new_n2846_
+.gate $_MUX_    A=new_n2846_ B=new_n2845_ S=new_n1272_ Y=new_n2847_
+.gate $_MUX_    A=new_n2847_ B=new_n2844_ S=new_n1274_ Y=new_n2848_
+.gate $_NAND_   A=new_n2627_ B=new_n1285_ Y=new_n2849_
+.gate $_NAND_   A=new_n2849_ B=new_n1287_ Y=new_n2850_
+.gate $_OR_     A=new_n2850_ B=new_n2797_ Y=new_n2851_
+.gate $_ANDNOT_ A=ys__n9 B=new_n2851_ Y=new_n2852_
+.gate $_OR_     A=new_n2852_ B=new_n2848_ Y=new_n2853_
+.gate $_MUX_    A=new_n2853_ B=new_n2848_ S=new_n1259_ Y=new_n2854_
+.gate $_NAND_   A=new_n2854_ B=new_n1257_ Y=new_n2855_
+.gate $_NAND_   A=new_n2855_ B=new_n2841_ Y=new_n2856_
+.gate $_NOR_    A=ys__n1630 B=ys__n1064 Y=new_n2857_
+.gate $_OR_     A=new_n2857_ B=new_n1297_ Y=new_n2858_
+.gate $_OR_     A=new_n1459_ B=new_n1301_ Y=new_n2859_
+.gate $_NAND_   A=new_n2859_ B=new_n2858_ Y=new_n2860_
+.gate $_NOR_    A=new_n2860_ B=new_n2856_ Y=new_n2861_
+.gate $_MUX_    A=new_n1357_ B=new_n1355_ S=new_n1316_ Y=new_n2862_
+.gate $_MUX_    A=new_n2862_ B=new_n2642_ S=new_n2353_ Y=new_n2863_
+.gate $_ANDNOT_ A=new_n2863_ B=new_n2352_ Y=new_n2864_
+.gate $_NAND_   A=new_n2864_ B=new_n1346_ Y=new_n2865_
+.gate $_OR_     A=new_n2865_ B=new_n1307_ Y=new_n2866_
+.gate $_NAND_   A=new_n2866_ B=new_n2861_ Y=new_n2867_
+.gate $_NAND_   A=new_n1457_ B=new_n1440_ Y=new_n2868_
+.gate $_NAND_   A=new_n2868_ B=new_n1461_ Y=new_n2869_
+.gate $_XOR_    A=new_n2869_ B=new_n1439_ Y=new_n2870_
+.gate $_MUX_    A=new_n2870_ B=new_n2867_ S=new_n1371_ Y=new_n2871_
+.gate $_NAND_   A=new_n2871_ B=new_n1250_ Y=new_n2872_
+.gate $_NAND_   A=ys__n1358 B=ys__n1064 Y=new_n2873_
+.gate $_OR_     A=new_n2873_ B=new_n1301_ Y=new_n2874_
+.gate $_NOR_    A=ys__n1358 B=ys__n1064 Y=new_n2875_
+.gate $_OR_     A=new_n2875_ B=new_n1297_ Y=new_n2876_
+.gate $_NAND_   A=new_n2876_ B=new_n2874_ Y=new_n2877_
+.gate $_OR_     A=new_n2533_ B=new_n1252_ Y=new_n2878_
+.gate $_NAND_   A=new_n2878_ B=new_n2855_ Y=new_n2879_
+.gate $_NOR_    A=new_n2879_ B=new_n2877_ Y=new_n2880_
+.gate $_NAND_   A=new_n2880_ B=new_n2866_ Y=new_n2881_
+.gate $_NAND_   A=new_n1647_ B=new_n1634_ Y=new_n2882_
+.gate $_ANDNOT_ A=new_n2882_ B=new_n1655_ Y=new_n2883_
+.gate $_XNOR_   A=new_n2883_ B=new_n1651_ Y=new_n2884_
+.gate $_MUX_    A=new_n2884_ B=new_n2881_ S=new_n1371_ Y=new_n2885_
+.gate $_NAND_   A=new_n2885_ B=new_n1261_ Y=new_n2886_
+.gate $_NAND_   A=new_n2886_ B=new_n2872_ Y=new_n2887_
+.gate $_MUX_    A=new_n2887_ B=new_n2840_ S=new_n1245_ Y=new_n2888_
+.gate $_MUX_    A=new_n2888_ B=ys__n2075 S=new_n1078_ Y=ys__n2076
+.gate $_NAND_   A=new_n1169_ B=new_n1153_ Y=new_n2890_
+.gate $_NAND_   A=new_n2890_ B=new_n1175_ Y=new_n2891_
+.gate $_XOR_    A=new_n2891_ B=new_n1149_ Y=new_n2892_
+.gate $_NAND_   A=new_n2892_ B=new_n1083_ Y=new_n2893_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1622 Y=new_n2894_
+.gate $_NAND_   A=new_n2894_ B=new_n2893_ Y=new_n2895_
+.gate $_ORNOT_  A=new_n1252_ B=new_n1437_ Y=new_n2896_
+.gate $_ANDNOT_ A=new_n2671_ B=new_n1270_ Y=new_n2897_
+.gate $_MUX_    A=new_n2674_ B=new_n2672_ S=new_n1270_ Y=new_n2898_
+.gate $_MUX_    A=new_n2898_ B=new_n2897_ S=new_n1272_ Y=new_n2899_
+.gate $_MUX_    A=new_n2678_ B=new_n2675_ S=new_n1270_ Y=new_n2900_
+.gate $_MUX_    A=new_n2681_ B=new_n2679_ S=new_n1270_ Y=new_n2901_
+.gate $_MUX_    A=new_n2901_ B=new_n2900_ S=new_n1272_ Y=new_n2902_
+.gate $_MUX_    A=new_n2902_ B=new_n2899_ S=new_n1274_ Y=new_n2903_
+.gate $_OR_     A=new_n1284_ B=new_n1282_ Y=new_n2904_
+.gate $_NAND_   A=new_n2904_ B=new_n1287_ Y=new_n2905_
+.gate $_OR_     A=new_n2905_ B=new_n2797_ Y=new_n2906_
+.gate $_ANDNOT_ A=ys__n9 B=new_n2906_ Y=new_n2907_
+.gate $_OR_     A=new_n2907_ B=new_n2903_ Y=new_n2908_
+.gate $_MUX_    A=new_n2908_ B=new_n2903_ S=new_n1259_ Y=new_n2909_
+.gate $_NAND_   A=new_n2909_ B=new_n1257_ Y=new_n2910_
+.gate $_NAND_   A=new_n2910_ B=new_n2896_ Y=new_n2911_
+.gate $_NOR_    A=ys__n1622 B=ys__n1067 Y=new_n2912_
+.gate $_OR_     A=new_n2912_ B=new_n1297_ Y=new_n2913_
+.gate $_NOT_    A=new_n1466_ Y=new_n2914_
+.gate $_OR_     A=new_n2914_ B=new_n1301_ Y=new_n2915_
+.gate $_NAND_   A=new_n2915_ B=new_n2913_ Y=new_n2916_
+.gate $_NOR_    A=new_n2916_ B=new_n2911_ Y=new_n2917_
+.gate $_MUX_    A=ys__n1067 B=ys__n1064 S=new_n1312_ Y=new_n2918_
+.gate $_MUX_    A=new_n2918_ B=new_n2810_ S=new_n2354_ Y=new_n2919_
+.gate $_MUX_    A=new_n2919_ B=new_n2700_ S=new_n2353_ Y=new_n2920_
+.gate $_ANDNOT_ A=new_n2920_ B=new_n2352_ Y=new_n2921_
+.gate $_NAND_   A=new_n2921_ B=new_n1346_ Y=new_n2922_
+.gate $_OR_     A=new_n2922_ B=new_n1307_ Y=new_n2923_
+.gate $_NAND_   A=new_n2923_ B=new_n2917_ Y=new_n2924_
+.gate $_NAND_   A=new_n1457_ B=new_n1441_ Y=new_n2925_
+.gate $_NAND_   A=new_n2925_ B=new_n1463_ Y=new_n2926_
+.gate $_XOR_    A=new_n2926_ B=new_n1437_ Y=new_n2927_
+.gate $_MUX_    A=new_n2927_ B=new_n2924_ S=new_n1371_ Y=new_n2928_
+.gate $_NAND_   A=new_n2928_ B=new_n1250_ Y=new_n2929_
+.gate $_NAND_   A=ys__n1350 B=ys__n1067 Y=new_n2930_
+.gate $_OR_     A=new_n2930_ B=new_n1301_ Y=new_n2931_
+.gate $_NOR_    A=ys__n1350 B=ys__n1067 Y=new_n2932_
+.gate $_OR_     A=new_n2932_ B=new_n1297_ Y=new_n2933_
+.gate $_NAND_   A=new_n2933_ B=new_n2931_ Y=new_n2934_
+.gate $_OR_     A=new_n2529_ B=new_n1252_ Y=new_n2935_
+.gate $_NAND_   A=new_n2935_ B=new_n2910_ Y=new_n2936_
+.gate $_NOR_    A=new_n2936_ B=new_n2934_ Y=new_n2937_
+.gate $_NAND_   A=new_n2937_ B=new_n2923_ Y=new_n2938_
+.gate $_ORNOT_  A=new_n1652_ B=new_n1634_ Y=new_n2939_
+.gate $_NAND_   A=new_n2939_ B=new_n1658_ Y=new_n2940_
+.gate $_XOR_    A=new_n2940_ B=new_n1643_ Y=new_n2941_
+.gate $_MUX_    A=new_n2941_ B=new_n2938_ S=new_n1371_ Y=new_n2942_
+.gate $_NAND_   A=new_n2942_ B=new_n1261_ Y=new_n2943_
+.gate $_NAND_   A=new_n2943_ B=new_n2929_ Y=new_n2944_
+.gate $_MUX_    A=new_n2944_ B=new_n2895_ S=new_n1245_ Y=new_n2945_
+.gate $_MUX_    A=new_n2945_ B=ys__n2152 S=new_n1078_ Y=ys__n2153
+.gate $_AND_    A=new_n2891_ B=new_n1149_ Y=new_n2947_
+.gate $_NOR_    A=new_n2947_ B=new_n1178_ Y=new_n2948_
+.gate $_XNOR_   A=new_n2948_ B=new_n1148_ Y=new_n2949_
+.gate $_NAND_   A=new_n2949_ B=new_n1083_ Y=new_n2950_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1617 Y=new_n2951_
+.gate $_NAND_   A=new_n2951_ B=new_n2950_ Y=new_n2952_
+.gate $_ORNOT_  A=new_n1252_ B=new_n1436_ Y=new_n2953_
+.gate $_MUX_    A=new_n2733_ B=new_n2731_ S=new_n1270_ Y=new_n2954_
+.gate $_MUX_    A=new_n2954_ B=new_n1271_ S=new_n1272_ Y=new_n2955_
+.gate $_MUX_    A=new_n2737_ B=new_n2734_ S=new_n1270_ Y=new_n2956_
+.gate $_MUX_    A=new_n2740_ B=new_n2738_ S=new_n1270_ Y=new_n2957_
+.gate $_MUX_    A=new_n2957_ B=new_n2956_ S=new_n1272_ Y=new_n2958_
+.gate $_MUX_    A=new_n2958_ B=new_n2955_ S=new_n1274_ Y=new_n2959_
+.gate $_NOT_    A=new_n1287_ Y=new_n2960_
+.gate $_NOR_    A=new_n2960_ B=new_n1286_ Y=new_n2961_
+.gate $_NAND_   A=new_n2961_ B=new_n1289_ Y=new_n2962_
+.gate $_ANDNOT_ A=ys__n9 B=new_n2962_ Y=new_n2963_
+.gate $_OR_     A=new_n2963_ B=new_n2959_ Y=new_n2964_
+.gate $_MUX_    A=new_n2964_ B=new_n2959_ S=new_n1259_ Y=new_n2965_
+.gate $_NAND_   A=new_n2965_ B=new_n1257_ Y=new_n2966_
+.gate $_NAND_   A=new_n2966_ B=new_n2953_ Y=new_n2967_
+.gate $_NOR_    A=ys__n1617 B=ys__n1069 Y=new_n2968_
+.gate $_OR_     A=new_n2968_ B=new_n1297_ Y=new_n2969_
+.gate $_OR_     A=new_n1465_ B=new_n1301_ Y=new_n2970_
+.gate $_NAND_   A=new_n2970_ B=new_n2969_ Y=new_n2971_
+.gate $_NOR_    A=new_n2971_ B=new_n2967_ Y=new_n2972_
+.gate $_ANDNOT_ A=new_n1360_ B=new_n2352_ Y=new_n2973_
+.gate $_NAND_   A=new_n2973_ B=new_n1346_ Y=new_n2974_
+.gate $_OR_     A=new_n2974_ B=new_n1307_ Y=new_n2975_
+.gate $_NAND_   A=new_n2975_ B=new_n2972_ Y=new_n2976_
+.gate $_NAND_   A=new_n2926_ B=new_n1437_ Y=new_n2977_
+.gate $_NAND_   A=new_n2977_ B=new_n2914_ Y=new_n2978_
+.gate $_XOR_    A=new_n2978_ B=new_n1436_ Y=new_n2979_
+.gate $_MUX_    A=new_n2979_ B=new_n2976_ S=new_n1371_ Y=new_n2980_
+.gate $_NAND_   A=new_n2980_ B=new_n1250_ Y=new_n2981_
+.gate $_NAND_   A=ys__n1345 B=ys__n1069 Y=new_n2982_
+.gate $_OR_     A=new_n2982_ B=new_n1301_ Y=new_n2983_
+.gate $_NOR_    A=ys__n1345 B=ys__n1069 Y=new_n2984_
+.gate $_OR_     A=new_n2984_ B=new_n1297_ Y=new_n2985_
+.gate $_NAND_   A=new_n2985_ B=new_n2983_ Y=new_n2986_
+.gate $_OR_     A=new_n2525_ B=new_n1252_ Y=new_n2987_
+.gate $_NAND_   A=new_n2987_ B=new_n2966_ Y=new_n2988_
+.gate $_NOR_    A=new_n2988_ B=new_n2986_ Y=new_n2989_
+.gate $_NAND_   A=new_n2989_ B=new_n2975_ Y=new_n2990_
+.gate $_NAND_   A=new_n2940_ B=new_n1643_ Y=new_n2991_
+.gate $_ORNOT_  A=new_n1660_ B=new_n2991_ Y=new_n2992_
+.gate $_XOR_    A=new_n2992_ B=new_n1640_ Y=new_n2993_
+.gate $_MUX_    A=new_n2993_ B=new_n2990_ S=new_n1371_ Y=new_n2994_
+.gate $_NAND_   A=new_n2994_ B=new_n1261_ Y=new_n2995_
+.gate $_NAND_   A=new_n2995_ B=new_n2981_ Y=new_n2996_
+.gate $_MUX_    A=new_n2996_ B=new_n2952_ S=new_n1245_ Y=new_n2997_
+.gate $_MUX_    A=new_n2997_ B=ys__n2216 S=new_n1078_ Y=ys__n2217
+.gate $_XOR_    A=new_n1194_ B=new_n1182_ Y=new_n2999_
+.gate $_NAND_   A=new_n2999_ B=new_n1083_ Y=new_n3000_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1603 Y=new_n3001_
+.gate $_NAND_   A=new_n3001_ B=new_n3000_ Y=new_n3002_
+.gate $_ORNOT_  A=new_n1252_ B=new_n1482_ Y=new_n3003_
+.gate $_ANDNOT_ A=new_n2369_ B=new_n1272_ Y=new_n3004_
+.gate $_MUX_    A=new_n2385_ B=new_n2376_ S=new_n1272_ Y=new_n3005_
+.gate $_MUX_    A=new_n3005_ B=new_n3004_ S=new_n1274_ Y=new_n3006_
+.gate $_NAND_   A=new_n1289_ B=new_n1287_ Y=new_n3007_
+.gate $_ANDNOT_ A=ys__n9 B=new_n3007_ Y=new_n3008_
+.gate $_OR_     A=new_n3008_ B=new_n3006_ Y=new_n3009_
+.gate $_MUX_    A=new_n3009_ B=new_n3006_ S=new_n1259_ Y=new_n3010_
+.gate $_NAND_   A=new_n3010_ B=new_n1257_ Y=new_n3011_
+.gate $_NAND_   A=new_n3011_ B=new_n3003_ Y=new_n3012_
+.gate $_NOR_    A=ys__n1603 B=ys__n1079 Y=new_n3013_
+.gate $_OR_     A=new_n3013_ B=new_n1297_ Y=new_n3014_
+.gate $_OR_     A=new_n1489_ B=new_n1301_ Y=new_n3015_
+.gate $_NAND_   A=new_n3015_ B=new_n3014_ Y=new_n3016_
+.gate $_NOR_    A=new_n3016_ B=new_n3012_ Y=new_n3017_
+.gate $_MUX_    A=ys__n1079 B=ys__n1069 S=new_n1312_ Y=new_n3018_
+.gate $_MUX_    A=new_n3018_ B=new_n2918_ S=new_n2354_ Y=new_n3019_
+.gate $_MUX_    A=new_n3019_ B=new_n2811_ S=new_n2353_ Y=new_n3020_
+.gate $_MUX_    A=new_n3020_ B=new_n2357_ S=new_n2352_ Y=new_n3021_
+.gate $_NAND_   A=new_n3021_ B=new_n1346_ Y=new_n3022_
+.gate $_OR_     A=new_n3022_ B=new_n1307_ Y=new_n3023_
+.gate $_NAND_   A=new_n3023_ B=new_n3017_ Y=new_n3024_
+.gate $_XOR_    A=new_n1482_ B=new_n1470_ Y=new_n3025_
+.gate $_MUX_    A=new_n3025_ B=new_n3024_ S=new_n1371_ Y=new_n3026_
+.gate $_NAND_   A=new_n3026_ B=new_n1250_ Y=new_n3027_
+.gate $_NAND_   A=ys__n1331 B=ys__n1079 Y=new_n3028_
+.gate $_OR_     A=new_n3028_ B=new_n1301_ Y=new_n3029_
+.gate $_NOR_    A=ys__n1331 B=ys__n1079 Y=new_n3030_
+.gate $_OR_     A=new_n3030_ B=new_n1297_ Y=new_n3031_
+.gate $_NAND_   A=new_n3031_ B=new_n3029_ Y=new_n3032_
+.gate $_OR_     A=new_n2520_ B=new_n1252_ Y=new_n3033_
+.gate $_NAND_   A=new_n3033_ B=new_n3011_ Y=new_n3034_
+.gate $_NOR_    A=new_n3034_ B=new_n3032_ Y=new_n3035_
+.gate $_NAND_   A=new_n3035_ B=new_n3023_ Y=new_n3036_
+.gate $_XOR_    A=new_n1700_ B=new_n1665_ Y=new_n3037_
+.gate $_MUX_    A=new_n3037_ B=new_n3036_ S=new_n1371_ Y=new_n3038_
+.gate $_NAND_   A=new_n3038_ B=new_n1261_ Y=new_n3039_
+.gate $_NAND_   A=new_n3039_ B=new_n3027_ Y=new_n3040_
+.gate $_MUX_    A=new_n3040_ B=new_n3002_ S=new_n1245_ Y=new_n3041_
+.gate $_MUX_    A=new_n3041_ B=ys__n2296 S=new_n1078_ Y=ys__n2297
+.gate $_NAND_   A=new_n1194_ B=new_n1182_ Y=new_n3043_
+.gate $_NAND_   A=new_n3043_ B=new_n1201_ Y=new_n3044_
+.gate $_XOR_    A=new_n3044_ B=new_n1193_ Y=new_n3045_
+.gate $_NAND_   A=new_n3045_ B=new_n1083_ Y=new_n3046_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1598 Y=new_n3047_
+.gate $_NAND_   A=new_n3047_ B=new_n3046_ Y=new_n3048_
+.gate $_ORNOT_  A=new_n1252_ B=new_n1481_ Y=new_n3049_
+.gate $_ANDNOT_ A=new_n2602_ B=new_n1272_ Y=new_n3050_
+.gate $_MUX_    A=new_n2617_ B=new_n2609_ S=new_n1272_ Y=new_n3051_
+.gate $_MUX_    A=new_n3051_ B=new_n3050_ S=new_n1274_ Y=new_n3052_
+.gate $_ANDNOT_ A=new_n2628_ B=new_n1287_ Y=new_n3053_
+.gate $_OR_     A=new_n3053_ B=new_n2797_ Y=new_n3054_
+.gate $_NOR_    A=new_n3054_ B=new_n1276_ Y=new_n3055_
+.gate $_OR_     A=new_n3055_ B=new_n3052_ Y=new_n3056_
+.gate $_MUX_    A=new_n3056_ B=new_n3052_ S=new_n1259_ Y=new_n3057_
+.gate $_NAND_   A=new_n3057_ B=new_n1257_ Y=new_n3058_
+.gate $_NAND_   A=new_n3058_ B=new_n3049_ Y=new_n3059_
+.gate $_NOR_    A=ys__n1598 B=ys__n1081 Y=new_n3060_
+.gate $_OR_     A=new_n3060_ B=new_n1297_ Y=new_n3061_
+.gate $_OR_     A=new_n1487_ B=new_n1301_ Y=new_n3062_
+.gate $_NAND_   A=new_n3062_ B=new_n3061_ Y=new_n3063_
+.gate $_NOR_    A=new_n3063_ B=new_n3059_ Y=new_n3064_
+.gate $_MUX_    A=new_n1354_ B=new_n1351_ S=new_n1316_ Y=new_n3065_
+.gate $_MUX_    A=new_n3065_ B=new_n2862_ S=new_n2353_ Y=new_n3066_
+.gate $_MUX_    A=new_n3066_ B=new_n2643_ S=new_n2352_ Y=new_n3067_
+.gate $_NAND_   A=new_n3067_ B=new_n1346_ Y=new_n3068_
+.gate $_OR_     A=new_n3068_ B=new_n1307_ Y=new_n3069_
+.gate $_NAND_   A=new_n3069_ B=new_n3064_ Y=new_n3070_
+.gate $_NAND_   A=new_n1482_ B=new_n1470_ Y=new_n3071_
+.gate $_NAND_   A=new_n3071_ B=new_n1489_ Y=new_n3072_
+.gate $_XOR_    A=new_n3072_ B=new_n1481_ Y=new_n3073_
+.gate $_MUX_    A=new_n3073_ B=new_n3070_ S=new_n1371_ Y=new_n3074_
+.gate $_NAND_   A=new_n3074_ B=new_n1250_ Y=new_n3075_
+.gate $_NAND_   A=ys__n1326 B=ys__n1081 Y=new_n3076_
+.gate $_OR_     A=new_n3076_ B=new_n1301_ Y=new_n3077_
+.gate $_NOR_    A=ys__n1326 B=ys__n1081 Y=new_n3078_
+.gate $_OR_     A=new_n3078_ B=new_n1297_ Y=new_n3079_
+.gate $_NAND_   A=new_n3079_ B=new_n3077_ Y=new_n3080_
+.gate $_OR_     A=new_n2513_ B=new_n1252_ Y=new_n3081_
+.gate $_NAND_   A=new_n3081_ B=new_n3058_ Y=new_n3082_
+.gate $_NOR_    A=new_n3082_ B=new_n3080_ Y=new_n3083_
+.gate $_NAND_   A=new_n3083_ B=new_n3069_ Y=new_n3084_
+.gate $_NAND_   A=new_n1700_ B=new_n1665_ Y=new_n3085_
+.gate $_ORNOT_  A=new_n1710_ B=new_n3085_ Y=new_n3086_
+.gate $_XOR_    A=new_n3086_ B=new_n1705_ Y=new_n3087_
+.gate $_MUX_    A=new_n3087_ B=new_n3084_ S=new_n1371_ Y=new_n3088_
+.gate $_NAND_   A=new_n3088_ B=new_n1261_ Y=new_n3089_
+.gate $_NAND_   A=new_n3089_ B=new_n3075_ Y=new_n3090_
+.gate $_MUX_    A=new_n3090_ B=new_n3048_ S=new_n1245_ Y=new_n3091_
+.gate $_MUX_    A=new_n3091_ B=ys__n2355 S=new_n1078_ Y=ys__n2356
+.gate $_ORNOT_  A=new_n1195_ B=new_n1182_ Y=new_n3093_
+.gate $_NAND_   A=new_n3093_ B=new_n1203_ Y=new_n3094_
+.gate $_XOR_    A=new_n3094_ B=new_n1191_ Y=new_n3095_
+.gate $_NAND_   A=new_n3095_ B=new_n1083_ Y=new_n3096_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1590 Y=new_n3097_
+.gate $_NAND_   A=new_n3097_ B=new_n3096_ Y=new_n3098_
+.gate $_ORNOT_  A=new_n1252_ B=new_n1479_ Y=new_n3099_
+.gate $_ANDNOT_ A=new_n2673_ B=new_n1272_ Y=new_n3100_
+.gate $_MUX_    A=new_n2680_ B=new_n2676_ S=new_n1272_ Y=new_n3101_
+.gate $_MUX_    A=new_n3101_ B=new_n3100_ S=new_n1274_ Y=new_n3102_
+.gate $_NAND_   A=new_n2686_ B=new_n2960_ Y=new_n3103_
+.gate $_NAND_   A=new_n3103_ B=new_n1289_ Y=new_n3104_
+.gate $_ANDNOT_ A=ys__n9 B=new_n3104_ Y=new_n3105_
+.gate $_OR_     A=new_n3105_ B=new_n3102_ Y=new_n3106_
+.gate $_MUX_    A=new_n3106_ B=new_n3102_ S=new_n1259_ Y=new_n3107_
+.gate $_NAND_   A=new_n3107_ B=new_n1257_ Y=new_n3108_
+.gate $_NAND_   A=new_n3108_ B=new_n3099_ Y=new_n3109_
+.gate $_NOR_    A=ys__n1590 B=ys__n1084 Y=new_n3110_
+.gate $_OR_     A=new_n3110_ B=new_n1297_ Y=new_n3111_
+.gate $_OR_     A=new_n1495_ B=new_n1301_ Y=new_n3112_
+.gate $_NAND_   A=new_n3112_ B=new_n3111_ Y=new_n3113_
+.gate $_NOR_    A=new_n3113_ B=new_n3109_ Y=new_n3114_
+.gate $_MUX_    A=ys__n1084 B=ys__n1081 S=new_n1312_ Y=new_n3115_
+.gate $_MUX_    A=new_n3115_ B=new_n3018_ S=new_n2354_ Y=new_n3116_
+.gate $_MUX_    A=new_n3116_ B=new_n2919_ S=new_n2353_ Y=new_n3117_
+.gate $_MUX_    A=new_n3117_ B=new_n2701_ S=new_n2352_ Y=new_n3118_
+.gate $_NAND_   A=new_n3118_ B=new_n1346_ Y=new_n3119_
+.gate $_OR_     A=new_n3119_ B=new_n1307_ Y=new_n3120_
+.gate $_NAND_   A=new_n3120_ B=new_n3114_ Y=new_n3121_
+.gate $_NAND_   A=new_n1483_ B=new_n1470_ Y=new_n3122_
+.gate $_NAND_   A=new_n3122_ B=new_n1491_ Y=new_n3123_
+.gate $_XOR_    A=new_n3123_ B=new_n1479_ Y=new_n3124_
+.gate $_MUX_    A=new_n3124_ B=new_n3121_ S=new_n1371_ Y=new_n3125_
+.gate $_NAND_   A=new_n3125_ B=new_n1250_ Y=new_n3126_
+.gate $_NAND_   A=ys__n1318 B=ys__n1084 Y=new_n3127_
+.gate $_OR_     A=new_n3127_ B=new_n1301_ Y=new_n3128_
+.gate $_NOR_    A=ys__n1318 B=ys__n1084 Y=new_n3129_
+.gate $_OR_     A=new_n3129_ B=new_n1297_ Y=new_n3130_
+.gate $_NAND_   A=new_n3130_ B=new_n3128_ Y=new_n3131_
+.gate $_OR_     A=new_n2509_ B=new_n1252_ Y=new_n3132_
+.gate $_NAND_   A=new_n3132_ B=new_n3108_ Y=new_n3133_
+.gate $_NOR_    A=new_n3133_ B=new_n3131_ Y=new_n3134_
+.gate $_NAND_   A=new_n3134_ B=new_n3120_ Y=new_n3135_
+.gate $_AND_    A=new_n1706_ B=new_n1665_ Y=new_n3136_
+.gate $_OR_     A=new_n3136_ B=new_n1713_ Y=new_n3137_
+.gate $_XOR_    A=new_n3137_ B=new_n1696_ Y=new_n3138_
+.gate $_MUX_    A=new_n3138_ B=new_n3135_ S=new_n1371_ Y=new_n3139_
+.gate $_NAND_   A=new_n3139_ B=new_n1261_ Y=new_n3140_
+.gate $_NAND_   A=new_n3140_ B=new_n3126_ Y=new_n3141_
+.gate $_MUX_    A=new_n3141_ B=new_n3098_ S=new_n1245_ Y=new_n3142_
+.gate $_MUX_    A=new_n3142_ B=ys__n2427 S=new_n1078_ Y=ys__n2428
+.gate $_NAND_   A=new_n3094_ B=new_n1191_ Y=new_n3144_
+.gate $_NAND_   A=new_n3144_ B=new_n1207_ Y=new_n3145_
+.gate $_XOR_    A=new_n3145_ B=new_n1190_ Y=new_n3146_
+.gate $_NAND_   A=new_n3146_ B=new_n1083_ Y=new_n3147_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1585 Y=new_n3148_
+.gate $_NAND_   A=new_n3148_ B=new_n3147_ Y=new_n3149_
+.gate $_ORNOT_  A=new_n1252_ B=new_n1478_ Y=new_n3150_
+.gate $_ANDNOT_ A=new_n2732_ B=new_n1272_ Y=new_n3151_
+.gate $_MUX_    A=new_n2739_ B=new_n2735_ S=new_n1272_ Y=new_n3152_
+.gate $_MUX_    A=new_n3152_ B=new_n3151_ S=new_n1274_ Y=new_n3153_
+.gate $_NAND_   A=new_n2745_ B=new_n2960_ Y=new_n3154_
+.gate $_NAND_   A=new_n3154_ B=new_n1289_ Y=new_n3155_
+.gate $_ANDNOT_ A=ys__n9 B=new_n3155_ Y=new_n3156_
+.gate $_OR_     A=new_n3156_ B=new_n3153_ Y=new_n3157_
+.gate $_MUX_    A=new_n3157_ B=new_n3153_ S=new_n1259_ Y=new_n3158_
+.gate $_NAND_   A=new_n3158_ B=new_n1257_ Y=new_n3159_
+.gate $_NAND_   A=new_n3159_ B=new_n3150_ Y=new_n3160_
+.gate $_NOR_    A=ys__n1585 B=ys__n1086 Y=new_n3161_
+.gate $_OR_     A=new_n3161_ B=new_n1297_ Y=new_n3162_
+.gate $_OR_     A=new_n1493_ B=new_n1301_ Y=new_n3163_
+.gate $_NAND_   A=new_n3163_ B=new_n3162_ Y=new_n3164_
+.gate $_NOR_    A=new_n3164_ B=new_n3160_ Y=new_n3165_
+.gate $_MUX_    A=new_n1356_ B=new_n1352_ S=new_n1323_ Y=new_n3166_
+.gate $_MUX_    A=new_n3166_ B=new_n2758_ S=new_n2352_ Y=new_n3167_
+.gate $_NAND_   A=new_n3167_ B=new_n1346_ Y=new_n3168_
+.gate $_OR_     A=new_n3168_ B=new_n1307_ Y=new_n3169_
+.gate $_NAND_   A=new_n3169_ B=new_n3165_ Y=new_n3170_
+.gate $_NAND_   A=new_n3123_ B=new_n1479_ Y=new_n3171_
+.gate $_NAND_   A=new_n3171_ B=new_n1495_ Y=new_n3172_
+.gate $_XOR_    A=new_n3172_ B=new_n1478_ Y=new_n3173_
+.gate $_MUX_    A=new_n3173_ B=new_n3170_ S=new_n1371_ Y=new_n3174_
+.gate $_NAND_   A=new_n3174_ B=new_n1250_ Y=new_n3175_
+.gate $_NAND_   A=ys__n1313 B=ys__n1086 Y=new_n3176_
+.gate $_OR_     A=new_n3176_ B=new_n1301_ Y=new_n3177_
+.gate $_NOR_    A=ys__n1313 B=ys__n1086 Y=new_n3178_
+.gate $_OR_     A=new_n3178_ B=new_n1297_ Y=new_n3179_
+.gate $_NAND_   A=new_n3179_ B=new_n3177_ Y=new_n3180_
+.gate $_OR_     A=new_n2505_ B=new_n1252_ Y=new_n3181_
+.gate $_NAND_   A=new_n3181_ B=new_n3159_ Y=new_n3182_
+.gate $_NOR_    A=new_n3182_ B=new_n3180_ Y=new_n3183_
+.gate $_NAND_   A=new_n3183_ B=new_n3169_ Y=new_n3184_
+.gate $_NAND_   A=new_n3137_ B=new_n1696_ Y=new_n3185_
+.gate $_ANDNOT_ A=new_n3185_ B=new_n1715_ Y=new_n3186_
+.gate $_XNOR_   A=new_n3186_ B=new_n1693_ Y=new_n3187_
+.gate $_MUX_    A=new_n3187_ B=new_n3184_ S=new_n1371_ Y=new_n3188_
+.gate $_NAND_   A=new_n3188_ B=new_n1261_ Y=new_n3189_
+.gate $_NAND_   A=new_n3189_ B=new_n3175_ Y=new_n3190_
+.gate $_MUX_    A=new_n3190_ B=new_n3149_ S=new_n1245_ Y=new_n3191_
+.gate $_MUX_    A=new_n3191_ B=ys__n2486 S=new_n1078_ Y=ys__n2487
+.gate $_NAND_   A=new_n1196_ B=new_n1182_ Y=new_n3193_
+.gate $_NAND_   A=new_n3193_ B=new_n1210_ Y=new_n3194_
+.gate $_XOR_    A=new_n3194_ B=new_n1187_ Y=new_n3195_
+.gate $_NAND_   A=new_n3195_ B=new_n1083_ Y=new_n3196_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1574 Y=new_n3197_
+.gate $_NAND_   A=new_n3197_ B=new_n3196_ Y=new_n3198_
+.gate $_ORNOT_  A=new_n1252_ B=new_n1475_ Y=new_n3199_
+.gate $_ANDNOT_ A=new_n2790_ B=new_n1272_ Y=new_n3200_
+.gate $_MUX_    A=new_n2793_ B=new_n2791_ S=new_n1272_ Y=new_n3201_
+.gate $_MUX_    A=new_n3201_ B=new_n3200_ S=new_n1274_ Y=new_n3202_
+.gate $_OR_     A=new_n1287_ B=new_n1284_ Y=new_n3203_
+.gate $_NAND_   A=new_n3203_ B=new_n1289_ Y=new_n3204_
+.gate $_ANDNOT_ A=ys__n9 B=new_n3204_ Y=new_n3205_
+.gate $_OR_     A=new_n3205_ B=new_n3202_ Y=new_n3206_
+.gate $_MUX_    A=new_n3206_ B=new_n3202_ S=new_n1259_ Y=new_n3207_
+.gate $_NAND_   A=new_n3207_ B=new_n1257_ Y=new_n3208_
+.gate $_NAND_   A=new_n3208_ B=new_n3199_ Y=new_n3209_
+.gate $_NOR_    A=ys__n1574 B=ys__n1090 Y=new_n3210_
+.gate $_OR_     A=new_n3210_ B=new_n1297_ Y=new_n3211_
+.gate $_OR_     A=new_n1502_ B=new_n1301_ Y=new_n3212_
+.gate $_NAND_   A=new_n3212_ B=new_n3211_ Y=new_n3213_
+.gate $_NOR_    A=new_n3213_ B=new_n3209_ Y=new_n3214_
+.gate $_MUX_    A=ys__n1090 B=ys__n1086 S=new_n1312_ Y=new_n3215_
+.gate $_MUX_    A=new_n3215_ B=new_n3115_ S=new_n2354_ Y=new_n3216_
+.gate $_MUX_    A=new_n3216_ B=new_n3019_ S=new_n2353_ Y=new_n3217_
+.gate $_MUX_    A=new_n3217_ B=new_n2812_ S=new_n2352_ Y=new_n3218_
+.gate $_NAND_   A=new_n3218_ B=new_n1346_ Y=new_n3219_
+.gate $_OR_     A=new_n3219_ B=new_n1307_ Y=new_n3220_
+.gate $_NAND_   A=new_n3220_ B=new_n3214_ Y=new_n3221_
+.gate $_NAND_   A=new_n1484_ B=new_n1470_ Y=new_n3222_
+.gate $_NAND_   A=new_n3222_ B=new_n1498_ Y=new_n3223_
+.gate $_XOR_    A=new_n3223_ B=new_n1475_ Y=new_n3224_
+.gate $_MUX_    A=new_n3224_ B=new_n3221_ S=new_n1371_ Y=new_n3225_
+.gate $_NAND_   A=new_n3225_ B=new_n1250_ Y=new_n3226_
+.gate $_NAND_   A=ys__n1302 B=ys__n1090 Y=new_n3227_
+.gate $_OR_     A=new_n3227_ B=new_n1301_ Y=new_n3228_
+.gate $_NOR_    A=ys__n1302 B=ys__n1090 Y=new_n3229_
+.gate $_OR_     A=new_n3229_ B=new_n1297_ Y=new_n3230_
+.gate $_NAND_   A=new_n3230_ B=new_n3228_ Y=new_n3231_
+.gate $_OR_     A=new_n2501_ B=new_n1252_ Y=new_n3232_
+.gate $_NAND_   A=new_n3232_ B=new_n3208_ Y=new_n3233_
+.gate $_NOR_    A=new_n3233_ B=new_n3231_ Y=new_n3234_
+.gate $_NAND_   A=new_n3234_ B=new_n3220_ Y=new_n3235_
+.gate $_ANDNOT_ A=new_n1665_ B=new_n1707_ Y=new_n3236_
+.gate $_ORNOT_  A=new_n3236_ B=new_n1719_ Y=new_n3237_
+.gate $_XOR_    A=new_n3237_ B=new_n1685_ Y=new_n3238_
+.gate $_MUX_    A=new_n3238_ B=new_n3235_ S=new_n1371_ Y=new_n3239_
+.gate $_NAND_   A=new_n3239_ B=new_n1261_ Y=new_n3240_
+.gate $_NAND_   A=new_n3240_ B=new_n3226_ Y=new_n3241_
+.gate $_MUX_    A=new_n3241_ B=new_n3198_ S=new_n1245_ Y=new_n3242_
+.gate $_MUX_    A=new_n3242_ B=ys__n2568 S=new_n1078_ Y=ys__n2569
+.gate $_NAND_   A=new_n3194_ B=new_n1187_ Y=new_n3244_
+.gate $_NAND_   A=new_n3244_ B=new_n1214_ Y=new_n3245_
+.gate $_XOR_    A=new_n3245_ B=new_n1186_ Y=new_n3246_
+.gate $_NAND_   A=new_n3246_ B=new_n1083_ Y=new_n3247_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1569 Y=new_n3248_
+.gate $_NAND_   A=new_n3248_ B=new_n3247_ Y=new_n3249_
+.gate $_ORNOT_  A=new_n1252_ B=new_n1474_ Y=new_n3250_
+.gate $_ANDNOT_ A=new_n2842_ B=new_n1272_ Y=new_n3251_
+.gate $_MUX_    A=new_n2845_ B=new_n2843_ S=new_n1272_ Y=new_n3252_
+.gate $_MUX_    A=new_n3252_ B=new_n3251_ S=new_n1274_ Y=new_n3253_
+.gate $_NOR_    A=new_n2849_ B=new_n1287_ Y=new_n3254_
+.gate $_NOR_    A=new_n3254_ B=new_n2797_ Y=new_n3255_
+.gate $_ANDNOT_ A=new_n3255_ B=new_n1276_ Y=new_n3256_
+.gate $_OR_     A=new_n3256_ B=new_n3253_ Y=new_n3257_
+.gate $_MUX_    A=new_n3257_ B=new_n3253_ S=new_n1259_ Y=new_n3258_
+.gate $_NAND_   A=new_n3258_ B=new_n1257_ Y=new_n3259_
+.gate $_NAND_   A=new_n3259_ B=new_n3250_ Y=new_n3260_
+.gate $_NOR_    A=ys__n1569 B=ys__n1092 Y=new_n3261_
+.gate $_OR_     A=new_n3261_ B=new_n1297_ Y=new_n3262_
+.gate $_OR_     A=new_n1500_ B=new_n1301_ Y=new_n3263_
+.gate $_NAND_   A=new_n3263_ B=new_n3262_ Y=new_n3264_
+.gate $_NOR_    A=new_n3264_ B=new_n3260_ Y=new_n3265_
+.gate $_MUX_    A=new_n1350_ B=new_n1348_ S=new_n1316_ Y=new_n3266_
+.gate $_MUX_    A=new_n3266_ B=new_n3065_ S=new_n2353_ Y=new_n3267_
+.gate $_MUX_    A=new_n3267_ B=new_n2863_ S=new_n2352_ Y=new_n3268_
+.gate $_NAND_   A=new_n3268_ B=new_n1346_ Y=new_n3269_
+.gate $_OR_     A=new_n3269_ B=new_n1307_ Y=new_n3270_
+.gate $_NAND_   A=new_n3270_ B=new_n3265_ Y=new_n3271_
+.gate $_NAND_   A=new_n3223_ B=new_n1475_ Y=new_n3272_
+.gate $_NAND_   A=new_n3272_ B=new_n1502_ Y=new_n3273_
+.gate $_XOR_    A=new_n3273_ B=new_n1474_ Y=new_n3274_
+.gate $_MUX_    A=new_n3274_ B=new_n3271_ S=new_n1371_ Y=new_n3275_
+.gate $_NAND_   A=new_n3275_ B=new_n1250_ Y=new_n3276_
+.gate $_NAND_   A=ys__n1297 B=ys__n1092 Y=new_n3277_
+.gate $_OR_     A=new_n3277_ B=new_n1301_ Y=new_n3278_
+.gate $_NOR_    A=ys__n1297 B=ys__n1092 Y=new_n3279_
+.gate $_OR_     A=new_n3279_ B=new_n1297_ Y=new_n3280_
+.gate $_NAND_   A=new_n3280_ B=new_n3278_ Y=new_n3281_
+.gate $_OR_     A=new_n2496_ B=new_n1252_ Y=new_n3282_
+.gate $_NAND_   A=new_n3282_ B=new_n3259_ Y=new_n3283_
+.gate $_NOR_    A=new_n3283_ B=new_n3281_ Y=new_n3284_
+.gate $_NAND_   A=new_n3284_ B=new_n3270_ Y=new_n3285_
+.gate $_NAND_   A=new_n3237_ B=new_n1685_ Y=new_n3286_
+.gate $_ANDNOT_ A=new_n3286_ B=new_n1721_ Y=new_n3287_
+.gate $_XNOR_   A=new_n3287_ B=new_n1682_ Y=new_n3288_
+.gate $_MUX_    A=new_n3288_ B=new_n3285_ S=new_n1371_ Y=new_n3289_
+.gate $_NAND_   A=new_n3289_ B=new_n1261_ Y=new_n3290_
+.gate $_NAND_   A=new_n3290_ B=new_n3276_ Y=new_n3291_
+.gate $_MUX_    A=new_n3291_ B=new_n3249_ S=new_n1245_ Y=new_n3292_
+.gate $_MUX_    A=new_n3292_ B=ys__n2627 S=new_n1078_ Y=ys__n2628
+.gate $_NAND_   A=new_n3194_ B=new_n1188_ Y=new_n3294_
+.gate $_NAND_   A=new_n3294_ B=new_n1216_ Y=new_n3295_
+.gate $_XOR_    A=new_n3295_ B=new_n1184_ Y=new_n3296_
+.gate $_NAND_   A=new_n3296_ B=new_n1083_ Y=new_n3297_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1561 Y=new_n3298_
+.gate $_NAND_   A=new_n3298_ B=new_n3297_ Y=new_n3299_
+.gate $_ORNOT_  A=new_n1252_ B=new_n1472_ Y=new_n3300_
+.gate $_ANDNOT_ A=new_n2897_ B=new_n1272_ Y=new_n3301_
+.gate $_MUX_    A=new_n2900_ B=new_n2898_ S=new_n1272_ Y=new_n3302_
+.gate $_MUX_    A=new_n3302_ B=new_n3301_ S=new_n1274_ Y=new_n3303_
+.gate $_NOR_    A=new_n2904_ B=new_n1287_ Y=new_n3304_
+.gate $_NOR_    A=new_n3304_ B=new_n2797_ Y=new_n3305_
+.gate $_ANDNOT_ A=new_n3305_ B=new_n1276_ Y=new_n3306_
+.gate $_OR_     A=new_n3306_ B=new_n3303_ Y=new_n3307_
+.gate $_MUX_    A=new_n3307_ B=new_n3303_ S=new_n1259_ Y=new_n3308_
+.gate $_NAND_   A=new_n3308_ B=new_n1257_ Y=new_n3309_
+.gate $_NAND_   A=new_n3309_ B=new_n3300_ Y=new_n3310_
+.gate $_NOR_    A=ys__n1561 B=ys__n1095 Y=new_n3311_
+.gate $_OR_     A=new_n3311_ B=new_n1297_ Y=new_n3312_
+.gate $_OR_     A=new_n1507_ B=new_n1301_ Y=new_n3313_
+.gate $_NAND_   A=new_n3313_ B=new_n3312_ Y=new_n3314_
+.gate $_NOR_    A=new_n3314_ B=new_n3310_ Y=new_n3315_
+.gate $_MUX_    A=ys__n1095 B=ys__n1092 S=new_n1312_ Y=new_n3316_
+.gate $_MUX_    A=new_n3316_ B=new_n3215_ S=new_n2354_ Y=new_n3317_
+.gate $_MUX_    A=new_n3317_ B=new_n3116_ S=new_n2353_ Y=new_n3318_
+.gate $_MUX_    A=new_n3318_ B=new_n2920_ S=new_n2352_ Y=new_n3319_
+.gate $_NAND_   A=new_n3319_ B=new_n1346_ Y=new_n3320_
+.gate $_OR_     A=new_n3320_ B=new_n1307_ Y=new_n3321_
+.gate $_NAND_   A=new_n3321_ B=new_n3315_ Y=new_n3322_
+.gate $_NAND_   A=new_n3223_ B=new_n1476_ Y=new_n3323_
+.gate $_NAND_   A=new_n3323_ B=new_n1504_ Y=new_n3324_
+.gate $_XOR_    A=new_n3324_ B=new_n1472_ Y=new_n3325_
+.gate $_MUX_    A=new_n3325_ B=new_n3322_ S=new_n1371_ Y=new_n3326_
+.gate $_NAND_   A=new_n3326_ B=new_n1250_ Y=new_n3327_
+.gate $_NAND_   A=ys__n1289 B=ys__n1095 Y=new_n3328_
+.gate $_OR_     A=new_n3328_ B=new_n1301_ Y=new_n3329_
+.gate $_NOR_    A=ys__n1289 B=ys__n1095 Y=new_n3330_
+.gate $_OR_     A=new_n3330_ B=new_n1297_ Y=new_n3331_
+.gate $_NAND_   A=new_n3331_ B=new_n3329_ Y=new_n3332_
+.gate $_OR_     A=new_n2492_ B=new_n1252_ Y=new_n3333_
+.gate $_NAND_   A=new_n3333_ B=new_n3309_ Y=new_n3334_
+.gate $_NOR_    A=new_n3334_ B=new_n3332_ Y=new_n3335_
+.gate $_NAND_   A=new_n3335_ B=new_n3321_ Y=new_n3336_
+.gate $_ORNOT_  A=new_n1686_ B=new_n3237_ Y=new_n3337_
+.gate $_NAND_   A=new_n3337_ B=new_n1724_ Y=new_n3338_
+.gate $_XOR_    A=new_n3338_ B=new_n1677_ Y=new_n3339_
+.gate $_MUX_    A=new_n3339_ B=new_n3336_ S=new_n1371_ Y=new_n3340_
+.gate $_NAND_   A=new_n3340_ B=new_n1261_ Y=new_n3341_
+.gate $_NAND_   A=new_n3341_ B=new_n3327_ Y=new_n3342_
+.gate $_MUX_    A=new_n3342_ B=new_n3299_ S=new_n1245_ Y=new_n3343_
+.gate $_MUX_    A=new_n3343_ B=ys__n2699 S=new_n1078_ Y=ys__n2700
+.gate $_NAND_   A=new_n3295_ B=new_n1184_ Y=new_n3345_
+.gate $_NAND_   A=new_n3345_ B=new_n1219_ Y=new_n3346_
+.gate $_XOR_    A=new_n3346_ B=new_n1183_ Y=new_n3347_
+.gate $_NAND_   A=new_n3347_ B=new_n1083_ Y=new_n3348_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1556 Y=new_n3349_
+.gate $_NAND_   A=new_n3349_ B=new_n3348_ Y=new_n3350_
+.gate $_ORNOT_  A=new_n1252_ B=new_n1471_ Y=new_n3351_
+.gate $_MUX_    A=new_n2956_ B=new_n2954_ S=new_n1272_ Y=new_n3352_
+.gate $_MUX_    A=new_n3352_ B=new_n1273_ S=new_n1274_ Y=new_n3353_
+.gate $_NOR_    A=new_n2797_ B=new_n1288_ Y=new_n3354_
+.gate $_ANDNOT_ A=new_n3354_ B=new_n1276_ Y=new_n3355_
+.gate $_OR_     A=new_n3355_ B=new_n3353_ Y=new_n3356_
+.gate $_MUX_    A=new_n3356_ B=new_n3353_ S=new_n1259_ Y=new_n3357_
+.gate $_NAND_   A=new_n3357_ B=new_n1257_ Y=new_n3358_
+.gate $_NAND_   A=new_n3358_ B=new_n3351_ Y=new_n3359_
+.gate $_NOR_    A=ys__n1556 B=ys__n1097 Y=new_n3360_
+.gate $_OR_     A=new_n3360_ B=new_n1297_ Y=new_n3361_
+.gate $_OR_     A=new_n1506_ B=new_n1301_ Y=new_n3362_
+.gate $_NAND_   A=new_n3362_ B=new_n3361_ Y=new_n3363_
+.gate $_NOR_    A=new_n3363_ B=new_n3359_ Y=new_n3364_
+.gate $_NAND_   A=new_n1361_ B=new_n1346_ Y=new_n3365_
+.gate $_OR_     A=new_n3365_ B=new_n1307_ Y=new_n3366_
+.gate $_NAND_   A=new_n3366_ B=new_n3364_ Y=new_n3367_
+.gate $_NAND_   A=new_n3324_ B=new_n1472_ Y=new_n3368_
+.gate $_NAND_   A=new_n3368_ B=new_n1507_ Y=new_n3369_
+.gate $_XOR_    A=new_n3369_ B=new_n1471_ Y=new_n3370_
+.gate $_MUX_    A=new_n3370_ B=new_n3367_ S=new_n1371_ Y=new_n3371_
+.gate $_NAND_   A=new_n3371_ B=new_n1250_ Y=new_n3372_
+.gate $_NAND_   A=ys__n1284 B=ys__n1097 Y=new_n3373_
+.gate $_OR_     A=new_n3373_ B=new_n1301_ Y=new_n3374_
+.gate $_NOR_    A=ys__n1284 B=ys__n1097 Y=new_n3375_
+.gate $_OR_     A=new_n3375_ B=new_n1297_ Y=new_n3376_
+.gate $_NAND_   A=new_n3376_ B=new_n3374_ Y=new_n3377_
+.gate $_OR_     A=new_n2488_ B=new_n1252_ Y=new_n3378_
+.gate $_NAND_   A=new_n3378_ B=new_n3358_ Y=new_n3379_
+.gate $_NOR_    A=new_n3379_ B=new_n3377_ Y=new_n3380_
+.gate $_NAND_   A=new_n3380_ B=new_n3366_ Y=new_n3381_
+.gate $_NAND_   A=new_n3338_ B=new_n1677_ Y=new_n3382_
+.gate $_ORNOT_  A=new_n1726_ B=new_n3382_ Y=new_n3383_
+.gate $_XOR_    A=new_n3383_ B=new_n1674_ Y=new_n3384_
+.gate $_MUX_    A=new_n3384_ B=new_n3381_ S=new_n1371_ Y=new_n3385_
+.gate $_NAND_   A=new_n3385_ B=new_n1261_ Y=new_n3386_
+.gate $_NAND_   A=new_n3386_ B=new_n3372_ Y=new_n3387_
+.gate $_MUX_    A=new_n3387_ B=new_n3350_ S=new_n1245_ Y=new_n3388_
+.gate $_MUX_    A=new_n3388_ B=ys__n2755 S=new_n1078_ Y=ys__n2756
+.gate $_XOR_    A=new_n1225_ B=new_n1224_ Y=new_n3390_
+.gate $_NAND_   A=new_n3390_ B=new_n1083_ Y=new_n3391_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1539 Y=new_n3392_
+.gate $_NAND_   A=new_n3392_ B=new_n3391_ Y=new_n3393_
+.gate $_ORNOT_  A=new_n1252_ B=new_n1513_ Y=new_n3394_
+.gate $_ANDNOT_ A=new_n2377_ B=new_n1274_ Y=new_n3395_
+.gate $_ANDNOT_ A=new_n1289_ B=new_n1276_ Y=new_n3396_
+.gate $_OR_     A=new_n3396_ B=new_n3395_ Y=new_n3397_
+.gate $_MUX_    A=new_n3397_ B=new_n3395_ S=new_n1259_ Y=new_n3398_
+.gate $_NAND_   A=new_n3398_ B=new_n1257_ Y=new_n3399_
+.gate $_NAND_   A=new_n3399_ B=new_n3394_ Y=new_n3400_
+.gate $_NOR_    A=ys__n1539 B=ys__n1108 Y=new_n3401_
+.gate $_OR_     A=new_n3401_ B=new_n1297_ Y=new_n3402_
+.gate $_OR_     A=new_n1420_ B=new_n1301_ Y=new_n3403_
+.gate $_NAND_   A=new_n3403_ B=new_n3402_ Y=new_n3404_
+.gate $_NOR_    A=new_n3404_ B=new_n3400_ Y=new_n3405_
+.gate $_MUX_    A=ys__n1108 B=ys__n1097 S=new_n1312_ Y=new_n3406_
+.gate $_MUX_    A=new_n3406_ B=new_n3316_ S=new_n2354_ Y=new_n3407_
+.gate $_MUX_    A=new_n3407_ B=new_n3216_ S=new_n2353_ Y=new_n3408_
+.gate $_MUX_    A=new_n3408_ B=new_n3020_ S=new_n2352_ Y=new_n3409_
+.gate $_MUX_    A=new_n3409_ B=new_n2358_ S=new_n2641_ Y=new_n3410_
+.gate $_NAND_   A=new_n3410_ B=new_n1306_ Y=new_n3411_
+.gate $_NAND_   A=new_n3411_ B=new_n3405_ Y=new_n3412_
+.gate $_XOR_    A=new_n1513_ B=new_n1512_ Y=new_n3413_
+.gate $_MUX_    A=new_n3413_ B=new_n3412_ S=new_n1371_ Y=new_n3414_
+.gate $_NAND_   A=new_n3414_ B=new_n1250_ Y=new_n3415_
+.gate $_NAND_   A=ys__n1267 B=ys__n1108 Y=new_n3416_
+.gate $_OR_     A=new_n3416_ B=new_n1301_ Y=new_n3417_
+.gate $_NOR_    A=ys__n1267 B=ys__n1108 Y=new_n3418_
+.gate $_OR_     A=new_n3418_ B=new_n1297_ Y=new_n3419_
+.gate $_NAND_   A=new_n3419_ B=new_n3417_ Y=new_n3420_
+.gate $_OR_     A=new_n2482_ B=new_n1252_ Y=new_n3421_
+.gate $_NAND_   A=new_n3421_ B=new_n3399_ Y=new_n3422_
+.gate $_NOR_    A=new_n3422_ B=new_n3420_ Y=new_n3423_
+.gate $_NAND_   A=new_n3423_ B=new_n3411_ Y=new_n3424_
+.gate $_XOR_    A=new_n1769_ B=new_n1732_ Y=new_n3425_
+.gate $_MUX_    A=new_n3425_ B=new_n3424_ S=new_n1371_ Y=new_n3426_
+.gate $_NAND_   A=new_n3426_ B=new_n1261_ Y=new_n3427_
+.gate $_NAND_   A=new_n3427_ B=new_n3415_ Y=new_n3428_
+.gate $_MUX_    A=new_n3428_ B=new_n3393_ S=new_n1245_ Y=new_n3429_
+.gate $_MUX_    A=new_n3429_ B=ys__n2843 S=new_n1078_ Y=ys__n2844
+.gate $_NAND_   A=new_n1225_ B=new_n1224_ Y=new_n3431_
+.gate $_NAND_   A=new_n3431_ B=new_n1132_ Y=new_n3432_
+.gate $_XOR_    A=new_n3432_ B=new_n1133_ Y=new_n3433_
+.gate $_NAND_   A=new_n3433_ B=new_n1083_ Y=new_n3434_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1534 Y=new_n3435_
+.gate $_NAND_   A=new_n3435_ B=new_n3434_ Y=new_n3436_
+.gate $_ORNOT_  A=new_n1252_ B=new_n1421_ Y=new_n3437_
+.gate $_ANDNOT_ A=new_n2610_ B=new_n1274_ Y=new_n3438_
+.gate $_NOR_    A=new_n2629_ B=new_n1289_ Y=new_n3439_
+.gate $_ANDNOT_ A=ys__n9 B=new_n3439_ Y=new_n3440_
+.gate $_OR_     A=new_n3440_ B=new_n3438_ Y=new_n3441_
+.gate $_MUX_    A=new_n3441_ B=new_n3438_ S=new_n1259_ Y=new_n3442_
+.gate $_NAND_   A=new_n3442_ B=new_n1257_ Y=new_n3443_
+.gate $_NAND_   A=new_n3443_ B=new_n3437_ Y=new_n3444_
+.gate $_NOR_    A=ys__n1534 B=ys__n1110 Y=new_n3445_
+.gate $_OR_     A=new_n3445_ B=new_n1297_ Y=new_n3446_
+.gate $_OR_     A=new_n1418_ B=new_n1301_ Y=new_n3447_
+.gate $_NAND_   A=new_n3447_ B=new_n3446_ Y=new_n3448_
+.gate $_NOR_    A=new_n3448_ B=new_n3444_ Y=new_n3449_
+.gate $_MUX_    A=new_n1347_ B=new_n1339_ S=new_n1316_ Y=new_n3450_
+.gate $_MUX_    A=new_n3450_ B=new_n3266_ S=new_n2353_ Y=new_n3451_
+.gate $_MUX_    A=new_n3451_ B=new_n3066_ S=new_n2352_ Y=new_n3452_
+.gate $_MUX_    A=new_n3452_ B=new_n2644_ S=new_n2641_ Y=new_n3453_
+.gate $_NAND_   A=new_n3453_ B=new_n1306_ Y=new_n3454_
+.gate $_NAND_   A=new_n3454_ B=new_n3449_ Y=new_n3455_
+.gate $_NAND_   A=new_n1513_ B=new_n1512_ Y=new_n3456_
+.gate $_NAND_   A=new_n3456_ B=new_n1420_ Y=new_n3457_
+.gate $_XOR_    A=new_n3457_ B=new_n1421_ Y=new_n3458_
+.gate $_MUX_    A=new_n3458_ B=new_n3455_ S=new_n1371_ Y=new_n3459_
+.gate $_NAND_   A=new_n3459_ B=new_n1250_ Y=new_n3460_
+.gate $_NAND_   A=ys__n1262 B=ys__n1110 Y=new_n3461_
+.gate $_OR_     A=new_n3461_ B=new_n1301_ Y=new_n3462_
+.gate $_NOR_    A=ys__n1262 B=ys__n1110 Y=new_n3463_
+.gate $_OR_     A=new_n3463_ B=new_n1297_ Y=new_n3464_
+.gate $_NAND_   A=new_n3464_ B=new_n3462_ Y=new_n3465_
+.gate $_OR_     A=new_n2473_ B=new_n1252_ Y=new_n3466_
+.gate $_NAND_   A=new_n3466_ B=new_n3443_ Y=new_n3467_
+.gate $_NOR_    A=new_n3467_ B=new_n3465_ Y=new_n3468_
+.gate $_NAND_   A=new_n3468_ B=new_n3454_ Y=new_n3469_
+.gate $_NAND_   A=new_n1769_ B=new_n1732_ Y=new_n3470_
+.gate $_ANDNOT_ A=new_n3470_ B=new_n1774_ Y=new_n3471_
+.gate $_XNOR_   A=new_n3471_ B=new_n1766_ Y=new_n3472_
+.gate $_MUX_    A=new_n3472_ B=new_n3469_ S=new_n1371_ Y=new_n3473_
+.gate $_NAND_   A=new_n3473_ B=new_n1261_ Y=new_n3474_
+.gate $_NAND_   A=new_n3474_ B=new_n3460_ Y=new_n3475_
+.gate $_MUX_    A=new_n3475_ B=new_n3436_ S=new_n1245_ Y=new_n3476_
+.gate $_MUX_    A=new_n3476_ B=ys__n2899 S=new_n1078_ Y=ys__n2900
+.gate $_NAND_   A=new_n1226_ B=new_n1224_ Y=new_n3478_
+.gate $_NAND_   A=new_n3478_ B=new_n1135_ Y=new_n3479_
+.gate $_XOR_    A=new_n3479_ B=new_n1128_ Y=new_n3480_
+.gate $_NAND_   A=new_n3480_ B=new_n1083_ Y=new_n3481_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1526 Y=new_n3482_
+.gate $_NAND_   A=new_n3482_ B=new_n3481_ Y=new_n3483_
+.gate $_ORNOT_  A=new_n1252_ B=new_n1416_ Y=new_n3484_
+.gate $_ANDNOT_ A=new_n2677_ B=new_n1274_ Y=new_n3485_
+.gate $_NOR_    A=new_n2687_ B=new_n1289_ Y=new_n3486_
+.gate $_ANDNOT_ A=ys__n9 B=new_n3486_ Y=new_n3487_
+.gate $_OR_     A=new_n3487_ B=new_n3485_ Y=new_n3488_
+.gate $_MUX_    A=new_n3488_ B=new_n3485_ S=new_n1259_ Y=new_n3489_
+.gate $_NAND_   A=new_n3489_ B=new_n1257_ Y=new_n3490_
+.gate $_NAND_   A=new_n3490_ B=new_n3484_ Y=new_n3491_
+.gate $_NOR_    A=ys__n1526 B=ys__n1113 Y=new_n3492_
+.gate $_OR_     A=new_n3492_ B=new_n1297_ Y=new_n3493_
+.gate $_OR_     A=new_n1427_ B=new_n1301_ Y=new_n3494_
+.gate $_NAND_   A=new_n3494_ B=new_n3493_ Y=new_n3495_
+.gate $_NOR_    A=new_n3495_ B=new_n3491_ Y=new_n3496_
+.gate $_MUX_    A=ys__n1113 B=ys__n1110 S=new_n1312_ Y=new_n3497_
+.gate $_MUX_    A=new_n3497_ B=new_n3406_ S=new_n2354_ Y=new_n3498_
+.gate $_MUX_    A=new_n3498_ B=new_n3317_ S=new_n2353_ Y=new_n3499_
+.gate $_MUX_    A=new_n3499_ B=new_n3117_ S=new_n2352_ Y=new_n3500_
+.gate $_MUX_    A=new_n3500_ B=new_n2702_ S=new_n2641_ Y=new_n3501_
+.gate $_NAND_   A=new_n3501_ B=new_n1306_ Y=new_n3502_
+.gate $_NAND_   A=new_n3502_ B=new_n3496_ Y=new_n3503_
+.gate $_NAND_   A=new_n1514_ B=new_n1512_ Y=new_n3504_
+.gate $_NAND_   A=new_n3504_ B=new_n1423_ Y=new_n3505_
+.gate $_XOR_    A=new_n3505_ B=new_n1416_ Y=new_n3506_
+.gate $_MUX_    A=new_n3506_ B=new_n3503_ S=new_n1371_ Y=new_n3507_
+.gate $_NAND_   A=new_n3507_ B=new_n1250_ Y=new_n3508_
+.gate $_NAND_   A=ys__n1254 B=ys__n1113 Y=new_n3509_
+.gate $_OR_     A=new_n3509_ B=new_n1301_ Y=new_n3510_
+.gate $_NOR_    A=ys__n1254 B=ys__n1113 Y=new_n3511_
+.gate $_OR_     A=new_n3511_ B=new_n1297_ Y=new_n3512_
+.gate $_NAND_   A=new_n3512_ B=new_n3510_ Y=new_n3513_
+.gate $_OR_     A=new_n2469_ B=new_n1252_ Y=new_n3514_
+.gate $_NAND_   A=new_n3514_ B=new_n3490_ Y=new_n3515_
+.gate $_NOR_    A=new_n3515_ B=new_n3513_ Y=new_n3516_
+.gate $_NAND_   A=new_n3516_ B=new_n3502_ Y=new_n3517_
+.gate $_ORNOT_  A=new_n1770_ B=new_n1732_ Y=new_n3518_
+.gate $_NAND_   A=new_n3518_ B=new_n1777_ Y=new_n3519_
+.gate $_XOR_    A=new_n3519_ B=new_n1761_ Y=new_n3520_
+.gate $_MUX_    A=new_n3520_ B=new_n3517_ S=new_n1371_ Y=new_n3521_
+.gate $_NAND_   A=new_n3521_ B=new_n1261_ Y=new_n3522_
+.gate $_NAND_   A=new_n3522_ B=new_n3508_ Y=new_n3523_
+.gate $_MUX_    A=new_n3523_ B=new_n3483_ S=new_n1245_ Y=new_n3524_
+.gate $_MUX_    A=new_n3524_ B=ys__n2968 S=new_n1078_ Y=ys__n2969
+.gate $_NAND_   A=new_n3479_ B=new_n1128_ Y=new_n3526_
+.gate $_NAND_   A=new_n3526_ B=new_n1139_ Y=new_n3527_
+.gate $_XOR_    A=new_n3527_ B=new_n1127_ Y=new_n3528_
+.gate $_NAND_   A=new_n3528_ B=new_n1083_ Y=new_n3529_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1521 Y=new_n3530_
+.gate $_NAND_   A=new_n3530_ B=new_n3529_ Y=new_n3531_
+.gate $_ORNOT_  A=new_n1252_ B=new_n1415_ Y=new_n3532_
+.gate $_ANDNOT_ A=new_n2736_ B=new_n1274_ Y=new_n3533_
+.gate $_NOR_    A=new_n2746_ B=new_n1289_ Y=new_n3534_
+.gate $_ANDNOT_ A=ys__n9 B=new_n3534_ Y=new_n3535_
+.gate $_OR_     A=new_n3535_ B=new_n3533_ Y=new_n3536_
+.gate $_MUX_    A=new_n3536_ B=new_n3533_ S=new_n1259_ Y=new_n3537_
+.gate $_NAND_   A=new_n3537_ B=new_n1257_ Y=new_n3538_
+.gate $_NAND_   A=new_n3538_ B=new_n3532_ Y=new_n3539_
+.gate $_NOR_    A=ys__n1521 B=ys__n1115 Y=new_n3540_
+.gate $_OR_     A=new_n3540_ B=new_n1297_ Y=new_n3541_
+.gate $_OR_     A=new_n1425_ B=new_n1301_ Y=new_n3542_
+.gate $_NAND_   A=new_n3542_ B=new_n3541_ Y=new_n3543_
+.gate $_NOR_    A=new_n3543_ B=new_n3539_ Y=new_n3544_
+.gate $_MUX_    A=new_n1349_ B=new_n1340_ S=new_n1323_ Y=new_n3545_
+.gate $_MUX_    A=new_n3545_ B=new_n3166_ S=new_n2352_ Y=new_n3546_
+.gate $_MUX_    A=new_n3546_ B=new_n2759_ S=new_n2641_ Y=new_n3547_
+.gate $_NAND_   A=new_n3547_ B=new_n1306_ Y=new_n3548_
+.gate $_NAND_   A=new_n3548_ B=new_n3544_ Y=new_n3549_
+.gate $_NAND_   A=new_n3505_ B=new_n1416_ Y=new_n3550_
+.gate $_NAND_   A=new_n3550_ B=new_n1427_ Y=new_n3551_
+.gate $_XOR_    A=new_n3551_ B=new_n1415_ Y=new_n3552_
+.gate $_MUX_    A=new_n3552_ B=new_n3549_ S=new_n1371_ Y=new_n3553_
+.gate $_NAND_   A=new_n3553_ B=new_n1250_ Y=new_n3554_
+.gate $_NAND_   A=ys__n1249 B=ys__n1115 Y=new_n3555_
+.gate $_OR_     A=new_n3555_ B=new_n1301_ Y=new_n3556_
+.gate $_NOR_    A=ys__n1249 B=ys__n1115 Y=new_n3557_
+.gate $_OR_     A=new_n3557_ B=new_n1297_ Y=new_n3558_
+.gate $_NAND_   A=new_n3558_ B=new_n3556_ Y=new_n3559_
+.gate $_OR_     A=new_n2465_ B=new_n1252_ Y=new_n3560_
+.gate $_NAND_   A=new_n3560_ B=new_n3538_ Y=new_n3561_
+.gate $_NOR_    A=new_n3561_ B=new_n3559_ Y=new_n3562_
+.gate $_NAND_   A=new_n3562_ B=new_n3548_ Y=new_n3563_
+.gate $_NAND_   A=new_n3519_ B=new_n1761_ Y=new_n3564_
+.gate $_ORNOT_  A=new_n1779_ B=new_n3564_ Y=new_n3565_
+.gate $_XOR_    A=new_n3565_ B=new_n1758_ Y=new_n3566_
+.gate $_MUX_    A=new_n3566_ B=new_n3563_ S=new_n1371_ Y=new_n3567_
+.gate $_NAND_   A=new_n3567_ B=new_n1261_ Y=new_n3568_
+.gate $_NAND_   A=new_n3568_ B=new_n3554_ Y=new_n3569_
+.gate $_MUX_    A=new_n3569_ B=new_n3531_ S=new_n1245_ Y=new_n3570_
+.gate $_MUX_    A=new_n3570_ B=ys__n3024 S=new_n1078_ Y=ys__n3025
+.gate $_NAND_   A=new_n1227_ B=new_n1224_ Y=new_n3572_
+.gate $_NAND_   A=new_n3572_ B=new_n1142_ Y=new_n3573_
+.gate $_XOR_    A=new_n3573_ B=new_n1143_ Y=new_n3574_
+.gate $_NAND_   A=new_n3574_ B=new_n1083_ Y=new_n3575_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1510 Y=new_n3576_
+.gate $_NAND_   A=new_n3576_ B=new_n3575_ Y=new_n3577_
+.gate $_ORNOT_  A=new_n1252_ B=new_n1431_ Y=new_n3578_
+.gate $_ANDNOT_ A=new_n2792_ B=new_n1274_ Y=new_n3579_
+.gate $_NAND_   A=new_n2798_ B=new_n2797_ Y=new_n3580_
+.gate $_ANDNOT_ A=new_n3580_ B=new_n1276_ Y=new_n3581_
+.gate $_OR_     A=new_n3581_ B=new_n3579_ Y=new_n3582_
+.gate $_MUX_    A=new_n3582_ B=new_n3579_ S=new_n1259_ Y=new_n3583_
+.gate $_NAND_   A=new_n3583_ B=new_n1257_ Y=new_n3584_
+.gate $_NAND_   A=new_n3584_ B=new_n3578_ Y=new_n3585_
+.gate $_NOR_    A=ys__n1510 B=ys__n1119 Y=new_n3586_
+.gate $_OR_     A=new_n3586_ B=new_n1297_ Y=new_n3587_
+.gate $_OR_     A=new_n1409_ B=new_n1301_ Y=new_n3588_
+.gate $_NAND_   A=new_n3588_ B=new_n3587_ Y=new_n3589_
+.gate $_NOR_    A=new_n3589_ B=new_n3585_ Y=new_n3590_
+.gate $_MUX_    A=ys__n1119 B=ys__n1115 S=new_n1312_ Y=new_n3591_
+.gate $_MUX_    A=new_n3591_ B=new_n3497_ S=new_n2354_ Y=new_n3592_
+.gate $_MUX_    A=new_n3592_ B=new_n3407_ S=new_n2353_ Y=new_n3593_
+.gate $_MUX_    A=new_n3593_ B=new_n3217_ S=new_n2352_ Y=new_n3594_
+.gate $_MUX_    A=new_n3594_ B=new_n2813_ S=new_n2641_ Y=new_n3595_
+.gate $_NAND_   A=new_n3595_ B=new_n1306_ Y=new_n3596_
+.gate $_NAND_   A=new_n3596_ B=new_n3590_ Y=new_n3597_
+.gate $_NAND_   A=new_n1515_ B=new_n1512_ Y=new_n3598_
+.gate $_NAND_   A=new_n3598_ B=new_n1430_ Y=new_n3599_
+.gate $_XOR_    A=new_n3599_ B=new_n1431_ Y=new_n3600_
+.gate $_MUX_    A=new_n3600_ B=new_n3597_ S=new_n1371_ Y=new_n3601_
+.gate $_NAND_   A=new_n3601_ B=new_n1250_ Y=new_n3602_
+.gate $_NAND_   A=ys__n1238 B=ys__n1119 Y=new_n3603_
+.gate $_OR_     A=new_n3603_ B=new_n1301_ Y=new_n3604_
+.gate $_NOR_    A=ys__n1238 B=ys__n1119 Y=new_n3605_
+.gate $_OR_     A=new_n3605_ B=new_n1297_ Y=new_n3606_
+.gate $_NAND_   A=new_n3606_ B=new_n3604_ Y=new_n3607_
+.gate $_OR_     A=new_n2461_ B=new_n1252_ Y=new_n3608_
+.gate $_NAND_   A=new_n3608_ B=new_n3584_ Y=new_n3609_
+.gate $_NOR_    A=new_n3609_ B=new_n3607_ Y=new_n3610_
+.gate $_NAND_   A=new_n3610_ B=new_n3596_ Y=new_n3611_
+.gate $_ORNOT_  A=new_n1771_ B=new_n1732_ Y=new_n3612_
+.gate $_NAND_   A=new_n3612_ B=new_n1783_ Y=new_n3613_
+.gate $_XOR_    A=new_n3613_ B=new_n1750_ Y=new_n3614_
+.gate $_MUX_    A=new_n3614_ B=new_n3611_ S=new_n1371_ Y=new_n3615_
+.gate $_NAND_   A=new_n3615_ B=new_n1261_ Y=new_n3616_
+.gate $_NAND_   A=new_n3616_ B=new_n3602_ Y=new_n3617_
+.gate $_MUX_    A=new_n3617_ B=new_n3577_ S=new_n1245_ Y=new_n3618_
+.gate $_MUX_    A=new_n3618_ B=ys__n3104 S=new_n1078_ Y=ys__n3105
+.gate $_NAND_   A=new_n3573_ B=new_n1143_ Y=new_n3620_
+.gate $_NAND_   A=new_n3620_ B=new_n1121_ Y=new_n3621_
+.gate $_XOR_    A=new_n3621_ B=new_n1122_ Y=new_n3622_
+.gate $_NAND_   A=new_n3622_ B=new_n1083_ Y=new_n3623_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1505 Y=new_n3624_
+.gate $_NAND_   A=new_n3624_ B=new_n3623_ Y=new_n3625_
+.gate $_ORNOT_  A=new_n1252_ B=new_n1410_ Y=new_n3626_
+.gate $_ANDNOT_ A=new_n2844_ B=new_n1274_ Y=new_n3627_
+.gate $_NAND_   A=new_n2850_ B=new_n2797_ Y=new_n3628_
+.gate $_ANDNOT_ A=new_n3628_ B=new_n1276_ Y=new_n3629_
+.gate $_OR_     A=new_n3629_ B=new_n3627_ Y=new_n3630_
+.gate $_MUX_    A=new_n3630_ B=new_n3627_ S=new_n1259_ Y=new_n3631_
+.gate $_NAND_   A=new_n3631_ B=new_n1257_ Y=new_n3632_
+.gate $_NAND_   A=new_n3632_ B=new_n3626_ Y=new_n3633_
+.gate $_NOR_    A=ys__n1505 B=ys__n1121 Y=new_n3634_
+.gate $_OR_     A=new_n3634_ B=new_n1297_ Y=new_n3635_
+.gate $_OR_     A=new_n1407_ B=new_n1301_ Y=new_n3636_
+.gate $_NAND_   A=new_n3636_ B=new_n3635_ Y=new_n3637_
+.gate $_NOR_    A=new_n3637_ B=new_n3633_ Y=new_n3638_
+.gate $_MUX_    A=new_n1338_ B=new_n1336_ S=new_n1316_ Y=new_n3639_
+.gate $_MUX_    A=new_n3639_ B=new_n3450_ S=new_n2353_ Y=new_n3640_
+.gate $_MUX_    A=new_n3640_ B=new_n3267_ S=new_n2352_ Y=new_n3641_
+.gate $_MUX_    A=new_n3641_ B=new_n2864_ S=new_n2641_ Y=new_n3642_
+.gate $_NAND_   A=new_n3642_ B=new_n1306_ Y=new_n3643_
+.gate $_NAND_   A=new_n3643_ B=new_n3638_ Y=new_n3644_
+.gate $_NAND_   A=new_n3599_ B=new_n1431_ Y=new_n3645_
+.gate $_NAND_   A=new_n3645_ B=new_n1409_ Y=new_n3646_
+.gate $_XOR_    A=new_n3646_ B=new_n1410_ Y=new_n3647_
+.gate $_MUX_    A=new_n3647_ B=new_n3644_ S=new_n1371_ Y=new_n3648_
+.gate $_NAND_   A=new_n3648_ B=new_n1250_ Y=new_n3649_
+.gate $_NAND_   A=ys__n1233 B=ys__n1121 Y=new_n3650_
+.gate $_OR_     A=new_n3650_ B=new_n1301_ Y=new_n3651_
+.gate $_NOR_    A=ys__n1233 B=ys__n1121 Y=new_n3652_
+.gate $_OR_     A=new_n3652_ B=new_n1297_ Y=new_n3653_
+.gate $_NAND_   A=new_n3653_ B=new_n3651_ Y=new_n3654_
+.gate $_OR_     A=new_n2456_ B=new_n1252_ Y=new_n3655_
+.gate $_NAND_   A=new_n3655_ B=new_n3632_ Y=new_n3656_
+.gate $_NOR_    A=new_n3656_ B=new_n3654_ Y=new_n3657_
+.gate $_NAND_   A=new_n3657_ B=new_n3643_ Y=new_n3658_
+.gate $_NAND_   A=new_n3613_ B=new_n1750_ Y=new_n3659_
+.gate $_ORNOT_  A=new_n1785_ B=new_n3659_ Y=new_n3660_
+.gate $_XOR_    A=new_n3660_ B=new_n1747_ Y=new_n3661_
+.gate $_MUX_    A=new_n3661_ B=new_n3658_ S=new_n1371_ Y=new_n3662_
+.gate $_NAND_   A=new_n3662_ B=new_n1261_ Y=new_n3663_
+.gate $_NAND_   A=new_n3663_ B=new_n3649_ Y=new_n3664_
+.gate $_MUX_    A=new_n3664_ B=new_n3625_ S=new_n1245_ Y=new_n3665_
+.gate $_MUX_    A=new_n3665_ B=ys__n3160 S=new_n1078_ Y=ys__n3161
+.gate $_NAND_   A=new_n3573_ B=new_n1144_ Y=new_n3667_
+.gate $_NAND_   A=new_n3667_ B=new_n1124_ Y=new_n3668_
+.gate $_XOR_    A=new_n3668_ B=new_n1117_ Y=new_n3669_
+.gate $_NAND_   A=new_n3669_ B=new_n1083_ Y=new_n3670_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1497 Y=new_n3671_
+.gate $_NAND_   A=new_n3671_ B=new_n3670_ Y=new_n3672_
+.gate $_ORNOT_  A=new_n1252_ B=new_n1405_ Y=new_n3673_
+.gate $_ANDNOT_ A=new_n2899_ B=new_n1274_ Y=new_n3674_
+.gate $_NAND_   A=new_n2905_ B=new_n2797_ Y=new_n3675_
+.gate $_ANDNOT_ A=new_n3675_ B=new_n1276_ Y=new_n3676_
+.gate $_OR_     A=new_n3676_ B=new_n3674_ Y=new_n3677_
+.gate $_MUX_    A=new_n3677_ B=new_n3674_ S=new_n1259_ Y=new_n3678_
+.gate $_NAND_   A=new_n3678_ B=new_n1257_ Y=new_n3679_
+.gate $_NAND_   A=new_n3679_ B=new_n3673_ Y=new_n3680_
+.gate $_NOR_    A=ys__n1497 B=ys__n1124 Y=new_n3681_
+.gate $_OR_     A=new_n3681_ B=new_n1297_ Y=new_n3682_
+.gate $_NOT_    A=new_n1401_ Y=new_n3683_
+.gate $_OR_     A=new_n3683_ B=new_n1301_ Y=new_n3684_
+.gate $_NAND_   A=new_n3684_ B=new_n3682_ Y=new_n3685_
+.gate $_NOR_    A=new_n3685_ B=new_n3680_ Y=new_n3686_
+.gate $_MUX_    A=ys__n1124 B=ys__n1121 S=new_n1312_ Y=new_n3687_
+.gate $_MUX_    A=new_n3687_ B=new_n3591_ S=new_n2354_ Y=new_n3688_
+.gate $_MUX_    A=new_n3688_ B=new_n3498_ S=new_n2353_ Y=new_n3689_
+.gate $_MUX_    A=new_n3689_ B=new_n3318_ S=new_n2352_ Y=new_n3690_
+.gate $_MUX_    A=new_n3690_ B=new_n2921_ S=new_n2641_ Y=new_n3691_
+.gate $_NAND_   A=new_n3691_ B=new_n1306_ Y=new_n3692_
+.gate $_NAND_   A=new_n3692_ B=new_n3686_ Y=new_n3693_
+.gate $_NAND_   A=new_n3599_ B=new_n1432_ Y=new_n3694_
+.gate $_NAND_   A=new_n3694_ B=new_n1412_ Y=new_n3695_
+.gate $_XOR_    A=new_n3695_ B=new_n1405_ Y=new_n3696_
+.gate $_MUX_    A=new_n3696_ B=new_n3693_ S=new_n1371_ Y=new_n3697_
+.gate $_NAND_   A=new_n3697_ B=new_n1250_ Y=new_n3698_
+.gate $_NAND_   A=ys__n1225 B=ys__n1124 Y=new_n3699_
+.gate $_OR_     A=new_n3699_ B=new_n1301_ Y=new_n3700_
+.gate $_NOR_    A=ys__n1225 B=ys__n1124 Y=new_n3701_
+.gate $_OR_     A=new_n3701_ B=new_n1297_ Y=new_n3702_
+.gate $_NAND_   A=new_n3702_ B=new_n3700_ Y=new_n3703_
+.gate $_OR_     A=new_n2452_ B=new_n1252_ Y=new_n3704_
+.gate $_NAND_   A=new_n3704_ B=new_n3679_ Y=new_n3705_
+.gate $_NOR_    A=new_n3705_ B=new_n3703_ Y=new_n3706_
+.gate $_NAND_   A=new_n3706_ B=new_n3692_ Y=new_n3707_
+.gate $_ANDNOT_ A=new_n3613_ B=new_n1751_ Y=new_n3708_
+.gate $_OR_     A=new_n3708_ B=new_n1788_ Y=new_n3709_
+.gate $_XOR_    A=new_n3709_ B=new_n1742_ Y=new_n3710_
+.gate $_MUX_    A=new_n3710_ B=new_n3707_ S=new_n1371_ Y=new_n3711_
+.gate $_NAND_   A=new_n3711_ B=new_n1261_ Y=new_n3712_
+.gate $_NAND_   A=new_n3712_ B=new_n3698_ Y=new_n3713_
+.gate $_MUX_    A=new_n3713_ B=new_n3672_ S=new_n1245_ Y=new_n3714_
+.gate $_MUX_    A=new_n3714_ B=ys__n3229 S=new_n1078_ Y=ys__n3230
+.gate $_AND_    A=new_n3668_ B=new_n1117_ Y=new_n3716_
+.gate $_NOR_    A=new_n3716_ B=new_n1113_ Y=new_n3717_
+.gate $_XNOR_   A=new_n3717_ B=new_n1114_ Y=new_n3718_
+.gate $_NAND_   A=new_n3718_ B=new_n1083_ Y=new_n3719_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1492 Y=new_n3720_
+.gate $_NAND_   A=new_n3720_ B=new_n3719_ Y=new_n3721_
+.gate $_ORNOT_  A=new_n1252_ B=new_n1402_ Y=new_n3722_
+.gate $_ANDNOT_ A=new_n2955_ B=new_n1274_ Y=new_n3723_
+.gate $_NOR_    A=new_n2961_ B=new_n1289_ Y=new_n3724_
+.gate $_NOR_    A=new_n3724_ B=new_n1276_ Y=new_n3725_
+.gate $_OR_     A=new_n3725_ B=new_n3723_ Y=new_n3726_
+.gate $_MUX_    A=new_n3726_ B=new_n3723_ S=new_n1259_ Y=new_n3727_
+.gate $_NAND_   A=new_n3727_ B=new_n1257_ Y=new_n3728_
+.gate $_NAND_   A=new_n3728_ B=new_n3722_ Y=new_n3729_
+.gate $_NOR_    A=ys__n1492 B=ys__n1126 Y=new_n3730_
+.gate $_OR_     A=new_n3730_ B=new_n1297_ Y=new_n3731_
+.gate $_OR_     A=new_n1400_ B=new_n1301_ Y=new_n3732_
+.gate $_NAND_   A=new_n3732_ B=new_n3731_ Y=new_n3733_
+.gate $_NOR_    A=new_n3733_ B=new_n3729_ Y=new_n3734_
+.gate $_MUX_    A=new_n1353_ B=new_n1341_ S=new_n1334_ Y=new_n3735_
+.gate $_MUX_    A=new_n3735_ B=new_n2973_ S=new_n2641_ Y=new_n3736_
+.gate $_NAND_   A=new_n3736_ B=new_n1306_ Y=new_n3737_
+.gate $_NAND_   A=new_n3737_ B=new_n3734_ Y=new_n3738_
+.gate $_NAND_   A=new_n3695_ B=new_n1405_ Y=new_n3739_
+.gate $_NAND_   A=new_n3739_ B=new_n3683_ Y=new_n3740_
+.gate $_XOR_    A=new_n3740_ B=new_n1402_ Y=new_n3741_
+.gate $_MUX_    A=new_n3741_ B=new_n3738_ S=new_n1371_ Y=new_n3742_
+.gate $_NAND_   A=new_n3742_ B=new_n1250_ Y=new_n3743_
+.gate $_NAND_   A=ys__n1220 B=ys__n1126 Y=new_n3744_
+.gate $_OR_     A=new_n3744_ B=new_n1301_ Y=new_n3745_
+.gate $_NOR_    A=ys__n1220 B=ys__n1126 Y=new_n3746_
+.gate $_OR_     A=new_n3746_ B=new_n1297_ Y=new_n3747_
+.gate $_NAND_   A=new_n3747_ B=new_n3745_ Y=new_n3748_
+.gate $_OR_     A=new_n2448_ B=new_n1252_ Y=new_n3749_
+.gate $_NAND_   A=new_n3749_ B=new_n3728_ Y=new_n3750_
+.gate $_NOR_    A=new_n3750_ B=new_n3748_ Y=new_n3751_
+.gate $_NAND_   A=new_n3751_ B=new_n3737_ Y=new_n3752_
+.gate $_NAND_   A=new_n3709_ B=new_n1742_ Y=new_n3753_
+.gate $_ANDNOT_ A=new_n3753_ B=new_n1790_ Y=new_n3754_
+.gate $_XNOR_   A=new_n3754_ B=new_n1739_ Y=new_n3755_
+.gate $_MUX_    A=new_n3755_ B=new_n3752_ S=new_n1371_ Y=new_n3756_
+.gate $_NAND_   A=new_n3756_ B=new_n1261_ Y=new_n3757_
+.gate $_NAND_   A=new_n3757_ B=new_n3743_ Y=new_n3758_
+.gate $_MUX_    A=new_n3758_ B=new_n3721_ S=new_n1245_ Y=new_n3759_
+.gate $_MUX_    A=new_n3759_ B=ys__n3284 S=new_n1078_ Y=ys__n3285
+.gate $_XOR_    A=new_n1230_ B=new_n1109_ Y=new_n3761_
+.gate $_NAND_   A=new_n3761_ B=new_n1083_ Y=new_n3762_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1478 Y=new_n3763_
+.gate $_NAND_   A=new_n3763_ B=new_n3762_ Y=new_n3764_
+.gate $_ANDNOT_ A=new_n1397_ B=new_n1252_ Y=new_n3765_
+.gate $_ANDNOT_ A=new_n3004_ B=new_n1274_ Y=new_n3766_
+.gate $_NOR_    A=new_n1289_ B=new_n1287_ Y=new_n3767_
+.gate $_NOR_    A=new_n3767_ B=new_n1276_ Y=new_n3768_
+.gate $_OR_     A=new_n3768_ B=new_n3766_ Y=new_n3769_
+.gate $_MUX_    A=new_n3769_ B=new_n3766_ S=new_n1259_ Y=new_n3770_
+.gate $_ANDNOT_ A=new_n3770_ B=new_n1258_ Y=new_n3771_
+.gate $_NOR_    A=new_n3771_ B=new_n3765_ Y=new_n3772_
+.gate $_NOR_    A=ys__n1478 B=ys__n1131 Y=new_n3773_
+.gate $_NOR_    A=new_n3773_ B=new_n1297_ Y=new_n3774_
+.gate $_NOR_    A=new_n1391_ B=new_n1301_ Y=new_n3775_
+.gate $_NOR_    A=new_n3775_ B=new_n3774_ Y=new_n3776_
+.gate $_NAND_   A=new_n3776_ B=new_n3772_ Y=new_n3777_
+.gate $_NOT_    A=new_n3021_ Y=new_n3778_
+.gate $_NOT_    A=new_n3408_ Y=new_n3779_
+.gate $_NOT_    A=new_n3592_ Y=new_n3780_
+.gate $_NOT_    A=new_n3687_ Y=new_n3781_
+.gate $_MUX_    A=ys__n1131 B=ys__n1126 S=new_n1312_ Y=new_n3782_
+.gate $_NOT_    A=new_n3782_ Y=new_n3783_
+.gate $_MUX_    A=new_n3783_ B=new_n3781_ S=new_n2354_ Y=new_n3784_
+.gate $_MUX_    A=new_n3784_ B=new_n3780_ S=new_n2353_ Y=new_n3785_
+.gate $_MUX_    A=new_n3785_ B=new_n3779_ S=new_n2352_ Y=new_n3786_
+.gate $_MUX_    A=new_n3786_ B=new_n3778_ S=new_n2641_ Y=new_n3787_
+.gate $_NOR_    A=new_n3787_ B=new_n1307_ Y=new_n3788_
+.gate $_NOR_    A=new_n3788_ B=new_n3777_ Y=new_n3789_
+.gate $_XNOR_   A=new_n1518_ B=new_n1397_ Y=new_n3790_
+.gate $_MUX_    A=new_n3790_ B=new_n3789_ S=new_n1371_ Y=new_n3791_
+.gate $_ANDNOT_ A=new_n1250_ B=new_n3791_ Y=new_n3792_
+.gate $_NAND_   A=ys__n1206 B=ys__n1131 Y=new_n3793_
+.gate $_NOR_    A=new_n3793_ B=new_n1301_ Y=new_n3794_
+.gate $_NOR_    A=ys__n1206 B=ys__n1131 Y=new_n3795_
+.gate $_NOR_    A=new_n3795_ B=new_n1297_ Y=new_n3796_
+.gate $_NOR_    A=new_n3796_ B=new_n3794_ Y=new_n3797_
+.gate $_NOR_    A=new_n2443_ B=new_n1252_ Y=new_n3798_
+.gate $_NOR_    A=new_n3798_ B=new_n3771_ Y=new_n3799_
+.gate $_NAND_   A=new_n3799_ B=new_n3797_ Y=new_n3800_
+.gate $_NOR_    A=new_n3800_ B=new_n3788_ Y=new_n3801_
+.gate $_XOR_    A=new_n1796_ B=new_n1610_ Y=new_n3802_
+.gate $_MUX_    A=new_n3802_ B=new_n3801_ S=new_n1371_ Y=new_n3803_
+.gate $_ANDNOT_ A=new_n1261_ B=new_n3803_ Y=new_n3804_
+.gate $_OR_     A=new_n3804_ B=new_n3792_ Y=new_n3805_
+.gate $_MUX_    A=new_n3805_ B=new_n3764_ S=new_n1245_ Y=new_n3806_
+.gate $_MUX_    A=new_n3806_ B=ys__n3374 S=new_n1078_ Y=ys__n3375
+.gate $_NAND_   A=new_n1230_ B=new_n1109_ Y=new_n3808_
+.gate $_NAND_   A=new_n3808_ B=new_n1103_ Y=new_n3809_
+.gate $_XOR_    A=new_n3809_ B=new_n1104_ Y=new_n3810_
+.gate $_NAND_   A=new_n3810_ B=new_n1083_ Y=new_n3811_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1473 Y=new_n3812_
+.gate $_NAND_   A=new_n3812_ B=new_n3811_ Y=new_n3813_
+.gate $_ANDNOT_ A=new_n1392_ B=new_n1252_ Y=new_n3814_
+.gate $_ANDNOT_ A=new_n3050_ B=new_n1274_ Y=new_n3815_
+.gate $_NAND_   A=new_n3053_ B=new_n2797_ Y=new_n3816_
+.gate $_ANDNOT_ A=new_n3816_ B=new_n1276_ Y=new_n3817_
+.gate $_OR_     A=new_n3817_ B=new_n3815_ Y=new_n3818_
+.gate $_MUX_    A=new_n3818_ B=new_n3815_ S=new_n1259_ Y=new_n3819_
+.gate $_ANDNOT_ A=new_n3819_ B=new_n1258_ Y=new_n3820_
+.gate $_NOR_    A=new_n3820_ B=new_n3814_ Y=new_n3821_
+.gate $_NOR_    A=ys__n1473 B=ys__n1133 Y=new_n3822_
+.gate $_NOR_    A=new_n3822_ B=new_n1297_ Y=new_n3823_
+.gate $_NOR_    A=new_n1389_ B=new_n1301_ Y=new_n3824_
+.gate $_NOR_    A=new_n3824_ B=new_n3823_ Y=new_n3825_
+.gate $_NAND_   A=new_n3825_ B=new_n3821_ Y=new_n3826_
+.gate $_NOT_    A=new_n3067_ Y=new_n3827_
+.gate $_NOT_    A=new_n3451_ Y=new_n3828_
+.gate $_NOT_    A=new_n3639_ Y=new_n3829_
+.gate $_NOT_    A=new_n1335_ Y=new_n3830_
+.gate $_MUX_    A=new_n3830_ B=new_n1329_ S=new_n1316_ Y=new_n3831_
+.gate $_MUX_    A=new_n3831_ B=new_n3829_ S=new_n2353_ Y=new_n3832_
+.gate $_MUX_    A=new_n3832_ B=new_n3828_ S=new_n2352_ Y=new_n3833_
+.gate $_MUX_    A=new_n3833_ B=new_n3827_ S=new_n2641_ Y=new_n3834_
+.gate $_NOR_    A=new_n3834_ B=new_n1307_ Y=new_n3835_
+.gate $_NOR_    A=new_n3835_ B=new_n3826_ Y=new_n3836_
+.gate $_NAND_   A=new_n1518_ B=new_n1397_ Y=new_n3837_
+.gate $_NAND_   A=new_n3837_ B=new_n1391_ Y=new_n3838_
+.gate $_XNOR_   A=new_n3838_ B=new_n1392_ Y=new_n3839_
+.gate $_MUX_    A=new_n3839_ B=new_n3836_ S=new_n1371_ Y=new_n3840_
+.gate $_ORNOT_  A=new_n3840_ B=new_n1250_ Y=new_n3841_
+.gate $_NAND_   A=ys__n1201 B=ys__n1133 Y=new_n3842_
+.gate $_NOR_    A=new_n3842_ B=new_n1301_ Y=new_n3843_
+.gate $_NOR_    A=ys__n1201 B=ys__n1133 Y=new_n3844_
+.gate $_NOR_    A=new_n3844_ B=new_n1297_ Y=new_n3845_
+.gate $_NOR_    A=new_n3845_ B=new_n3843_ Y=new_n3846_
+.gate $_NOR_    A=new_n2436_ B=new_n1252_ Y=new_n3847_
+.gate $_NOR_    A=new_n3847_ B=new_n3820_ Y=new_n3848_
+.gate $_NAND_   A=new_n3848_ B=new_n3846_ Y=new_n3849_
+.gate $_OR_     A=new_n3849_ B=new_n3835_ Y=new_n3850_
+.gate $_ORNOT_  A=new_n1610_ B=new_n1796_ Y=new_n3851_
+.gate $_ORNOT_  A=new_n1602_ B=new_n3851_ Y=new_n3852_
+.gate $_XOR_    A=new_n3852_ B=new_n1599_ Y=new_n3853_
+.gate $_MUX_    A=new_n3853_ B=new_n3850_ S=new_n1371_ Y=new_n3854_
+.gate $_NAND_   A=new_n3854_ B=new_n1261_ Y=new_n3855_
+.gate $_NAND_   A=new_n3855_ B=new_n3841_ Y=new_n3856_
+.gate $_MUX_    A=new_n3856_ B=new_n3813_ S=new_n1245_ Y=new_n3857_
+.gate $_MUX_    A=new_n3857_ B=ys__n3430 S=new_n1078_ Y=ys__n3431
+.gate $_NAND_   A=new_n1230_ B=new_n1110_ Y=new_n3859_
+.gate $_NAND_   A=new_n3859_ B=new_n1106_ Y=new_n3860_
+.gate $_XOR_    A=new_n3860_ B=new_n1099_ Y=new_n3861_
+.gate $_NAND_   A=new_n3861_ B=new_n1083_ Y=new_n3862_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1465 Y=new_n3863_
+.gate $_NAND_   A=new_n3863_ B=new_n3862_ Y=new_n3864_
+.gate $_ANDNOT_ A=new_n1387_ B=new_n1252_ Y=new_n3865_
+.gate $_ANDNOT_ A=new_n3100_ B=new_n1274_ Y=new_n3866_
+.gate $_NOR_    A=new_n3103_ B=new_n1289_ Y=new_n3867_
+.gate $_NOR_    A=new_n3867_ B=new_n1276_ Y=new_n3868_
+.gate $_OR_     A=new_n3868_ B=new_n3866_ Y=new_n3869_
+.gate $_MUX_    A=new_n3869_ B=new_n3866_ S=new_n1259_ Y=new_n3870_
+.gate $_ANDNOT_ A=new_n3870_ B=new_n1258_ Y=new_n3871_
+.gate $_NOR_    A=new_n3871_ B=new_n3865_ Y=new_n3872_
+.gate $_NOR_    A=ys__n1465 B=ys__n1136 Y=new_n3873_
+.gate $_NOR_    A=new_n3873_ B=new_n1297_ Y=new_n3874_
+.gate $_NOT_    A=new_n1383_ Y=new_n3875_
+.gate $_NOR_    A=new_n3875_ B=new_n1301_ Y=new_n3876_
+.gate $_NOR_    A=new_n3876_ B=new_n3874_ Y=new_n3877_
+.gate $_NAND_   A=new_n3877_ B=new_n3872_ Y=new_n3878_
+.gate $_MUX_    A=ys__n1136 B=ys__n1133 S=new_n1312_ Y=new_n3879_
+.gate $_MUX_    A=new_n3879_ B=new_n3782_ S=new_n2354_ Y=new_n3880_
+.gate $_MUX_    A=new_n3880_ B=new_n3688_ S=new_n2353_ Y=new_n3881_
+.gate $_MUX_    A=new_n3881_ B=new_n3499_ S=new_n2352_ Y=new_n3882_
+.gate $_MUX_    A=new_n3882_ B=new_n3118_ S=new_n2641_ Y=new_n3883_
+.gate $_ANDNOT_ A=new_n3883_ B=new_n1307_ Y=new_n3884_
+.gate $_NOR_    A=new_n3884_ B=new_n3878_ Y=new_n3885_
+.gate $_NAND_   A=new_n1518_ B=new_n1398_ Y=new_n3886_
+.gate $_NAND_   A=new_n3886_ B=new_n1394_ Y=new_n3887_
+.gate $_XNOR_   A=new_n3887_ B=new_n1387_ Y=new_n3888_
+.gate $_MUX_    A=new_n3888_ B=new_n3885_ S=new_n1371_ Y=new_n3889_
+.gate $_ORNOT_  A=new_n3889_ B=new_n1250_ Y=new_n3890_
+.gate $_NAND_   A=ys__n1193 B=ys__n1136 Y=new_n3891_
+.gate $_NOR_    A=new_n3891_ B=new_n1301_ Y=new_n3892_
+.gate $_NOR_    A=ys__n1193 B=ys__n1136 Y=new_n3893_
+.gate $_NOR_    A=new_n3893_ B=new_n1297_ Y=new_n3894_
+.gate $_NOR_    A=new_n3894_ B=new_n3892_ Y=new_n3895_
+.gate $_NOR_    A=new_n2432_ B=new_n1252_ Y=new_n3896_
+.gate $_NOR_    A=new_n3896_ B=new_n3871_ Y=new_n3897_
+.gate $_NAND_   A=new_n3897_ B=new_n3895_ Y=new_n3898_
+.gate $_OR_     A=new_n3898_ B=new_n3884_ Y=new_n3899_
+.gate $_NAND_   A=new_n1796_ B=new_n1611_ Y=new_n3900_
+.gate $_NAND_   A=new_n3900_ B=new_n1605_ Y=new_n3901_
+.gate $_XOR_    A=new_n3901_ B=new_n1606_ Y=new_n3902_
+.gate $_MUX_    A=new_n3902_ B=new_n3899_ S=new_n1371_ Y=new_n3903_
+.gate $_NAND_   A=new_n3903_ B=new_n1261_ Y=new_n3904_
+.gate $_NAND_   A=new_n3904_ B=new_n3890_ Y=new_n3905_
+.gate $_MUX_    A=new_n3905_ B=new_n3864_ S=new_n1245_ Y=new_n3906_
+.gate $_MUX_    A=new_n3906_ B=ys__n3499 S=new_n1078_ Y=ys__n3500
+.gate $_AND_    A=new_n3860_ B=new_n1099_ Y=new_n3908_
+.gate $_NOR_    A=new_n3908_ B=new_n1095_ Y=new_n3909_
+.gate $_XNOR_   A=new_n3909_ B=new_n1096_ Y=new_n3910_
+.gate $_NAND_   A=new_n3910_ B=new_n1083_ Y=new_n3911_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1460 Y=new_n3912_
+.gate $_NAND_   A=new_n3912_ B=new_n3911_ Y=new_n3913_
+.gate $_ANDNOT_ A=new_n1384_ B=new_n1252_ Y=new_n3914_
+.gate $_ANDNOT_ A=new_n3151_ B=new_n1274_ Y=new_n3915_
+.gate $_ANDNOT_ A=new_n2797_ B=new_n3154_ Y=new_n3916_
+.gate $_ANDNOT_ A=ys__n9 B=new_n3916_ Y=new_n3917_
+.gate $_OR_     A=new_n3917_ B=new_n3915_ Y=new_n3918_
+.gate $_MUX_    A=new_n3918_ B=new_n3915_ S=new_n1259_ Y=new_n3919_
+.gate $_ANDNOT_ A=new_n3919_ B=new_n1258_ Y=new_n3920_
+.gate $_NOR_    A=new_n3920_ B=new_n3914_ Y=new_n3921_
+.gate $_NOR_    A=ys__n1460 B=ys__n1138 Y=new_n3922_
+.gate $_NOR_    A=new_n3922_ B=new_n1297_ Y=new_n3923_
+.gate $_NOR_    A=new_n1382_ B=new_n1301_ Y=new_n3924_
+.gate $_NOR_    A=new_n3924_ B=new_n3923_ Y=new_n3925_
+.gate $_NAND_   A=new_n3925_ B=new_n3921_ Y=new_n3926_
+.gate $_NOT_    A=new_n3167_ Y=new_n3927_
+.gate $_NOT_    A=new_n3545_ Y=new_n3928_
+.gate $_NOT_    A=new_n1337_ Y=new_n3929_
+.gate $_MUX_    A=new_n3929_ B=new_n1330_ S=new_n1323_ Y=new_n3930_
+.gate $_MUX_    A=new_n3930_ B=new_n3928_ S=new_n2352_ Y=new_n3931_
+.gate $_MUX_    A=new_n3931_ B=new_n3927_ S=new_n2641_ Y=new_n3932_
+.gate $_NOR_    A=new_n3932_ B=new_n1307_ Y=new_n3933_
+.gate $_NOR_    A=new_n3933_ B=new_n3926_ Y=new_n3934_
+.gate $_NAND_   A=new_n3887_ B=new_n1387_ Y=new_n3935_
+.gate $_NAND_   A=new_n3935_ B=new_n3875_ Y=new_n3936_
+.gate $_XNOR_   A=new_n3936_ B=new_n1384_ Y=new_n3937_
+.gate $_MUX_    A=new_n3937_ B=new_n3934_ S=new_n1371_ Y=new_n3938_
+.gate $_ORNOT_  A=new_n3938_ B=new_n1250_ Y=new_n3939_
+.gate $_NAND_   A=ys__n1188 B=ys__n1138 Y=new_n3940_
+.gate $_NOR_    A=new_n3940_ B=new_n1301_ Y=new_n3941_
+.gate $_NOR_    A=ys__n1188 B=ys__n1138 Y=new_n3942_
+.gate $_NOR_    A=new_n3942_ B=new_n1297_ Y=new_n3943_
+.gate $_NOR_    A=new_n3943_ B=new_n3941_ Y=new_n3944_
+.gate $_NOR_    A=new_n2428_ B=new_n1252_ Y=new_n3945_
+.gate $_NOR_    A=new_n3945_ B=new_n3920_ Y=new_n3946_
+.gate $_NAND_   A=new_n3946_ B=new_n3944_ Y=new_n3947_
+.gate $_OR_     A=new_n3947_ B=new_n3933_ Y=new_n3948_
+.gate $_NAND_   A=new_n3901_ B=new_n1606_ Y=new_n3949_
+.gate $_ANDNOT_ A=new_n3949_ B=new_n1593_ Y=new_n3950_
+.gate $_XNOR_   A=new_n3950_ B=new_n1590_ Y=new_n3951_
+.gate $_MUX_    A=new_n3951_ B=new_n3948_ S=new_n1371_ Y=new_n3952_
+.gate $_NAND_   A=new_n3952_ B=new_n1261_ Y=new_n3953_
+.gate $_NAND_   A=new_n3953_ B=new_n3939_ Y=new_n3954_
+.gate $_MUX_    A=new_n3954_ B=new_n3913_ S=new_n1245_ Y=new_n3955_
+.gate $_MUX_    A=new_n3955_ B=ys__n3554 S=new_n1078_ Y=ys__n3555
+.gate $_XOR_    A=new_n1232_ B=new_n1092_ Y=new_n3957_
+.gate $_NAND_   A=new_n3957_ B=new_n1083_ Y=new_n3958_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1449 Y=new_n3959_
+.gate $_NAND_   A=new_n3959_ B=new_n3958_ Y=new_n3960_
+.gate $_ANDNOT_ A=new_n1380_ B=new_n1252_ Y=new_n3961_
+.gate $_ANDNOT_ A=new_n3200_ B=new_n1274_ Y=new_n3962_
+.gate $_ANDNOT_ A=new_n2797_ B=new_n3203_ Y=new_n3963_
+.gate $_NOR_    A=new_n3963_ B=new_n1276_ Y=new_n3964_
+.gate $_OR_     A=new_n3964_ B=new_n3962_ Y=new_n3965_
+.gate $_MUX_    A=new_n3965_ B=new_n3962_ S=new_n1259_ Y=new_n3966_
+.gate $_ANDNOT_ A=new_n3966_ B=new_n1258_ Y=new_n3967_
+.gate $_NOR_    A=new_n3967_ B=new_n3961_ Y=new_n3968_
+.gate $_NOR_    A=ys__n1449 B=ys__n1142 Y=new_n3969_
+.gate $_NOR_    A=new_n3969_ B=new_n1297_ Y=new_n3970_
+.gate $_NOR_    A=new_n1376_ B=new_n1301_ Y=new_n3971_
+.gate $_NOR_    A=new_n3971_ B=new_n3970_ Y=new_n3972_
+.gate $_NAND_   A=new_n3972_ B=new_n3968_ Y=new_n3973_
+.gate $_NOT_    A=new_n3218_ Y=new_n3974_
+.gate $_NOT_    A=new_n3593_ Y=new_n3975_
+.gate $_NOT_    A=new_n3879_ Y=new_n3976_
+.gate $_MUX_    A=ys__n1142 B=ys__n1138 S=new_n1312_ Y=new_n3977_
+.gate $_NOT_    A=new_n3977_ Y=new_n3978_
+.gate $_MUX_    A=new_n3978_ B=new_n3976_ S=new_n2354_ Y=new_n3979_
+.gate $_MUX_    A=new_n3979_ B=new_n3784_ S=new_n2353_ Y=new_n3980_
+.gate $_MUX_    A=new_n3980_ B=new_n3975_ S=new_n2352_ Y=new_n3981_
+.gate $_MUX_    A=new_n3981_ B=new_n3974_ S=new_n2641_ Y=new_n3982_
+.gate $_NOR_    A=new_n3982_ B=new_n1307_ Y=new_n3983_
+.gate $_NOR_    A=new_n3983_ B=new_n3973_ Y=new_n3984_
+.gate $_XNOR_   A=new_n1520_ B=new_n1380_ Y=new_n3985_
+.gate $_MUX_    A=new_n3985_ B=new_n3984_ S=new_n1371_ Y=new_n3986_
+.gate $_ORNOT_  A=new_n3986_ B=new_n1250_ Y=new_n3987_
+.gate $_NAND_   A=ys__n1177 B=ys__n1142 Y=new_n3988_
+.gate $_NOR_    A=new_n3988_ B=new_n1301_ Y=new_n3989_
+.gate $_NOR_    A=ys__n1177 B=ys__n1142 Y=new_n3990_
+.gate $_NOR_    A=new_n3990_ B=new_n1297_ Y=new_n3991_
+.gate $_NOR_    A=new_n3991_ B=new_n3989_ Y=new_n3992_
+.gate $_NOR_    A=new_n2424_ B=new_n1252_ Y=new_n3993_
+.gate $_NOR_    A=new_n3993_ B=new_n3967_ Y=new_n3994_
+.gate $_NAND_   A=new_n3994_ B=new_n3992_ Y=new_n3995_
+.gate $_OR_     A=new_n3995_ B=new_n3983_ Y=new_n3996_
+.gate $_XOR_    A=new_n1798_ B=new_n1583_ Y=new_n3997_
+.gate $_MUX_    A=new_n3997_ B=new_n3996_ S=new_n1371_ Y=new_n3998_
+.gate $_NAND_   A=new_n3998_ B=new_n1261_ Y=new_n3999_
+.gate $_NAND_   A=new_n3999_ B=new_n3987_ Y=new_n4000_
+.gate $_MUX_    A=new_n4000_ B=new_n3960_ S=new_n1245_ Y=new_n4001_
+.gate $_MUX_    A=new_n4001_ B=ys__n3634 S=new_n1078_ Y=ys__n3635
+.gate $_NAND_   A=new_n1232_ B=new_n1092_ Y=new_n4003_
+.gate $_NAND_   A=new_n4003_ B=new_n1088_ Y=new_n4004_
+.gate $_XOR_    A=new_n4004_ B=new_n1089_ Y=new_n4005_
+.gate $_NAND_   A=new_n4005_ B=new_n1083_ Y=new_n4006_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n1444 Y=new_n4007_
+.gate $_NAND_   A=new_n4007_ B=new_n4006_ Y=new_n4008_
+.gate $_ANDNOT_ A=new_n1377_ B=new_n1252_ Y=new_n4009_
+.gate $_ANDNOT_ A=new_n3251_ B=new_n1274_ Y=new_n4010_
+.gate $_ANDNOT_ A=new_n3254_ B=new_n1289_ Y=new_n4011_
+.gate $_NOR_    A=new_n4011_ B=new_n1276_ Y=new_n4012_
+.gate $_OR_     A=new_n4012_ B=new_n4010_ Y=new_n4013_
+.gate $_MUX_    A=new_n4013_ B=new_n4010_ S=new_n1259_ Y=new_n4014_
+.gate $_ANDNOT_ A=new_n4014_ B=new_n1258_ Y=new_n4015_
+.gate $_NOR_    A=new_n4015_ B=new_n4009_ Y=new_n4016_
+.gate $_NOR_    A=ys__n1444 B=ys__n1144 Y=new_n4017_
+.gate $_NOR_    A=new_n4017_ B=new_n1297_ Y=new_n4018_
+.gate $_NOR_    A=new_n1374_ B=new_n1301_ Y=new_n4019_
+.gate $_NOR_    A=new_n4019_ B=new_n4018_ Y=new_n4020_
+.gate $_NAND_   A=new_n4020_ B=new_n4016_ Y=new_n4021_
+.gate $_NOT_    A=new_n3268_ Y=new_n4022_
+.gate $_NOT_    A=new_n3640_ Y=new_n4023_
+.gate $_MUX_    A=new_n1326_ B=new_n1319_ S=new_n1316_ Y=new_n4024_
+.gate $_MUX_    A=new_n4024_ B=new_n3831_ S=new_n2353_ Y=new_n4025_
+.gate $_MUX_    A=new_n4025_ B=new_n4023_ S=new_n2352_ Y=new_n4026_
+.gate $_MUX_    A=new_n4026_ B=new_n4022_ S=new_n2641_ Y=new_n4027_
+.gate $_NOR_    A=new_n4027_ B=new_n1307_ Y=new_n4028_
+.gate $_NOR_    A=new_n4028_ B=new_n4021_ Y=new_n4029_
+.gate $_NAND_   A=new_n1520_ B=new_n1380_ Y=new_n4030_
+.gate $_NAND_   A=new_n4030_ B=new_n1376_ Y=new_n4031_
+.gate $_XNOR_   A=new_n4031_ B=new_n1377_ Y=new_n4032_
+.gate $_MUX_    A=new_n4032_ B=new_n4029_ S=new_n1371_ Y=new_n4033_
+.gate $_ORNOT_  A=new_n4033_ B=new_n1250_ Y=new_n4034_
+.gate $_NAND_   A=ys__n1172 B=ys__n1144 Y=new_n4035_
+.gate $_NOR_    A=new_n4035_ B=new_n1301_ Y=new_n4036_
+.gate $_NOR_    A=ys__n1172 B=ys__n1144 Y=new_n4037_
+.gate $_NOR_    A=new_n4037_ B=new_n1297_ Y=new_n4038_
+.gate $_NOR_    A=new_n4038_ B=new_n4036_ Y=new_n4039_
+.gate $_NOR_    A=new_n2419_ B=new_n1252_ Y=new_n4040_
+.gate $_NOR_    A=new_n4040_ B=new_n4015_ Y=new_n4041_
+.gate $_NAND_   A=new_n4041_ B=new_n4039_ Y=new_n4042_
+.gate $_OR_     A=new_n4042_ B=new_n4028_ Y=new_n4043_
+.gate $_NAND_   A=new_n1798_ B=new_n1583_ Y=new_n4044_
+.gate $_NAND_   A=new_n4044_ B=new_n1579_ Y=new_n4045_
+.gate $_XOR_    A=new_n4045_ B=new_n1580_ Y=new_n4046_
+.gate $_MUX_    A=new_n4046_ B=new_n4043_ S=new_n1371_ Y=new_n4047_
+.gate $_NAND_   A=new_n4047_ B=new_n1261_ Y=new_n4048_
+.gate $_NAND_   A=new_n4048_ B=new_n4034_ Y=new_n4049_
+.gate $_MUX_    A=new_n4049_ B=new_n4008_ S=new_n1245_ Y=new_n4050_
+.gate $_MUX_    A=new_n4050_ B=ys__n3689 S=new_n1078_ Y=ys__n3690
+.gate $_XOR_    A=new_n1234_ B=new_n1085_ Y=new_n4052_
+.gate $_NAND_   A=new_n4052_ B=new_n1083_ Y=new_n4053_
+.gate $_ORNOT_  A=new_n1242_ B=ys__n76 Y=new_n4054_
+.gate $_NAND_   A=new_n4054_ B=new_n4053_ Y=new_n4055_
+.gate $_ORNOT_  A=new_n1252_ B=new_n1373_ Y=new_n4056_
+.gate $_ANDNOT_ A=new_n3301_ B=new_n1274_ Y=new_n4057_
+.gate $_ANDNOT_ A=new_n3304_ B=new_n1289_ Y=new_n4058_
+.gate $_NOR_    A=new_n4058_ B=new_n1276_ Y=new_n4059_
+.gate $_OR_     A=new_n4059_ B=new_n4057_ Y=new_n4060_
+.gate $_MUX_    A=new_n4060_ B=new_n4057_ S=new_n1259_ Y=new_n4061_
+.gate $_NAND_   A=new_n4061_ B=new_n1257_ Y=new_n4062_
+.gate $_NAND_   A=new_n4062_ B=new_n4056_ Y=new_n4063_
+.gate $_NOR_    A=ys__n1147 B=ys__n76 Y=new_n4064_
+.gate $_OR_     A=new_n4064_ B=new_n1297_ Y=new_n4065_
+.gate $_OR_     A=new_n1372_ B=new_n1301_ Y=new_n4066_
+.gate $_NAND_   A=new_n4066_ B=new_n4065_ Y=new_n4067_
+.gate $_NOR_    A=new_n4067_ B=new_n4063_ Y=new_n4068_
+.gate $_MUX_    A=ys__n1147 B=ys__n1144 S=new_n1312_ Y=new_n4069_
+.gate $_MUX_    A=new_n4069_ B=new_n3977_ S=new_n2354_ Y=new_n4070_
+.gate $_MUX_    A=new_n4070_ B=new_n3880_ S=new_n2353_ Y=new_n4071_
+.gate $_MUX_    A=new_n4071_ B=new_n3689_ S=new_n2352_ Y=new_n4072_
+.gate $_MUX_    A=new_n4072_ B=new_n3319_ S=new_n2641_ Y=new_n4073_
+.gate $_NAND_   A=new_n4073_ B=new_n1306_ Y=new_n4074_
+.gate $_NAND_   A=new_n4074_ B=new_n4068_ Y=new_n4075_
+.gate $_XOR_    A=new_n1522_ B=new_n1373_ Y=new_n4076_
+.gate $_MUX_    A=new_n4076_ B=new_n4075_ S=new_n1371_ Y=new_n4077_
+.gate $_NAND_   A=new_n4077_ B=new_n1250_ Y=new_n4078_
+.gate $_NAND_   A=ys__n1164 B=ys__n1147 Y=new_n4079_
+.gate $_OR_     A=new_n4079_ B=new_n1301_ Y=new_n4080_
+.gate $_NOR_    A=ys__n1164 B=ys__n1147 Y=new_n4081_
+.gate $_OR_     A=new_n4081_ B=new_n1297_ Y=new_n4082_
+.gate $_NAND_   A=new_n4082_ B=new_n4080_ Y=new_n4083_
+.gate $_OR_     A=new_n2415_ B=new_n1252_ Y=new_n4084_
+.gate $_NAND_   A=new_n4084_ B=new_n4062_ Y=new_n4085_
+.gate $_NOR_    A=new_n4085_ B=new_n4083_ Y=new_n4086_
+.gate $_NAND_   A=new_n4086_ B=new_n4074_ Y=new_n4087_
+.gate $_XOR_    A=new_n1800_ B=new_n1571_ Y=new_n4088_
+.gate $_MUX_    A=new_n4088_ B=new_n4087_ S=new_n1371_ Y=new_n4089_
+.gate $_NAND_   A=new_n4089_ B=new_n1261_ Y=new_n4090_
+.gate $_NAND_   A=new_n4090_ B=new_n4078_ Y=new_n4091_
+.gate $_MUX_    A=new_n4091_ B=new_n4055_ S=new_n1245_ Y=new_n4092_
+.gate $_MUX_    A=new_n4092_ B=ys__n3752 S=new_n1078_ Y=ys__n3753
+.end

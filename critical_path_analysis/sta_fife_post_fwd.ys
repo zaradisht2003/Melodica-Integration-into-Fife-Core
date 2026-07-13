@@ -1,0 +1,49 @@
+# ============================================================
+# Variant 3: Fife Core AFTER Forwarding (Posit modules included)
+# Top module: mkCPU
+# Uses the CURRENT (post-forwarding) mkRR_WB.v
+# Method: abc technology mapping with generic45nm.genlib
+#         ABC prints critical path delay via print_stats -t
+# ============================================================
+
+# BSC Verilog primitives
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/bsc/lib/Verilog/FIFO1.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/bsc/lib/Verilog/FIFO2.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/bsc/lib/Verilog/SizedFIFO.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/bsc/lib/Verilog/RegFile.v
+
+# Melodica sub-modules
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/module_fn_twosC_quire.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkMultiplier.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkNormalizer.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkExtracter.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkFtoP_PNE.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkPtoF_PNE.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkPositCore.v
+
+# Fife Core modules (post-forwarding — current mkRR_WB.v)
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkGPRs_synth.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkGPR_Logging_synth.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRR_WB.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkDecode.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkFetch.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCSRs.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRetire.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkEX_Control.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkEX_Int.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkEX_Posit.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkRVFI_Report.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCPU.v
+
+hierarchy -check -top mkCPU
+synth -top mkCPU -flatten
+
+# Technology mapping: ABC prints delay = X.XX ns (critical path)
+abc -script "+read_library,/teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/generic45nm.genlib;strash;map;print_stats -t;write_blif,%/output.blif"
+
+# Cell count statistics
+stat
+
+# Longest topological path (gate hops — for reference only)
+ltp

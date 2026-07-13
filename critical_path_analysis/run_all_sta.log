@@ -1,0 +1,180 @@
+
+[0;34m[21:43:42][0m =====================================================================
+[0;34m[21:43:42][0m   Critical Path Analysis — Yosys STA + generic45nm.lib
+[0;34m[21:43:42][0m =====================================================================
+
+[0;34m[21:43:42][0m STEP 0: Checking prerequisites...
+[0;32m[OK][0m Yosys: Yosys 0.33 (git sha1 2584903a060)
+[0;32m[OK][0m BSC compiler: /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/bsc/bin/bsc
+[0;32m[OK][0m Liberty: /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/generic45nm.lib
+[0;34m[21:43:42][0m 
+[0;34m[21:43:42][0m STEP 1: Generating pre-forwarding mkRR_WB.v...
+[0;34m[21:43:42][0m   Source: git commit 2aa5711 of Learn_Bluespec_and_RISCV_Design
+[0;34m[21:43:42][0m   Backing up current S3_RR_S6_WB.bsv...
+[0;34m[21:43:42][0m   Extracting pre-forwarding BSV from git (2aa5711)...
+[0;32m[OK][0m   Extracted pre-forwarding S3_RR_S6_WB.bsv
+[0;34m[21:43:42][0m   Recompiling S3_RR_S6_WB.bsv with BSC to generate mkRR_WB.v...
+checking package dependencies
+Warning: Unknown position: (S0089)
+  Multiple copies of a file were found in the path. Using:
+    /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/src_Common/Utils.bsv
+  Ignoring:
+    /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Melodica/src_bsv/common/Utils.bsv
+Warning: Unknown position: (S0089)
+  Multiple copies of a file were found in the path. Using:
+    /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/src_Fife/Inter_Stage.bsv
+  Ignoring:
+    /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/src_Common/Inter_Stage.bsv
+Warning: Unknown position: (S0089)
+  Multiple copies of a file were found in the path. Using:
+    /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/src_Fife/Fn_Dispatch.bsv
+  Ignoring:
+    /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/src_Common/Fn_Dispatch.bsv
+compiling /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/src_Common/GPRs.bsv
+code generation for mkGPRs_synth starts
+Verilog file created: /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/critical_path_analysis/pre_fwd_verilog/mkGPRs_synth.v
+Elaborated module file created: build_v/mkGPRs_synth.ba
+code generation for mkGPR_Logging_synth starts
+Verilog file created: /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/critical_path_analysis/pre_fwd_verilog/mkGPR_Logging_synth.v
+Elaborated module file created: build_v/mkGPR_Logging_synth.ba
+compiling /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/src_Fife/S3_RR_S6_WB.bsv
+code generation for mkRR_WB starts
+Warning: "/teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/src_Fife/S3_RR_S6_WB.bsv", line 66, column 8: (G0020)
+  System functions (e.g., $display) called by interface methods execute in an
+  unpredictable order during Verilog simulations.
+      Top-level interface method `init' calls a system function (e.g.,
+      $display) at
+      "/teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/src_Fife/S3_RR_S6_WB.bsv",
+      line 219, column 7
+Warning: "/teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/src_Fife/S3_RR_S6_WB.bsv", line 66, column 8: (G0010)
+  Rule "gpr_write" was treated as more urgent than
+  "rl_RW_from_Retire". Conflicts:
+    "gpr_write" cannot fire before "rl_RW_from_Retire":
+      calls to gprs.write_dm vs. gprs.write_rd
+    "rl_RW_from_Retire" cannot fire before "gpr_write":
+      calls to gprs.write_rd vs. gprs.write_dm
+Verilog file created: /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/critical_path_analysis/pre_fwd_verilog/mkRR_WB.v
+Elaborated Verilog module file created: build_v/mkRR_WB.ba
+All packages are up to date.
+[0;32m[OK][0m   Pre-forwarding mkRR_WB.v generated: /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/critical_path_analysis/pre_fwd_verilog/mkRR_WB.v
+[0;34m[21:43:45][0m   Restoring post-forwarding S3_RR_S6_WB.bsv...
+[0;32m[OK][0m   Post-forwarding BSV restored
+[0;34m[21:43:45][0m 
+[0;34m[21:43:45][0m STEP 2: Running Yosys STA for all 5 design variants...
+[0;34m[21:43:45][0m   (This may take 5–30 minutes per variant for large designs)
+[0;34m[21:43:45][0m 
+[0;34m[21:43:45][0m 
+[0;34m[21:43:45][0m ─────────────────────────────────────────────────────────────────
+[0;34m[21:43:45][0m VARIANT 1: Melodica Standalone
+[0;34m[21:43:45][0m   Script: /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/critical_path_analysis/sta_melodica.ys
+[0;34m[21:43:45][0m   Output: /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/critical_path_analysis/results/melodica_sta.log
+[0;34m[21:43:45][0m ─────────────────────────────────────────────────────────────────
+[0;32m[OK][0m   Completed. Key timing output:
+    ABC: netlist                       : i/o = 4045/ 3161  lat =    0  nd = 40908  edge =  92884  area =40908.00  delay = 1.27  lev = 70
+    Longest topological path in mkPositCore (length=5028):
+[0;34m[21:46:01][0m 
+[0;34m[21:46:01][0m ─────────────────────────────────────────────────────────────────
+[0;34m[21:46:01][0m VARIANT 2: Fife Core — Pre-Forwarding
+[0;34m[21:46:01][0m   Script: /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/critical_path_analysis/sta_fife_pre_fwd.ys
+[0;34m[21:46:01][0m   Output: /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/critical_path_analysis/results/fife_pre_fwd_sta.log
+[0;34m[21:46:01][0m ─────────────────────────────────────────────────────────────────
+[0;32m[OK][0m   Completed. Key timing output:
+    ABC: netlist                       : i/o =14775/ 9552  lat =    0  nd = 71930  edge = 164177  area =71930.00  delay = 1.27  lev = 70
+    Longest topological path in mkCPU (length=7010):
+[0;34m[21:49:47][0m 
+[0;34m[21:49:47][0m ─────────────────────────────────────────────────────────────────
+[0;34m[21:49:47][0m VARIANT 3: Fife Core — Post-Forwarding
+[0;34m[21:49:47][0m   Script: /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/critical_path_analysis/sta_fife_post_fwd.ys
+[0;34m[21:49:47][0m   Output: /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/critical_path_analysis/results/fife_post_fwd_sta.log
+[0;34m[21:49:47][0m ─────────────────────────────────────────────────────────────────
+[0;32m[OK][0m   Completed. Key timing output:
+    ABC: netlist                       : i/o =14775/ 9552  lat =    0  nd = 71930  edge = 164177  area =71930.00  delay = 1.27  lev = 70
+    Longest topological path in mkCPU (length=7010):
+[0;34m[21:53:49][0m 
+[0;34m[21:53:49][0m ─────────────────────────────────────────────────────────────────
+[0;34m[21:53:49][0m VARIANT 4: Integrated System — Pre-Forwarding
+[0;34m[21:53:49][0m   Script: /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/critical_path_analysis/sta_integrated_pre_fwd.ys
+[0;34m[21:53:49][0m   Output: /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/critical_path_analysis/results/integrated_pre_fwd_sta.log
+[0;34m[21:53:49][0m ─────────────────────────────────────────────────────────────────
+[1;33m[WARN][0m   Yosys returned non-zero exit. Last lines:
+    Note: Assuming pure combinatorial block at /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCPU.v:1708.3-1751.6 in
+    compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+    use of @* instead of @(...) for better match of synthesis and simulation.
+    Note: Assuming pure combinatorial block at /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCPU.v:1774.3-1802.6 in
+    compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+    use of @* instead of @(...) for better match of synthesis and simulation.
+    Successfully finished Verilog frontend.
+    
+    25. Executing Verilog-2005 frontend: /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkTop.v
+    /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkTop.v:29: ERROR: syntax error, unexpected '[', expecting ',' or ')'
+[1;33m[WARN][0m   Check /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/critical_path_analysis/results/integrated_pre_fwd_sta.log for full details
+[0;34m[21:53:50][0m 
+[0;34m[21:53:50][0m ─────────────────────────────────────────────────────────────────
+[0;34m[21:53:50][0m VARIANT 5: Integrated System — Post-Forwarding
+[0;34m[21:53:50][0m   Script: /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/critical_path_analysis/sta_integrated_post_fwd.ys
+[0;34m[21:53:50][0m   Output: /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/critical_path_analysis/results/integrated_post_fwd_sta.log
+[0;34m[21:53:50][0m ─────────────────────────────────────────────────────────────────
+[1;33m[WARN][0m   Yosys returned non-zero exit. Last lines:
+    Note: Assuming pure combinatorial block at /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCPU.v:1708.3-1751.6 in
+    compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+    use of @* instead of @(...) for better match of synthesis and simulation.
+    Note: Assuming pure combinatorial block at /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkCPU.v:1774.3-1802.6 in
+    compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+    use of @* instead of @(...) for better match of synthesis and simulation.
+    Successfully finished Verilog frontend.
+    
+    25. Executing Verilog-2005 frontend: /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkTop.v
+    /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkTop.v:29: ERROR: syntax error, unexpected '[', expecting ',' or ')'
+[1;33m[WARN][0m   Check /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/critical_path_analysis/results/integrated_post_fwd_sta.log for full details
+[0;34m[21:53:51][0m 
+[0;34m[21:53:51][0m STEP 3: Parsing results and generating summary...
+================================================================================
+CRITICAL PATH ANALYSIS RESULTS — Yosys+ABC with generic45nm.genlib
+================================================================================
+
+[✓] Variant 1: Melodica Standalone
+    Critical Path: 1.270 ns  |  Max Freq: 787.4 MHz
+    Logic Levels: 70  |  Cells: 44,925  |  LTP hops: 5028
+  [ABC Timing Output]
+    ABC: netlist                       : i/o = 4045/ 3161  lat =    0  nd = 40908  edge =  92884  area =40908.00  delay = 1.27  lev = 70
+
+[✓] Variant 2: Fife Core — Pre-Forwarding
+    Critical Path: 1.270 ns  |  Max Freq: 787.4 MHz
+    Logic Levels: 70  |  Cells: 86,092  |  LTP hops: 7010
+  [ABC Timing Output]
+    ABC: netlist                       : i/o =14775/ 9552  lat =    0  nd = 71930  edge = 164177  area =71930.00  delay = 1.27  lev = 70
+
+[✓] Variant 3: Fife Core — Post-Forwarding
+    Critical Path: 1.270 ns  |  Max Freq: 787.4 MHz
+    Logic Levels: 70  |  Cells: 86,092  |  LTP hops: 7010
+  [ABC Timing Output]
+    ABC: netlist                       : i/o =14775/ 9552  lat =    0  nd = 71930  edge = 164177  area =71930.00  delay = 1.27  lev = 70
+
+[✗] Variant 4: Integrated System — Pre-Forwarding
+    ERROR: /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkTop.v:29: ERROR: syntax error, unexpected '[', expecting ',' or ')'
+
+[✗] Variant 5: Integrated System — Post-Forwarding
+    ERROR: /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkTop.v:29: ERROR: syntax error, unexpected '[', expecting ',' or ')'
+
+
+========================================================================================
+COMPARISON TABLE
+========================================================================================
+
+#   Design Variant                             Critical Path     Max Freq   Levels      Cells
+------------------------------------------------------------------------------------------
+1   Melodica Standalone                             1.270 ns    787.4 MHz       70     44,925
+2   Fife Core — Pre-Forwarding                      1.270 ns    787.4 MHz       70     86,092
+3   Fife Core — Post-Forwarding                     1.270 ns    787.4 MHz       70     86,092
+4   Integrated System — Pre-Forwarding                   N/A          N/A      N/A        N/A
+5   Integrated System — Post-Forwarding                  N/A          N/A      N/A        N/A
+------------------------------------------------------------------------------------------
+
+Markdown summary written to: critical_path_analysis/critical_path_summary.md
+[0;34m[21:53:55][0m 
+[0;34m[21:53:55][0m =====================================================================
+[0;34m[21:53:55][0m   All analyses complete!
+[0;34m[21:53:55][0m   Summary:   /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/critical_path_analysis/critical_path_summary.md
+[0;34m[21:53:55][0m   Full logs: /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/critical_path_analysis/results/
+[0;34m[21:53:55][0m   Run log:   /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/critical_path_analysis/run_all_sta.log
+[0;34m[21:53:55][0m =====================================================================

@@ -1,0 +1,161 @@
+library (generic45nm) {
+    time_unit : "1ns";
+    voltage_unit : "1V";
+    current_unit : "1mA";
+    capacitive_load_unit (1, pf);
+    delay_model : table_lookup;
+
+    lu_table_template(t1x1) {
+        variable_1 : input_net_transition;
+        variable_2 : total_output_net_capacitance;
+        index_1 ("0.010");
+        index_2 ("0.010");
+    }
+
+    cell (DFF_P) {
+        ff (IQ,IQN) { clocked_on:"C"; next_state:"D"; }
+        pin(C){direction:input;clock:true;}
+        pin(D){direction:input;
+            timing(){related_pin:"C";timing_type:setup_rising;
+                rise_constraint(t1x1){values("0.020");}
+                fall_constraint(t1x1){values("0.020");}
+            }
+            timing(){related_pin:"C";timing_type:hold_rising;
+                rise_constraint(t1x1){values("0.010");}
+                fall_constraint(t1x1){values("0.010");}
+            }
+        }
+        pin(Q){direction:output;function:"IQ";
+            timing(){related_pin:"C";timing_type:rising_edge;
+                cell_rise(t1x1){values("0.060");}
+                cell_fall(t1x1){values("0.060");}
+                rise_transition(t1x1){values("0.010");}
+                fall_transition(t1x1){values("0.010");}
+            }
+        }
+    }
+
+    cell (DFF_PP0) {
+        ff (IQ,IQN) { clocked_on:"C"; next_state:"D"; clear:"R"; }
+        pin(C){direction:input;clock:true;}
+        pin(R){direction:input;}
+        pin(D){direction:input;
+            timing(){related_pin:"C";timing_type:setup_rising;
+                rise_constraint(t1x1){values("0.020");}
+                fall_constraint(t1x1){values("0.020");}
+            }
+            timing(){related_pin:"C";timing_type:hold_rising;
+                rise_constraint(t1x1){values("0.010");}
+                fall_constraint(t1x1){values("0.010");}
+            }
+        }
+        pin(Q){direction:output;function:"IQ";
+            timing(){related_pin:"C";timing_type:rising_edge;
+                cell_rise(t1x1){values("0.060");}
+                cell_fall(t1x1){values("0.060");}
+                rise_transition(t1x1){values("0.010");}
+                fall_transition(t1x1){values("0.010");}
+            }
+        }
+    }
+
+    cell (DFFE_PP) {
+        ff (IQ,IQN) { clocked_on:"C & E"; next_state:"D"; }
+        pin(C){direction:input;clock:true;}
+        pin(E){direction:input;}
+        pin(D){direction:input;
+            timing(){related_pin:"C";timing_type:setup_rising;
+                rise_constraint(t1x1){values("0.025");}
+                fall_constraint(t1x1){values("0.025");}
+            }
+            timing(){related_pin:"C";timing_type:hold_rising;
+                rise_constraint(t1x1){values("0.010");}
+                fall_constraint(t1x1){values("0.010");}
+            }
+        }
+        pin(Q){direction:output;function:"IQ";
+            timing(){related_pin:"C";timing_type:rising_edge;
+                cell_rise(t1x1){values("0.065");}
+                cell_fall(t1x1){values("0.065");}
+                rise_transition(t1x1){values("0.010");}
+                fall_transition(t1x1){values("0.010");}
+            }
+        }
+    }
+
+    cell ($_NOT_) {
+        pin(A){direction:input;}
+        pin(Y){direction:output;function:"!A";
+            timing(){related_pin:"A";
+                cell_rise(t1x1){values("0.009");}
+                cell_fall(t1x1){values("0.009");}
+                rise_transition(t1x1){values("0.004");}
+                fall_transition(t1x1){values("0.004");}
+            }
+        }
+    }
+    cell ($_AND_) {
+        pin(A){direction:input;} pin(B){direction:input;}
+        pin(Y){direction:output;function:"A&B";
+            timing(){related_pin:"A";cell_rise(t1x1){values("0.018");}cell_fall(t1x1){values("0.016");}rise_transition(t1x1){values("0.005");}fall_transition(t1x1){values("0.005");}}
+            timing(){related_pin:"B";cell_rise(t1x1){values("0.018");}cell_fall(t1x1){values("0.016");}rise_transition(t1x1){values("0.005");}fall_transition(t1x1){values("0.005");}}
+        }
+    }
+    cell ($_OR_) {
+        pin(A){direction:input;} pin(B){direction:input;}
+        pin(Y){direction:output;function:"A|B";
+            timing(){related_pin:"A";cell_rise(t1x1){values("0.019");}cell_fall(t1x1){values("0.017");}rise_transition(t1x1){values("0.005");}fall_transition(t1x1){values("0.005");}}
+            timing(){related_pin:"B";cell_rise(t1x1){values("0.019");}cell_fall(t1x1){values("0.017");}rise_transition(t1x1){values("0.005");}fall_transition(t1x1){values("0.005");}}
+        }
+    }
+    cell ($_XOR_) {
+        pin(A){direction:input;} pin(B){direction:input;}
+        pin(Y){direction:output;function:"A^B";
+            timing(){related_pin:"A";cell_rise(t1x1){values("0.028");}cell_fall(t1x1){values("0.028");}rise_transition(t1x1){values("0.006");}fall_transition(t1x1){values("0.006");}}
+            timing(){related_pin:"B";cell_rise(t1x1){values("0.028");}cell_fall(t1x1){values("0.028");}rise_transition(t1x1){values("0.006");}fall_transition(t1x1){values("0.006");}}
+        }
+    }
+    cell ($_XNOR_) {
+        pin(A){direction:input;} pin(B){direction:input;}
+        pin(Y){direction:output;function:"!(A^B)";
+            timing(){related_pin:"A";cell_rise(t1x1){values("0.028");}cell_fall(t1x1){values("0.028");}rise_transition(t1x1){values("0.006");}fall_transition(t1x1){values("0.006");}}
+            timing(){related_pin:"B";cell_rise(t1x1){values("0.028");}cell_fall(t1x1){values("0.028");}rise_transition(t1x1){values("0.006");}fall_transition(t1x1){values("0.006");}}
+        }
+    }
+    cell ($_NAND_) {
+        pin(A){direction:input;} pin(B){direction:input;}
+        pin(Y){direction:output;function:"!(A&B)";
+            timing(){related_pin:"A";cell_rise(t1x1){values("0.014");}cell_fall(t1x1){values("0.017");}rise_transition(t1x1){values("0.005");}fall_transition(t1x1){values("0.005");}}
+            timing(){related_pin:"B";cell_rise(t1x1){values("0.014");}cell_fall(t1x1){values("0.017");}rise_transition(t1x1){values("0.005");}fall_transition(t1x1){values("0.005");}}
+        }
+    }
+    cell ($_NOR_) {
+        pin(A){direction:input;} pin(B){direction:input;}
+        pin(Y){direction:output;function:"!(A|B)";
+            timing(){related_pin:"A";cell_rise(t1x1){values("0.017");}cell_fall(t1x1){values("0.014");}rise_transition(t1x1){values("0.005");}fall_transition(t1x1){values("0.005");}}
+            timing(){related_pin:"B";cell_rise(t1x1){values("0.017");}cell_fall(t1x1){values("0.014");}rise_transition(t1x1){values("0.005");}fall_transition(t1x1){values("0.005");}}
+        }
+    }
+    cell ($_ANDNOT_) {
+        pin(A){direction:input;} pin(B){direction:input;}
+        pin(Y){direction:output;function:"A&!B";
+            timing(){related_pin:"A";cell_rise(t1x1){values("0.018");}cell_fall(t1x1){values("0.016");}rise_transition(t1x1){values("0.005");}fall_transition(t1x1){values("0.005");}}
+            timing(){related_pin:"B";cell_rise(t1x1){values("0.018");}cell_fall(t1x1){values("0.016");}rise_transition(t1x1){values("0.005");}fall_transition(t1x1){values("0.005");}}
+        }
+    }
+    cell ($_ORNOT_) {
+        pin(A){direction:input;} pin(B){direction:input;}
+        pin(Y){direction:output;function:"A|!B";
+            timing(){related_pin:"A";cell_rise(t1x1){values("0.019");}cell_fall(t1x1){values("0.017");}rise_transition(t1x1){values("0.005");}fall_transition(t1x1){values("0.005");}}
+            timing(){related_pin:"B";cell_rise(t1x1){values("0.019");}cell_fall(t1x1){values("0.017");}rise_transition(t1x1){values("0.005");}fall_transition(t1x1){values("0.005");}}
+        }
+    }
+    cell ($_MUX_) {
+        pin(A){direction:input;} pin(B){direction:input;} pin(S){direction:input;}
+        pin(Y){direction:output;function:"!S&A|S&B";
+            timing(){related_pin:"A";cell_rise(t1x1){values("0.022");}cell_fall(t1x1){values("0.022");}rise_transition(t1x1){values("0.006");}fall_transition(t1x1){values("0.006");}}
+            timing(){related_pin:"B";cell_rise(t1x1){values("0.022");}cell_fall(t1x1){values("0.022");}rise_transition(t1x1){values("0.006");}fall_transition(t1x1){values("0.006");}}
+            timing(){related_pin:"S";cell_rise(t1x1){values("0.028");}cell_fall(t1x1){values("0.028");}rise_transition(t1x1){values("0.006");}fall_transition(t1x1){values("0.006");}}
+        }
+    }
+}

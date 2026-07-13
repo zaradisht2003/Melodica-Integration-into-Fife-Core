@@ -1,0 +1,37 @@
+# ============================================================
+# Variant 1: Melodica Standalone Critical Path Analysis
+# Top module: mkPositCore (with all Melodica sub-modules)
+# Method: abc technology mapping with generic45nm.genlib
+#         ABC prints critical path delay via print_stats -t
+# ============================================================
+
+# BSC Verilog primitives (FIFOs, RegFile used by Melodica modules)
+read_verilog -I /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/bsc/lib/Verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/bsc/lib/Verilog/FIFO1.v
+read_verilog -I /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/bsc/lib/Verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/bsc/lib/Verilog/FIFO2.v
+read_verilog -I /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/bsc/lib/Verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/bsc/lib/Verilog/SizedFIFO.v
+read_verilog -I /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/bsc/lib/Verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/bsc/lib/Verilog/RegFile.v
+
+# Melodica design files (from the integrated verilog directory)
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/module_fn_twosC_quire.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkQuire.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkMultiplier.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkNormalizer.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkExtracter.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkFtoP_PNE.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkPtoF_PNE.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/mkPositCore.v
+
+# Elaborate and flatten to a single module for path analysis
+hierarchy -check -top mkPositCore
+synth -top mkPositCore -flatten
+
+# Technology mapping to generic 45nm standard cell library using ABC.
+# ABC prints: delay = X.XX ns (critical path), area = Y.YY (cell area), lev = N (logic levels)
+# The output appears as: "ABC: netlist : ... delay = X.XX  lev = N"
+abc -script "+read_library,/teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/generic45nm.genlib;strash;map;print_stats -t;write_blif,%/output.blif"
+
+# Also report statistics (cell count)
+stat
+
+# Longest topological path (gate hops, not ns — for reference only)
+ltp
