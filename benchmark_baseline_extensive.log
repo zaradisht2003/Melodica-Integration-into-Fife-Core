@@ -1,0 +1,60 @@
+Running tests without recompiling...
+Running test: posit_basic ...
+  Cycles: 172
+  Instructions Retired: 26
+  IPC: 0.1512
+  Pipeline Stalls (Data Hazards): 81
+  Control Flushes (Mispredicts): 2
+Running test: posit_convert ...
+  Cycles: 157
+  Instructions Retired: 31
+  IPC: 0.1975
+  Pipeline Stalls (Data Hazards): 59
+  Control Flushes (Mispredicts): 1
+Running test: posit_dot_product ...
+  Cycles: 348
+  Instructions Retired: 68
+  IPC: 0.1954
+  Pipeline Stalls (Data Hazards): 142
+  Control Flushes (Mispredicts): 7
+Running test: posit_mac_loop ...
+  Cycles: 3537
+  Instructions Retired: 308
+  IPC: 0.0871
+  Pipeline Stalls (Data Hazards): 2387
+  Control Flushes (Mispredicts): 99
+Running test: posit_matmul ...
+  Cycles: 3543
+  Instructions Retired: 374
+  IPC: 0.1056
+  Pipeline Stalls (Data Hazards): 2289
+  Control Flushes (Mispredicts): 99
+Running test: posit_poly_eval ...
+  Cycles: 4065
+  Instructions Retired: 844
+  IPC: 0.2076
+  Pipeline Stalls (Data Hazards): 2121
+  Control Flushes (Mispredicts): 99
+Running test: posit_conv1d ...
+  Cycles: 718
+  Instructions Retired: 156
+  IPC: 0.2173
+  Pipeline Stalls (Data Hazards): 270
+  Control Flushes (Mispredicts): 15
+Running test: posit_iir_filter ...
+  Cycles: 2531
+  Instructions Retired: 406
+  IPC: 0.1604
+  Pipeline Stalls (Data Hazards): 1583
+  Control Flushes (Mispredicts): 49
+
+=== Benchmark Summary ===
+posit_basic | Cycles: 172      | IPC: 0.1512 | Stalls: 81     | Flushes: 2     
+posit_convert | Cycles: 157      | IPC: 0.1975 | Stalls: 59     | Flushes: 1     
+posit_dot_product | Cycles: 348      | IPC: 0.1954 | Stalls: 142    | Flushes: 7     
+posit_mac_loop | Cycles: 3537     | IPC: 0.0871 | Stalls: 2387   | Flushes: 99    
+posit_matmul | Cycles: 3543     | IPC: 0.1056 | Stalls: 2289   | Flushes: 99    
+posit_poly_eval | Cycles: 4065     | IPC: 0.2076 | Stalls: 2121   | Flushes: 99    
+posit_conv1d | Cycles: 718      | IPC: 0.2173 | Stalls: 270    | Flushes: 15    
+posit_iir_filter | Cycles: 2531     | IPC: 0.1604 | Stalls: 1583   | Flushes: 49    
+

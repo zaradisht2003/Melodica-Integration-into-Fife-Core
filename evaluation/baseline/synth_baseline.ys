@@ -1,0 +1,10 @@
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/bsc/lib/Verilog/FIFO1.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/bsc/lib/Verilog/FIFO2.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/bsc/lib/Verilog/SizedFIFO.v
+read_verilog /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/bsc/lib/Verilog/RegFile.v
+read_verilog Learn_Bluespec_and_RISCV_Design/Code/Build/Fife/verilog/*.v
+hierarchy -check -top mkCPU
+synth -top mkCPU -flatten
+abc -script "+read_library,generic45nm.genlib;strash;map;print_stats -t"
+stat
+ltp

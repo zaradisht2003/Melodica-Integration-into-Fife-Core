@@ -1,1 +1,8 @@
-log.txt
+# Generated log files
+*.log
+test.log
+
+# Generated synthesis logs
+critical_path_analysis/results/*.log
+evaluation/baseline/*.log
+evaluation/branch_prediction/*.log

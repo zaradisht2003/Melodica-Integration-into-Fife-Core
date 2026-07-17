@@ -1,0 +1,133 @@
+--- S5 ---
+   function Action fa_redirect_Fetch (Bool         mispredicted,
+				      Bool         haltreq,
+				      RR_to_Retire x1,
+				      Bit #(XLEN)  next_pc,
+				      Bool         is_branch,
+				      Bool         branch_taken,
+				      Bool         is_redirect);
+      action
+
+	 if (haltreq) begin
+	    rg_dpc        <= next_pc;
+	    rg_dcsr_prv   <= priv_M;
+	    rg_runstate   <= S5_HALTING1;
+	    if (verbosity != 0)
+	       $display ("S5_Retire.fa_redirect_Fetch: rg_runstate: HALTREQ->HALTING1");
+	 end
+
+	 if (((rg_runstate == S5_RUNNING) && mispredicted)
+	     || haltreq || is_branch)
+	    begin
+	       if (mispredicted) rg_total_flushes <= rg_total_flushes + 1;
+	       let next_epoch = mispredicted ? rg_epoch + 1 : rg_epoch;
+	       if (mispredicted) rg_epoch <= next_epoch;
+	       let y = Fetch_from_Retire {next_pc:    next_pc,
+					  next_epoch: next_epoch,
+					  haltreq:    haltreq,
+					  is_branch:  is_branch,
+					  branch_taken: branch_taken,
+					  is_redirect: is_redirect,
+					  xtra: Fetch_from_Retire_Xtra {
+					     inum:  x1.xtra.inum,
+					     pc:    x1.pc,
+					     instr: x1.instr}
+					  };
+	       f_Fetch_from_Retire.enq (y);
+--- S5 ---
+   Reg #(Bit #(10)) rg_print_cycle <- mkReg (0);
+   rule rl_print_flushes;
+      rg_print_cycle <= rg_print_cycle + 1;
+      $display("BENCHMARK_FLUSH: %0d", rg_total_flushes);
+   endrule
+--- S3 ---
+   Reg #(Bit #(10)) rg_print_cycle <- mkReg (0);
+   rule rl_print_stats;
+      rg_print_cycle <= rg_print_cycle + 1;
+      $display("BENCHMARK_STALL: %0d", rg_total_stalls);
+   endrule
+--- S5 ---
+   Reg #(Bit #(10)) rg_print_cycle <- mkReg (0);
+   rule rl_print_flushes;
+      rg_print_cycle <= rg_print_cycle + 1;
+      $display("BENCHMARK_FLUSH: %0d", rg_total_flushes);
+   endrule
+--- S5 ---
+   Reg #(S5_RunState) rg_runstate     <- mkReg (S5_RUNNING);
+   Reg #(Bit #(64)) rg_total_flushes <- mkReg (0);
+
+   rule rl_print_flushes;
+      $display("BENCHMARK_FLUSH: %0d", rg_total_flushes);
+   endrule
+
+   Reg #(Bit #(XLEN)) rg_dpc          <- mkRegU;
+--- S5 ---
+	    begin
+	       rg_epoch <= rg_epoch + 1;
+	       if (mispredicted) rg_total_flushes <= rg_total_flushes + 1;
+	       if (verbosity != 0) begin
+--- S3 ---
+   Reg #(Bit #(16)) rg_stall_count <- mkReg (0);
+   Reg #(Bit #(64)) rg_total_stalls <- mkReg (0);
+
+   rule rl_print_stats;
+      $display("BENCHMARK_STALL: %0d", rg_total_stalls);
+   endrule
+
+   // ================================================================
+--- S3 ---
+      else begin
+	 // STALL
+	 rg_stall_count <= rg_stall_count + 1;
+         rg_total_stalls <= rg_total_stalls + 1;
+	 if (verbosity >= 2)
+	    $display ("    Stall %0d", rg_stall_count);
+      end
+--- S5 ---
+   // For tracing
+   Reg #(Bit #(32)) rg_trace_seq <- mkReg (0);
+   Reg #(Bit #(64)) rg_total_flushes <- mkReg (0);
+
+   rule rl_print_stats;
+      $display("BENCHMARK_FLUSH: %0d", rg_total_flushes);
+   endrule
+
+   // ================================================================
+--- S5 ---
+                                          };
+               f_Fetch_from_Retire.enq (y);
+               rg_total_flushes <= rg_total_flushes + 1;
+--- S5 ---
+               let y = Fetch_from_Retire {next_pc:    next_pc,
+                                          next_epoch: next_epoch,
+                                          haltreq:    haltreq,
+                                          xtra: Fetch_from_Retire_Xtra {
+                                             inum:  x1.xtra.inum,
+                                             pc:    x1.pc,
+                                             instr: x1.instr}
+                                          };
+               f_Fetch_from_Retire.enq (y);
+               rg_total_flushes <= rg_total_flushes + 1;
+
+               // ---------------- DEBUG
+--- S5 ---
+   Reg #(Epoch) rg_epoch  <- mkReg (0);
+   Reg #(Bit #(64)) rg_total_flushes <- mkReg (0);
+--- S5 ---
+   Reg #(Bit #(32)) rg_trace_seq <- mkReg (0);
+--- S5 ---
+   Bool retire_Posit            = (retire_PIPE && is_Posit);   // NEW
+   Bool retire_DMem             = (retire_PIPE && is_DMem);
+   Reg #(Bit #(32)) rg_trace_seq <- mkReg (0);
+   Reg #(Bit #(64)) rg_total_instrets <- mkReg (0);
+
+   rule rl_print_stats;
+      $display("BENCHMARK_FLUSH: %0d", rg_total_flushes);
+      $display("BENCHMARK_INSTRET: %0d", rg_total_instrets);
+   endrule
+--- S5 ---
+   Reg #(Bit #(32)) rg_trace_seq <- mkReg (0);
+
+   rule rl_print_stats;
+      $display("BENCHMARK_FLUSH: %0d", rg_total_flushes);
+   endrule

@@ -1,0 +1,25 @@
+Running tests without recompiling...
+Running test: posit_basic ...
+  Cycles: 169
+  Instructions Retired: 26
+  IPC: 0.1538
+  Pipeline Stalls (Data Hazards): 91
+  Control Flushes (Mispredicts): 2
+Running test: posit_convert ...
+  Cycles: 157
+  Instructions Retired: 31
+  IPC: 0.1975
+  Pipeline Stalls (Data Hazards): 79
+  Control Flushes (Mispredicts): 1
+Running test: posit_dot_product ...
+  Cycles: 359
+  Instructions Retired: 68
+  IPC: 0.1894
+  Pipeline Stalls (Data Hazards): 200
+  Control Flushes (Mispredicts): 7
+
+=== Benchmark Summary ===
+posit_basic | Cycles: 169      | IPC: 0.1538 | Stalls: 91     | Flushes: 2     
+posit_convert | Cycles: 157      | IPC: 0.1975 | Stalls: 79     | Flushes: 1     
+posit_dot_product | Cycles: 359      | IPC: 0.1894 | Stalls: 200    | Flushes: 7     
+

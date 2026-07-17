@@ -363,3 +363,42 @@ The high LTP numbers are expected for designs compiled with the **Bluespec Syste
 **Max Clock Frequency:** `1190.4 MHz`
 **Logic Levels (ABC):** `49`
 **Cell Count (post-mapping):** `30,191`
+
+---
+
+# Benchmark Comparison (Baseline vs Forwarding vs Branch Prediction)
+
+The following table compares the benchmark performance of the `Melodica` posit/quire test programs across three pipeline variants:
+1. **Baseline** (stall-only pipeline)
+2. **Forwarding** (EX-to-RR data bypass and WAW hazard fix)
+3. **Branch Prediction** (Forwarding + 32-entry BTB + 2-bit BHT)
+
+| Benchmark | Variant | Cycles | IPC | Stalls | Flushes |
+|-----------|---------|--------|-----|--------|---------|
+| **posit_basic** | Baseline | 172 | 0.1512 | 81 | 2 |
+| | Forwarding | 169 | 0.1538 | 91 | 2 |
+| | **Branch Prediction** | **166** | **0.1566** | **87** | **2** |
+| **posit_convert** | Baseline | 157 | 0.1975 | 59 | 1 |
+| | Forwarding | 157 | 0.1975 | 79 | 1 |
+| | **Branch Prediction** | **157** | **0.1975** | **79** | **1** |
+| **posit_dot_product** | Baseline | 348 | 0.1954 | 142 | 7 |
+| | Forwarding | 359 | 0.1894 | 200 | 7 |
+| | **Branch Prediction** | **361** | **0.1884** | **196** | **7** |
+| **posit_mac_loop** | Baseline | 3537 | 0.0871 | 2387 | 99 |
+| | Forwarding | 3636 | 0.0847 | 2790 | 99 |
+| | **Branch Prediction** | **808** | **0.3812** | **447** | **2** |
+| **posit_matmul** | Baseline | 3543 | 0.1056 | 2289 | 99 |
+| | Forwarding | 3642 | 0.1027 | 2730 | 99 |
+| | **Branch Prediction** | **1273** | **0.2938** | **791** | **13** |
+| **posit_poly_eval** | Baseline | 4065 | 0.2076 | 2121 | 99 |
+| | Forwarding | 4062 | 0.2078 | 2680 | 99 |
+| | **Branch Prediction** | **4678** | **0.1804** | **3676** | **23** |
+| **posit_conv1d** | Baseline | 718 | 0.2173 | 270 | 15 |
+| | Forwarding | 733 | 0.2128 | 438 | 15 |
+| | **Branch Prediction** | **608** | **0.2566** | **333** | **9** |
+| **posit_iir_filter** | Baseline | 2531 | 0.1604 | 1583 | 49 |
+| | Forwarding | 2577 | 0.1575 | 1883 | 49 |
+| | **Branch Prediction** | **2203** | **0.1843** | **1744** | **2** |
+
+> [!TIP]
+> The Branch Predictor reduces pipeline flushes enormously in loop-heavy programs such as `posit_mac_loop`, `posit_matmul`, and `posit_iir_filter`. In `posit_mac_loop`, flushes dropped from **99** down to **2**, reducing total execution cycles from **3537** to **808** (a ~4.3x speedup).

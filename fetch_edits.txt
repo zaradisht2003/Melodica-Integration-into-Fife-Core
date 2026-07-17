@@ -1,0 +1,32 @@
+Add BTB and BHT state and logic to S1_Fetch.bsv
+
+
+
+Update all tasks to [x] in task.md
+# Branch Prediction Integration and Evaluation Task List
+
+- `[x]` **Phase 1: Baseline Evaluation**
+  - `[x]` Build and synthesize current design
+  - `[x]` Extract synthesis metrics (Critical path delay, Area, Logic Depth)
+  - `[x]` Save reports in `evaluation/baseline/`
+  - `[x]` Run all test programs (`posit_basic`, `posit_convert`, `posit_dot_product`)
+  - `[x]` Collect performance metrics (Cycles, Retired instructions, IPC, Stalls, Flushes)
+
+- `[x]` **Phase 2: Branch Prediction Implementation**
+  - `[x]` Create `branch-prediction` git branch
+  - `[x]` Implement Branch History Table (BHT) with 2-bit saturating counters
+  - `[x]` Implement Branch Target Buffer (BTB) with 32 entries (Direct mapped)
+  - `[x]` Update Fetch stage (`S1_Fetch.bsv`) to use BHT and BTB
+  - `[x]` Update pipeline to propagate predictions and outcomes
+  - `[x]` Update Retire stage (`S5_Retire.bsv`) to resolve branches and trigger BTB/BHT updates
+  - `[x]` Build and synthesize the updated design
+  - `[x]` Save reports in `evaluation/branch_prediction/`
+  - `[x]` Run all test programs on the new design
+  - `[x]` Collect updated performance metrics
+
+- `[x]` **Phase 3: Evaluation and Documentation**
+  - `[x]` Compare baseline vs branch-predicted models
+  - `[x]` Update `README.md` with:
+    - `[x]` Instructions on how to run benchmarks
+    - `[x]` Instructions on how to synthesize the core
+    - `[x]` Summary table comparing area, frequency, and benchmark performance
