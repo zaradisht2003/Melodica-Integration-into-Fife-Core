@@ -6,3 +6,4 @@ test.log
 critical_path_analysis/results/*.log
 evaluation/baseline/*.log
 evaluation/branch_prediction/*.log
+log.txt

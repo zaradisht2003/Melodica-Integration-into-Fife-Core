@@ -1,0 +1,29 @@
+
+29. Printing statistics.
+
+=== mkCPU ===
+
+   Number of wires:              92246
+   Number of wire bits:         211286
+   Number of public wires:        2937
+   Number of public wire bits:  121934
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:             107091
+     AND2                        18767
+     ANDNOT2                      2592
+     DFF_P                       16404
+     MUX2                        24999
+     NAND2                       31953
+     NOR2                         1132
+     NOT1                          272
+     OR2                          4269
+     ORNOT2                       1684
+     XNOR2                        2592
+     XOR2                         2427
+
+30. Executing LTP pass (find longest path).
+
+Longest topological path in mkCPU (length=0):
+    0: \state_mkFSMstate [20]

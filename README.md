@@ -314,6 +314,7 @@ The high LTP numbers are expected for designs compiled with the **Bluespec Syste
 | **4** | Integrated System — Pre-Forwarding | 1.270 ns | 787.4 MHz | 70 | 86,081 |
 | **5** | Integrated System — Post-Forwarding | 1.270 ns | 787.4 MHz | 70 | 86,081 |
 | **6** | Pure Fife Core (Without Melodica) | 0.840 ns | 1190.4 MHz | 49 | 30,191 |
+| **7** | Integrated System — Branch Prediction | 1.270 ns | 787.4 MHz | 70 | 95,325 |
 
 > [!TIP]
 > The critical path is exactly **1.270 ns** across variants 1-5. This proves that the computationally intensive `Melodica` posit arithmetic unit is the primary timing bottleneck of the system. The addition of bypass forwarding logic and the WAW scoreboard counter in the `Fife Core` pipeline does **not** increase the critical path delay beyond what the posit unit already dictates. Removing the Melodica unit entirely (Variant 6) drops the critical path by ~34%.
@@ -364,6 +365,13 @@ The high LTP numbers are expected for designs compiled with the **Bluespec Syste
 **Logic Levels (ABC):** `49`
 **Cell Count (post-mapping):** `30,191`
 
+### Variant 7: Integrated System — Branch Prediction
+**Description:** `mkCPU` pipeline, branch prediction (BTB + BHT) and forwarding logic
+**Critical Path:** `1.270 ns`
+**Max Clock Frequency:** `787.4 MHz`
+**Logic Levels (ABC):** `70`
+**Cell Count (post-mapping):** `95,325`
+
 ---
 
 # Benchmark Comparison (Baseline vs Forwarding vs Branch Prediction)
@@ -399,6 +407,8 @@ The following table compares the benchmark performance of the `Melodica` posit/q
 | **posit_iir_filter** | Baseline | 2531 | 0.1604 | 1583 | 49 |
 | | Forwarding | 2577 | 0.1575 | 1883 | 49 |
 | | **Branch Prediction** | **2203** | **0.1843** | **1744** | **2** |
+
+![Benchmark Histogram](docs/benchmark_histogram.png)
 
 > [!TIP]
 > The Branch Predictor reduces pipeline flushes enormously in loop-heavy programs such as `posit_mac_loop`, `posit_matmul`, and `posit_iir_filter`. In `posit_mac_loop`, flushes dropped from **99** down to **2**, reducing total execution cycles from **3537** to **808** (a ~4.3x speedup).
