@@ -412,3 +412,18 @@ The following table compares the benchmark performance of the `Melodica` posit/q
 
 > [!TIP]
 > The Branch Predictor reduces pipeline flushes enormously in loop-heavy programs such as `posit_mac_loop`, `posit_matmul`, and `posit_iir_filter`. In `posit_mac_loop`, flushes dropped from **99** down to **2**, reducing total execution cycles from **3537** to **808** (a ~4.3x speedup).
+
+---
+
+## 9. Hardware Resources and Critical Path Comparison (B-Posit Integration)
+
+We recently integrated the B-Posit encoder and decoder logic to replace the traditional variable-shifting operations in the Posit arithmetic pipeline. The following table compares the hardware resources and critical path between the baseline integrated design and the new B-Posit design (both synthesized for the `mkCPU` module targeting `generic45nm`).
+
+| Metric | Integrated Design (Baseline) | Integrated Design (B-Posit) | Change |
+| --- | --- | --- | --- |
+| **Critical Path Delay** | 1.27 ns | 1.06 ns | -16.5% (Faster) |
+| **Logic Levels** | 70 | 58 | -17.1% (Shallower) |
+| **Total Area** | 78,924.00 | 77,425.00 | -1.9% (Smaller) |
+| **Total Cell Count** | 95,325 | 93,818 | -1,507 cells |
+
+The bounded regime checks and 6-input MUX arrays from the B-Posit architecture significantly shortened the critical path, effectively unlocking a higher max clock frequency while simultaneously reducing the total cell count and area footprint!

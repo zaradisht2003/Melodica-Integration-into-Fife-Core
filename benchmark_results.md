@@ -2,7 +2,7 @@
 ```
 
 === Benchmark Summary ===
-posit_basic | Cycles: 166      | IPC: 0.1566 | Stalls: 87     | Flushes: 2     
+posit_basic | Cycles: 155      | IPC: 0.1419 | Stalls: 84     | Flushes: 1     
 posit_convert | Cycles: 157      | IPC: 0.1975 | Stalls: 79     | Flushes: 1     
 posit_dot_product | Cycles: 361      | IPC: 0.1884 | Stalls: 196    | Flushes: 7     
 posit_mac_loop | Cycles: 808      | IPC: 0.3812 | Stalls: 447    | Flushes: 2     
