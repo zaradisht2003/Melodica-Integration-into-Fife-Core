@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # TCL includes the next line in this comment \
-exec bluetcl "$0" -quiet -- "$@"
+exec /teamspace/studios/this_studio/Melodica-Integration-into-Fife-Core/bsc/bin/bluetcl "$0" -quiet -- "$@"
 
 set major_version 2
 set minor_version 0
